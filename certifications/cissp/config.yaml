@@ -1,0 +1,153 @@
+certification:
+  id: cissp
+  name: CISSP
+  full_name: Certified Information Systems Security Professional
+  organization: (ISC)²
+  version: "2024"
+
+presentation:
+  themes:
+    fantasy:
+      game_title: "The Citadel of the Eight Domains"
+      subtitle: "A CISSP Training Adventure"
+      player_term: "Seeker"
+      domain_term: "Domain"
+      narrator: "THE CITADEL"
+      victory_message: "You have earned the title of Information Systems Security Professional!"
+
+    corporate:
+      game_title: "InfoSec Adventures at Initech"
+      subtitle: "A CISSP Training Experience"
+      player_term: "Employee"
+      domain_term: "Level"
+      narrator: "HR DEPARTMENT"
+      victory_message: "Congratulations! Your CISSP certification has been approved!"
+
+domains:
+  count: 8
+
+  list:
+    - id: 1
+      name: "Security and Risk Management"
+      short_name: "Security & Risk Mgmt"
+      themes:
+        fantasy:
+          title: "THE HALL OF SECURITY AND RISK MANAGEMENT"
+          subtitle: "Where governance meets the weight of consequence"
+        corporate:
+          title: "SECURITY GOVERNANCE DEPARTMENT"
+          subtitle: "Where policies meet quarterly reviews"
+
+    - id: 2
+      name: "Asset Security"
+      short_name: "Asset Security"
+      themes:
+        fantasy:
+          title: "THE VAULT OF ASSET SECURITY"
+          subtitle: "Know what you protect, protect what you know"
+        corporate:
+          title: "ASSET MANAGEMENT DIVISION"
+          subtitle: "Please label your assets. Yes, even that USB drive."
+
+    - id: 3
+      name: "Security Architecture and Engineering"
+      short_name: "Security Architecture"
+      themes:
+        fantasy:
+          title: "THE ARCHITECTS' SANCTUM"
+          subtitle: "Where defense takes form in stone and spell"
+        corporate:
+          title: "SECURITY ARCHITECTURE TEAM"
+          subtitle: "Building secure systems, one diagram at a time"
+
+    - id: 4
+      name: "Communication and Network Security"
+      short_name: "Network Security"
+      themes:
+        fantasy:
+          title: "THE MESSENGER'S GUILD"
+          subtitle: "Where secrets travel safely through dangerous lands"
+        corporate:
+          title: "NETWORK SECURITY OPERATIONS"
+          subtitle: "Keeping the packets flowing and the hackers out"
+
+    - id: 5
+      name: "Identity and Access Management"
+      short_name: "Identity & Access Mgmt"
+      themes:
+        fantasy:
+          title: "THE GATEKEEPERS' TOWER"
+          subtitle: "Who goes there? And should they?"
+        corporate:
+          title: "IAM DEPARTMENT"
+          subtitle: "Because everyone needs the right access to the right stuff"
+
+    - id: 6
+      name: "Security Assessment and Testing"
+      short_name: "Assessment & Testing"
+      themes:
+        fantasy:
+          title: "THE PROVING GROUNDS"
+          subtitle: "Where defenses are tested and weaknesses revealed"
+        corporate:
+          title: "SECURITY TESTING TEAM"
+          subtitle: "Breaking things professionally since 1999"
+
+    - id: 7
+      name: "Security Operations"
+      short_name: "Security Operations"
+      themes:
+        fantasy:
+          title: "THE WATCH COMMANDER'S POST"
+          subtitle: "Ever vigilant, ever ready"
+        corporate:
+          title: "SECURITY OPERATIONS CENTER"
+          subtitle: "The SOC that never sleeps (literally)"
+
+    - id: 8
+      name: "Software Development Security"
+      short_name: "Software Dev Security"
+      themes:
+        fantasy:
+          title: "THE SCRIPTORIUM OF SOFTWARE"
+          subtitle: "Code with care, for bugs become breaches"
+        corporate:
+          title: "DEVSECOPS TEAM"
+          subtitle: "Shift left, ship right, sleep... eventually"
+
+scoring:
+  scenarios_per_domain: 10
+  xp_per_correct: 50
+  hp_penalty_wrong: 20
+  max_hp: 100
+  starting_hp: 100
+
+  titles:
+    - threshold: 0
+      fantasy: "Novice Scribe"
+      corporate: "New Hire"
+    - threshold: 400
+      fantasy: "Apprentice Guardian"
+      corporate: "Junior Analyst"
+    - threshold: 1000
+      fantasy: "Warden of Secrets"
+      corporate: "Security Analyst"
+    - threshold: 1600
+      fantasy: "Keeper of the Cipher"
+      corporate: "Senior Analyst"
+    - threshold: 2200
+      fantasy: "Shield Bearer"
+      corporate: "Security Lead"
+    - threshold: 2800
+      fantasy: "Master of Controls"
+      corporate: "Security Architect"
+    - threshold: 3400
+      fantasy: "High Sentinel"
+      corporate: "Principal Engineer"
+    - threshold: 4000
+      fantasy: "Information Systems Security Professional"
+      corporate: "CISSP (Certified)"
+
+performance:
+  excellent: 80
+  passing: 60

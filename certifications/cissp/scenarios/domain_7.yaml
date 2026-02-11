@@ -1,0 +1,1601 @@
+domain: 7
+domain_name: Security Operations
+scenarios:
+- id: d7_incident_response_lifecycle
+  domain: 7
+  correct_index: 2
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 7: Security Operations - Incident Response Lifecycle'
+  failure_text: "\nThe Incident Response Lifecycle has four major phases: Preparation (before\nincidents),\
+    \ Detection and Analysis (identifying and understanding the threat),\nContainment/Eradication/Recovery\
+    \ (stopping and removing the threat), and\nPost-Incident Review (learning from the incident). Understanding\
+    \ where you\nare in this cycle determines your next action.\n        "
+  themes:
+    fantasy:
+      title: THE SIEGE HAS BEGUN
+      narrative: "\nThe alarm bells shatter the midnight silence. Dark riders have been spotted\nbreaching\
+        \ the outer wall - scouts report at least a dozen infiltrators now\nloose within the Citadel grounds.\
+        \ Your sentinel network has already identified\nthree towers showing signs of intrusion.\n\nThe\
+        \ Captain of the Guard rushes to your side. \"We've detected them and\nidentified the affected\
+        \ areas. Our analysis is complete. What comes NEXT\nin our response?\"\n\nThe infiltrators are\
+        \ spreading. Every moment of indecision allows them to\nembed deeper into your defenses. The response\
+        \ protocol scroll hangs on\nthe wall, its ancient wisdom guiding generations of guardians.\n\n\
+        What is your next action?\n                "
+      choices:
+      - text: Begin Preparation - gather supplies and train the guards
+      - text: Conduct Lessons Learned - document what happened for future reference
+      - text: Execute Containment, Eradication, and Recovery - stop the spread and remove the threat
+      - text: Continue Detection and Analysis - keep watching to see what else happens
+      success_text: "\nYou draw your blade and issue rapid orders. \"Seal the affected towers! Deploy\n\
+        the purification squads! No infiltrator escapes, and no clean area becomes\ncompromised!\"\n\n\
+        Your guards spring into action. The containment teams isolate the affected\ntowers while the eradication\
+        \ squads systematically clear each floor. By dawn,\nthe threat is eliminated and normal operations\
+        \ resume.\n\nThe Master Sentinel nods approvingly. \"You understood the sacred sequence:\nPreparation,\
+        \ then Detection and Analysis, then Containment and Recovery,\nand finally Lessons Learned. You\
+        \ knew exactly where we stood and what came\nnext.\"\n\nThe incident response lifecycle flows\
+        \ like a river - each phase following\nnaturally from the last. Skipping ahead or falling behind\
+        \ invites disaster.\n                "
+      failure_texts:
+        0: "\nPreparation happens BEFORE incidents occur, not during them! While you\ngathered supplies\
+          \ and held training sessions, the infiltrators embedded\nthemselves throughout the Citadel.\
+          \ By morning, they had compromised the\nroyal treasury.\n\nThe incident response lifecycle is:\
+          \ Preparation, Detection/Analysis,\nContainment/Eradication/Recovery, and Post-Incident Review.\
+          \ You were in\nDetection/Analysis - the NEXT phase was Containment.\n                    "
+        1: "\nLessons Learned is the FINAL phase of incident response, not the next step!\nWhile you documented\
+          \ observations, the infiltrators spread unchecked through\nthe Citadel, eventually reaching\
+          \ the inner sanctum.\n\nAfter Detection/Analysis comes Containment/Eradication/Recovery. Only\
+          \ AFTER\nthe incident is resolved do you conduct post-incident review.\n                    "
+        3: "\nDetection and Analysis was already COMPLETE according to the scenario! You\nidentified affected\
+          \ systems and analyzed the threat. Continuing to analyze\nwhile the threat spreads is paralysis\
+          \ by analysis.\n\nThe next phase after Detection/Analysis is Containment/Eradication/Recovery.\n\
+          Act on the intelligence you've gathered - stop the spread!\n                    "
+    corporate:
+      title: 'SOC ALERT: BREACH DETECTED'
+      narrative: "\nYour phone buzzes at 2:47 AM. The SOC dashboard is lit up like a Christmas\ntree.\
+        \ Multiple alerts indicate lateral movement across the network - someone\nor something is hopping\
+        \ between servers in the finance department.\n\nThe night shift analyst briefs you quickly: \"\
+        We detected anomalous activity\nat 1:30 AM. We've identified twelve compromised hosts and analyzed\
+        \ the\nattack pattern - looks like stolen credentials being used for lateral\nmovement. Analysis\
+        \ complete. What's our next move?\"\n\nThe incident response plan sits in your shared drive, but\
+        \ there's no time\nto re-read it now. You need to make a call.\n\nWhat do you recommend?\n   \
+        \             "
+      choices:
+      - text: Schedule tabletop exercise - we need more preparation before acting
+      - text: Set up the post-incident review meeting - let's document this
+      - text: Initiate containment - isolate affected hosts, block the credentials, begin remediation
+      - text: Keep monitoring - we need more data before we act
+      success_text: "\n\"Containment NOW,\" you order. \"Isolate those twelve hosts, disable the\ncompromised\
+        \ credentials, and get EDR blocking that lateral movement pattern.\"\n\nBy 4 AM, the affected\
+        \ systems are isolated. By 6 AM, the eradication team\nhas cleared the malware. By noon, clean\
+        \ systems are being restored from\nknown-good backups.\n\nAt the post-incident review a week later,\
+        \ the CISO nods approvingly.\n\"Textbook response. Detection, Analysis, then straight into Containment\n\
+        and Recovery. No dithering, no over-analysis. That's why we have the\nincident response lifecycle\
+        \ - so we know exactly what comes next.\"\n\nThe coffee is cold, but the network is clean. That's\
+        \ a win.\n                "
+      failure_texts:
+        0: "\n\"Schedule a tabletop?\" The analyst stares at you. \"We're IN an active\nincident! Preparation\
+          \ happens BEFORE breaches, not during them!\"\n\nWhile you were planning theoretical exercises,\
+          \ the attackers exfiltrated\nthe quarterly financial data. The incident response lifecycle has\
+          \ distinct\nphases - Preparation comes first, but you were already past Detection and\nAnalysis.\
+          \ Containment was the next step.\n                    "
+        1: "\n\"Post-incident review? The incident is still HAPPENING!\" The analyst's\njaw drops as you\
+          \ open a calendar invite.\n\nBy the time you finished scheduling the PIR meeting, the attackers\
+          \ had\nestablished persistent backdoors across the network. Lessons Learned is\nthe LAST phase\
+          \ - after Containment, Eradication, and Recovery.\n                    "
+        3: "\n\"More monitoring?\" The analyst watches helplessly as the attack spreads.\n\"We already\
+          \ KNOW what's happening. We've done the analysis!\"\n\nBy continuing to gather data on an understood\
+          \ threat, you allowed the\nattackers to reach the crown jewels. Analysis paralysis is real.\
+          \ After\nDetection and Analysis, you MUST move to Containment. You had enough\ninformation -\
+          \ you needed to act.\n                    "
+- id: d7_chain_of_custody
+  domain: 7
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 7: Security Operations - Chain of Custody'
+  failure_text: "\nChain of custody documentation is ESSENTIAL for legal proceedings. It records\neveryone\
+    \ who handled evidence, when they handled it, why, and what they did\nwith it. This proves evidence\
+    \ integrity and prevents claims of tampering or\nplanting. Without proper chain of custody, even damning\
+    \ evidence may be\ninadmissible in court.\n        "
+  themes:
+    fantasy:
+      title: THE STOLEN GRIMOIRE
+      narrative: "\nA priceless grimoire has vanished from the Arcane Vault, and suspicion falls\nupon\
+        \ a junior scribe. The Magistrate demands evidence that will stand before\nthe Royal Court of\
+        \ Justice.\n\nYou discover a suspicious scroll hidden beneath the scribe's mattress. It\nappears\
+        \ to contain copied passages from the missing grimoire. This could be\nthe evidence that proves\
+        \ guilt or innocence.\n\nThe Court Arbiter warns you: \"Whatever evidence you present must be\
+        \ beyond\nreproach. The defense will challenge how it was found, who touched it, and\nwhether\
+        \ it could have been planted or altered. The Royal Court requires\nproof of evidence integrity.\"\
+        \n\nWhat documentation is ESSENTIAL to ensure this evidence is admissible?\n                "
+      choices:
+      - text: The scribe's performance evaluations from their supervisor
+      - text: Chain of custody documentation - who found it, who handled it, every transfer recorded
+      - text: The quarterly budget reports for the Arcane Vault
+      - text: The vendor contracts for scroll materials
+      success_text: "\nYou immediately produce a fresh evidence ledger. With careful precision, you\n\
+        document: the exact time of discovery, the location, who found the scroll,\nits condition, and\
+        \ who witnessed the finding.\n\nAs the scroll passes to the Court Examiner, you log the transfer\
+        \ - time,\nreason, and both parties' marks. Every subsequent examination is recorded\nwith the\
+        \ same meticulous detail.\n\nAt trial, the defense attempts to claim the scroll was planted. The\n\
+        Magistrate reviews your chain of custody documentation. \"Every hand that\ntouched this evidence\
+        \ is accounted for. Every moment is documented. The\nintegrity of this evidence is beyond reproach.\"\
+        \n\nThe truth prevails because you preserved it properly.\n                "
+      failure_texts:
+        0: "\n\"Performance evaluations?\" The Magistrate is bewildered. \"We're trying to\nprove the\
+          \ evidence is genuine, not whether the scribe was good at their job!\"\n\nWithout chain of custody\
+          \ documentation, the defense successfully argued\nthat the scroll could have been planted. The\
+          \ case was dismissed.\n\nChain of custody proves EVIDENCE integrity - who handled it, when,\
+          \ and\nwhy. Without it, evidence is inadmissible.\n                    "
+        2: "\n\"Budget reports?\" The Court Arbiter stares at you. \"What do vault expenditures\nhave\
+          \ to do with whether this scroll was properly handled as evidence?\"\n\nThe defense argued the\
+          \ scroll could have been tampered with since there was\nno documentation of who touched it.\
+          \ The case collapsed.\n\nChain of custody documentation is essential for legal proceedings -\
+          \ it proves\nevidence hasn't been altered or planted.\n                    "
+        3: "\n\"Vendor contracts for scroll materials?\" The Magistrate sighs heavily.\n\nWithout any\
+          \ documentation of how the evidence was discovered and handled,\nthe defense easily created\
+          \ reasonable doubt. \"Anyone could have placed this\nscroll there,\" they argued. Case dismissed.\n\
+          \nChain of custody is ESSENTIAL for legal admissibility.\n                    "
+    corporate:
+      title: THE HR INVESTIGATION
+      narrative: "\nHR and Legal have launched an investigation into a senior developer suspected\nof\
+        \ stealing source code before leaving for a competitor. You've been asked to\nassist with the\
+        \ forensic examination of their laptop.\n\nWhile imaging the drive, you discover a folder containing\
+        \ what appears to be\nproprietary code and customer data that was never authorized for local storage.\n\
+        \nThe company attorney pulls you aside. \"This case is likely going to court.\nIf we can't prove\
+        \ this evidence is legitimate and untampered, their lawyers\nwill have it thrown out. What documentation\
+        \ do we NEED?\"\n\nWhat do you tell them is ESSENTIAL?\n                "
+      choices:
+      - text: The developer's annual performance reviews
+      - text: Chain of custody documentation tracking everyone who handled the evidence
+      - text: The IT department's annual budget reports
+      - text: The company's vendor contracts with software suppliers
+      success_text: "\n\"Chain of custody,\" you respond immediately. You pull out your evidence\nhandling\
+        \ forms and begin documenting.\n\nEvery step is recorded: who discovered the laptop, when it was\
+        \ seized, who\ntransported it, when it reached the forensics lab, who performed the imaging,\n\
+        what tools were used, who has accessed the image since.\n\nSix months later, in court, opposing\
+        \ counsel challenges the evidence. Your\nattorney presents the chain of custody documentation\
+        \ - every hand, every\nmoment, every action accounted for.\n\n\"The evidence stands,\" the judge\
+        \ rules. \"Its integrity has been properly\ndocumented throughout.\"\n\nThe case proceeds, and\
+        \ justice is served because you knew what mattered.\n                "
+      failure_texts:
+        0: "\n\"Performance reviews?\" The attorney's face falls. \"We need to prove the\nEVIDENCE is\
+          \ legitimate, not whether they were a good employee!\"\n\nWithout chain of custody documentation,\
+          \ opposing counsel argued the data\ncould have been planted on the laptop. The judge agreed\
+          \ - evidence\nexcluded, case severely weakened.\n\nChain of custody is ESSENTIAL for legal admissibility.\n\
+          \                    "
+        2: "\n\"Budget reports?\" The attorney stares at you in disbelief. \"How does IT's\nbudget prove\
+          \ this evidence wasn't tampered with?\"\n\nWithout chain of custody, the defense successfully\
+          \ argued there was no way\nto prove the evidence was genuine. Case dismissed.\n\nChain of custody\
+          \ documentation is the foundation of forensic evidence\nadmissibility.\n                    "
+        3: "\n\"Vendor contracts?\" The attorney's hope visibly drains from their face.\n\nAt trial, opposing\
+          \ counsel challenged who had access to the laptop, whether\nthe data could have been planted,\
+          \ and whether proper procedures were followed.\nWithout chain of custody documentation, there\
+          \ was no defense.\n\nEvidence excluded. Case collapsed. The company lost.\n                \
+          \    "
+- id: d7_digital_forensics
+  domain: 7
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 7: Security Operations - Digital Forensics'
+  failure_text: "\nThe FIRST step in digital forensics is always to create a forensic image -\na bit-for-bit\
+    \ copy of the original evidence. All analysis is performed on\nthe copy, ensuring the original remains\
+    \ pristine. This preserves evidence\nintegrity and ensures findings can always be verified against\
+    \ an untouched\noriginal.\n        "
+  themes:
+    fantasy:
+      title: THE CORRUPTED CRYSTAL
+      narrative: "\nA memory crystal recovered from a captured enemy spy contains what may be\ncritical\
+        \ intelligence about an impending attack. However, the crystal is\nfragile - improper handling\
+        \ could corrupt or destroy its contents.\n\nThe Master of Secrets approaches you. \"This crystal\
+        \ must be examined, but\nits contents must remain pristine. Our enemies will claim we altered\
+        \ the\nmemories if we cannot prove the original remains untouched. The information\nmust hold\
+        \ up before the Allied Council.\"\n\nYou hold the crystal carefully. Its faint blue glow pulses\
+        \ with stored\nmemories. Whatever you do first will determine whether this evidence\nremains viable.\n\
+        \nWhat should be done FIRST to preserve evidence integrity?\n                "
+      choices:
+      - text: View the memories directly in the original crystal to see what's there
+      - text: Create a perfect magical duplicate of the crystal, then examine only the copy
+      - text: Destroy any suspicious memories to prevent further damage
+      - text: Cleanse the crystal with purification magic and install examination runes
+      success_text: "\nYou carefully invoke the Duplication Ritual, creating an exact magical copy\nof\
+        \ the crystal - every memory, every fragment, every whisper perfectly\npreserved. The original\
+        \ is sealed in a warded vault, untouched.\n\nAll examination proceeds on the copy. When you discover\
+        \ plans for an attack\non the Western Fortress, you can present your findings with confidence.\n\
+        \nBefore the Allied Council, an enemy advocate demands: \"How do we know these\nmemories weren't\
+        \ fabricated?\"\n\nYou present the sealed original. \"This has never been touched since capture.\n\
+        Compare it to our copy - they are identical. Our findings come from the\nduplicate, preserving\
+        \ the original as proof.\"\n\nThe evidence stands. The Western Fortress is warned in time.\n \
+        \               "
+      failure_texts:
+        0: "\nThe moment you accessed the crystal directly, the magical signatures changed.\nTimestamps\
+          \ shifted, access marks appeared. The original evidence is now\ncontaminated.\n\nAt the Allied\
+          \ Council, the enemy advocate smirks. \"The crystal shows it\nwas accessed by your people. How\
+          \ do we know you didn't add these memories?\"\n\nWithout a pristine original, your evidence\
+          \ is challenged successfully.\n\nALWAYS create a forensic copy first - never examine the original\
+          \ directly.\n                    "
+        2: "\nYou destroyed potential evidence! Whatever \"suspicious\" memories you erased\nmight have\
+          \ contained crucial intelligence or proof of innocence.\n\nThe Allied Council is appalled. \"\
+          You destroyed evidence before examination?\nHow can we trust anything you claim to have found?\"\
+          \n\nDeleting or altering evidence is the opposite of forensic preservation.\n              \
+          \      "
+        3: "\n\"Cleansing\" the crystal erased half its contents. \"Installing examination\nrunes\" overwrote\
+          \ memory addresses. The evidence is now useless and\ncontaminated.\n\nForensic examination must\
+          \ preserve original evidence in pristine state.\nCreating a bit-for-bit copy first ensures the\
+          \ original can always verify\nyour findings.\n                    "
+    corporate:
+      title: THE INSIDER'S LAPTOP
+      narrative: "\nThe terminated employee's laptop sits on your forensics bench. Legal suspects\nthey\
+        \ stole trade secrets before leaving, and this drive may contain proof.\nHowever, any misstep\
+        \ could make the evidence unusable in court.\n\nYour manager hovers nervously. \"The lawyers are\
+        \ breathing down my neck. They\nneed to know what's on that drive, but they also need it to hold\
+        \ up in court.\nOne wrong move and opposing counsel will tear us apart.\"\n\nThe laptop screen\
+        \ glows ominously. You know the first action you take will\nbe scrutinized heavily.\n\nWhat should\
+        \ be done FIRST to preserve evidence integrity?\n                "
+      choices:
+      - text: Boot up the laptop and browse through the files to see what's there
+      - text: Create a forensic image (bit-for-bit copy) of the drive
+      - text: Delete any files that look like malware to prevent further damage
+      - text: Format the drive and install forensics tools for analysis
+      success_text: "\n\"Don't touch that power button,\" you say, connecting a write-blocker to\nthe\
+        \ drive. Using your forensic imaging tool, you create a bit-for-bit copy\nof the entire drive\
+        \ - every sector, every fragment, including deleted files\nand slack space.\n\nThe original drive\
+        \ is sealed and secured. All analysis proceeds on the\nforensic image. When you find the smoking\
+        \ gun - a folder of stolen designs\nwith timestamps from the week before termination - you can\
+        \ prove exactly\nwhen and how you found it.\n\nAt trial, opposing counsel challenges your findings.\
+        \ You present the\nsealed original and your forensic image. \"Hash values match. The original\n\
+        was never modified. Everything we found came from an exact copy.\"\n\nThe evidence stands. Justice\
+        \ is served.\n                "
+      failure_texts:
+        0: "\nThe moment you booted the laptop, dozens of timestamps changed. The operating\nsystem modified\
+          \ access times, temp files were created, and logs were updated.\nThe original evidence is now\
+          \ contaminated.\n\nAt trial, opposing counsel argues: \"The drive was accessed after seizure.\n\
+          How do we know what was original versus what was added or modified?\"\n\nNEVER examine original\
+          \ media directly. Create a forensic image first.\n                    "
+        2: "\nYou just destroyed evidence! Whatever you deleted - even if it was malware -\ncould have\
+          \ been crucial to the investigation. You've also shown tampering\nwith the evidence.\n\nLegal\
+          \ is furious. \"You DELETED files from evidence? Do you know what\n'spoliation of evidence'\
+          \ means? We're going to be sanctioned!\"\n\nNever delete anything from evidence under any circumstances.\n\
+          \                    "
+        3: "\n\"You FORMATTED THE DRIVE?!\" Legal's screaming can be heard three floors up.\n\nAll evidence\
+          \ is destroyed. The case is not only lost - the company may face\nsanctions for destruction\
+          \ of evidence. Your forensics career is effectively\nover.\n\nA forensic image preserves evidence.\
+          \ Formatting destroys it completely.\n                    "
+- id: d7_siem_operations
+  domain: 7
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 7: Security Operations - SIEM'
+  failure_text: "\nSIEM (Security Information and Event Management) systems collect logs from\nmultiple\
+    \ sources, normalize them to a common format, and correlate events\nacross systems. This enables detection\
+    \ of attack patterns that individual\nlog sources cannot reveal. Without SIEM, security teams drown\
+    \ in scattered\ndata that cannot be effectively analyzed.\n        "
+  themes:
+    fantasy:
+      title: THE WATCHTOWER NETWORK
+      narrative: "\nThe Kingdom maintains a dozen watchtowers along its borders, each reporting\nsightings\
+        \ via messenger bird. The problem: each tower uses different codes,\nreports at different intervals,\
+        \ and their messages often contradict each other.\n\nThe War Council is frustrated. \"Yesterday,\
+        \ the Northern Tower reported dragon\nsightings while the Eastern Tower saw bandits. Were they\
+        \ the same threat from\ndifferent angles? Different threats? We cannot tell! By the time we decode\n\
+        and compare these messages, the threat has moved.\"\n\nThe Chief Scout sighs. \"We need a way\
+        \ to gather all reports in one place,\ntranslate them to a common language, and identify patterns\
+        \ across towers.\nRight now, each tower's observations exist in isolation.\"\n\nWhat solution\
+        \ addresses this problem?\n                "
+      choices:
+      - text: Destroy older messages to reduce the volume of reports
+      - text: Establish a central intelligence room that correlates all tower reports
+      - text: Shut down the less important towers to reduce confusion
+      - text: Have all towers send their messages directly to the War Council without processing
+      success_text: "\nYou propose the creation of the Central Vigilance Chamber - a room where\ntrained\
+        \ analysts receive all watchtower reports, translate them to a common\nformat, and plot them on\
+        \ a master map.\n\nWithin weeks, the results are remarkable. When the Northern Tower reports\n\
+        \"large winged shadow moving south\" and the Eastern Tower reports \"increased\nbandit activity\"\
+        \ an hour later, analysts correlate: the \"bandits\" are\nrefugees fleeing the dragon.\n\n\"Magnificent!\"\
+        \ the War Council exclaims. \"Now we see the full picture, not\nscattered fragments. We can identify\
+        \ attack patterns that individual towers\nwould never spot alone.\"\n\nThe Central Vigilance Chamber\
+        \ becomes the Kingdom's greatest defensive asset.\n                "
+      failure_texts:
+        0: "\n\"Destroy messages?!\" The Chief Scout is aghast. \"Those records let us\nidentify patterns\
+          \ over time! We once caught a spy ring because their\nmovements created patterns across three\
+          \ moons of reports!\"\n\nDeleting security logs loses critical historical data and may violate\n\
+          legal retention requirements. The solution is correlation, not deletion.\n                 \
+          \   "
+        2: "\n\"Close towers?\" The War Council shakes their heads. \"The 'less important'\nEastern Tower\
+          \ detected the assassination plot last spring! Attackers target\nweaknesses - removing coverage\
+          \ creates blind spots they will exploit.\"\n\nReducing visibility makes problems worse, not\
+          \ better. The solution is\nbetter correlation, not fewer data sources.\n                    "
+        3: "\nThe War Council is now drowning in unprocessed messages. The Chief Councilor\nhasn't slept\
+          \ in three days trying to decode different tower formats.\n\n\"Raw data isn't intelligence!\"\
+          \ he finally snaps. \"We needed analysis and\ncorrelation, not just a bigger pile of parchment!\"\
+          \n\nData without correlation and analysis is just noise.\n                    "
+    corporate:
+      title: THE LOG MANAGEMENT NIGHTMARE
+      narrative: "\nThe security team is drowning. Firewall logs come in one format, Windows\nevent logs\
+        \ in another, cloud service logs in yet another. When an incident\noccurs, analysts spend hours\
+        \ manually searching each system, trying to\npiece together what happened.\n\nThe CISO convenes\
+        \ an emergency meeting. \"Last week's breach investigation\ntook 72 hours because we couldn't\
+        \ correlate events across systems. The\nattacker hit the VPN, then the web server, then the database\
+        \ - but we\ncouldn't see the pattern until we manually compared timestamps across\nfive different\
+        \ log sources.\"\n\nThe team lead throws up his hands. \"Each system speaks a different language.\n\
+        We can't identify attack patterns when we're looking at scattered puzzle\npieces.\"\n\nWhat solution\
+        \ addresses this problem?\n                "
+      choices:
+      - text: Delete older logs to reduce the volume we need to search
+      - text: Implement a SIEM for centralized log collection and correlation
+      - text: Disable logging on less critical systems to reduce complexity
+      - text: Email all logs to the security team for manual review
+      success_text: "\n\"We need a SIEM,\" you recommend. Within months, the Security Information\nand\
+        \ Event Management platform is collecting logs from every source,\nnormalizing them to a common\
+        \ format, and correlating events automatically.\n\nThe transformation is dramatic. When the next\
+        \ suspicious login occurs at\n3 AM, the SIEM automatically correlates: VPN connection from unusual\n\
+        location, followed by privileged access to file server, followed by\nlarge data transfer. The\
+        \ alert fires in seconds.\n\n\"We just went from 72 hours to 72 seconds for threat detection,\"\
+        \ the CISO\ngrins at the next board meeting. \"The SIEM sees patterns no human analyst\ncould\
+        \ spot in real-time.\"\n\nYour SOC is now truly operational.\n                "
+      failure_texts:
+        0: "\n\"Delete logs?\" The compliance officer nearly chokes. \"We're required to\nretain security\
+          \ logs for seven years! And those 'old' logs are how we\ndetected last year's persistent threat!\"\
+          \n\nDeleting logs destroys critical forensic evidence and violates retention\nrequirements.\
+          \ You need better analysis, not less data.\n                    "
+        2: "\n\"Disable logging?\" The security analyst stares. \"The 'less critical' HR\nsystem is where\
+          \ the last three phishing attacks landed! Attackers love\nsystems without monitoring!\"\n\n\
+          Reducing visibility creates blind spots that attackers will exploit.\nSecurity requires MORE\
+          \ visibility, not less.\n                    "
+        3: "\nThe security team's inbox now contains 50,000 emails per day. Nobody can\nfind anything.\
+          \ Critical alerts are buried in noise. The team lead quits.\n\nEmail cannot correlate, analyze,\
+          \ or prioritize events. You needed a SIEM -\na system designed for centralized log management\
+          \ and analysis.\n                    "
+- id: d7_threat_intelligence
+  domain: 7
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 7: Security Operations - Threat Intelligence'
+  failure_text: "\nThreat intelligence provides indicators of compromise (IPs, domains, file\nhashes)\
+    \ for known threats. Integrating this intelligence with security\ncontrols (firewalls, proxies, EDR)\
+    \ enables proactive blocking of known-bad\ninfrastructure before attacks succeed. Reactive-only defense\
+    \ means always\nbeing one step behind attackers.\n        "
+  themes:
+    fantasy:
+      title: THE SPY NETWORK'S GIFT
+      narrative: "\nYour network of informants across the realms has proven invaluable. Last\nmoon, they\
+        \ warned of the Crimson Band's planned attack on merchant caravans.\nThe moon before, they identified\
+        \ poisoned grain shipments from a hostile\nkingdom.\n\nNow the Spymaster proposes an expansion:\
+        \ \"We can obtain regular reports of\nknown threats - bandit hideouts, cursed artifacts in circulation,\
+        \ enemy\ntroop movements. This intelligence can be shared directly with our gate\nguards, caravan\
+        \ masters, and tower sentinels.\"\n\nThe War Council debates. \"Reactive defense means we're always\
+        \ one step behind.\nBy the time we know about a threat, it's already at our gates. But if we\n\
+        had advance warning of known threats, we could block them before they arrive.\"\n\nHow should\
+        \ you implement proactive defense against known threats?\n                "
+      choices:
+      - text: Wait for attacks to happen, then respond - reactive defense only
+      - text: Integrate threat intelligence with all defensive positions to proactively block known threats
+      - text: Sever all connections to other realms to eliminate external threats entirely
+      - text: Focus only on internal threats and ignore external intelligence
+      success_text: "\nYou establish the Threat Intelligence Network. Regular reports from informants\n\
+        are translated into actionable warnings: \"The Crimson Band's leader has a\ndistinctive scar -\
+        \ all gate guards now know his face. Poisoned grain bears\nthis maker's mark - all inspectors\
+        \ check for it.\"\n\nThe results are immediate. A known assassin is stopped at the gates before\n\
+        entering. A shipment of cursed weapons is intercepted at the border. Enemy\nscouts are identified\
+        \ by their unit's distinctive cloaks.\n\n\"We're no longer waiting for attacks,\" the War Council\
+        \ marvels. \"We're\npreventing them before they begin. Known threats are blocked automatically\n\
+        because our defenses know what to look for.\"\n\nProactive defense through threat intelligence\
+        \ transforms your security posture.\n                "
+      failure_texts:
+        0: "\n\"Reactive only?\" The Spymaster is incredulous. \"So we wait for the assassin\nto strike,\
+          \ THEN try to catch them? We wait for the poison to kill people,\nTHEN investigate?\"\n\nReactive\
+          \ defense means always being one step behind. By the time you respond,\nthe damage is done.\
+          \ Threat intelligence enables proactive blocking of\nknown threats before attacks succeed.\n\
+          \                    "
+        2: "\n\"Sever all connections?\" The merchants revolt. Trade collapses. The kingdom's\neconomy\
+          \ crumbles. Without external goods, people starve.\n\nMeanwhile, internal threats flourish with\
+          \ no external intelligence to warn\nof them. Isolation is not security - it's blindness with\
+          \ economic collapse.\n                    "
+        3: "\n\"Ignore external threats?\" Six months later, an invasion force that your\nabandoned spy\
+          \ network would have detected three weeks in advance appears\nat your gates without warning.\n\
+          \nExternal threats are significant and often more dangerous than internal\nones. Ignoring them\
+          \ is catastrophically negligent.\n                    "
+    corporate:
+      title: THE THREAT FEED PROPOSAL
+      narrative: "\nThe security vendor's pitch is compelling: \"We aggregate threat data from\nthousands\
+        \ of sources worldwide. Known malicious IPs, domains hosting malware,\nfile hashes of known threats\
+        \ - updated in real-time. We can integrate this\ndirectly with your firewalls, proxies, and endpoint\
+        \ protection.\"\n\nYour manager is skeptical. \"Sounds expensive. Can't we just wait until\nwe\
+        \ detect threats ourselves?\"\n\nThe CISO weighs in: \"Last month's ransomware attack used infrastructure\
+        \ that\nwas flagged in threat feeds two weeks before it hit us. If our firewall had\nthat information,\
+        \ it would have blocked the initial callback automatically.\"\n\nThe team debates how to improve\
+        \ their defensive posture against known threats.\nWhat should be implemented?\n              \
+        \  "
+      choices:
+      - text: Stick with reactive incident response only
+      - text: Subscribe to threat intelligence feeds and integrate with security controls
+      - text: Disconnect from the internet entirely to eliminate external threats
+      - text: Ignore external threats and focus only on insider threats
+      success_text: "\nThe threat intelligence integration goes live on a Monday. By Friday, the\nfirewall\
+        \ has blocked 847 connections to known command-and-control servers.\nThe email gateway has quarantined\
+        \ 1,200 messages containing known malicious\nattachments. EDR has prevented execution of 43 known\
+        \ malware samples.\n\n\"None of these would have been caught without the threat feeds,\" the SOC\n\
+        lead reports. \"We're blocking attacks before they even start.\"\n\nSix months later, when a major\
+        \ ransomware campaign sweeps through your\nindustry, your organization is untouched. The malicious\
+        \ infrastructure\nwas flagged in your threat feeds before the campaign even launched.\n\nProactive\
+        \ defense wins.\n                "
+      failure_texts:
+        0: "\n\"Reactive only?\" The CISO sighs. \"So we wait for ransomware to encrypt\nour files, THEN\
+          \ respond? We wait for the breach, THEN investigate?\"\n\nThree months later, your organization\
+          \ is hit by the same ransomware\ncampaign that threat intelligence would have blocked. The cost\
+          \ of\nrecovery exceeds the threat feed subscription by 1000x.\n\nReactive defense is always\
+          \ one step behind.\n                    "
+        2: "\n\"Disconnect from the internet?\" The CEO stares. \"We're an e-commerce\ncompany. Our entire\
+          \ business IS the internet.\"\n\nThis is not 1985. For most modern organizations, internet connectivity\n\
+          is essential for operations. The solution is proactive defense, not\nisolation.\n          \
+          \          "
+        3: "\n\"Ignore external threats?\" The next month, a nation-state APT compromises\nyour VPN appliance\
+          \ using a vulnerability that threat intelligence had\nflagged two weeks earlier.\n\nExternal\
+          \ threats are often more sophisticated and dangerous than insider\nthreats. Ignoring them is\
+          \ negligent.\n                    "
+- id: d7_malware_analysis
+  domain: 7
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 7: Security Operations - Malware Analysis'
+  failure_text: "\nMalware must be analyzed in isolated sandbox environments where it cannot\naffect production\
+    \ systems or spread to other machines. Sandboxes capture\nmalware behavior (file changes, network\
+    \ connections, registry modifications)\nwithout risking real infrastructure. This intelligence is\
+    \ essential for\ncreating detection rules and understanding the threat.\n        "
+  themes:
+    fantasy:
+      title: THE CURSED ARTIFACT
+      narrative: "\nA strange amulet was discovered in a merchant's pack at the city gates. The\nguards\
+        \ who touched it immediately felt compelled to open the vault doors.\nFortunately, senior guards\
+        \ restrained them before any harm was done.\n\nThe Court Wizard examines the amulet without touching\
+        \ it. \"This bears\npowerful mind-control enchantments. We must understand its full capabilities\n\
+        to protect against similar artifacts. But actually testing it is dangerous -\nits effects could\
+        \ spread.\"\n\nThe Master of Defense agrees. \"We need to know what this thing does - what\ntriggers\
+        \ it, how far its influence reaches, what commands it implants. But\nwe cannot risk more guards\
+        \ falling under its spell.\"\n\nHow should this artifact be analyzed safely?\n                "
+      choices:
+      - text: Have a guard touch it in the throne room to observe the effects
+      - text: Study it within an isolated magical containment circle where effects cannot escape
+      - text: Send it to the neighboring kingdom and ask if their guards are affected
+      - text: Destroy it immediately without learning anything about its capabilities
+      success_text: "\nThe Court Wizard constructs a Containment Circle of Isolation - a magical\nbarrier\
+        \ where no effect can escape. Within this controlled environment,\nhe carefully triggers the artifact\
+        \ and observes.\n\n\"Fascinating,\" he reports. \"The compulsion only works within ten paces and\n\
+        requires direct skin contact. It implants a single command that fades after\none hour. And...\"\
+        \ he studies the runes, \"these symbols identify the\ncreator - the Shadowmancer of the Eastern\
+        \ Wastes.\"\n\nArmed with this intelligence, the Kingdom implements countermeasures: gloves\n\
+        for all guards handling suspicious items, detection wards tuned to these\nspecific enchantments,\
+        \ and a warning sent to allied realms.\n\nThe threat is understood and mitigated because it was\
+        \ safely analyzed.\n                "
+      failure_texts:
+        0: "\nThe guard touches the amulet in the crowded throne room. Within moments,\nthey're marching\
+          \ toward the treasury, and everyone within ten paces feels\nthe compulsion spreading. The King\
+          \ himself nearly hands over the crown\njewels before court wizards intervene.\n\nYou just infected\
+          \ your most secure location because you didn't use\nisolation. Malware (or cursed artifacts)\
+          \ must be analyzed in contained\nenvironments.\n                    "
+        2: "\nYou mailed a dangerous mind-control artifact to another kingdom? The courier\nwas compromised\
+          \ en route. Your allied realm now has three ministers under\nhostile control.\n\nNever expose\
+          \ others to threats you haven't analyzed. And never lose\ncontainment of dangerous materials.\n\
+          \                    "
+        3: "\nThe artifact is destroyed. You've learned nothing about how it works, who\nmade it, or how\
+          \ to detect similar items in the future.\n\nTwo weeks later, a dozen more amulets surface in\
+          \ various cities. Without\nunderstanding the threat, you have no defense. Each one claims victims\
+          \ before\nbeing discovered.\n\nDestroying threats without analysis loses critical intelligence.\n\
+          \                    "
+    corporate:
+      title: THE SUSPICIOUS EXECUTABLE
+      narrative: "\nA user reports that they almost opened a suspicious email attachment before\nthinking\
+        \ better of it. The file sits in their quarantine folder - an\nexecutable with a generic name\
+        \ that's definitely not something IT deployed.\n\nThe SOC analyst examines the file's metadata.\
+        \ \"This could be anything -\nransomware, a RAT, spyware. We need to understand what it does so\
+        \ we can\ncheck if any other systems are affected and create detection rules.\"\n\nYour manager\
+        \ is nervous. \"What if analyzing it infects our systems? That\nuser's machine is connected to\
+        \ the corporate network.\"\n\nThe analyst nods. \"We need to understand its behavior, but we can't\
+        \ risk\ninfection spreading. How do we safely analyze this?\"\n\nHow should this suspicious executable\
+        \ be analyzed?\n                "
+      choices:
+      - text: Run it on a production workstation and observe what happens
+      - text: Execute it in an isolated sandbox environment
+      - text: Email it to colleagues to see if their antivirus detects it
+      - text: Delete it immediately without any analysis
+      success_text: "\nYou fire up the malware analysis sandbox - an isolated virtual environment\nthat\
+        \ can't reach the production network or the internet. The executable is\ndetonated within this\
+        \ containment.\n\nThe sandbox captures everything: the file creates a hidden directory, drops\n\
+        a secondary payload, attempts to contact a command-and-control server\n(blocked by the isolated\
+        \ network), and begins encrypting files in the\ndocuments folder.\n\n\"Ransomware,\" the analyst\
+        \ confirms. \"And now we have the C2 domain to block,\nthe file hashes for detection rules, and\
+        \ the behavioral indicators for\nthreat hunting.\"\n\nWithin hours, network-wide scans confirm\
+        \ no other infections, and detection\nrules are deployed across all endpoints. The threat is understood\
+        \ and\nneutralized.\n                "
+      failure_texts:
+        0: "\nYou run malware on a production workstation connected to the corporate\nnetwork. Congratulations\
+          \ - the ransomware is now spreading laterally.\nFourteen servers are encrypted before anyone\
+          \ can pull the plug.\n\nNEVER run suspicious files on production systems. Sandboxes exist\n\
+          specifically for this purpose.\n                    "
+        2: "\nYou emailed malware to your colleagues? Two of them opened it to \"help with\ntesting.\"\
+          \ Their machines are now compromised. Also, your email system\nis now flagged for distributing\
+          \ malware, and you're explaining yourself\nto HR.\n\nNever distribute potential malware - to\
+          \ anyone, ever.\n                    "
+        3: "\nYou deleted the only sample without analysis. A week later, five more\nusers report similar\
+          \ attachments. You still don't know what it does, what\nit targets, or how to detect it.\n\n\
+          Deleting without analysis loses critical threat intelligence. You can't\ndefend against what\
+          \ you don't understand.\n                    "
+- id: d7_patch_management
+  domain: 7
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 7: Security Operations - Patch Management'
+  failure_text: "\nOrganizations should have emergency change procedures for critical situations.\nWhen\
+    \ vulnerabilities are being actively exploited, standard two-week processes\nmay be too slow. Emergency\
+    \ procedures allow expedited approval and accelerated\n(but not eliminated) testing. Active exploitation\
+    \ warrants emergency response -\nfaster, but still controlled.\n        "
+  themes:
+    fantasy:
+      title: THE EMERGENCY WARD UPGRADE
+      narrative: "\nA messenger arrives in a lather: the Mages' Guild has discovered that a\ncommon protection\
+        \ ward has a critical flaw. Dark mages are actively exploiting\nit to breach fortresses across\
+        \ the land. The Kingdom of Whitestone fell\njust yesterday.\n\nThe Court Wizard examines the ward\
+        \ correction scroll. \"This must be applied\nto all our defensive barriers. But our standard process\
+        \ requires two weeks\nof testing in the practice chambers before deployment. The testing chambers\n\
+        are currently occupied with the spring ward certification.\"\n\nThe War Council debates urgently.\
+        \ \"Two weeks may be too long - enemies know\nof this weakness and are exploiting it NOW. But\
+        \ applying untested corrections\ncould destabilize our other defenses.\"\n\nWhat is the BEST approach\
+        \ to this critical vulnerability?\n                "
+      choices:
+      - text: Strictly follow the two-week testing process regardless of the active threat
+      - text: Invoke emergency procedures for expedited testing and rapid deployment
+      - text: Ignore the ward correction since testing isn't complete
+      - text: Apply the correction everywhere immediately with no testing at all
+      success_text: "\nYou invoke the Emergency Ward Protocol. The Court Wizard convenes an emergency\n\
+        session with senior mages. Within hours, accelerated testing validates the\ncorrection on a representative\
+        \ sample of wards.\n\nBy nightfall, critical defensive positions receive the corrected wards.\n\
+        By the following evening, all kingdom defenses are updated. The process\nincluded testing - just\
+        \ accelerated, not abandoned.\n\nThree days later, scouts report that enemies attempted the known\
+        \ exploit\nagainst your gates. The corrected wards held firm. \"The emergency protocol\nsaved\
+        \ us,\" the War Council agrees. \"Speed with appropriate caution.\"\n\nCritical vulnerabilities\
+        \ require emergency procedures - faster, but not\nreckless.\n                "
+      failure_texts:
+        0: "\nYou rigidly followed the two-week process. On day six, dark mages exploited\nthe vulnerability\
+          \ and breached the Eastern Gate. The castle fell before\ntesting was complete.\n\nEmergency\
+          \ procedures exist precisely for situations like this. When\nvulnerabilities are being actively\
+          \ exploited, standard timelines must\nyield to appropriate urgency.\n                    "
+        2: "\n\"Ignore it?\" The Court Wizard is aghast as enemy forces pour through the\nnow-exploited\
+          \ weakness in your wards. \"Ignoring known, actively-exploited\nvulnerabilities is not caution\
+          \ - it's negligence!\"\n\nThe castle falls. Your \"caution\" killed everyone you were supposed\
+          \ to protect.\n                    "
+        3: "\nYou applied the correction everywhere with no testing. The ward correction\nconflicted with\
+          \ the older enchantments on the North Tower, causing a\ncatastrophic magical feedback. The tower\
+          \ collapsed, taking the best mages\nwith it.\n\nEmergency procedures still include testing -\
+          \ abbreviated, focused testing.\nZero testing risks catastrophic failures.\n               \
+          \     "
+    corporate:
+      title: THE CRITICAL ZERO-DAY
+      narrative: "\nThe security news explodes: a critical zero-day in your VPN appliance is\nbeing actively\
+        \ exploited in the wild. CISA has issued an emergency directive.\nYour vendor has released an\
+        \ emergency patch.\n\nThe change manager pulls up the calendar. \"Our standard change process\n\
+        requires two weeks for testing and CAB approval. The next CAB meeting is\nin five days.\"\n\n\
+        The CISO's phone is already ringing - the CEO saw the news and is asking\nif the company is protected.\
+        \ Meanwhile, your threat intel feed shows\nexploitation attempts increasing hourly.\n\n\"Two weeks\
+        \ is our process,\" the change manager insists. \"Process exists\nfor a reason.\"\n\nWhat is the\
+        \ BEST approach?\n                "
+      choices:
+      - text: Strictly follow the two-week testing process despite the active exploitation
+      - text: Use emergency change procedures for expedited approval and deployment
+      - text: Ignore the patch since our testing isn't complete
+      - text: Push the patch to production immediately with zero testing
+      success_text: "\n\"Invoke emergency change procedures,\" you declare. Within two hours, you've\n\
+        assembled the emergency CAB - CISO, IT Director, and Change Manager. The\npatch is tested on a\
+        \ non-production VPN concentrator.\n\nFour hours later, testing confirms the patch works and doesn't\
+        \ break\ncritical functionality. The emergency CAB approves. By midnight, all VPN\nappliances\
+        \ are patched.\n\nThe next morning, your SIEM shows 847 blocked exploitation attempts against\n\
+        the now-patched vulnerability. \"We dodged a bullet,\" the CISO tells the\nboard. \"Emergency\
+        \ procedures exist for exactly this situation - faster\napproval with appropriate controls, not\
+        \ bureaucratic paralysis.\"\n\nThe company is safe because you knew when and how to accelerate.\n\
+        \                "
+      failure_texts:
+        0: "\nYou waited for the two-week process. On day four, attackers exploited the\nvulnerability\
+          \ and established persistence in your network. The breach cost\n$4.7 million in remediation\
+          \ and regulatory fines.\n\n\"We have emergency change procedures for exactly this situation,\"\
+          \ the CISO\nfumes. \"Active exploitation means EMERGENCY. The two-week process is for\nroutine\
+          \ changes, not burning houses.\"\n                    "
+        2: "\n\"Ignore an actively-exploited critical vulnerability because testing isn't\ncomplete?\"\
+          \ The CISO stares in disbelief. \"That's not caution - that's\nnegligence.\"\n\nThe breach occurs\
+          \ three days later. Your \"process adherence\" explanation\ndoes not satisfy the regulators,\
+          \ the board, or the lawyers.\n                    "
+        3: "\nYou pushed the patch with zero testing. It conflicted with your custom\nVPN configuration.\
+          \ All remote workers are now locked out. The sales team\ncan't access CRM. The executives can't\
+          \ get their email.\n\n\"Emergency procedures still include TESTING!\" your manager shouts as\
+          \ the\nhelp desk melts down. \"Just FASTER testing!\"\n\nThe patch is rolled back. The vulnerability\
+          \ remains. You've made everything\nworse.\n                    "
+- id: d7_change_management
+  domain: 7
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 7: Security Operations - Change Management'
+  failure_text: "\nChange management requires all changes to be reviewed, approved, tested, and\ndocumented\
+    \ before implementation. Unapproved changes bypass these controls\nand can cause outages - as happened\
+    \ here. The process isn't bureaucracy for\nits own sake; it prevents exactly this type of incident.\n\
+    \        "
+  themes:
+    fantasy:
+      title: THE UNSANCTIONED WARD
+      narrative: "\nThe Merchant Guild is furious. Their caravans were blocked at the city gates\nfor\
+        \ six hours yesterday - the gate wards inexplicably rejected their trade\ntokens as counterfeit,\
+        \ despite being perfectly legitimate.\n\nInvestigation reveals that a junior enchanter, frustrated\
+        \ with the old ward's\nslow verification process, modified the gate ward's detection thresholds\n\
+        \"just a little\" to speed things up. He didn't tell anyone or test the\nchanges.\n\nThe Guild\
+        \ Master is demanding compensation. The Merchant Council is\nthreatening sanctions. The enchanter\
+        \ insists he was \"just trying to help\"\nand that \"the old settings were too slow anyway.\"\n\
+        \nWhat type of control failure does this represent?\n                "
+      choices:
+      - text: Incident response failure - the gates should have had a backup plan
+      - text: Change management failure - the modification was unapproved and untested
+      - text: Access control failure - the enchanter shouldn't have been able to touch the wards
+      - text: Encryption failure - the ward tokens should have been stronger
+      success_text: "\n\"This is a textbook change management failure,\" you explain to the Council.\n\
+        \"The enchanter made changes without approval, without review, without testing,\nand without documentation.\
+        \ Change management exists precisely to prevent\nthis.\"\n\nThe Chief Enchanter nods grimly. \"\
+        Every ward modification should go through\nthe Change Council. They verify the change is needed,\
+        \ review the plan, test\nin the practice chambers, and approve deployment. None of that happened\
+        \ here.\"\n\nNew protocols are implemented: all ward modifications require Change Council\napproval,\
+        \ testing in isolated chambers, and documentation of what was changed\nand why. The junior enchanter\
+        \ receives additional training.\n\nThe incident becomes a teaching moment about why change management\
+        \ matters.\n                "
+      failure_texts:
+        0: "\n\"Incident response?\" The Chief Enchanter shakes his head. \"The incident\nHAPPENED because\
+          \ of the unauthorized change. Having a backup plan for\nmerchant verification doesn't prevent\
+          \ unauthorized modifications to wards.\"\n\nThe root cause was change management failure - unapproved\
+          \ changes. Incident\nresponse handles problems after they occur; change management prevents\
+          \ them.\n                    "
+        2: "\n\"Access control?\" The Change Council debates. \"The enchanter was authorized\nto work\
+          \ on wards - that's his job. The failure wasn't that he COULD make\nchanges, but that he made\
+          \ changes without approval or testing.\"\n\nAccess control determines WHO can make changes.\
+          \ Change management determines\nWHETHER specific changes are appropriate. This was a change\
+          \ management failure.\n                    "
+        3: "\n\"Encryption failure?\" The Court Wizard is confused. \"The tokens weren't\ncounterfeited\
+          \ - they were REAL and were rejected because of unauthorized\nthreshold changes. Encryption\
+          \ is irrelevant here.\"\n\nThe problem was an unapproved, untested change. That's change management,\n\
+          not cryptography.\n                    "
+    corporate:
+      title: THE FRIDAY FIREWALL CHANGE
+      narrative: "\nThe CEO's executive assistant is apoplectic. \"The CEO hasn't been able to\naccess\
+        \ his trading app since last night! It's been blocked since about 5 PM\nyesterday!\"\n\nNetwork\
+        \ investigation reveals that a firewall administrator, trying to block\na suspicious IP range\
+        \ before heading home for the weekend, added a rule that\ninadvertently blocked the entire subnet\
+        \ used by the trading platform. No\nchange ticket. No peer review. No testing. Just a quick \"\
+        fix\" on his way out.\n\nThe CEO's losses from missed trades are potentially substantial. The\
+        \ firewall\nadmin insists he was \"just trying to protect the network\" and that \"the\nchange\
+        \ process takes too long for urgent blocks.\"\n\nWhat type of control failure does this represent?\n\
+        \                "
+      choices:
+      - text: Incident response failure - we should have caught the issue faster
+      - text: Change management failure - the modification was unapproved and untested
+      - text: Access control failure - the admin shouldn't have firewall access
+      - text: Encryption failure - the trading connection should have been encrypted
+      success_text: "\n\"Classic change management failure,\" you report to the incident review\ncommittee.\
+        \ \"The admin made a firewall change without a ticket, without peer\nreview, without testing,\
+        \ and without approval. Our change management process\nexists precisely to catch mistakes like\
+        \ this.\"\n\nThe CISO nods. \"Every firewall rule change should go through change management.\n\
+        Someone else reviews the rule for unintended consequences. Testing verifies\nno critical services\
+        \ are blocked. Documentation ensures we can track and\nreverse changes.\"\n\nThe organization\
+        \ reinforces change management requirements and implements\nmandatory peer review for all firewall\
+        \ modifications. The admin receives\nadditional training on proper procedures.\n\nThe incident\
+        \ becomes a case study in why change management matters.\n                "
+      failure_texts:
+        0: "\n\"Incident response?\" Your manager looks puzzled. \"The incident OCCURRED\nbecause of the\
+          \ unauthorized change. Faster detection doesn't prevent someone\nfrom making unapproved modifications.\"\
+          \n\nThe root cause was change management failure. Incident response is reactive;\nchange management\
+          \ is preventive.\n                    "
+        2: "\n\"Access control failure?\" The CISO considers. \"No - the firewall admin is\nsupposed to\
+          \ have firewall access. That's their job. The failure was making\nchanges without the required\
+          \ approval and testing process.\"\n\nAccess control governs WHO can make changes. Change management\
+          \ governs\nWHETHER specific changes are appropriate. Different controls, different\nfailures.\n\
+          \                    "
+        3: "\n\"Encryption?\" The network engineer is baffled. \"The connection was encrypted.\nIt was\
+          \ BLOCKED, not intercepted. How would encryption prevent a firewall\nrule from blocking traffic?\"\
+          \n\nThe issue was an unapproved firewall change. That's change management, not\ncryptography.\n\
+          \                    "
+- id: d7_configuration_management
+  domain: 7
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 7: Security Operations - Configuration Management'
+  failure_text: "\nConfiguration management defines standard baselines and uses automation to\nensure\
+    \ consistency across systems. When configurations drift from the standard,\nit's detected and corrected.\
+    \ Without configuration management, systems\nbecome inconsistent, creating security gaps that attackers\
+    \ exploit.\n        "
+  themes:
+    fantasy:
+      title: THE INCONSISTENT WATCHTOWERS
+      narrative: "\nThe Auditor General's report is damning. An inspection of the kingdom's\ntwenty watchtowers\
+        \ reveals complete chaos: six towers have unnecessary\nobservation mirrors that could leak information,\
+        \ four have outdated\ndefensive wards, three have conflicting communication crystals, and each\n\
+        tower's configuration is completely different.\n\n\"How did this happen?\" the War Council demands.\n\
+        \nThe Tower Commander shrugs helplessly. \"Each tower master configures their\ndomain as they\
+        \ see fit. Gareth prefers extra mirrors for visibility. Eliza\nrelies on older, proven wards.\
+        \ Marcus uses experimental crystals.\"\n\nThe Auditor General slams the table. \"This creates\
+        \ security gaps! Attackers\nstudy the weakest configuration and exploit it. And when a tower master\n\
+        retires, nobody knows how their tower is supposed to work!\"\n\nWhat should be implemented to\
+        \ address this?\n                "
+      choices:
+      - text: Rebuild all towers from scratch with identical designs
+      - text: Implement configuration management with standardized baselines
+      - text: Document current configurations as-is and call them 'standard'
+      - text: Allow each tower master to continue configuring systems their preferred way
+      success_text: "\nYou propose the Standard Tower Configuration - a defined baseline specifying\n\
+        exactly what wards, mirrors, and crystals each tower should have. Automation\nensorcellments are\
+        \ created to regularly verify compliance and report drift.\n\nWithin three months, all towers\
+        \ are aligned. Each has the same defensive\nwards, appropriate observation mirrors, and compatible\
+        \ communication crystals.\nWhen Tower Master Eliza retires, her successor can maintain the tower\
+        \ using\nthe documented standard.\n\n\"Magnificent,\" the Auditor General declares in the follow-up\
+        \ inspection.\n\"Consistent configurations mean consistent security. Drift is detected and\ncorrected\
+        \ automatically. This is proper configuration management.\"\n\nThe kingdom's defenses are now\
+        \ predictable, maintainable, and secure.\n                "
+      failure_texts:
+        0: "\n\"Rebuild all towers?\" The Treasury Minister chokes. \"That would bankrupt\nthe kingdom!\
+          \ And without configuration management, they'd drift apart again\nwithin a year anyway.\"\n\n\
+          The expensive solution doesn't fix the underlying problem. You need defined\nbaselines and ongoing\
+          \ enforcement - configuration management.\n                    "
+        2: "\n\"Document the chaos and call it standard?\" The Auditor General stares. \"If\nevery tower\
+          \ is configured differently, which one IS the standard? You've just\ngiven official sanction\
+          \ to chaos.\"\n\nThe inconsistency IS the problem. Documenting inconsistent configurations\n\
+          doesn't create consistency.\n                    "
+        3: "\n\"Continue as-is?\" One year later, an attacker identifies that Tower Fourteen\nhas outdated\
+          \ wards (Marcus's experimental approach), exploits the weakness,\nand captures the tower. From\
+          \ there, they gain a foothold to attack others.\n\nIndividual preferences are the CAUSE of the\
+          \ problem. Configuration management\nensures consistency and security.\n                    "
+    corporate:
+      title: THE SERVER AUDIT DISASTER
+      narrative: "\nThe compliance auditors are not happy. Their review of your server estate\nreveals\
+        \ chaos: some servers run unnecessary services, others have outdated\nsettings, configurations\
+        \ vary wildly between what should be identical\nsystems, and nobody can explain why Server 47\
+        \ has its own unique firewall\nrules.\n\n\"How did this happen?\" the CISO demands.\n\nThe senior\
+        \ sysadmin shrugs. \"Different admins configured different servers\nat different times. Mike likes\
+        \ to enable experimental features. Sarah\nprefers legacy configurations. Nobody ever established\
+        \ what 'correct'\nlooks like.\"\n\nThe auditor is blunt: \"Inconsistent configurations create\
+        \ attack surfaces.\nAttackers target the weakest server and pivot from there.\"\n\nWhat should\
+        \ be implemented?\n                "
+      choices:
+      - text: Rebuild all servers from scratch
+      - text: Implement configuration management with defined baselines
+      - text: Document current configurations as-is
+      - text: Allow each administrator to configure systems their preferred way
+      success_text: "\n\"We need configuration management,\" you recommend. Your team defines\nstandard\
+        \ baselines for each server type - what services run, what settings\nare configured, what firewall\
+        \ rules apply. Automation tools enforce these\nbaselines and report drift.\n\nWithin three months,\
+        \ the transformation is complete. Every web server is\nidentical. Every database server matches\
+        \ the standard. When drift is\ndetected - someone enabling an unauthorized service - the automation\n\
+        flags it immediately.\n\n\"This is what configuration management looks like,\" the auditors note\
+        \ in\ntheir follow-up report. \"Defined standards, automated enforcement, drift\ndetection. The\
+        \ inconsistency problem is solved.\"\n\nYour environment is now consistent, auditable, and secure.\n\
+        \                "
+      failure_texts:
+        0: "\n\"Rebuild everything?\" The IT Director laughs grimly. \"That's a two-year\nproject with\
+          \ a $5 million budget. And without configuration management,\nthe servers would drift apart\
+          \ again within six months.\"\n\nRebuilding doesn't solve the problem - it just delays it. You\
+          \ need defined\nbaselines and ongoing enforcement.\n                    "
+        2: "\n\"Document the chaos?\" The auditors shake their heads. \"If every server is\ndifferent,\
+          \ which one is 'correct'? You've just created official documentation\nof your inconsistency\
+          \ problem.\"\n\nDocumenting inconsistent configurations doesn't create consistency. You\nneed\
+          \ defined standards and enforcement.\n                    "
+        3: "\n\"Continue with individual preferences?\" The following year's audit is worse.\nServer 23,\
+          \ configured by an admin who left two years ago, is breached through\nan obsolete service nobody\
+          \ knew was running. The attack spreads to twelve\nother servers.\n\nIndividual preferences CAUSE\
+          \ the inconsistency. Configuration management\nestablishes and enforces standards.\n       \
+          \             "
+- id: d7_business_continuity
+  domain: 7
+  correct_index: 2
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 7: Security Operations - Business Continuity'
+  failure_text: "\nBusiness continuity sites have different levels of readiness: Cold sites have\nspace\
+    \ but no equipment (days to operational). Warm sites have equipment but\nneed data restored (hours).\
+    \ Hot sites run in parallel with synchronous\nreplication - immediate failover with zero data loss\
+    \ (RPO=0). The higher\nthe criticality, the hotter the site needed.\n        "
+  themes:
+    fantasy:
+      title: THE GREAT HALL COLLAPSE
+      narrative: "\nThe earthquake struck without warning. The Great Hall - center of kingdom\noperations\
+        \ - lies in ruins. The throne room is buried under rubble, the\ntreasury vault is inaccessible,\
+        \ and the communication crystal network\nis severed.\n\nThe Master of Continuity unfolds the emergency\
+        \ scrolls. \"We prepared for\nthis. Three contingency sites were established, each at different\
+        \ levels\nof readiness. Which shall we activate?\"\n\nHe spreads the options before you:\n\n\"\
+        The Cold Refuge in the Northern Mountains has space and basic structures\nbut would require days\
+        \ to set up governance operations. The Warm Sanctuary\nin the Western Valley has some pre-positioned\
+        \ supplies and could be\noperational in hours. The Hot Citadel in the Southern Fortress runs in\n\
+        parallel with us - it has current records and can take over immediately\nwith no interruption.\"\
+        \n\nWhat type of site allows IMMEDIATE failover with no data loss?\n                "
+      choices:
+      - text: Cold Refuge - space and basic structures only
+      - text: Warm Sanctuary - some equipment, operational in hours
+      - text: Hot Citadel - fully synchronized, immediate takeover
+      - text: Mobile caravan - transportable but needs days to deploy
+      success_text: "\n\"Activate the Hot Citadel immediately!\" you command.\n\nMagical mirrors flash\
+        \ between the sites. Within moments, the Southern\nFortress assumes all kingdom operations. Because\
+        \ records were synchronized\nin real-time, no decrees are lost, no treasury transactions are missing,\n\
+        no communications are interrupted.\n\n\"Remarkable,\" the visiting ambassador observes. \"I didn't\
+        \ even notice the\ntransition. Your governance continues uninterrupted.\"\n\nThe Master of Continuity\
+        \ nods. \"Hot sites are expensive - we maintain a full\nparallel operation at all times. But when\
+        \ disaster strikes, there is no\nrecovery time. We simply... continue.\"\n\nBusiness continuity\
+        \ is about keeping critical operations running, no matter\nwhat happens.\n                "
+      failure_texts:
+        0: "\n\"The Cold Refuge?\" By the time basic operations are established five days\nlater, three\
+          \ provinces have declared independence, the treasury records\nare hopelessly confused, and the\
+          \ kingdom's enemies have exploited the\nchaos.\n\nCold sites have space but nothing else. They're\
+          \ cheap but take days to\nbecome operational. For immediate continuity, you need a hot site.\n\
+          \                    "
+        1: "\n\"The Warm Sanctuary.\" Eight hours later, basic operations resume, but the\ntransition\
+          \ wasn't seamless. A full day of treasury records is missing.\nThree important decrees were\
+          \ lost in the confusion.\n\nWarm sites are faster than cold, but not immediate. For zero downtime\
+          \ and\nzero data loss, you need a hot site with synchronous replication.\n                 \
+          \   "
+        3: "\n\"Mobile caravan?\" The War Council stares. \"That takes three days to deploy\nand set up.\
+          \ We needed governance NOW!\"\n\nMobile sites are portable but slow to become operational. For\
+          \ immediate\nfailover, you need a hot site that's already running.\n                    "
+    corporate:
+      title: THE DATA CENTER DISASTER
+      narrative: "\nThe call comes at 3 AM: the primary data center is offline. Fire suppression\nactivated\
+        \ after a transformer explosion, but the damage is extensive. Power\nwill not be restored for\
+        \ at least a week.\n\nThe BCP coordinator gathers the crisis team. \"We have three recovery options\n\
+        prepared. Which should we activate?\"\n\nShe outlines the choices:\n\n\"Our cold site has rack\
+        \ space and power but no servers - we'd need to ship\nand install equipment. Could take three\
+        \ to five days. The warm site has\nhardware in place but needs current data restored from backup\
+        \ - four to\neight hours. The hot site runs in parallel with synchronous replication -\nwe can\
+        \ failover immediately with zero data loss.\"\n\nThe CEO is on the line: \"Our trading platform\
+        \ cannot be down. Every minute\ncosts us $10,000. What type of site gives us IMMEDIATE failover\
+        \ with NO\ndata loss?\"\n                "
+      choices:
+      - text: Cold site - space and power, days to operational
+      - text: Warm site - hardware ready, hours to operational
+      - text: Hot site with synchronous replication - immediate failover, zero data loss
+      - text: Mobile site - transportable, days to deploy
+      success_text: "\n\"Activate the hot site,\" you direct. The team initiates failover.\n\nBecause\
+        \ of synchronous replication, every transaction that hit the primary\nalso hit the secondary in\
+        \ real-time. Within minutes, the trading platform\nis running from the hot site. The morning's\
+        \ trading session opens on time.\nNot a single transaction is lost.\n\n\"That's why we paid for\
+        \ a hot site,\" the CEO tells the board. \"Zero downtime,\nzero data loss. The investment pays\
+        \ for itself in a single incident like\nthis.\"\n\nThe hot site's continuous operation and real-time\
+        \ replication made the\ndifference between seamless continuity and catastrophic loss.\n      \
+        \          "
+      failure_texts:
+        0: "\n\"Cold site?\" The CEO's voice goes cold. \"We'll be down for DAYS while you\nship and install\
+          \ equipment? Do you understand what that costs us?\"\n\nFive days later, when operations finally\
+          \ resume, the company has lost\nmillions in trading revenue, several major clients have left,\
+          \ and the\nstock price has tanked. Cold sites are not for critical operations\nrequiring rapid\
+          \ recovery.\n                    "
+        1: "\n\"Warm site.\" Eight hours later, operations resume, but the last four hours\nof transactions\
+          \ before the outage are missing - they weren't in the most\nrecent backup. Several million dollars\
+          \ in trades are lost or disputed.\n\nWarm sites are faster than cold but not immediate. For\
+          \ zero data loss,\nyou need synchronous replication at a hot site.\n                    "
+        3: "\n\"Mobile site?\" The CFO stares. \"You want to TRUCK in equipment while our\ntrading platform\
+          \ is down? We'll be bankrupt before it's deployed!\"\n\nMobile sites are for situations where\
+          \ fixed sites aren't available. For\nimmediate continuity of critical operations, you need a\
+          \ pre-established\nhot site.\n                    "
+- id: d7_disaster_recovery
+  domain: 7
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 7: Security Operations - Disaster Recovery'
+  failure_text: "\nRTO (Recovery Time Objective) is the maximum acceptable downtime - how long\nsystems\
+    \ can be unavailable before unacceptable business impact. RPO (Recovery\nPoint Objective) is the maximum\
+    \ acceptable data loss, measured as a time\nperiod - losing up to 1 hour of data means RPO is 1 hour.\
+    \ These objectives\ndrive the design of backup and recovery solutions.\n        "
+  themes:
+    fantasy:
+      title: THE RECOVERY COVENANT
+      narrative: "\nThe Grand Council is establishing recovery requirements for the kingdom's\ncritical\
+        \ operations. The Master of Records presents two key questions:\n\n\"First, the Royal Treasury\
+        \ processes gold transactions constantly. If the\nTreasury Vault is destroyed, how long can we\
+        \ tolerate being unable to\nprocess transactions before the kingdom's economy suffers irreparable\
+        \ harm?\"\n\n\"Second, the Treasury ledgers are updated continuously. If we must restore\nfrom\
+        \ backup records, how much lost transaction data can we tolerate before\nmerchants lose faith\
+        \ in our record-keeping?\"\n\nThe Keeper of Numbers steps forward with scroll and quill. \"We\
+        \ must define\nthese tolerances precisely. What do these two concepts represent?\"\n         \
+        \       "
+      choices:
+      - text: 'RTO: how often to test recovery procedures; RPO: how often to create backups'
+      - text: 'RTO: maximum acceptable downtime; RPO: maximum acceptable data loss'
+      - text: 'RTO: time to detect disasters; RPO: time to notify relevant parties'
+      - text: 'RTO: budget for recovery operations; RPO: budget for backup systems'
+      success_text: "\n\"RTO is our Recovery Time Objective,\" you explain. \"It's the maximum time\n\
+        we can tolerate the Treasury being non-operational. If we set RTO to four\nhours, we MUST be able\
+        \ to restore Treasury operations within four hours of\nany disaster.\"\n\n\"RPO is our Recovery\
+        \ Point Objective. It's the maximum data loss we can\ntolerate, measured in time. If our RPO is\
+        \ one hour, we can lose at most\none hour of transaction records. This means we need backups at\
+        \ least every\nhour.\"\n\nThe Keeper of Numbers nods approvingly. \"So if RTO is four hours and\
+        \ RPO is\none hour, we need recovery capabilities that restore operations within\nfour hours,\
+        \ losing no more than one hour of data. These are our restoration\ncovenants.\"\n\nThe kingdom's\
+        \ recovery requirements are now clearly defined.\n                "
+      failure_texts:
+        0: "\n\"Testing frequency and backup frequency?\" The Master of Records frowns.\n\"No, those are\
+          \ operational practices. We're asking about recovery OBJECTIVES\n- the acceptable limits of\
+          \ downtime and data loss.\"\n\nRTO and RPO define what's acceptable, not how often you test\
+          \ or backup.\nTesting and backup schedules should be designed to MEET your RTO/RPO.\n      \
+          \              "
+        2: "\n\"Detection and notification times?\" The Keeper of Numbers shakes his head.\n\"Those happen\
+          \ BEFORE recovery. We're asking about recovery OBJECTIVES - how\nlong until operations resume\
+          \ and how much data loss is acceptable.\"\n\nDetection time and notification time are separate\
+          \ metrics. RTO/RPO focus\nspecifically on recovery outcomes.\n                    "
+        3: "\n\"Budget allocations?\" The Treasury Minister chuckles. \"While recovery does\ncost money,\
+          \ RTO and RPO are TIME-based objectives, not budget metrics.\"\n\nRTO is maximum acceptable\
+          \ downtime. RPO is maximum acceptable data loss\n(measured in time). These are objectives that\
+          \ drive budgets, not budgets\nthemselves.\n                    "
+    corporate:
+      title: THE DR PLANNING SESSION
+      narrative: "\nThe disaster recovery planning committee is defining requirements for the\ncompany's\
+        \ critical systems. The consultant poses two key questions:\n\n\"First, if your payment processing\
+        \ system goes down, how long can your\nbusiness tolerate that outage before losses become unacceptable?\
+        \ This drives\nhow fast you need to be able to recover.\"\n\n\"Second, your payment system processes\
+        \ transactions continuously. If you\nhave to restore from backup, how much transaction data can\
+        \ you afford to\nlose? If you backup every four hours, you could lose up to four hours of\npayments\
+        \ in a disaster.\"\n\nThe CTO asks for clarification: \"What are these two concepts called, and\n\
+        what do they mean precisely?\"\n                "
+      choices:
+      - text: 'RTO: how often to test recovery; RPO: how often to backup'
+      - text: 'RTO: maximum acceptable downtime; RPO: maximum acceptable data loss'
+      - text: 'RTO: time to detect disasters; RPO: time to notify staff'
+      - text: 'RTO: budget for recovery; RPO: budget for backups'
+      success_text: "\n\"RTO is Recovery Time Objective - the maximum time the system can be down\nbefore\
+        \ business impact becomes unacceptable. If RTO is four hours, we must\nbe able to restore operations\
+        \ within four hours of any outage.\"\n\n\"RPO is Recovery Point Objective - the maximum data loss\
+        \ we can tolerate,\nmeasured as a time period. If RPO is one hour, we can lose at most one hour\n\
+        of transactions. This means we need backups or replication at least every\nhour.\"\n\nThe consultant\
+        \ nods. \"Exactly. So if your payment system RTO is four hours\nand RPO is one hour, you need\
+        \ recovery solutions that can restore the\nsystem within four hours while losing no more than\
+        \ one hour of data. Your\nbackup strategy, your recovery site, your replication - all must be\
+        \ designed\nto meet these objectives.\"\n\nThe committee has clear targets to design against.\n\
+        \                "
+      failure_texts:
+        0: "\n\"Testing and backup frequency?\" The consultant frowns. \"No, those are\noperational activities.\
+          \ RTO and RPO are OBJECTIVES - the acceptable limits\nthat those activities must be designed\
+          \ to meet.\"\n\nRTO is about acceptable downtime. RPO is about acceptable data loss. Testing\n\
+          and backup schedules are means to achieve those objectives.\n                    "
+        2: "\n\"Detection and notification?\" The consultant shakes their head. \"Those\nhappen during\
+          \ incident response, before recovery even begins. RTO and\nRPO specifically measure recovery\
+          \ outcomes.\"\n\nDetection time and notification time are different metrics entirely. RTO/RPO\n\
+          focus on the recovery phase, not the detection phase.\n                    "
+        3: "\n\"Budget metrics?\" The CFO laughs. \"I wish RTO meant 'Recovery Treasure\nOutlay,' but\
+          \ no. RTO and RPO are time-based objectives.\"\n\nRTO is maximum acceptable downtime. RPO is\
+          \ maximum acceptable data loss\n(in time). Budget is what you spend to achieve these objectives.\n\
+          \                    "
+- id: d7_physical_security
+  domain: 7
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 7: Security Operations - Physical Security'
+  failure_text: "\nMantraps (also called airlocks or interlocks) are enclosed entry systems where\nonly\
+    \ one door can be open at a time, ensuring only one person passes per\nauthentication. This PHYSICALLY\
+    \ prevents tailgating - the system won't allow\na second person through regardless of human behavior\
+    \ or awareness.\n        "
+  themes:
+    fantasy:
+      title: THE TAILGATING INTRUDER
+      narrative: "\nThe morning guard briefing includes a concerning report. Yesterday, an\nunauthorized\
+        \ person gained access to the Inner Sanctum by following closely\nbehind an authorized wizard\
+        \ as they passed through the warded doorway.\n\nThe Captain of the Guard is troubled. \"The wards\
+        \ only check one person at\na time. When Master Aldrin opened the door, someone slipped through\
+        \ behind\nhim before it closed. Aldrin was distracted reading a scroll and didn't\nnotice.\"\n\
+        \nThe War Council demands solutions. \"Posting 'no tailgating' signs has proven\nineffective -\
+        \ people ignore them or are too distracted. Adding more scrying\nmirrors lets us SEE tailgaters\
+        \ but doesn't STOP them. We need something\nthat physically prevents this from happening.\"\n\n\
+        What control BEST prevents tailgating?\n                "
+      choices:
+      - text: Install additional scrying mirrors to observe entries
+      - text: Implement a mantrap - a double-door chamber that admits only one person at a time
+      - text: Post larger 'No Tailgating' warning signs
+      - text: Require stronger authentication passwords for door access
+      success_text: "\nYou propose the installation of a Chamber of Singular Passage - a mantrap.\nThe\
+        \ enchanted airlock consists of two doors that cannot both be open at\nonce, and a counting ward\
+        \ that only allows one person to pass per\nauthentication.\n\nWhen Master Aldrin approaches now,\
+        \ he enters the first door, which seals\nbehind him. Only after the counting ward confirms exactly\
+        \ one person is\npresent does the inner door open. If someone tries to tailgate, the chamber\n\
+        refuses to release - instead, an alarm sounds.\n\n\"Foolproof,\" the Captain of the Guard approves.\
+        \ \"You cannot tailgate through\na mantrap no matter how distracted the authorized person is.\
+        \ The system\nphysically prevents more than one person per authentication.\"\n\nThe Inner Sanctum\
+        \ is now truly secure against tailgating.\n                "
+      failure_texts:
+        0: "\n\"More scrying mirrors?\" The Captain sighs. \"Mirrors let us WATCH someone\ntailgate, but\
+          \ they don't STOP them. The intruder still gets in - we just\nhave better footage of it happening.\"\
+          \n\nDetective controls identify problems. Preventive controls stop them.\nTailgating requires\
+          \ a preventive physical control.\n                    "
+        2: "\n\"Bigger signs?\" The War Council is unimpressed. \"The wizard was reading a\nscroll and\
+          \ didn't notice someone behind him. How would a bigger sign help?\nAnd determined intruders\
+          \ ignore signs anyway.\"\n\nSigns are awareness measures. They don't physically prevent tailgating.\n\
+          \                    "
+        3: "\n\"Stronger passwords?\" The Court Wizard frowns. \"The authentication worked\ncorrectly\
+          \ - Master Aldrin WAS authorized. The problem was someone slipping\nthrough with him, not breaking\
+          \ the authentication.\"\n\nStronger authentication doesn't prevent tailgating. The authorized\
+          \ person\npassed authentication; the issue is the unauthorized person following them.\n    \
+          \                "
+    corporate:
+      title: THE BADGE-SWIPE PROBLEM
+      narrative: "\nPhysical security reviews the access logs and security footage. Yesterday,\nan unauthorized\
+        \ individual accessed the secure development floor by walking\nclosely behind an authorized employee.\
+        \ The employee was on their phone and\ndidn't notice the person behind them.\n\nThe Security Director\
+        \ is frustrated. \"This is the third tailgating incident\nthis month. We've posted signs, sent\
+        \ awareness emails, and reminded people\nto be vigilant. But employees are distracted, polite,\
+        \ or just don't notice.\"\n\nThe CISO wants a permanent solution. \"Awareness is clearly not enough.\n\
+        People hold doors, don't pay attention, or feel rude challenging tailgaters.\nWe need something\
+        \ that physically prevents this, regardless of human behavior.\"\n\nWhat control BEST prevents\
+        \ tailgating?\n                "
+      choices:
+      - text: Install additional security cameras at entry points
+      - text: Implement a mantrap/airlock entry system
+      - text: Post 'No Tailgating' signs at all entrances
+      - text: Require longer, more complex badge PINs
+      success_text: "\n\"We need a mantrap,\" you recommend. The security team installs an airlock\nsystem\
+        \ at the secure floor entrance: two sets of doors with a small chamber\nbetween them.\n\nWhen\
+        \ an employee badges in, the outer door opens and they enter the chamber.\nThe outer door must\
+        \ fully close before the inner door will open. Weight\nsensors and occupancy detection ensure\
+        \ only one person passes per badge\nswipe. If two people are detected in the chamber, neither\
+        \ door opens and\nsecurity is alerted.\n\n\"Problem solved,\" the Security Director reports after\
+        \ a month. \"Zero\ntailgating incidents. The mantrap doesn't care if someone is polite,\ndistracted,\
+        \ or on their phone. It physically prevents multiple people\nfrom passing on a single authentication.\"\
+        \n\nTailgating is eliminated through physical controls, not awareness.\n                "
+      failure_texts:
+        0: "\n\"More cameras?\" The CISO shakes their head. \"We already have footage of\nthe tailgating.\
+          \ Cameras are detective controls - they record incidents but\ndon't prevent them. The unauthorized\
+          \ person still got in.\"\n\nPrevention requires physical controls. Cameras only provide evidence\
+          \ after\nthe fact.\n                    "
+        2: "\n\"More signs?\" The Security Director gestures at the existing signs. \"We\nalready have\
+          \ signs. People ignore them, are too polite to confront\ntailgaters, or are simply distracted.\
+          \ Signs don't physically stop anyone.\"\n\nAwareness measures have limited effectiveness. Physical\
+          \ prevention is needed.\n                    "
+        3: "\n\"Stronger PINs?\" The access control vendor is confused. \"The authentication\nwasn't bypassed\
+          \ - the employee properly authenticated. The problem is\nsomeone following them through the\
+          \ door before it closes.\"\n\nAuthentication strength is irrelevant to tailgating. The authorized\
+          \ person\npassed authentication; the issue is the unauthorized person following them.\n    \
+          \                "
+- id: d7_personnel_security
+  domain: 7
+  correct_index: 0
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 7: Security Operations - Personnel Security'
+  failure_text: "\nMandatory vacation is a personnel security control that requires employees to\ntake\
+    \ continuous time off while others perform their duties. This can reveal\nfraud or unauthorized activities\
+    \ that a single person could hide. Combined\nwith job rotation, it's an effective detective control\
+    \ for insider threats\nthat applies fairly to everyone without presuming guilt.\n        "
+  themes:
+    fantasy:
+      title: THE TROUBLED TREASURER
+      narrative: "\nThe Royal Spymaster presents a concerning report about the Deputy Treasurer.\n\"Lord\
+        \ Blackwood controls access to significant gold reserves. Recently, my\nsources report he has\
+        \ accumulated substantial gambling debts. He's been\nseen working late into the night, alone in\
+        \ the Treasury. He appears anxious\nand has declined his annual leave for three years.\"\n\nThe\
+        \ Master of Coin is troubled. \"Blackwood has served faithfully for fifteen\nyears. But financial\
+        \ pressure combined with access to gold, working alone\nwithout oversight, and never taking time\
+        \ off... these are warning signs.\"\n\nThe Council debates. \"We cannot dismiss someone based\
+        \ on personal financial\ntroubles - that would be unjust. But we must address the risk without\n\
+        rushing to harsh judgment.\"\n\nWhat security principle addresses this risk appropriately?\n \
+        \               "
+      choices:
+      - text: Require mandatory vacation periods where others must perform his duties
+      - text: Immediately terminate Lord Blackwood based on the gambling debts
+      - text: Remove all his access permanently without investigation
+      - text: Ignore personal financial issues as irrelevant to security
+      success_text: "\n\"Mandatory vacation,\" you advise. \"All personnel with sensitive access should\n\
+        be required to take continuous leave periods during which their colleagues\nmust handle their\
+        \ responsibilities.\"\n\nThe policy is implemented. When Lord Blackwood takes his required two-week\n\
+        leave, the substitute treasurer discovers discrepancies in the records -\nsmall amounts that Blackwood\
+        \ had been 'borrowing' with intent to repay.\n\nThe early detection allows for quiet remediation.\
+        \ Blackwood admits his\nmistakes, makes restitution, and receives counseling rather than prosecution.\n\
+        The treasury controls are strengthened.\n\n\"Mandatory vacation is a detective control for insider\
+        \ threats,\" the\nSpymaster explains. \"It forces others to perform the duties, revealing\nfraud\
+        \ or unauthorized activities that a single person could hide indefinitely.\"\n                "
+      failure_texts:
+        0: "\n\"Immediate termination?\" The Council is disturbed. \"Based on personal\nfinancial circumstances,\
+          \ without evidence of wrongdoing? That is unjust\nand potentially illegal. Many people have\
+          \ debts without becoming thieves.\"\n\nTermination based solely on personal circumstances is\
+          \ inappropriate.\nMandatory vacation is a fair control that applies to everyone and reveals\n\
+          problems without presuming guilt.\n                    "
+        2: "\n\"Remove all access permanently?\" Lord Blackwood's lawyers would have a\nfield day. \"\
+          You've destroyed his career based on gossip about gambling\ndebts, without any evidence of actual\
+          \ wrongdoing.\"\n\nThis is excessive and unjust. Mandatory vacation is a reasonable control\n\
+          that treats everyone fairly while revealing potential issues.\n                    "
+        3: "\n\"Ignore personal issues?\" One year later, a full audit reveals Lord\nBlackwood has embezzled\
+          \ 50,000 gold pieces to cover his gambling losses.\nThe kingdom is devastated - financially\
+          \ and reputationally.\n\nPersonal financial stress combined with access to assets is a known\n\
+          insider threat indicator. Mandatory vacation would have revealed the\nproblem much earlier.\n\
+          \                    "
+    corporate:
+      title: THE AFTER-HOURS EMPLOYEE
+      narrative: "\nHR flags a concerning pattern about a senior financial analyst. The employee\nhas\
+        \ access to wire transfer systems and has been exhibiting warning signs:\nvisible financial stress\
+        \ (car repossessed, foreclosure notice), working\nunusual late hours alone, and hasn't taken vacation\
+        \ in three years despite\nmultiple reminders.\n\nThe security team debates. \"These are classic\
+        \ insider threat indicators -\nfinancial pressure plus access plus opportunity. But we can't fire\
+        \ someone\njust because they're having money problems. That would be discrimination.\"\n\nThe\
+        \ CISO agrees. \"We need a control that addresses the risk fairly, without\npunishing someone\
+        \ for personal circumstances. Something that applies to\neveryone in sensitive positions.\"\n\n\
+        What security principle appropriately addresses this risk?\n                "
+      choices:
+      - text: Implement mandatory vacations for all employees in sensitive positions
+      - text: Immediately terminate the employee based on the financial stress
+      - text: Remove all access permanently without any investigation
+      - text: Ignore personal financial issues as not security-relevant
+      success_text: "\n\"Mandatory vacation policy,\" you recommend. \"All employees with access to\n\
+        sensitive systems must take at least one week of continuous vacation per\nyear, during which their\
+        \ colleagues handle their responsibilities.\"\n\nThe policy is implemented company-wide. When\
+        \ the financial analyst finally\ntakes mandated leave, the backup discovers subtle wire transfers\
+        \ to an\noutside account - small amounts the analyst had been diverting.\n\nThe early detection\
+        \ limits the damage. The employee is dealt with through\nappropriate channels, and internal controls\
+        \ are strengthened to require\ndual authorization for wire transfers.\n\n\"Mandatory vacation\
+        \ is an elegant control,\" the CISO explains to the board.\n\"It forces regular rotation of duties,\
+        \ naturally revealing any hidden\nactivities. It's fair because it applies to everyone, and it's\
+        \ effective\nbecause fraudsters can't hide forever when others must do their job.\"\n        \
+        \        "
+      failure_texts:
+        0: "\n\"Immediate termination?\" HR is alarmed. \"You want to fire someone because\nthey're having\
+          \ financial problems? That's potentially illegal discrimination.\nMany people face financial\
+          \ hardship without becoming criminals.\"\n\nTermination without evidence is unjust. Mandatory\
+          \ vacation is a fair,\npolicy-based control that reveals problems without presuming guilt.\n\
+          \                    "
+        2: "\n\"Remove all access with no investigation?\" The employee's lawyer calls\nthe next day.\
+          \ \"You've destroyed my client's career based on rumors about\ntheir personal finances. We'll\
+          \ see you in court.\"\n\nThis response is both excessive and legally risky. Mandatory vacation\n\
+          achieves security goals while treating people fairly.\n                    "
+        3: "\n\"Ignore it?\" Two years later, a forensic audit reveals the employee\ndiverted $340,000\
+          \ in small wire transfers over time. The financial pressure\nwas real; so was the theft.\n\n\
+          Personal financial stress combined with system access is a well-documented\ninsider threat indicator.\
+          \ Ignoring it is negligent.\n                    "
+- id: d7_media_sanitization
+  domain: 7
+  correct_index: 2
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 7: Security Operations - Media Sanitization'
+  failure_text: "\nProper media sanitization for sensitive data requires degaussing (for magnetic\nmedia)\
+    \ or physical destruction (shredding). Quick format and file deletion\nonly clear file tables - the\
+    \ actual data remains on disk and is easily\nrecovered. Before disposal, reuse, or donation of storage\
+    \ media, data must\nbe made unrecoverable through approved sanitization methods.\n        "
+  themes:
+    fantasy:
+      title: THE DECOMMISSIONED MEMORY CRYSTALS
+      narrative: "\nThe Treasury is upgrading its record-keeping system. Hundreds of memory\ncrystals\
+        \ containing decades of financial records - merchant transactions,\nnoble accounts, tax records\
+        \ - are being replaced. The old crystals must\nbe disposed of.\n\nThe Master of Secrets raises\
+        \ a concern: \"These crystals contain sensitive\ndata. Merchant trading patterns, noble financial\
+        \ positions, tax payment\nhistories - in the wrong hands, this information could be used for\n\
+        blackmail, market manipulation, or espionage.\"\n\nThe Treasury Clerk proposes: \"We'll simply\
+        \ mark them as 'erased' and sell\nthem to the Mages' Academy for reuse. Memory crystals are expensive.\"\
+        \n\nThe Court Wizard shakes his head. \"A skilled mage could recover those\n'erased' memories\
+        \ easily. Marking them erased doesn't remove the data -\nit just hides it.\"\n\nWhat sanitization\
+        \ method ensures data cannot be recovered before resale?\n                "
+      choices:
+      - text: Mark the crystals as 'erased' - that should be sufficient
+      - text: Remove all visible contents and empty the recycle vessel
+      - text: Apply the Shattering Ritual or degaussing enchantment to destroy data completely
+      - text: Remove the crystal labels so nobody knows what was on them
+      success_text: "\n\"Complete destruction is required,\" you decree. For crystals being reused\nor\
+        \ sold, the Degaussing Enchantment completely scrambles the magical\npatterns storing data - making\
+        \ recovery impossible even for master mages.\n\nFor crystals containing the most sensitive data,\
+        \ the Shattering Ritual\nphysically destroys them into powder that can never be reassembled.\n\
+        \nThe Court Wizard verifies each sanitized crystal. \"I cannot recover a\nsingle memory from these.\
+        \ The degaussing was complete. And the shattered\nones...\" he gestures at a pile of crystal dust,\
+        \ \"...are beyond any\nrecovery spell.\"\n\nThe sensitive records are truly gone, and the Treasury's\
+        \ secrets die with\nthe old storage system.\n                "
+      failure_texts:
+        0: "\n\"Mark them erased?\" The Court Wizard sighs. \"Watch this.\" He takes a\n'erased' crystal\
+          \ and performs a recovery spell. Transaction records,\nnoble accounts, and tax information flow\
+          \ forth in vivid detail.\n\n\"'Erasing' just marks space as available for reuse. The DATA remains\n\
+          until overwritten. Any skilled mage can recover it.\"\n                    "
+        1: "\n\"Empty the recycle vessel?\" The Court Wizard demonstrates: the 'emptied'\ncrystal still\
+          \ contains recoverable data. \"Removing visible contents doesn't\ntouch the actual memory patterns.\
+          \ Those remain until properly sanitized.\"\n\nStandard deletion leaves data fully recoverable.\n\
+          \                    "
+        3: "\n\"Remove the labels?\" The Court Wizard is incredulous. \"The label says\nnothing about\
+          \ the contents. Anyone with recovery skills can read what's\nactually ON the crystal regardless\
+          \ of what's written ON it.\"\n\nLabels are metadata. Data sanitization requires destroying the\
+          \ actual\ndata, not the labels.\n                    "
+    corporate:
+      title: THE HARD DRIVE DONATION
+      narrative: "\nThe company is refreshing its workstation fleet. 500 old hard drives, many\ncontaining\
+        \ sensitive customer data, payment information, and internal\ndocuments, need to be disposed of.\n\
+        \nThe sustainability committee proposes: \"We should donate these to the\nlocal school's computer\
+        \ lab. They could really use the storage.\"\n\nIT security raises a concern: \"These drives contain\
+        \ PII, financial data,\nand confidential business information. We can't just hand them over.\"\
+        \n\nThe sustainability lead responds: \"We'll do a quick format on each drive.\nThat erases everything,\
+        \ right?\"\n\nThe security analyst shakes their head. \"Quick format just clears the\nfile table.\
+        \ The actual data remains on the platters and is easily recovered\nwith free tools.\"\n\nWhat\
+        \ sanitization method ensures data cannot be recovered before donation?\n                "
+      choices:
+      - text: Quick format of the drives - that clears everything
+      - text: Delete all files and empty the recycle bin
+      - text: Degaussing or physical destruction of the drives
+      - text: Remove the drive labels so nobody knows what company they came from
+      success_text: "\n\"We have two options for proper sanitization,\" you explain. \"For drives\nbeing\
+        \ donated, we use degaussing - a powerful magnetic field that scrambles\nall data on the platters\
+        \ beyond recovery. For drives containing the most\nsensitive data, physical destruction - industrial\
+        \ shredding into small\nfragments.\"\n\nThe process is implemented. Each drive is either degaussed\
+        \ with verification\nthat no data is recoverable, or physically shredded by a certified vendor\n\
+        who provides certificates of destruction.\n\n\"The school gets properly sanitized drives they\
+        \ can safely use,\" you report.\n\"And our sensitive data is truly, irreversibly gone. This meets\
+        \ DoD and\nNIST standards for media sanitization.\"\n\nData protection extends through the entire\
+        \ asset lifecycle, including\ndisposal.\n                "
+      failure_texts:
+        0: "\n\"Quick format?\" Three months later, the local news runs a story: 'School\nComputer Finds\
+          \ Thousands of Customer Records on Donated Drives.' A\nstudent's parent, who works in IT, recovered\
+          \ the data with free tools.\n\nQuick format only clears the file system table. The actual data\
+          \ remains\non disk and is trivially recoverable.\n                    "
+        1: "\n\"Delete and empty recycle bin?\" The compliance officer sighs and demonstrates:\nusing\
+          \ a free recovery tool, he retrieves thousands of 'deleted' files\nfrom a test drive.\n\nFile\
+          \ deletion doesn't remove data from the physical disk. It marks space\nas available for reuse.\
+          \ Recovery is trivial.\n                    "
+        3: "\n\"Remove labels?\" The security auditor stares. \"How does removing a sticker\nprotect the\
+          \ data stored on the magnetic platters? Anyone with a SATA cable\ncan read everything on that\
+          \ drive.\"\n\nLabels are cosmetic. Data sanitization requires destroying the actual data,\n\
+          not the labels.\n                    "
+- id: d7_ediscovery
+  domain: 7
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 7: Security Operations - E-Discovery'
+  failure_text: "\nA legal hold (litigation hold) suspends normal data destruction when litigation\nis\
+    \ reasonably anticipated. Once you receive notice of potential legal action,\ncontinuing to delete\
+    \ relevant data is spoliation - destruction of evidence -\nwhich can result in severe sanctions, adverse\
+    \ inferences, or losing the case\nentirely. IT must implement the hold because IT controls the data.\n\
+    \        "
+  themes:
+    fantasy:
+      title: THE IMPENDING TRIBUNAL
+      narrative: "\nA messenger from the Royal Court of Justice arrives with dire news. A\nmerchant guild\
+        \ is bringing a trade dispute before the Tribunal, claiming\nyour kingdom's trade ministry engaged\
+        \ in unlawful practices. The Tribunal\nrequires preservation of all correspondence, transaction\
+        \ records, and\ninternal communications related to the matter.\n\nThe Master of Records approaches\
+        \ you urgently. \"Our standard practice\ndestroys routine correspondence after one year. The oldest\
+        \ relevant\ndocuments are approaching that date. What do we do?\"\n\nThe Court Advisor warns:\
+        \ \"Destroying documents after we've been notified\nof the Tribunal's requirements would be viewed\
+        \ as spoliation - destruction\nof evidence. The penalties for that are severe - the Tribunal may\
+        \ assume\nthe destroyed documents would have proven our guilt.\"\n\nWhat is your IMMEDIATE obligation?\n\
+        \                "
+      choices:
+      - text: Destroy the correspondence to protect sensitive information
+      - text: Issue a preservation order halting all destruction of relevant documents
+      - text: Continue normal retention practices - the Tribunal hasn't formally started yet
+      - text: Let the legal advisors handle it - records management isn't their concern
+      success_text: "\n\"Issue a preservation order immediately!\" you command. Royal messengers\nrace\
+        \ throughout the kingdom with sealed scrolls: all document destruction\nis halted for anything\
+        \ potentially related to the trade ministry matter.\n\nThe Master of Records implements the hold:\
+        \ \"All correspondence involving\ntrade agreements, merchant communications, and ministry decisions\
+        \ is now\npreserved regardless of age. Our normal destruction schedule is suspended\nfor these\
+        \ documents until the Tribunal concludes.\"\n\nWhen the Tribunal convenes months later, your advocate\
+        \ presents a complete\nrecord. The opposing guild attempts to claim you destroyed evidence, but\n\
+        your preservation order - with its timestamp and scope - proves otherwise.\n\n\"Proper preservation\
+        \ demonstrates good faith,\" the Tribunal notes. \"This\nkingdom has complied with all obligations.\"\
+        \n                "
+      failure_texts:
+        0: "\n\"Destroy the documents?\" The Court Advisor turns pale. \"After receiving\nnotice of the\
+          \ Tribunal's interest? That is spoliation of evidence!\"\n\nAt the Tribunal, the opposing guild\
+          \ presents evidence of your post-notice\ndestruction. The judges draw an adverse inference:\
+          \ destroyed documents\nare presumed to have supported the opposition's claims. Your kingdom\n\
+          suffers severe penalties.\n\nNever destroy evidence after receiving legal hold notice.\n   \
+          \                 "
+        2: "\n\"Continue normal practices?\" Two months later, at the Tribunal, the\nopposing advocate\
+          \ demands documents that no longer exist - destroyed under\n'normal retention.'\n\n\"You were\
+          \ notified of this matter,\" the judge frowns. \"Yet you allowed\ndocument destruction to continue?\
+          \ That is spoliation.\" Severe sanctions\nfollow.\n\nLegal hold requirements begin when you're\
+          \ notified, not when proceedings\nformally begin.\n                    "
+        3: "\n\"Not our concern?\" Unfortunately, the legal advisors don't control the\nrecords. By the\
+          \ time they realize documents are being destroyed, critical\nevidence is gone.\n\nAt the Tribunal:\
+          \ \"The kingdom claims its records department wasn't\nproperly instructed. That is not a defense\
+          \ - it's an admission of\ninternal failure.\" Sanctions for spoliation are imposed.\n\nIT/Records\
+          \ controls the data and must implement preservation.\n                    "
+    corporate:
+      title: THE LITIGATION HOLD
+      narrative: "\nThe General Counsel bursts into the IT director's office. \"We just received\nnotice\
+        \ that a former employee is suing the company for wrongful termination.\nThe plaintiff's attorney\
+        \ has demanded preservation of all emails, documents,\nand communications related to this employee's\
+        \ tenure and termination.\"\n\nThe IT director checks the retention policies. \"Our standard policy\
+        \ deletes\nemails older than 90 days. Some of the relevant communications are\napproaching that\
+        \ threshold.\"\n\nThe General Counsel is emphatic: \"If we delete any of that data now, after\n\
+        receiving this notice, it's spoliation. Courts can sanction us, draw\nadverse inferences, or even\
+        \ enter default judgment against us. We could\nlose the case without it ever being decided on\
+        \ merits.\"\n\nWhat is IT's IMMEDIATE obligation?\n                "
+      choices:
+      - text: Delete the emails to protect employee privacy
+      - text: Issue a legal hold to preserve all relevant data
+      - text: Continue normal retention policies - the lawsuit hasn't been filed yet
+      - text: Let Legal handle it - IT doesn't deal with lawsuits
+      success_text: "\n\"We'll implement a legal hold immediately,\" you confirm. Within hours,\nthe email\
+        \ system is configured to preserve all communications involving\nthe former employee, the HR department,\
+        \ the employee's manager, and\nanyone involved in the termination decision.\n\nA company-wide\
+        \ notification is sent to relevant custodians: \"Do not delete\nany documents, emails, or files\
+        \ related to [employee name] or their\ntermination. Automatic deletion is suspended for these\
+        \ records.\"\n\nWhen discovery proceeds, the company can produce a complete record. The\nopposing\
+        \ attorney's attempt to claim spoliation fails - the legal hold\ndocumentation shows immediate\
+        \ action to preserve all relevant data.\n\n\"Proper e-discovery preservation,\" your attorney\
+        \ notes, \"prevented what\ncould have been catastrophic sanctions.\"\n                "
+      failure_texts:
+        0: "\n\"Delete the emails?\" The General Counsel nearly faints. \"After we received\na preservation\
+          \ demand? That's textbook spoliation!\"\n\nDuring discovery, the opposing attorney subpoenas\
+          \ email server logs showing\nlarge-scale deletions after the notice date. The judge imposes\
+          \ sanctions\nand an adverse inference instruction: the jury is told to assume deleted\nemails\
+          \ would have supported the plaintiff.\n\nThe case, which might have been winnable, is effectively\
+          \ lost.\n                    "
+        2: "\n\"Continue normal retention?\" Three months into litigation, the plaintiff's\nattorney demands\
+          \ emails that were auto-deleted under 'normal policies'\nafter you received the preservation\
+          \ notice.\n\n\"Your Honor, the defendant continued deleting emails AFTER receiving our\npreservation\
+          \ demand.\" The judge is not impressed. Sanctions for spoliation\nare substantial.\n\nLegal\
+          \ hold obligations begin when you reasonably anticipate litigation.\n                    "
+        3: "\n\"Not IT's problem?\" Legal doesn't control the email server. By the time\nthey realize\
+          \ data is being deleted, critical communications are gone.\n\nIn court: \"The defendant claims\
+          \ their IT and Legal departments failed to\ncoordinate. That internal failure doesn't excuse\
+          \ spoliation.\" The sanctions\nare severe.\n\nIT controls the data - they must implement the\
+          \ preservation.\n                    "
+- id: d7_security_monitoring
+  domain: 7
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 7: Security Operations - Security Monitoring'
+  failure_text: "\nEffective security monitoring requires alert tuning (reducing false positives\nby adjusting\
+    \ thresholds and rules) and prioritization (ensuring high-severity\nthreats are investigated first).\
+    \ Without these, SOC teams drown in noise\nand miss genuine threats. The goal is actionable alerts,\
+    \ not more alerts.\n        "
+  themes:
+    fantasy:
+      title: THE OVERWHELMED WATCHERS
+      narrative: "\nThe Sentinel Tower receives reports from across the kingdom - suspicious\ntravelers,\
+        \ unusual magical signatures, potential threats. But the Chief\nSentinel is drowning.\n\n\"We\
+        \ receive ten thousand reports daily,\" he explains wearily. \"We can\nonly investigate perhaps\
+        \ one hundred. Most reports are false alarms or\nminor issues, but buried in there somewhere are\
+        \ real threats. Last week,\nwe missed a genuine assassination plot because the report was lost\
+        \ in the\nnoise.\"\n\nThe Captain of the Guard examines the situation. \"Some reports are clearly\n\
+        more important than others. A suspicious person in the marketplace is\nless urgent than a known\
+        \ assassin spotted near the castle. And many of\nthese reports - like 'stranger wearing a hood'\
+        \ - are too broad to be useful.\"\n\nWhat should be done to make the alert volume manageable?\n\
+        \                "
+      choices:
+      - text: Ignore all alerts since there are too many to handle
+      - text: Tune alert thresholds and implement prioritization - focus on high-severity threats first
+      - text: Investigate alerts randomly - fairness is important
+      - text: Disable the sentinel network to eliminate the alert flood
+      success_text: "\nYou implement a two-part solution. First, alert tuning: 'stranger in hood'\nis\
+        \ too vague and generates too many false positives - the threshold is\nraised to require additional\
+        \ suspicious indicators. Second, prioritization:\nthreats near critical areas or involving known\
+        \ adversaries are flagged\nas high priority and investigated first.\n\nWithin a month, the transformation\
+        \ is remarkable. Alert volume has dropped\nto 3,000 daily (tuning eliminated the false positives),\
+        \ and sentinels\ninvestigate the highest-priority threats first. The assassination plot\nfrom\
+        \ last week? Similar reports are now immediately escalated.\n\n\"We're no longer drowning,\" the\
+        \ Chief Sentinel reports. \"We focus on what\nmatters, and the false alarms no longer bury real\
+        \ threats.\"\n\nEffective monitoring requires tuning and prioritization, not just more\nalerts.\n\
+        \                "
+      failure_texts:
+        0: "\n\"Ignore all alerts?\" The next week, a real threat is missed because it\nwas among the\
+          \ 'ignored' alerts. The kingdom suffers an attack that could\nhave been prevented.\n\nThe solution\
+          \ isn't to ignore everything - it's to filter and prioritize\nso important alerts get attention.\n\
+          \                    "
+        2: "\n\"Random investigation?\" By chance, the sentinels spend days investigating\n'suspicious\
+          \ cat behavior' while the genuine assassination plot goes\nuninvestigated. The king narrowly\
+          \ survives.\n\nRandom investigation doesn't prioritize critical threats. High-severity\nalerts\
+          \ must be investigated first.\n                    "
+        3: "\n\"Disable the sentinel network?\" The kingdom goes blind. Without any\nmonitoring, threats\
+          \ arrive without warning. The first indication of the\ninvasion is when enemy troops appear\
+          \ at the gates.\n\nSome monitoring is essential. The solution is better monitoring, not\nno\
+          \ monitoring.\n                    "
+    corporate:
+      title: THE SOC ALERT NIGHTMARE
+      narrative: "\nThe SOC team lead presents the problem at the security committee meeting.\n\"We're\
+        \ getting 10,000 alerts per day. We can investigate maybe 100. Our\nanalysts are burned out, real\
+        \ threats are getting missed, and morale is\nin the toilet.\"\n\nThe CISO examines the alert dashboard.\
+        \ \"I see thousands of 'failed login\nattempt' alerts - most are probably users mistyping passwords.\
+        \ And these\n'suspicious outbound connection' alerts - half of them are just marketing\nanalytics\
+        \ platforms. Meanwhile, the alert for lateral movement yesterday\nwas buried so deep that nobody\
+        \ saw it until the damage was done.\"\n\nThe team lead nods. \"We're drowning in noise. The important\
+        \ stuff is\ngetting lost. But we can't just ignore alerts - what if we miss something?\"\n\nWhat\
+        \ should be done?\n                "
+      choices:
+      - text: Ignore all alerts since there are too many to process
+      - text: Tune alert thresholds and implement prioritization
+      - text: Investigate alerts randomly to ensure fairness
+      - text: Disable monitoring entirely to eliminate the alert flood
+      success_text: "\n\"Two things,\" you recommend. \"Alert tuning and prioritization.\"\n\nOver the\
+        \ next month, the team refines alert rules: single failed logins\nno longer alert (threshold raised\
+        \ to 5 failures in 10 minutes); known-good\nanalytics platforms are whitelisted; and overly broad\
+        \ signatures are made\nmore specific.\n\nSimultaneously, remaining alerts are prioritized: lateral\
+        \ movement,\nprivilege escalation, and data exfiltration patterns are flagged critical\nand investigated\
+        \ first. Low-priority alerts (normal user behavior that's\nslightly unusual) are batched for weekly\
+        \ review.\n\n\"Alert volume is down to 2,000 per day,\" the team lead reports after a\nmonth.\
+        \ \"And analysts actually look at the critical queue first. We haven't\nmissed a single high-priority\
+        \ threat.\"\n\nThe SOC is functioning effectively again.\n                "
+      failure_texts:
+        0: "\n\"Ignore all alerts?\" Two weeks later, ransomware encrypts the entire\ndomain. The alerts\
+          \ were there - lateral movement, suspicious SMB traffic,\nunusual service account activity -\
+          \ but they were being 'ignored.'\n\nThe solution isn't to ignore everything; it's to make alerts\
+          \ actionable\nthrough tuning and prioritization.\n                    "
+        2: "\n\"Random investigation?\" The analysts spend a week investigating false\npositives selected\
+          \ at random while a genuine APT quietly exfiltrates\ncustomer data. The critical alerts were\
+          \ there - just not randomly selected.\n\nRandom investigation doesn't prioritize threats by\
+          \ severity. Critical\nalerts must be investigated first.\n                    "
+        3: "\n\"Disable monitoring?\" The CISO stares. \"You want to fly completely blind?\nDo you know\
+          \ what happens to organizations with no security monitoring?\"\n\nSix months later, the breach\
+          \ investigation reveals attackers were in the\nnetwork for four months. With no monitoring,\
+          \ there was nothing to detect\nthem.\n                    "
+- id: d7_problem_management
+  domain: 7
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 7: Security Operations - Problem Management'
+  failure_text: "\nProblem management focuses on identifying root causes of recurring incidents\nand implementing\
+    \ permanent fixes. Incident management handles individual\noccurrences but doesn't prevent recurrence.\
+    \ When the same incident type\nkeeps happening, problem management investigates why and implements\
+    \ systemic\nsolutions.\n        "
+  themes:
+    fantasy:
+      title: THE RECURRING BREACH
+      narrative: "\nThe War Council reviews the incident log with growing frustration. \"This\nis the\
+        \ THIRD time in two moons that infiltrators have entered through the\nEastern Sewers. Each time,\
+        \ we catch them, expel them, and repair the damage.\nAnd each time, they return using the same\
+        \ route.\"\n\nThe Captain of the Guard is defensive. \"We've handled each incident perfectly.\n\
+        Detection was rapid, response was effective, the intruders were expelled,\nand operations resumed\
+        \ quickly.\"\n\nThe Grand Strategist shakes his head. \"You've treated the symptoms three\ntimes,\
+        \ but the disease remains. Why do infiltrators keep choosing the\nEastern Sewers? What is it about\
+        \ that route that makes it attractive? And\nhow do we fix the underlying vulnerability so this\
+        \ stops happening?\"\n\nWhat process should address the ROOT CAUSE to prevent recurrence?\n  \
+        \              "
+      choices:
+      - text: Incident management - handle each occurrence as it happens
+      - text: Problem management - identify and fix the root cause
+      - text: Change management - approve changes to the sewer
+      - text: Release management - deploy updates to defenses
+      success_text: "\n\"We need problem management,\" you explain. \"Incident management addresses\n\
+        individual events. Problem management asks WHY incidents recur and\nimplements permanent fixes.\"\
+        \n\nA problem investigation is launched. The team discovers that the Eastern\nSewer's detection\
+        \ wards have a blind spot where two coverage areas don't\noverlap. Infiltrators have learned to\
+        \ exploit this gap.\n\nThe root cause identified, a permanent fix is designed: overlapping ward\n\
+        coverage with no gaps. Once implemented, infiltration attempts through\nthe Eastern Sewer drop\
+        \ to zero.\n\n\"Problem management prevents recurrence,\" the Grand Strategist approves.\n\"We're\
+        \ no longer repeatedly treating the same wound. We've healed it\npermanently.\"\n            \
+        \    "
+      failure_texts:
+        0: "\n\"Keep handling each occurrence?\" The fourth infiltration occurs the next\nweek. Then the\
+          \ fifth. Then the sixth.\n\n\"We're very good at handling these incidents,\" the Captain notes\
+          \ proudly.\n\"But shouldn't we, perhaps, stop them from happening?\"\n\nIncident management\
+          \ handles events. Problem management prevents recurrence.\n                    "
+        2: "\n\"Change management?\" The Change Council asks: \"Change what, exactly? We\nneed to know\
+          \ what's broken before we can approve a fix.\"\n\nChange management approves changes. Problem\
+          \ management identifies what\nchanges are needed by analyzing root causes.\n               \
+          \     "
+        3: "\n\"Release management?\" The deployment team asks: \"Deploy what? We don't\nhave a solution\
+          \ to deploy - we don't even know what the problem is.\"\n\nRelease management deploys solutions.\
+          \ Problem management identifies what\nsolutions are needed through root cause analysis.\n  \
+          \                  "
+    corporate:
+      title: THE RECURRING PHISHING PROBLEM
+      narrative: "\nThe security team lead reviews the quarterly metrics with frustration.\n\"This is\
+        \ the THIRD major phishing incident in two months. Each time, users\nclick malicious links, credentials\
+        \ get stolen, and we reset passwords and\nclean up the mess. And each time, it happens again.\"\
+        \n\nThe SOC manager is proud of the response. \"Our incident response is\nexcellent. Average time\
+        \ from detection to containment is under two hours.\nWe have playbooks, we have tools, we have\
+        \ trained staff.\"\n\nThe CISO interrupts: \"You're very good at mopping the floor. But you\n\
+        haven't turned off the faucet. Why do users keep clicking these links?\nWhat is it about our defenses\
+        \ that lets these phishing emails through?\nAnd how do we stop this from happening again?\"\n\n\
+        What process should address the ROOT CAUSE?\n                "
+      choices:
+      - text: Incident management - handle each phishing event as it occurs
+      - text: Problem management - identify and fix the root cause of recurring incidents
+      - text: Change management - approve changes to email systems
+      - text: Release management - deploy patches to email servers
+      success_text: "\n\"We need problem management,\" you recommend. \"Incident management handles\n\
+        individual events. Problem management investigates why they keep recurring.\"\n\nThe problem investigation\
+        \ reveals multiple root causes: email filtering\nisn't catching lookalike domains, security awareness\
+        \ training hasn't been\nupdated in two years, and there's no mechanism for users to report\nsuspicious\
+        \ emails.\n\nPermanent fixes are implemented: enhanced email filtering with lookalike\ndomain\
+        \ blocking, refreshed security awareness training with phishing\nsimulations, and a simple 'Report\
+        \ Phishing' button in the email client.\n\nThree months later, phishing incidents have dropped\
+        \ 90%. \"Problem management\nturned off the faucet,\" the CISO notes. \"We're not just mopping\
+        \ anymore.\"\n                "
+      failure_texts:
+        0: "\n\"Keep handling each incident?\" The fourth phishing campaign succeeds the\nnext month.\
+          \ Then the fifth. Then the sixth.\n\n\"Our incident response metrics are excellent,\" the SOC\
+          \ manager notes.\n\"But shouldn't we, you know, stop having so many incidents?\"\n\nIncident\
+          \ management responds to events. Problem management prevents them.\n                    "
+        2: "\n\"Change management?\" The CAB asks: \"What change are you proposing? We\napprove changes\
+          \ - we don't identify what changes are needed.\"\n\nChange management is the approval process.\
+          \ Problem management identifies\nwhat needs to change through root cause analysis.\n       \
+          \             "
+        3: "\n\"Release management?\" The deployment team asks: \"Deploy what? We need a\nsolution before\
+          \ we can deploy it.\"\n\nRelease management handles deployment. Problem management identifies\n\
+          what solutions are needed by analyzing root causes.\n                    "
+- id: d7_deprovisioning
+  domain: 7
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 7: Security Operations - Resource Protection'
+  failure_text: "\nDeprovisioning is the process of revoking all access - logical and physical -\nwhen\
+    \ an employee leaves the organization. It should occur on or before the\nemployee's last day and must\
+    \ be comprehensive: badge access, system accounts,\nVPN, applications, and any special permissions.\
+    \ Failure to deprovision\nleaves organizations vulnerable to former employee access.\n        "
+  themes:
+    fantasy:
+      title: THE DEPARTED GUARDIAN
+      narrative: "\nTwo weeks ago, Sir Aldric left the Citadel Guard under bitter circumstances\nafter\
+        \ a dispute with the Captain. Today, a sentry reports something alarming:\nSir Aldric was seen\
+        \ entering the barracks at midnight using his old access\ncrystal, which still functions.\n\n\
+        The Captain of the Guard is furious. \"He was terminated fourteen days ago!\nWhy does his crystal\
+        \ still work? Why wasn't his access to the barracks\nrevoked?\"\n\nInvestigation reveals a troubling\
+        \ pattern: the provisioning office creates\naccess crystals for new guardians promptly, but there's\
+        \ no corresponding\nprocess for deactivating them when guardians depart. Sir Aldric's crystal\n\
+        was simply... never disabled.\n\nWhat operational process failure does this indicate?\n      \
+        \          "
+      choices:
+      - text: Background check process failure - we shouldn't have hired him
+      - text: Account provisioning and deprovisioning failure - access wasn't revoked upon departure
+      - text: Training program failure - he should have known to return his crystal
+      - text: Encryption key management failure - the crystals should use stronger magic
+      success_text: "\n\"This is a deprovisioning failure,\" you explain. \"We have good processes\nfor\
+        \ granting access - provisioning. But we have no corresponding process\nfor revoking access when\
+        \ someone leaves - deprovisioning.\"\n\nYou implement an immediate fix: all access must be revoked\
+        \ on or before\na guardian's final day. A checklist ensures all access points are covered:\ngate\
+        \ crystals, barracks entry, armory access, training ground permissions,\ncommunication crystals,\
+        \ and any special authorizations.\n\nA weekly audit compares the active guardian roster to active\
+        \ access\npermissions, flagging any discrepancies immediately.\n\n\"Deprovisioning is now part\
+        \ of our standard offboarding,\" the Captain\nreports. \"No former guardian will have active access\
+        \ after departure.\"\n                "
+      failure_texts:
+        0: "\n\"Background check failure?\" The Provost shakes his head. \"Sir Aldric's\nbackground check\
+          \ was thorough. The problem isn't that we hired him - it's\nthat his access wasn't revoked when\
+          \ he left.\"\n\nBackground checks are pre-employment. Deprovisioning is at termination.\nDifferent\
+          \ processes, different failures.\n                    "
+        2: "\n\"Training failure?\" The Training Master is confused. \"Train him to do what?\nVoluntarily\
+          \ surrender his functioning access crystal? That's not realistic.\nThe SYSTEM should have disabled\
+          \ it automatically.\"\n\nRelying on departed personnel to self-revoke access is not a control.\n\
+          Deprovisioning must be a managed, systematic process.\n                    "
+        3: "\n\"Encryption key management?\" The Court Wizard sighs. \"The crystal's magic\nis perfectly\
+          \ strong. The problem is that his AUTHORIZATION was never\nrevoked. Stronger encryption doesn't\
+          \ fix that.\"\n\nThe crystal worked correctly - it authenticated a valid credential. The\nproblem\
+          \ was that the credential should no longer have been valid.\n                    "
+    corporate:
+      title: THE GHOST BADGE
+      narrative: "\nSecurity calls with an alarming report: an access card that should have\nbeen deactivated\
+        \ two weeks ago was just used to enter the building at\n11:47 PM. Badge records show it belongs\
+        \ to a terminated employee - one\nwho left under acrimonious circumstances after a heated dispute\
+        \ with\nmanagement.\n\nHR confirms: the employee was terminated fourteen days ago. But their\n\
+        badge? Still active in the access control system. Their Active Directory\naccount? Still enabled.\
+        \ Their VPN credentials? Still valid.\n\nThe CISO is furious. \"This person left two weeks ago!\
+        \ Why do they still\nhave access to ANYTHING?\"\n\nInvestigation reveals there's no formal deprovisioning\
+        \ process. Provisioning\nnew employees is well-documented, but there's no checklist or process\
+        \ for\nremoving access when they leave.\n\nWhat operational process failure does this indicate?\n\
+        \                "
+      choices:
+      - text: Background check process failure - we shouldn't have hired them
+      - text: Account/access provisioning and deprovisioning failure
+      - text: Training program failure - they should have returned their badge
+      - text: Encryption key management failure - badges should use stronger encryption
+      success_text: "\n\"This is a deprovisioning failure,\" you explain. \"We're good at giving\npeople\
+        \ access when they join - that's provisioning. But we have no matching\nprocess for taking it\
+        \ away when they leave - that's deprovisioning.\"\n\nYou work with HR and IT to create a comprehensive\
+        \ offboarding checklist:\nbadge deactivation, AD account disable, VPN revocation, email access\n\
+        removal, application access removal, and physical key collection - all\ncompleted on or before\
+        \ the employee's last day.\n\nAn automated report now compares HR's employee roster to active\
+        \ access\naccounts daily, flagging any orphaned access immediately.\n\n\"No terminated employee\
+        \ will have lingering access,\" you report. \"The\nprocess gap is closed.\"\n                "
+      failure_texts:
+        0: "\n\"Background check failure?\" HR is confused. \"Their background check was\nfine when we\
+          \ hired them. The problem isn't the hiring decision - it's\nthat their access wasn't removed\
+          \ when they left.\"\n\nBackground checks happen at hiring. Deprovisioning happens at termination.\n\
+          Completely different processes.\n                    "
+        2: "\n\"Training failure?\" The security team stares. \"You think we should train\nterminated\
+          \ employees to please remember to return their badges and disable\ntheir own accounts? That's\
+          \ not how access management works.\"\n\nDeprovisioning must be a managed, systematic process.\
+          \ Relying on departed\nemployees to self-revoke access is not a control.\n                 \
+          \   "
+        3: "\n\"Encryption on badges?\" The badge vendor rep sighs. \"The badge encryption\nis fine. It\
+          \ authenticated correctly - the problem is that it SHOULD no\nlonger have been valid. That's\
+          \ not an encryption issue.\"\n\nThe authentication worked. The AUTHORIZATION should have been\
+          \ revoked.\n                    "

@@ -1,0 +1,1677 @@
+domain: 4
+domain_name: Communication and Network Security
+scenarios:
+- id: d4_osi_layers
+  domain: 4
+  correct_index: 3
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 4: Communication and Network Security - OSI Model'
+  failure_text: "\nThe OSI model has 7 layers. DNS resolution operates at Layer 7 (Application).\nWhen\
+    \ troubleshooting, if lower layers work (ping by IP succeeds), the\nproblem is at a higher layer.\
+    \ DNS translates human-friendly names to\nIP addresses - an application-layer service.\n        "
+  themes:
+    fantasy:
+      title: THE CRYSTAL MESSENGER'S DILEMMA
+      narrative: "\nThe Arcane Communications Tower crackles with frustrated energy. A crystal\nmessenger\
+        \ sprite reports that enchanted scrolls are reaching their destinations,\nbut the words upon them\
+        \ are scrambled into nonsense.\n\n\"Most peculiar,\" mutters the Tower Keeper. \"I can trace the\
+        \ magical pathways\nperfectly - the scroll reaches the correct tower. The magical seals verify\n\
+        the scroll is intact. Yet the message translation spell fails completely.\"\n\nYou examine the\
+        \ communication channels. The physical crystal links glow\nstrong and steady. The magical routing\
+        \ sigils correctly direct each scroll.\nThe transport enchantments confirm delivery and receipt.\n\
+        \n\"It seems the lower layers of our magical network function perfectly,\" you\nobserve. \"The\
+        \ crystals connect, the routes work, the deliveries confirm...\"\n\nThe Keeper nods grimly. \"\
+        Yet the Name-to-Tower translation spell - converting\nfriendly names like 'Archmage Theron' to\
+        \ actual tower coordinates - fails\nentirely. At which layer of our communication magic does the\
+        \ problem lie?\"\n\nWhat layer of the magical network is failing?\n                "
+      choices:
+      - text: The Crystal Layer - the physical connections must be subtly damaged
+      - text: The Routing Layer - the magical pathways are misdirecting scrolls
+      - text: The Transport Layer - delivery confirmations are being forged
+      - text: The Application Layer - the name translation spell operates at the highest level
+      success_text: "\n\"Of course!\" The Tower Keeper's eyes widen with understanding. \"The\nName-to-Tower\
+        \ translation is an application-level service, like our\nDNS - Domain Name Sorcery!\"\n\nYou nod\
+        \ approvingly. \"The physical crystals work, the routing functions,\nthe transport confirms delivery.\
+        \ All lower layers are operational. It is\nonly the highest layer - where names become addresses\
+        \ - that fails.\"\n\nThe Keeper immediately dispatches a repair sprite to the Name Translation\n\
+        Sanctuary. Within the hour, scrolls flow freely once more.\n\n\"You have taught me to troubleshoot\
+        \ systematically,\" the Keeper says\ngratefully. \"When lower layers function, look to the highest\
+        \ layers for\nthe fault.\"\n\nYou have demonstrated understanding of the OSI MODEL LAYERS.\n \
+        \               "
+      failure_texts:
+        0: "\nPhysical layer issues would prevent all communication entirely - not even\nbasic connectivity\
+          \ would work. Since the scrolls physically reach their\ndestinations (proven by IP-equivalent\
+          \ crystal tracing), the physical\nlayer is functioning perfectly. DNS/name resolution operates\
+          \ at Layer 7,\nthe Application layer.\n                    "
+        1: "\nThe routing layer (Network layer) handles addressing and path selection.\nSince scrolls\
+          \ reach the correct destination tower when addressed by\ncoordinates (like an IP address), routing\
+          \ works correctly. The problem\nis translating friendly names to addresses - a Layer 7 function.\n\
+          \                    "
+        2: "\nThe Transport layer handles reliable delivery and session management.\nSince delivery confirmations\
+          \ work properly, this layer is functional.\nDNS name resolution - converting hostnames to IP\
+          \ addresses - is an\nApplication layer (Layer 7) service.\n                    "
+    corporate:
+      title: THE HELPDESK MYSTERY
+      narrative: "\nThe helpdesk phone hasn't stopped ringing all morning. Every caller has\nthe same\
+        \ complaint: they can't reach the company's internal wiki.\n\nYou start troubleshooting methodically.\
+        \ \"Can you ping 10.0.50.25?\"\n\n\"Yes, that works fine.\"\n\n\"Okay, now try ping wiki.internal.corp\"\
+        \n\n\"Hmm... 'could not resolve hostname.' What does that mean?\"\n\nYou run some tests yourself.\
+        \ The network cables are fine. The switches\nshow green lights. Traceroute to the wiki server's\
+        \ IP address works\nperfectly. The server itself responds to direct IP connections.\n\nBut anything\
+        \ requiring a hostname lookup fails completely. Someone\nmumbles something about the new IT guy\
+        \ \"cleaning up\" the server room\nyesterday and accidentally unplugging something he thought\
+        \ was unused.\n\nYour manager appears, looking stressed. \"The CTO is asking which OSI\nlayer\
+        \ is affected. She needs it for the incident report. Yesterday.\"\n\nAt which OSI layer is this\
+        \ problem occurring?\n                "
+      choices:
+      - text: 'Layer 1 - Physical: probably a loose cable somewhere'
+      - text: 'Layer 3 - Network: the IP routing must be broken'
+      - text: 'Layer 4 - Transport: TCP connections are failing'
+      - text: 'Layer 7 - Application: DNS resolution is an application-layer service'
+      success_text: "\nYou pull up the incident report template. \"It's Layer 7 - Application\nlayer.\
+        \ DNS resolution is an application-layer protocol.\"\n\n\"But wait,\" your manager protests, \"\
+        DNS seems so fundamental...\"\n\n\"It is fundamental, but it's still an application service. Here's\
+        \ the\nproof: Layer 1-3 are working because we can ping by IP address. Layer 4\nis working because\
+        \ TCP connections succeed. The only thing broken is\nthe DNS lookup, which translates hostnames\
+        \ to IP addresses at Layer 7.\"\n\nThe new IT guy sheepishly admits he unplugged the DNS server\
+        \ thinking\nit was \"some old forgotten box.\" The server is plugged back in, and\nwithin minutes,\
+        \ the helpdesk phones go quiet.\n\n\"Put 'DNS server temporarily offline - Application Layer'\
+        \ in the report,\"\nyou tell your manager. \"And maybe put labels on the critical servers.\"\n\
+        \nYou have demonstrated understanding of the OSI MODEL LAYERS.\n                "
+      failure_texts:
+        0: "\nIf the Physical layer were damaged, ping by IP address would also fail.\nSince IP connectivity\
+          \ works perfectly, all physical connections are\nfunctional. DNS operates at Layer 7 (Application),\
+          \ not Layer 1.\n                    "
+        1: "\nThe Network layer handles IP addressing and routing. Since ping to the\nserver's IP address\
+          \ works, routing is functioning correctly. DNS\ntranslates hostnames to IP addresses and operates\
+          \ at Layer 7, not\nLayer 3.\n                    "
+        2: "\nThe Transport layer (TCP/UDP) handles connection establishment and\nreliability. Since TCP\
+          \ connections to IP addresses work, Layer 4 is\nfine. DNS is an application-layer protocol that\
+          \ uses UDP (port 53)\nbut is itself a Layer 7 service.\n                    "
+- id: d4_network_segmentation
+  domain: 4
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 4: Communication and Network Security - Network Segmentation'
+  failure_text: "\nNetwork segmentation divides networks into isolated zones with controlled\naccess between\
+    \ them. It limits lateral movement - even if one segment is\ncompromised, firewalls prevent attackers\
+    \ from reaching other segments.\nThis is fundamental defense in depth for network security.\n    \
+    \    "
+  themes:
+    fantasy:
+      title: THE PLAGUE OF CORRUPTED SCROLLS
+      narrative: "\nDisaster has struck the Citadel's archive network. A cursed scroll, opened\nby a careless\
+        \ apprentice in the Accounting Scriptorium, has spread its\ncorruption throughout the entire network.\
+        \ Ancient texts in the Research\nSanctum - irreplaceable magical formulas - now writhe with the\
+        \ same\ndark enchantment.\n\nThe Grand Archivist is beside himself. \"How could corruption spread\
+        \ from\nmere ledger-keepers to our most sacred research chambers? They have nothing\nin common!\"\
+        \n\nYou investigate and find the terrible truth: all Scriptoriums share the\nsame magical messaging\
+        \ network with no barriers between them. A corruption\nin one chamber flows freely to all others.\n\
+        \n\"This must never happen again,\" the Archivist declares. \"What protection\nwould BEST prevent\
+        \ such lateral spreading of magical corruption in the\nfuture?\"\n\nHow do you advise the Grand\
+        \ Archivist?\n                "
+      choices:
+      - text: Install more powerful cleansing wards on all scrolls throughout the network
+      - text: Divide the network into separate segments with warded barriers between each
+      - text: Require stronger authentication passwords for all scribes
+      - text: Encrypt all scroll messages so corruption cannot read them
+      success_text: "\n\"We must segment the network,\" you explain, conjuring an illusion of the\nnew\
+        \ architecture. \"The Accounting Scriptorium becomes its own isolated\nrealm. Research another.\
+        \ Each segment protected by warded barriers that\ncontrol exactly what messages may pass between\
+        \ them.\"\n\nThe Archivist studies the design. \"So if corruption strikes Accounting...\"\n\n\"\
+        It remains contained. The barriers - like magical firewalls - block any\nunauthorized spread.\
+        \ Research receives only pre-approved message types\nfrom Accounting, nothing more.\"\n\n\"But\
+        \ won't this slow our work?\"\n\n\"Slightly. But the alternative is losing everything when one\
+        \ apprentice\nopens the wrong scroll. Defense in depth requires accepting some friction\nfor much\
+        \ greater protection.\"\n\nThe segmentation project begins immediately. Future incidents remain\n\
+        isolated to their origin chambers.\n\nYou have demonstrated proper NETWORK SEGMENTATION principles.\n\
+        \                "
+      failure_texts:
+        0: "\nCleansing wards (antivirus) may detect known corruptions, but they cannot\nstop determined\
+          \ dark magic from spreading once it has a foothold. They\nalso cannot prevent zero-day curses.\
+          \ Segmentation physically prevents\nlateral movement - even if corruption evades detection,\
+          \ it cannot cross\nwarded barriers to other segments.\n                    "
+        2: "\nStronger passwords protect against unauthorized access, but this corruption\nspread through\
+          \ the legitimate network connections between chambers. Once\nmalware is inside a system, authentication\
+          \ doesn't prevent it from moving\nto connected systems. Segmentation limits what systems CAN\
+          \ connect.\n                    "
+        3: "\nEncryption protects message confidentiality but doesn't prevent malware\nspread. Corrupted\
+          \ data can be encrypted just as easily as clean data.\nThe corruption doesn't need to read messages\
+          \ - it just uses the network\npaths to spread. Segmentation blocks those paths entirely.\n \
+          \                   "
+    corporate:
+      title: THE RANSOMWARE RETROSPECTIVE
+      narrative: "\nThe incident response team sits in grim silence. Last week's ransomware\nattack started\
+        \ when someone in Accounting opened a malicious email\nattachment. Within four hours, it had encrypted\
+        \ the R&D servers, the\nHR database, the CEO's laptop, and half of production.\n\nThe CISO rubs\
+        \ her temples. \"I don't understand. These departments have\nnothing to do with each other. How\
+        \ did malware from Karen's desktop in\nAccounting end up encrypting prototype designs in R&D?\"\
+        \n\nYou pull up the network diagram. It's a flat network - one giant subnet\nwith no internal\
+        \ barriers. Any device can reach any other device. The\nmalware simply walked from system to system\
+        \ through open network paths.\n\n\"Well,\" the CISO says, \"we're rebuilding from backups anyway.\
+        \ What\nsingle control would BEST prevent this lateral movement in our new\nnetwork design?\"\n\
+        \nWhat do you recommend?\n                "
+      choices:
+      - text: Deploy better antivirus on all endpoints - catch malware before it spreads
+      - text: Implement network segmentation with firewall rules between departments
+      - text: Require 20-character passwords for all users
+      - text: Encrypt all internal network traffic with VPN
+      success_text: "\nYou sketch out the new design on the whiteboard. \"We segment. Accounting\ngets\
+        \ its own VLAN. R&D gets another. HR, Production, Management - each\nin isolated network segments\
+        \ with firewalls controlling traffic between\nthem.\"\n\n\"Won't that be complicated?\" someone\
+        \ asks.\n\n\"Yes. But here's the thing: even if Karen clicks another phishing email\nnext year\
+        \ - and she will - the malware gets trapped in the Accounting\nsegment. The firewall blocks it\
+        \ from reaching R&D because there's no\nlegitimate reason for Karen's desktop to connect to R&D\
+        \ servers.\"\n\nThe CISO nods slowly. \"So we limit the blast radius.\"\n\n\"Exactly. Antivirus\
+        \ might miss the malware. Passwords don't stop it once\nit's running. But segmentation physically\
+        \ prevents it from reaching what\nit can't legitimately access.\"\n\nThe network redesign project\
+        \ gets immediate budget approval.\n\nYou have demonstrated proper NETWORK SEGMENTATION principles.\n\
+        \                "
+      failure_texts:
+        0: "\nAntivirus is important but imperfect - it missed this malware the first\ntime. Zero-day\
+          \ threats evade signature detection. Segmentation provides\ndefense in depth: even if AV fails,\
+          \ the malware can't traverse firewalled\nboundaries between segments. Don't rely on a single\
+          \ control.\n                    "
+        2: "\nStrong passwords prevent unauthorized login, but the ransomware didn't\nneed passwords -\
+          \ it spread through network vulnerabilities and open\nconnections between systems. Once malware\
+          \ is executing, password strength\nis irrelevant. Segmentation blocks the network paths malware\
+          \ uses.\n                    "
+        3: "\nVPN encrypts traffic, but encryption doesn't block malicious traffic -\nit just makes it\
+          \ confidential. Encrypted malware communication is still\nmalware communication. Segmentation\
+          \ controls WHICH systems can talk to\nwhich, not just whether the conversation is encrypted.\n\
+          \                    "
+- id: d4_stateful_firewall
+  domain: 4
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 4: Communication and Network Security - Firewall Technologies'
+  failure_text: "\nStateful firewalls maintain connection state tables, tracking all active\nsessions.\
+    \ They can detect packets claiming to be part of connections that\nwere never established. Stateless\
+    \ packet filters examine each packet\nindependently and cannot detect this type of attack.\n     \
+    \   "
+  themes:
+    fantasy:
+      title: THE PHANTOM REPLY SCROLLS
+      narrative: "\nThe Border Sentinel reports a disturbing pattern. Strange scrolls are\nappearing at\
+        \ the Citadel gates, claiming to be replies to messages the\nCitadel never sent. They bear all\
+        \ the correct magical seals and routing\nmarks of legitimate responses.\n\n\"Our scouts never\
+        \ sent inquiries to these foreign towers,\" the Sentinel\nCommander explains. \"Yet these 'reply'\
+        \ scrolls arrive constantly, each\nclaiming to answer questions we never asked. Some contain hidden\
+        \ curses\nthat activate upon reading.\"\n\nYou examine the gates' defenses. The current barrier\
+        \ enchantment examines\neach scroll individually, checking only its current form and destination.\n\
+        It has no memory of past communications.\n\n\"The attackers exploit this ignorance,\" you realize.\
+        \ \"They send forged\nreplies to conversations that never existed. Our stateless barrier cannot\n\
+        know the difference.\"\n\nThe Commander grips his sword hilt. \"What manner of defense would\n\
+        recognize these phantom replies for the deceptions they are?\"\n\nWhat type of firewall defense\
+        \ do you recommend?\n                "
+      choices:
+      - text: A simple packet-checking barrier that examines each scroll independently
+      - text: A connection-tracking barrier that remembers all outgoing messages and validates replies
+      - text: A web-specific barrier designed for HTTP messages only
+      - text: A session-layer gateway that validates scroll formatting
+      success_text: "\n\"You need a stateful barrier,\" you explain. \"One that maintains a ledger\nof\
+        \ all legitimate conversations - every message sent outward, awaiting\nits proper reply.\"\n\n\
+        You demonstrate the concept with an illusion. \"When a scout sends an\ninquiry, the barrier records:\
+        \ 'Message to Tower Valdris, expecting reply.'\nWhen a scroll arrives claiming to be that reply,\
+        \ the barrier checks its\nledger. If no matching outgoing message exists...\"\n\n\"The reply is\
+        \ a phantom! A forgery!\" The Commander's eyes light up.\n\n\"Precisely. Stateless barriers are\
+        \ blind to conversation context. They\nsee each scroll in isolation. Stateful barriers understand\
+        \ that replies\nmust match requests. No request means no legitimate reply can exist.\"\n\nThe\
+        \ enchantment is upgraded within the week. The phantom reply attacks\ncease entirely - the attackers\
+        \ cannot forge what the barrier validates.\n\nYou have demonstrated understanding of STATEFUL\
+        \ INSPECTION FIREWALLS.\n                "
+      failure_texts:
+        0: "\nA stateless packet-checking barrier is exactly the problem! It examines\neach packet/scroll\
+          \ independently without remembering previous traffic.\nIt cannot detect that a \"reply\" has\
+          \ no corresponding \"request.\" You need\nstateful inspection that tracks connection state.\n\
+          \                    "
+        2: "\nWeb Application Firewalls (WAFs) specialize in HTTP/HTTPS traffic and\napplication-layer\
+          \ attacks like SQL injection. They don't address the\nfundamental issue of forged TCP connection\
+          \ responses. Stateful inspection\ntracks all connection types, not just web traffic.\n     \
+          \               "
+        3: "\nSession-layer gateways work at OSI Layer 5 and handle session establishment.\nWhile they\
+          \ have some awareness of connections, stateful inspection firewalls\nspecifically maintain connection\
+          \ state tables to track TCP/UDP conversations\nand validate that responses match legitimate\
+          \ outbound requests.\n                    "
+    corporate:
+      title: THE UNSOLICITED RESPONSES
+      narrative: "\nThe security monitoring console keeps flagging suspicious traffic. Packets\nare arriving\
+        \ from external addresses, all formatted as TCP response packets\nwith the ACK flag set - as if\
+        \ responding to connections your network\ninitiated. But your logs show no corresponding outbound\
+        \ connections.\n\n\"It's a classic TCP session hijacking attempt,\" you explain to the junior\n\
+        analyst. \"Attackers send packets that look like they're part of existing\nconversations. If our\
+        \ firewall is stateless, it might let them through.\"\n\nThe analyst frowns. \"But these packets\
+        \ have proper headers, correct ports,\nvalid checksums...\"\n\n\"All of which a stateless firewall\
+        \ would accept. It only examines each\npacket individually. It doesn't know whether there's actually\
+        \ a\nconversation happening.\"\n\nYour manager walks over. \"The board is asking what type of\
+        \ firewall\nwe need to prevent these attacks. They want it in writing.\"\n\nWhat type of firewall\
+        \ should you recommend?\n                "
+      choices:
+      - text: Packet filtering firewall - it can examine packet headers
+      - text: Stateful inspection firewall - it tracks connection state
+      - text: Web application firewall - it understands HTTP
+      - text: Circuit-level gateway - it validates session establishment
+      success_text: "\nYou type up the recommendation: \"We need a stateful inspection firewall.\"\n\n\
+        \"Here's why,\" you explain to your manager. \"Stateful firewalls maintain\na connection state\
+        \ table. When our network initiates a connection to\ngoogle.com, the firewall notes: 'Connection\
+        \ from 10.0.1.15:52344 to\n142.250.80.46:443 - expecting responses.'\n\n\"When packets arrive\
+        \ claiming to be responses, the stateful firewall\nchecks its table. If there's a matching outbound\
+        \ connection, the reply\nis legitimate. If not - if we never made that request - the packet is\n\
+        dropped as unauthorized.\"\n\n\"And packet filters can't do this?\"\n\n\"Packet filters examine\
+        \ each packet in isolation. They might see a\nproperly-formatted response packet and say 'looks\
+        \ fine, come on in.'\nThey have no memory, no context. Stateful firewalls remember.\"\n\nThe recommendation\
+        \ is approved and the attack traffic stops getting\nthrough entirely.\n\nYou have demonstrated\
+        \ understanding of STATEFUL INSPECTION FIREWALLS.\n                "
+      failure_texts:
+        0: "\nPacket filtering firewalls (stateless) are exactly what the attackers\nare exploiting. They\
+          \ examine individual packets without connection context.\nThey cannot determine that a \"response\"\
+          \ has no legitimate \"request.\"\nStateful inspection maintains connection tables to track this.\n\
+          \                    "
+        2: "\nWAFs protect web applications from HTTP-layer attacks like XSS, SQL\ninjection, and similar.\
+          \ They don't address TCP-level session manipulation.\nThe attack described operates at the network/transport\
+          \ layer, requiring\nstateful connection tracking, not application inspection.\n            \
+          \        "
+        3: "\nCircuit-level gateways work at the session layer and can validate that\nhandshakes complete\
+          \ properly. However, stateful inspection firewalls\nprovide more comprehensive connection tracking,\
+          \ maintaining full state\ntables for all TCP/UDP conversations and validating that responses\n\
+          match recorded requests.\n                    "
+- id: d4_vpn_technologies
+  domain: 4
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 4: Communication and Network Security - VPN Technologies'
+  failure_text: "\nSSL/TLS VPNs work through standard web browsers using HTTPS (port 443),\nwhich is almost\
+    \ never blocked by firewalls. They don't require special\nclient software for basic access. This makes\
+    \ them ideal for users\nconnecting from diverse, uncontrolled network environments.\n        "
+  themes:
+    fantasy:
+      title: THE WANDERING SCHOLARS
+      narrative: "\nThe Citadel's traveling scholars face a dilemma. They journey to distant\nlands, staying\
+        \ in foreign inns and markets, yet must consult the Citadel's\nprotected archives remotely. The\
+        \ public message crystals in these places\nare notoriously untrustworthy - any eavesdropper can\
+        \ intercept the magic.\n\n\"We cannot install special enchanted crystals in every inn across the\n\
+        realm,\" the Head Scholar sighs. \"Our people carry only basic communication\norbs - the kind\
+        \ any merchant uses.\"\n\n\"Yet they must access restricted archives through these untrusted\n\
+        channels?\" you ask.\n\n\"Precisely. The foreign inns often block unusual magical protocols -\n\
+        they only permit the most basic message-scrying. Our scholars need\nsomething that works everywhere,\
+        \ using only the tools they already\ncarry.\"\n\nThe Head Scholar spreads her hands. \"What approach\
+        \ would allow our\nscholars secure access to the archives from any location, using only\nstandard\
+        \ equipment that won't be blocked by suspicious innkeepers?\"\n\nWhat VPN approach do you recommend?\n\
+        \                "
+      choices:
+      - text: IPSec tunnel magic - powerful but requires special crystals
+      - text: SSL/TLS browser-based access - works through any standard scrying orb
+      - text: PPTP enchantment - old magic that most barriers recognize and block
+      - text: L2TP without encryption - fast but offers no protection from eavesdroppers
+      success_text: "\n\"SSL/TLS scrying is your answer,\" you declare. \"It works through any\nstandard\
+        \ communication orb - no special equipment needed. The magic\ntravels on the same channels that\
+        \ merchants use for trade, so suspicious\ninnkeepers have no reason to block it.\"\n\n\"But is\
+        \ it secure enough for archive access?\"\n\n\"Absolutely. SSL/TLS creates an encrypted tunnel\
+        \ that protects all\ncommunication. The foreign inn sees only ordinary-looking traffic.\nInside\
+        \ that tunnel, your scholars access archives as if they were\nwithin the Citadel itself.\"\n\n\
+        \"And our people need no special training?\"\n\n\"If they can use a standard scrying orb for basic\
+        \ message-reading, they\ncan use SSL/TLS access. The complexity is hidden behind simplicity.\"\
+        \n\nThe Head Scholar smiles with relief. \"Finally, a solution that works in\nthe real world,\
+        \ not just in theoretical enchantment manuals.\"\n\nYou have demonstrated understanding of VPN\
+        \ TECHNOLOGIES.\n                "
+      failure_texts:
+        0: "\nIPSec provides excellent security but typically requires dedicated client\nsoftware and\
+          \ uses protocols (ESP, AH) that are often blocked by firewalls.\nHotel and cafe networks frequently\
+          \ block non-standard protocols. SSL/TLS\nVPNs use HTTPS (port 443), which is almost never blocked.\n\
+          \                    "
+        2: "\nPPTP is an obsolete protocol with known security vulnerabilities. Many\nnetworks block it\
+          \ entirely. Modern security requirements demand current\nprotocols. SSL/TLS VPNs are widely\
+          \ supported and use standard HTTPS\nchannels that aren't blocked.\n                    "
+        3: "\nL2TP without encryption provides NO confidentiality - all traffic would\nbe visible to anyone\
+          \ on the untrusted network. This defeats the entire\npurpose of VPN access from hostile environments.\
+          \ SSL/TLS VPNs provide\nboth the accessibility and the encryption required.\n              \
+          \      "
+    corporate:
+      title: THE REMOTE WORK REALITY
+      narrative: "\nThe pandemic changed everything. Now half your employees work from home,\ncoffee shops,\
+        \ hotel business centers, or wherever they happen to be.\nThey all need access to internal resources\
+        \ - file shares, internal apps,\ndevelopment environments.\n\nThe old IPSec VPN worked fine when\
+        \ everyone was at home, but complaints\nflood in from traveling employees. \"The hotel wifi blocks\
+        \ it.\" \"The\ncoffee shop firewall kills my connection.\" \"I had to use my phone's\nhotspot\
+        \ because nothing else worked.\"\n\nThe CTO calls an emergency meeting. \"We need VPN access that\
+        \ works from\nanywhere - hotels, airports, conference centers, wherever. Our people\ncan't always\
+        \ install special client software - sometimes they're on\nborrowed laptops or public kiosks. What's\
+        \ our solution?\"\n\nWhat VPN approach do you recommend?\n                "
+      choices:
+      - text: Stick with IPSec tunnel mode - tell users to work around firewall blocks
+      - text: Deploy SSL/TLS VPN with browser-based access
+      - text: Use PPTP - it's simpler and faster to deploy
+      - text: Implement L2TP without encryption for maximum compatibility
+      success_text: "\n\"SSL/TLS VPN with browser access,\" you recommend. \"Here's why it solves\nall\
+        \ our problems:\n\n\"First, it works through web browsers - no client software installation\n\
+        required. Users on borrowed laptops can still connect.\n\n\"Second, it uses HTTPS on port 443.\
+        \ That's the same port as every\nsecure website. No hotel or coffee shop blocks port 443 because\
+        \ it\nwould break the entire internet for their customers.\n\n\"Third, it provides full encryption.\
+        \ Unlike some of the... alternatives...\nwe've considered.\"\n\nThe CTO nods. \"What about our\
+        \ power users who need full tunnel access?\"\n\n\"The browser provides access to specific resources.\
+        \ For power users,\nwe offer the full SSL VPN client - it's still more compatible than\nIPSec\
+        \ because it tunnels through HTTPS.\"\n\nWithin a month, the helpdesk tickets about VPN connectivity\
+        \ drop by 90%.\n\nYou have demonstrated understanding of VPN TECHNOLOGIES.\n                "
+      failure_texts:
+        0: "\n\"Work around firewall blocks\" is not a scalable solution. Users can't\ncontrol hotel or\
+          \ conference center firewalls. IPSec uses protocols\n(ESP, AH) and ports that are frequently\
+          \ blocked. SSL/TLS VPNs use\nstandard HTTPS traffic that networks cannot block without breaking\n\
+          all secure web browsing.\n                    "
+        2: "\nPPTP is a legacy protocol with well-documented security vulnerabilities.\nIt's been deprecated\
+          \ by Microsoft and is blocked by many enterprise\nnetworks. Using PPTP would be a step backward\
+          \ in security and wouldn't\nsolve the compatibility issues. SSL/TLS is the modern standard.\n\
+          \                    "
+        3: "\nL2TP without encryption means all traffic is visible to anyone on the\nnetwork - exactly\
+          \ what a VPN is supposed to prevent. Users connecting\nfrom hostile networks (coffee shops,\
+          \ hotels) would have zero protection.\nThis is worse than no VPN because it provides false confidence.\n\
+          \                    "
+- id: d4_wireless_evil_twin
+  domain: 4
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 4: Communication and Network Security - Wireless Security'
+  failure_text: "\nAn evil twin attack creates a fake access point with the same SSID as\na legitimate\
+    \ network. Devices configured to auto-connect will join the\nmalicious AP, allowing attackers to intercept\
+    \ traffic, steal credentials,\nor launch further attacks. Defense includes 802.1X authentication and\n\
+    disabling auto-connect features.\n        "
+  themes:
+    fantasy:
+      title: THE PHANTOM BEACON
+      narrative: "\nGuards rush to the Citadel with alarming news. Apprentices returning from\nthe Eastern\
+        \ Market report that their communication crystals automatically\nlinked to what they believed\
+        \ was the Citadel's message network - but\nsomething was wrong. The signal came from a wagon in\
+        \ the market square,\nnot the Citadel's towers.\n\n\"They said it looked exactly like our network\
+        \ beacon,\" a guard explains.\n\"Same name, same appearance. Their crystals connected without\
+        \ asking.\nThen all their messages - passwords, secrets, everything - flowed through\nthis impostor's\
+        \ wagon.\"\n\nYou examine one of the affected crystals. It's configured to automatically\nconnect\
+        \ to any beacon broadcasting the Citadel's network name. There's\nno verification that the beacon\
+        \ is genuine.\n\n\"The villain created a perfect duplicate of our signal,\" you realize.\n\"Crystals\
+        \ cannot tell the fake from the real thing by name alone.\"\n\nThe Guard Captain demands answers.\
+        \ \"What manner of attack is this? I\nmust report to the Council.\"\n\nWhat type of attack was\
+        \ this?\n                "
+      choices:
+      - text: Crystal signature forgery - the attacker cloned device identities
+      - text: Evil twin attack - a rogue beacon mimicking the legitimate network
+      - text: Bluetooth hijacking - the attacker intercepted short-range signals
+      - text: Setup code attack - the attacker cracked the network's protection
+      success_text: "\n\"This is an evil twin attack,\" you explain to the Council. \"The attacker\ncreated\
+        \ a rogue access point - a fake beacon - broadcasting the same\nnetwork name as our legitimate\
+        \ signal. Because our network name isn't\nsecret and crystals auto-connect to familiar names...\"\
+        \n\n\"The crystals had no way to know which beacon was real,\" the Archmage\nfinishes grimly.\n\
+        \n\"Precisely. The evil twin often has a stronger signal - being physically\ncloser in the market\
+        \ - so crystals prefer it over our distant towers.\nAll traffic then routes through the attacker,\
+        \ who can capture credentials,\nmodify messages, or inject malicious content.\"\n\n\"What defenses\
+        \ exist?\"\n\n\"Users must verify they're connected to legitimate networks before\ntransmitting\
+        \ sensitive data. Certificate-based authentication helps\ncrystals recognize genuine beacons.\
+        \ And we should warn everyone about\nthe dangers of auto-connecting to familiar network names.\"\
+        \n\nYou have demonstrated understanding of WIRELESS SECURITY attacks.\n                "
+      failure_texts:
+        0: "\nMAC spoofing changes a device's hardware address to impersonate another\ndevice. While related\
+          \ to network attacks, the scenario specifically\ndescribes a fake access point mimicking a legitimate\
+          \ network name -\nthat's an evil twin attack, not MAC spoofing.\n                    "
+        2: "\nBluetooth hijacking targets Bluetooth connections, which operate\ndifferently from WiFi\
+          \ networks. This attack involved WiFi - devices\nconnecting to a fake access point with a matching\
+          \ network name. That's\nspecifically an evil twin (rogue access point) attack.\n           \
+          \         "
+        3: "\nWPS PIN attacks target the WiFi Protected Setup feature to crack a\nnetwork's password.\
+          \ This attack didn't crack the legitimate network -\nit created a completely separate fake network\
+          \ with the same name. The\nevil twin captures traffic from deceived users.\n               \
+          \     "
+    corporate:
+      title: THE PARKING LOT PROBLEM
+      narrative: "\nThree employees from the Legal department report something strange.\nYesterday morning,\
+        \ while sitting in the parking lot before work, their\nlaptops connected to \"CorpWiFi-5G\" -\
+        \ the company's wireless network.\nThey answered some emails, logged into a few internal systems...\n\
+        \nThen they walked inside and discovered they were still 50 feet from\nthe building. The network\
+        \ name was right, but they'd been connected\nto... something else. Something in a white van parked\
+        \ near the entrance.\n\nThe security team reviews the laptop logs. All three devices auto-\nconnected\
+        \ to a network broadcasting your company's exact SSID. But the\naccess point wasn't yours. It\
+        \ was a portable hotspot in that van,\nwhich drove away an hour later.\n\nLegal is furious. The\
+        \ CISO needs answers for the board.\n\nWhat type of attack was this?\n                "
+      choices:
+      - text: MAC spoofing attack - the attacker cloned legitimate device addresses
+      - text: Evil twin / Rogue access point attack
+      - text: Bluetooth hijacking attack
+      - text: WPS PIN attack to crack the network password
+      success_text: "\n\"This was an evil twin attack,\" you explain to the CISO. \"Also called\na rogue\
+        \ access point. The attacker set up their own WiFi hotspot and\nnamed it 'CorpWiFi-5G' - identical\
+        \ to our legitimate network.\"\n\n\"But how did the laptops connect to it?\"\n\n\"Because they're\
+        \ configured to auto-connect to known networks by name.\nWhen they saw 'CorpWiFi-5G,' they connected\
+        \ automatically - no user\ninteraction needed. The evil twin had a stronger signal in the parking\n\
+        lot than our actual network inside the building.\"\n\n\"So everything they did...\"\n\n\"Went\
+        \ through the attacker's device. Login credentials, email content,\ninternal system access - all\
+        \ potentially captured.\"\n\nThe CISO sighs. \"What do we do?\"\n\n\"Disable auto-connect on managed\
+        \ devices. Implement 802.1X authentication\nso devices verify the network is genuine. Train users\
+        \ to verify connections\nbefore entering credentials. And sweep for rogue access points regularly.\"\
+        \n\nYou have demonstrated understanding of WIRELESS SECURITY attacks.\n                "
+      failure_texts:
+        0: "\nMAC spoofing involves changing a device's MAC address to bypass access\ncontrols or impersonate\
+          \ another device. This attack created a completely\nfake access point with a matching SSID -\
+          \ that's an evil twin attack,\nwhich tricks devices into connecting to a malicious network.\n\
+          \                    "
+        2: "\nBluetooth hijacking attacks Bluetooth connections, not WiFi networks.\nThis attack targeted\
+          \ WiFi - the laptops connected to a fake WiFi\naccess point broadcasting the company's SSID.\
+          \ That's specifically\nan evil twin (rogue access point) attack.\n                    "
+        3: "\nWPS attacks attempt to crack the legitimate network's password by\nexploiting weaknesses\
+          \ in WiFi Protected Setup. This attacker didn't\ncrack your network - they created their own\
+          \ fake network with an\nidentical name. Evil twin attacks capture traffic from deceived\nusers,\
+          \ not crack passwords.\n                    "
+- id: d4_dns_security
+  domain: 4
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 4: Communication and Network Security - DNS Security'
+  failure_text: "\nDNSSEC (DNS Security Extensions) cryptographically signs DNS records,\nallowing clients\
+    \ to verify that responses are authentic and haven't\nbeen tampered with. This prevents DNS spoofing\
+    \ and cache poisoning\nattacks that redirect users to malicious sites.\n        "
+  themes:
+    fantasy:
+      title: THE MISDIRECTED PILGRIMS
+      narrative: "\nPilgrims seeking the Sacred Treasury have been arriving at a dark temple\ninstead.\
+        \ They asked their guide-crystals for directions to \"Sacred Treasury\"\nand followed faithfully\
+        \ - yet ended up at an impostor site designed to\nsteal their offerings and secrets.\n\nThe Name\
+        \ Keepers investigate and discover corruption in the Direction\nOracle - the magical system that\
+        \ translates destination names into actual\nlocations. Someone has poisoned its knowledge, replacing\
+        \ the true path\nto the Sacred Treasury with directions to the dark temple.\n\n\"When pilgrims\
+        \ ask for 'Sacred Treasury,' the Oracle gives them the wrong\nlocation,\" a Name Keeper explains.\
+        \ \"The dark temple is a perfect replica\n- visitors don't realize they're in the wrong place\
+        \ until it's too late.\"\n\n\"Can we simply correct the Oracle's records?\"\n\n\"We've tried.\
+        \ But the poisoner keeps re-corrupting them. We need a way\nto verify that direction answers are\
+        \ authentic and haven't been tampered\nwith.\"\n\nWhat security measure would BEST prevent this\
+        \ attack?\n                "
+      choices:
+      - text: Install protective wards at the Sacred Treasury entrance
+      - text: Implement signed directions that prove authenticity through cryptographic seals
+      - text: Add guardians to inspect travelers before entering destinations
+      - text: Filter which pilgrims can access the naming service
+      success_text: "\n\"We need cryptographically signed directions,\" you declare. \"When the\nOracle\
+        \ provides a path, it must bear an unforgeable seal proving the\nanswer is authentic and unchanged.\"\
+        \n\n\"How would this work?\"\n\n\"The legitimate Name Keepers hold secret signing keys. Every\
+        \ direction\nthey issue is sealed with their unique signature. Pilgrims' guide-crystals\nverify\
+        \ the seal before following directions. Unsigned or incorrectly\nsigned directions are rejected.\"\
+        \n\n\"But the dark temple operators could create their own seals...\"\n\n\"Not ones that match\
+        \ the legitimate signers. Without the secret keys,\nany forgery is detectable. This is called\
+        \ DNSSEC in the mortal realm -\nDNS Security Extensions. It cryptographically protects the integrity\n\
+        of name resolution.\"\n\n\"Even if the Oracle is poisoned, the false directions won't have valid\n\
+        signatures!\" The Name Keeper's face lights up with understanding.\n\nYou have demonstrated understanding\
+        \ of DNS SECURITY.\n                "
+      failure_texts:
+        0: "\nSSL certificates on the destination server authenticate the server\nitself, but that doesn't\
+          \ help if pilgrims are directed to the wrong\nlocation in the first place. They'd arrive at\
+          \ the dark temple, which\ncould have its own certificates. DNSSEC prevents the misdirection\n\
+          before it happens.\n                    "
+        2: "\nWeb Application Firewalls protect web applications from attacks like\nSQL injection. They\
+          \ don't address DNS poisoning, which happens before\nusers ever reach the web server. The problem\
+          \ is in the name resolution\nsystem, requiring DNS-level protection like DNSSEC.\n         \
+          \           "
+        3: "\nMAC filtering controls which devices can access a network based on\nhardware addresses.\
+          \ It has nothing to do with DNS resolution or\npreventing cache poisoning attacks. DNSSEC cryptographically\
+          \ validates\nDNS responses to prevent exactly this type of attack.\n                    "
+    corporate:
+      title: THE BANKING REDIRECT
+      narrative: "\nUsers are calling in a panic. They typed \"bankofamerica.com\" in their\nbrowsers,\
+        \ hit enter, and landed on a site that looked exactly like\nBank of America - but wasn't. Login\
+        \ credentials entered on this fake\nsite went straight to attackers.\n\nYour team investigates\
+        \ and finds the horrifying truth: someone has\npoisoned your DNS server's cache. When users request\
+        \ the IP address\nfor the bank's website, your DNS server returns an attacker-controlled\nIP instead\
+        \ of the legitimate one.\n\n\"But they typed the correct URL!\" your manager protests.\n\n\"The\
+        \ URL doesn't matter if DNS gives them the wrong IP address. They\nget redirected before they\
+        \ know anything's wrong.\"\n\n\"The bank's website has SSL certificates...\"\n\n\"Which only proves\
+        \ they reached the server the DNS sent them to. If\nDNS is compromised, they never reach the real\
+        \ bank in the first place.\"\n\nWhat security measure would BEST prevent this attack?\n      \
+        \          "
+      choices:
+      - text: Require all banking sites to have SSL certificates
+      - text: Implement DNSSEC to cryptographically validate DNS responses
+      - text: Deploy a web application firewall
+      - text: Enable MAC address filtering on the network
+      success_text: "\n\"We need DNSSEC,\" you explain. \"DNS Security Extensions add cryptographic\n\
+        signatures to DNS responses. When our DNS server asks for bankofamerica.com,\nthe response comes\
+        \ signed with keys that only the legitimate DNS\ninfrastructure controls.\"\n\n\"And if someone\
+        \ poisons our cache?\"\n\n\"The poisoned entries won't have valid signatures. Our DNS resolver\n\
+        rejects unsigned or incorrectly signed responses. The attackers can't\nforge the cryptographic\
+        \ signatures without the private keys.\"\n\n\"Why isn't everyone using this already?\"\n\n\"Deployment\
+        \ is still ongoing. But for our corporate DNS, we can enable\nDNSSEC validation today. Any poisoned\
+        \ responses get rejected because\nthey can't produce valid signatures.\"\n\nThe DNS infrastructure\
+        \ is upgraded within a week. The next cache\npoisoning attempt fails immediately - the forged\
+        \ responses have no\nvalid DNSSEC signatures.\n\nYou have demonstrated understanding of DNS SECURITY.\n\
+        \                "
+      failure_texts:
+        0: "\nSSL certificates authenticate the web server, but they don't prevent\nDNS redirection. If\
+          \ DNS sends users to 192.168.1.evil instead of the\nreal server, they never reach the legitimate\
+          \ SSL-protected server.\nThe attackers can even have their own SSL certificate for the fake\n\
+          site. DNSSEC prevents the redirection at the DNS level.\n                    "
+        2: "\nWeb Application Firewalls protect web applications from HTTP-layer\nattacks. They don't\
+          \ operate at the DNS level and cannot prevent DNS\ncache poisoning. The attack happens before\
+          \ any HTTP traffic occurs -\nit's in the name resolution phase. DNSSEC is the appropriate defense.\n\
+          \                    "
+        3: "\nMAC filtering controls which devices can access the network based on\nhardware addresses.\
+          \ It has no relationship to DNS security and cannot\nprevent cache poisoning attacks. DNSSEC\
+          \ cryptographically validates\nDNS responses to prevent exactly this type of manipulation.\n\
+          \                    "
+- id: d4_email_security
+  domain: 4
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 4: Communication and Network Security - Email Security'
+  failure_text: "\nSPF validates which servers can send email for your domain. DKIM\ncryptographically\
+    \ signs emails proving origin. DMARC provides policy\nenforcement and reporting. Together, they allow\
+    \ receiving servers to\nreject spoofed emails claiming to be from your domain.\n        "
+  themes:
+    fantasy:
+      title: THE FORGED ROYAL DECREES
+      narrative: "\nThe Kingdom is in chaos. Official decrees bearing the Royal Seal have been\narriving\
+        \ at provincial lords, demanding tribute payments to a mysterious\nnew treasury. The decrees look\
+        \ perfect - correct formatting, proper seals,\nauthentic-looking signatures.\n\nBut the King issued\
+        \ no such decrees. Someone is forging royal communications,\nand the forgeries are indistinguishable\
+        \ from genuine messages.\n\n\"The lords receive these false decrees through the standard message\
+        \ network,\"\nthe Chancellor explains. \"The messages claim to originate from the Royal\nPalace,\
+        \ but they come from impostors. Our current message system cannot\nverify that a message truly\
+        \ comes from where it claims.\"\n\n\"We need layers of verification,\" you respond. \"First, we\
+        \ declare which\nmessage towers are authorized to send royal decrees. Second, we cryptographically\n\
+        sign each genuine message. Third, we tell receiving lords to reject any\nmessage that fails either\
+        \ check.\"\n\nThe Chancellor nods gravely. \"What would you call such a system?\"\n\nWhat combination\
+        \ of controls prevents domain spoofing?\n                "
+      choices:
+      - text: Spam filters and message scanning for malicious content
+      - text: SPF to authorize senders, DKIM to sign messages, and DMARC to enforce policy
+      - text: Encrypted message transmission to protect content confidentiality
+      - text: Individual message encryption with magical seals for each recipient
+      success_text: "\n\"Three controls working together,\" you explain, sketching the design.\n\n\"First:\
+        \ Sender Policy Framework - a public declaration listing which\nmessage towers are authorized\
+        \ to send royal decrees. Any message claiming\nroyal origin but coming from an unlisted tower\
+        \ is suspicious.\n\n\"Second: DomainKeys Identified Mail - each genuine message bears a\ncryptographic\
+        \ signature that only the Royal Scribes can create. Receivers\nverify the signature to confirm\
+        \ the message is authentic and unchanged.\n\n\"Third: Domain-based Message Authentication - a\
+        \ policy telling receivers\nwhat to do when messages fail SPF or DKIM checks. We declare: 'Reject\n\
+        any message claiming to be from us that fails authentication.'\"\n\n\"So receivers know to ignore\
+        \ the forgeries?\"\n\n\"Precisely. SPF verifies the sending tower. DKIM verifies the message\n\
+        integrity. DMARC enforces the policy. Together, they make domain spoofing\ndetectable and rejectable.\"\
+        \n\nYou have demonstrated understanding of EMAIL SECURITY controls.\n                "
+      failure_texts:
+        0: "\nSpam filters may catch some phishing attempts but cannot specifically\nverify that messages\
+          \ truly originate from claimed domains. They don't\nprevent domain spoofing - an attacker can\
+          \ craft convincing messages\nthat pass spam filters. SPF+DKIM+DMARC specifically authenticate\n\
+          message origin.\n                    "
+        2: "\nTLS encrypts email in transit, protecting confidentiality between\nmail servers. It doesn't\
+          \ verify that the sender domain is legitimate -\nencrypted forgeries are still forgeries. SPF+DKIM+DMARC\
+          \ authenticate\nthe sender domain, which is a different concern than encryption.\n         \
+          \           "
+        3: "\nS/MIME encrypts and signs individual messages between specific users,\nproviding end-to-end\
+          \ protection. But it doesn't prevent domain-level\nspoofing where attackers claim to send from\
+          \ your organization.\nSPF+DKIM+DMARC work at the domain level to prevent anyone from\nimpersonating\
+          \ your organization.\n                    "
+    corporate:
+      title: THE INTERNAL PHISHING WAVE
+      narrative: "\nThe executive assistant bursts into your office. \"The CEO is NOT\nrequesting emergency\
+        \ wire transfers! These emails are NOT from him!\"\n\nOver the past week, dozens of employees\
+        \ received urgent emails appearing\nto come from executives - requesting wire transfers, gift\
+        \ cards, password\nresets. The \"From\" addresses showed legitimate company domains. Some\nemployees\
+        \ fell for it.\n\n\"How is this possible?\" your manager demands. \"They're sending email\nas\
+        \ OUR domain!\"\n\nYou examine the message headers. The emails originated from external\nservers\
+        \ but claimed to be from @yourcompany.com. Your mail servers\naccepted them because there's no\
+        \ mechanism verifying that messages\nactually come from authorized sources.\n\n\"We're being domain-spoofed,\"\
+        \ you explain. \"Anyone on the internet can\nclaim to send email from our domain, and recipients\
+        \ have no way to\nverify it's genuine.\"\n\nWhat combination of controls would BEST prevent this?\n\
+        \                "
+      choices:
+      - text: Upgrade spam filters and add better antivirus scanning
+      - text: Implement SPF, DKIM, and DMARC for domain authentication
+      - text: Enable TLS encryption for all email transmission
+      - text: Deploy S/MIME encryption for all employee emails
+      success_text: "\nYou pull up the implementation plan. \"We need three layers of email\nauthentication:\n\
+        \n\"SPF - we publish a DNS record listing every server authorized to send\nemail for our domain.\
+        \ Receiving mail servers can check if incoming mail\nactually came from an authorized server.\n\
+        \n\"DKIM - we cryptographically sign all outgoing messages. Receivers can\nverify the signature\
+        \ to confirm messages are genuine and unmodified.\n\n\"DMARC - we publish a policy telling receivers\
+        \ what to do with messages\nthat fail SPF or DKIM. We say 'reject anything that fails authentication.'\n\
+        We also get reports about spoofing attempts.\"\n\n\"And this stops the spoofing?\"\n\n\"Receiving\
+        \ servers that check DMARC will reject spoofed emails claiming\nto be from us. The attackers can't\
+        \ forge valid DKIM signatures without\nour private keys. They can't send from authorized servers\
+        \ without\ncompromising them.\"\n\nImplementation takes a month. The spoofing attacks drop to\
+        \ near zero.\n\nYou have demonstrated understanding of EMAIL SECURITY controls.\n            \
+        \    "
+      failure_texts:
+        0: "\nSpam filters help but cannot specifically prevent domain spoofing.\nAttackers can craft\
+          \ convincing emails that pass content filters.\nSPF+DKIM+DMARC provide cryptographic verification\
+          \ of sender domains,\nwhich is fundamentally different from content scanning.\n            \
+          \        "
+        2: "\nTLS encrypts email in transit, protecting against eavesdropping. It\ndoesn't verify that\
+          \ the sender domain is legitimate. An attacker's\nspoofed email can travel over TLS just as\
+          \ easily as legitimate email.\nSPF+DKIM+DMARC authenticate sender domains, addressing the spoofing\n\
+          problem directly.\n                    "
+        3: "\nS/MIME provides end-to-end encryption and signing for individual users,\nbut it doesn't\
+          \ prevent domain-level spoofing. Attackers sending email\nas \"ceo@yourcompany.com\" don't have\
+          \ the CEO's S/MIME certificate, but\nmost recipients don't check for that. SPF+DKIM+DMARC work\
+          \ at the\ninfrastructure level to reject spoofed messages before delivery.\n               \
+          \     "
+- id: d4_arp_spoofing
+  domain: 4
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 4: Communication and Network Security - Network Attacks'
+  failure_text: "\nARP spoofing (or ARP poisoning) involves sending fake ARP replies to\nassociate the\
+    \ attacker's MAC address with legitimate IP addresses (like\nthe gateway). This redirects traffic\
+    \ through the attacker's machine,\nenabling man-in-the-middle interception.\n        "
+  themes:
+    fantasy:
+      title: THE INVISIBLE INTERCEPTOR
+      narrative: "\nMessages between the Citadel's towers are being intercepted and modified,\nyet no\
+        \ one can find the spy. Scouts report that enchanted parchments reach\ntheir destinations unchanged...\
+        \ or so they appear. But critical orders are\narriving corrupted, approvals are being forged,\
+        \ and secrets are leaking.\n\nAn apprentice wizard finally notices the pattern. \"The messages\
+        \ pass through\nsomeone else before reaching the gate tower! When I trace the magical\npathway,\
+        \ I see our local address crystal being answered by... something\nelse. Something claiming to\
+        \ BE the gate tower.\"\n\nYou investigate the local address resolution system. When a tower asks\n\
+        \"What is the crystal signature for the Gate Tower?\", an impostor answers\nfirst: \"It's MY signature.\
+        \ Send everything to ME.\" The impostor receives\nall messages, reads or modifies them, then forwards\
+        \ them to the real gate.\n\n\"The villain corrupts our local address tables,\" you realize. \"\
+        Every tower\nthinks the impostor IS the gate tower. What attack is this?\"\n\nWhat type of attack\
+        \ is being described?\n                "
+      choices:
+      - text: Name oracle poisoning - corrupting the direction-giving system
+      - text: Address resolution deception - redirecting traffic through a false node
+      - text: Flood attack - overwhelming the towers with too many messages
+      - text: Message fragmentation - exploiting how large messages are split
+      success_text: "\n\"This is ARP spoofing - Address Resolution Protocol poisoning,\" you explain.\n\
+        \"In the mundane realm, ARP translates IP addresses to physical MAC addresses.\nHere, it translates\
+        \ tower names to crystal signatures.\"\n\n\"The attacker sends false address claims - 'I am the\
+        \ Gate Tower' - and\nour crystals believe them. All traffic meant for the Gate Tower flows to\n\
+        the impostor instead. They're now 'in the middle' of every conversation.\"\n\n\"How did we not\
+        \ notice?\"\n\n\"Because the impostor forwards everything after reading it. Messages still\narrive,\
+        \ just... slightly delayed. The interception is invisible unless you\ntrace the actual pathway.\"\
+        \n\n\"The defense?\"\n\n\"Static address tables for critical towers. Dynamic ARP inspection that\n\
+        validates claims against known-good values. Port security to limit which\ndevices can make address\
+        \ claims. And encryption of message contents so\ninterception reveals nothing useful.\"\n\nYou\
+        \ have demonstrated understanding of NETWORK ATTACKS - specifically ARP spoofing.\n          \
+        \      "
+      failure_texts:
+        0: "\nDNS poisoning attacks the name-to-IP translation (Layer 7). This attack\noperates at Layer\
+          \ 2, corrupting the IP-to-MAC address resolution tables.\nARP spoofing poisons local network\
+          \ address tables, allowing an attacker\nto intercept traffic on the same network segment.\n\
+          \                    "
+        2: "\nSYN flood is a denial-of-service attack that overwhelms servers with\nconnection requests.\
+          \ This attack doesn't deny service - traffic still\nflows, just through an interceptor. ARP\
+          \ spoofing enables man-in-the-middle\nattacks, not denial of service.\n                    "
+        3: "\nIP fragmentation attacks exploit how large packets are split and\nreassembled. This attack\
+          \ manipulates address resolution to redirect\ntraffic. ARP spoofing poisons address tables,\
+          \ causing traffic to route\nthrough an attacker-controlled system.\n                    "
+    corporate:
+      title: THE COFFEE SHOP COMPROMISE
+      narrative: "\nYour security awareness training just got very real. You're at a coffee\nshop, laptop\
+        \ open, working on email. A colleague texts you: \"Did you\njust send me credentials to the development\
+        \ server? That's weird...\"\n\nYou check your sent folder. Nothing there. But your network traffic\
+        \ is\nbeing captured - someone on this coffee shop network is intercepting\neverything you send\
+        \ and receive.\n\nLater, analyzing the attack from a secure location, you understand what\nhappened.\
+        \ An attacker on the same network sent fake responses to your\nlaptop's address resolution requests.\
+        \ When your laptop asked \"What's the\nMAC address for the gateway router?\", the attacker answered:\
+        \ \"It's MY\nMAC address.\"\n\nAll your traffic - meant for the internet - routed through the\
+        \ attacker's\nlaptop first. They captured credentials, session tokens, everything\nunencrypted.\n\
+        \nWhat attack did you fall victim to?\n                "
+      choices:
+      - text: DNS poisoning attack
+      - text: ARP spoofing/poisoning attack
+      - text: SYN flood denial of service attack
+      - text: IP fragmentation attack
+      success_text: "\n\"ARP spoofing,\" you confirm, writing up the incident report. \"The attacker\n\
+        exploited how local networks resolve IP addresses to physical MAC addresses.\"\n\nYou sketch the\
+        \ attack flow:\n\"1. My laptop needs to send traffic to the gateway (192.168.1.1)\n2. It broadcasts:\
+        \ 'Who has 192.168.1.1?'\n3. The attacker responds: 'That's me! Send traffic to my MAC.'\n4. My\
+        \ laptop's ARP cache now maps the gateway IP to the attacker's MAC\n5. All my internet traffic\
+        \ goes to the attacker first\n6. Attacker forwards it after logging everything\"\n\n\"Why didn't\
+        \ you notice?\"\n\n\"Because traffic still worked. The attacker forwarded everything - just\n\
+        captured a copy first. Classic man-in-the-middle positioning through\nARP cache poisoning.\"\n\
+        \n\"Lessons learned?\"\n\n\"Never trust public WiFi for sensitive work. Use VPN. Use HTTPS exclusively.\n\
+        Assume the network is hostile. ARP spoofing is trivially easy on shared\nnetworks.\"\n\nYou have\
+        \ demonstrated understanding of NETWORK ATTACKS.\n                "
+      failure_texts:
+        0: "\nDNS poisoning corrupts name-to-IP resolution at the DNS level. This attack\noperated at\
+          \ Layer 2, poisoning ARP tables that map IP addresses to MAC\naddresses. Different attack vectors\
+          \ - DNS is application layer, ARP is\ndata link layer.\n                    "
+        2: "\nSYN flood is a denial-of-service attack that prevents new connections.\nThis attack didn't\
+          \ prevent anything - it intercepted traffic. ARP spoofing\nenables man-in-the-middle attacks\
+          \ where the attacker captures and forwards\ntraffic transparently.\n                    "
+        3: "\nIP fragmentation attacks exploit packet reassembly vulnerabilities. This\nattack manipulated\
+          \ Layer 2 address resolution to redirect traffic through\nan attacker system. ARP spoofing poisons\
+          \ local address tables, enabling\ntraffic interception.\n                    "
+- id: d4_ids_vs_ips
+  domain: 4
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 4: Communication and Network Security - IDS/IPS'
+  failure_text: "\nAn Intrusion Detection System (IDS) monitors and alerts but doesn't block\ntraffic.\
+    \ An Intrusion Prevention System (IPS) sits inline and can actively\nblock detected threats. If detection\
+    \ occurred but blocking didn't, an IDS\nwas in use when an IPS was needed.\n        "
+  themes:
+    fantasy:
+      title: THE OBSERVING GARGOYLE
+      narrative: "\nThe Citadel was breached last night. A dark wizard slipped through the\nouter wards,\
+        \ traversed the inner corridors, and stole three ancient relics\nbefore escaping. The Citadel's\
+        \ enchanted gargoyle guardian saw everything.\n\n\"You saw the intruder?\" the Archmage demands\
+        \ of the stone creature.\n\n\"Oh yes, Master. I observed his every move. I noted his dark aura,\
+        \ his\nmalicious intent, his strange shadow-walking magic. I created detailed\nrecords of his\
+        \ entire intrusion.\" The gargoyle gestures at a stack of\nparchments. \"My reports were quite\
+        \ thorough.\"\n\n\"But you didn't STOP him?!\"\n\n\"That... is not my function. I detect and alert.\
+        \ I do not intervene.\nYou should have received my warning scrolls?\"\n\nThe Archmage's face turns\
+        \ crimson. \"AFTER the theft! Hours later!\"\n\n\"Yes, I report at the end of each night. Is that\
+        \ not sufficient?\"\n\nWhat is the fundamental problem with this security control?\n\n       \
+        \         "
+      choices:
+      - text: It's an IPS that failed to detect the intrusion - replace with a better IPS
+      - text: It's an IDS that only detects; they need an IPS that actively blocks threats
+      - text: It's a WAF that only handles web attacks - they need network protection
+      - text: It's a firewall that needs better detection rules added to it
+      success_text: "\n\"Your gargoyle is an IDS - an Intrusion Detection System,\" you explain\nto the\
+        \ frustrated Archmage. \"It observes, analyzes, records, and alerts.\nBut it does not intervene.\
+        \ It cannot block attacks in progress.\"\n\n\"Then it's useless!\"\n\n\"Not useless - but insufficient\
+        \ alone. Detection without prevention allows\nattackers to succeed while you receive alerts. What\
+        \ you need is an IPS -\nan Intrusion Prevention System.\"\n\n\"What's the difference?\"\n\n\"\
+        An IPS sits directly in the path of traffic. When it detects malicious\nactivity, it blocks it\
+        \ immediately. The dark wizard would have been stopped\nat the first ward, not observed committing\
+        \ the theft and reported later.\"\n\n\"Then why have IDS at all?\"\n\n\"IDS watches traffic copies\
+        \ without delaying them - useful for analysis\nwithout impacting performance. But for stopping\
+        \ attacks in real-time, you\nneed IPS positioned inline.\"\n\nYou have demonstrated understanding\
+        \ of IDS versus IPS.\n                "
+      failure_texts:
+        0: "\nThe gargoyle detected the intrusion just fine - it created detailed records\nof everything.\
+          \ The problem isn't detection capability but the lack of\nprevention capability. IDS detects\
+          \ and alerts; IPS detects AND blocks.\nThis was an IDS functioning as designed, but design was\
+          \ insufficient.\n                    "
+        2: "\nWAFs (Web Application Firewalls) specifically protect web applications\nfrom HTTP attacks.\
+          \ This scenario describes general intrusion detection,\nnot web-specific protection. The issue\
+          \ is IDS vs IPS - detection-only\nversus active prevention of detected threats.\n          \
+          \          "
+        3: "\nFirewalls block traffic based on rules about ports, protocols, and addresses.\nIDS/IPS analyze\
+          \ traffic content and behavior for malicious patterns.\nThe gargoyle was detecting malicious\
+          \ activity (intrusion detection) but\nnot blocking it. It needs to be replaced with or supplemented\
+          \ by an IPS.\n                    "
+    corporate:
+      title: THE SECURITY SYSTEM THAT WATCHED
+      narrative: "\nThe post-incident review is brutal. Last week, attackers exfiltrated the\nentire customer\
+        \ database. The attack took six hours. The security team\nfound out the next morning when they\
+        \ reviewed overnight alerts.\n\n\"How did we not stop this?!\" the CISO demands.\n\nThe security\
+        \ analyst pulls up the logs. \"We have 147 alerts from the\nattack. The security system detected\
+        \ every phase: initial access, lateral\nmovement, privilege escalation, data staging, exfiltration.\
+        \ Complete\nvisibility into the entire attack chain.\"\n\n\"So you WATCHED them steal our data?!\"\
+        \n\n\"The system detected and alerted. That's what it does. It doesn't block\ntraffic - it copies\
+        \ traffic, analyzes it, and generates alerts. The\nalerts went to the queue... which we review\
+        \ each morning.\"\n\nThe CISO's eye twitches. \"So we have a system that watches crimes happen\n\
+        and sends us a report afterward?\"\n\nWhat is the fundamental issue here?\n                "
+      choices:
+      - text: It was an IPS that failed - upgrade to a better IPS
+      - text: It was an IDS - they need an IPS for active blocking
+      - text: It was a WAF - they need network-level protection
+      - text: It was a firewall - they need better rules
+      success_text: "\n\"You have an IDS - Intrusion Detection System,\" you explain. \"It detected\n\
+        everything perfectly. The problem is, IDS only monitors and alerts. It\ndoes not block.\"\n\n\"\
+        The vendor said it was 'advanced threat detection'!\"\n\n\"And it detected threats. Admirably.\
+        \ It just can't stop them. For that,\nyou need an IPS - Intrusion Prevention System. An IPS sits\
+        \ inline - all\ntraffic passes through it. When it detects malicious activity, it blocks\nit immediately.\"\
+        \n\n\"Why would anyone want IDS instead of IPS?\"\n\n\"IDS analyzes copies of traffic, so it can't\
+        \ accidentally block legitimate\nactivity. Some organizations fear false positives disrupting\
+        \ operations.\nBut as you've learned, detection without prevention means watching attacks\nhappen\
+        \ while generating excellent documentation of your compromise.\"\n\n\"So we need IPS?\"\n\n\"\
+        You need IPS for active threats. You can keep IDS for additional visibility.\nBut something must\
+        \ be able to actually stop attacks, not just observe them.\"\n\nYou have demonstrated understanding\
+        \ of IDS versus IPS.\n                "
+      failure_texts:
+        0: "\nThe system detected everything - 147 accurate alerts across the entire\nattack chain. Detection\
+          \ worked perfectly. The problem is that IDS only\ndetects; it doesn't block. If it were an IPS,\
+          \ it would have stopped the\nattack at the first detected phase instead of just alerting.\n\
+          \                    "
+        2: "\nWAFs protect web applications from HTTP-layer attacks. This scenario\ndescribes a data exfiltration\
+          \ across the network, detected but not blocked.\nThe distinction is between IDS (detection only)\
+          \ and IPS (detection plus\nprevention). They need IPS to actually block detected attacks.\n\
+          \                    "
+        3: "\nFirewalls filter traffic based on predetermined rules about addresses,\nports, and protocols.\
+          \ IDS/IPS analyze traffic behavior and content for\nmalicious patterns. This was definitely\
+          \ an IDS - it detected the attack.\nThe missing capability is prevention, which requires an\
+          \ IPS.\n                    "
+- id: d4_network_access_control
+  domain: 4
+  correct_index: 2
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 4: Communication and Network Security - Network Access Control'
+  failure_text: "\n802.1X provides port-based network access control, requiring authentication\nbefore\
+    \ granting network access. Combined with NAC (Network Access Control),\nit can also verify device\
+    \ health/posture (patches, antivirus, compliance)\nbefore allowing connection.\n        "
+  themes:
+    fantasy:
+      title: THE MERCHANT'S UNKNOWN CRYSTAL
+      narrative: "\nA traveling merchant arrives at the Citadel gates, producing a communication\ncrystal\
+        \ and requesting access to the trading network. The guards are unsure -\nthe crystal looks legitimate,\
+        \ but they have no way to verify its origin or\nensure it meets Citadel security standards.\n\n\
+        \"We cannot simply allow unknown crystals onto our network,\" the Captain\nof the Guard argues.\
+        \ \"What if it carries corruption? What if it's been\ncompromised? We don't even know if it has\
+        \ proper protective enchantments.\"\n\nThe merchant protests. \"I am a legitimate trader! I have\
+        \ documents!\"\n\n\"Documents can be forged. Your crystal may be genuine, or it may be a\nvessel\
+        \ for dark magic. We need a way to verify both your identity AND\nyour crystal's security before\
+        \ granting network access.\"\n\nWhat technology enables the Citadel to verify device identity\
+        \ and\nsecurity posture before granting network access?\n                "
+      choices:
+      - text: Message inspection to detect rogue DHCP enchantments
+      - text: Crystal duplication for monitoring network traffic
+      - text: Portal authentication with security verification before network access
+      - text: Maintaining a list of approved crystal signatures for matching
+      success_text: "\n\"We implement port-based access control with health verification,\" you\nexplain.\
+        \ \"In the mortal realm, this is called 802.1X with NAC - Network\nAccess Control.\"\n\n\"How\
+        \ does it work?\"\n\n\"When the merchant's crystal connects to a network access point, it cannot\n\
+        communicate until it authenticates. First, we verify the merchant's identity\nthrough a central\
+        \ authentication authority. Second, we inspect the crystal\nitself - does it have current protective\
+        \ enchantments? Is it free of\ncorruption? Does it meet our security requirements?\"\n\n\"And\
+        \ if it fails?\"\n\n\"It's quarantined. The crystal can only access remediation services - a\n\
+        healing ward to cure infections, an update fountain to refresh protections.\nOnly after passing\
+        \ all checks does it gain network access.\"\n\n\"So no unknown, unhealthy crystals on our network?\"\
+        \n\n\"Precisely. Every device must prove both identity and health before\ngaining access. This\
+        \ prevents compromised or non-compliant devices from\naccessing protected resources.\"\n\nYou\
+        \ have demonstrated understanding of NETWORK ACCESS CONTROL.\n                "
+      failure_texts:
+        0: "\nDHCP snooping prevents rogue DHCP servers from assigning addresses on\nthe network. It doesn't\
+          \ authenticate devices or verify their security\nposture. 802.1X with NAC provides both device\
+          \ authentication and health\nverification before granting network access.\n                \
+          \    "
+        1: "\nPort mirroring copies traffic to a monitoring device for analysis. It\ndoesn't control network\
+          \ access or verify device compliance. 802.1X with\nNAC actually blocks network access until\
+          \ both identity and security\nposture are verified.\n                    "
+        3: "\nMAC address tables are used for basic switching decisions and can be\nfiltered for basic\
+          \ access control. However, MAC addresses can be spoofed,\nand MAC filtering doesn't verify device\
+          \ health or identity through\nauthentication. 802.1X with NAC provides true identity verification\
+          \ and\nposture assessment.\n                    "
+    corporate:
+      title: THE CONTRACTOR'S LAPTOP
+      narrative: "\nThe network just got interesting. A contractor showed up, plugged their\npersonal\
+        \ laptop into an open network jack in the conference room, and\nconnected directly to the corporate\
+        \ network. No authentication. No\nverification. Full access.\n\nYour manager discovered this when\
+        \ the contractor's malware-infected laptop\nstarted scanning internal servers.\n\n\"How is this\
+        \ possible?\" the IT director demands. \"Anyone can just plug in\nand get network access?\"\n\n\
+        \"Currently, yes. Our network ports are open. If something connects and\nrequests an IP address,\
+        \ DHCP gives it one, and it's on the network.\"\n\n\"That's insane. A visitor could plug in a\
+        \ compromised device and have\naccess to everything!\"\n\n\"That's exactly what happened.\"\n\n\
+        What technology should be implemented to verify device identity and\nsecurity posture before granting\
+        \ network access?\n                "
+      choices:
+      - text: DHCP snooping to prevent rogue DHCP servers
+      - text: Port mirroring to monitor all traffic
+      - text: 802.1X with NAC for authentication and posture checking
+      - text: Maintain a MAC address whitelist
+      success_text: "\n\"We need 802.1X with NAC,\" you explain, pulling up a diagram. \"Here's\nhow it\
+        \ works:\n\n\"When a device plugs into a network port, it can't communicate with\nanything except\
+        \ an authentication server. The port is 'closed' until\nthe device proves itself.\n\n\"First,\
+        \ 802.1X verifies the device's identity - through certificates,\ncredentials, or domain membership.\n\
+        \n\"Second, NAC checks the device's security posture - is antivirus running\nand current? Is the\
+        \ OS patched? Does it meet our security baseline?\n\n\"If either check fails, the device goes\
+        \ to a quarantine VLAN where it\ncan only access remediation resources.\"\n\n\"What about legitimate\
+        \ contractors?\"\n\n\"They authenticate with guest credentials and get limited network access\n\
+        only. Their device posture is still verified before any access is granted.\"\n\n\"So no more 'plug\
+        \ in and you're on the network'?\"\n\n\"Every device must prove identity and health. No exceptions.\"\
+        \n\nYou have demonstrated understanding of NETWORK ACCESS CONTROL.\n                "
+      failure_texts:
+        0: "\nDHCP snooping prevents rogue DHCP servers from operating on the network -\nit doesn't control\
+          \ which devices can connect or verify their security\nstatus. 802.1X with NAC provides port-based\
+          \ authentication and health\nchecking before granting network access.\n                    "
+        1: "\nPort mirroring copies traffic for monitoring and analysis. It doesn't\nprevent unauthorized\
+          \ devices from connecting or verify device compliance.\n802.1X with NAC actually blocks network\
+          \ access until authentication and\nposture verification succeed.\n                    "
+        3: "\nMAC address whitelists provide very limited access control. MAC addresses\nare easily spoofed,\
+          \ and this approach doesn't verify device health or\nuse strong authentication. 802.1X provides\
+          \ certificate or credential-\nbased authentication, and NAC verifies device security posture.\n\
+          \                    "
+- id: d4_secure_protocols
+  domain: 4
+  correct_index: 2
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 4: Communication and Network Security - Secure Protocols'
+  failure_text: "\nSFTP runs over SSH, providing encryption for data in transit and server\nauthentication\
+    \ through SSH host keys. FTP and TFTP transmit data in\ncleartext with no encryption. Always use SFTP\
+    \ or equivalent secure\nprotocols for file transfers across untrusted networks.\n        "
+  themes:
+    fantasy:
+      title: THE SCROLL COURIER'S CONCERN
+      narrative: "\nThe Master Scribe summons you with an urgent request. \"We must establish\nsecure\
+        \ scroll transfer to the Northern Archives. The route crosses disputed\nterritory - every message\
+        \ we send could be intercepted by enemy scouts.\"\n\n\"What are the requirements?\" you ask.\n\
+        \n\"First, the scroll contents must be protected from prying eyes - complete\nsecrecy of what\
+        \ we send. Second, we must verify we're actually reaching\nthe Northern Archives and not some\
+        \ impostor tower. Third, the common\nmessage couriers along the route support only standard protocols\
+        \ - we\ncannot require special magical equipment at every waystation.\"\n\nYou consider the options.\
+        \ Standard scroll couriers transmit everything\nin clear text - anyone who intercepts them reads\
+        \ everything. The Northern\nArchives have their own authentication seals that could verify their\n\
+        identity if the protocol supports it.\n\n\"Which transfer enchantment meets both requirements\
+        \ - confidentiality\nAND server verification - using standard magical infrastructure?\"\n    \
+        \            "
+      choices:
+      - text: Standard open courier - fastest and simplest
+      - text: Lightweight courier with no authentication - quick but not secure
+      - text: Encrypted tunneled courier with server seal verification
+      - text: Voice message relay - spoken words cannot be captured
+      success_text: "\n\"You need SFTP - Secure File Transfer Protocol,\" you explain. \"In magical\n\
+        terms, an encrypted tunnel with server verification.\"\n\n\"How does it differ from standard couriers?\"\
+        \n\n\"Standard file transfer - FTP - sends everything in clear text, including\nyour authentication\
+        \ words. Anyone who intercepts the courier reads\neverything. SFTP runs over an encrypted channel\
+        \ - SSH. The contents are\nprotected from eavesdroppers.\"\n\n\"And the verification requirement?\"\
+        \n\n\"SSH verifies the server's identity through cryptographic seals - host\nkeys. When you first\
+        \ connect to the Northern Archives, you verify their\nseal. Future connections confirm that seal\
+        \ hasn't changed. If an impostor\ntries to intercept your connection, the seal mismatch alerts\
+        \ you.\"\n\n\"So confidentiality and server authentication in one protocol?\"\n\n\"Precisely.\
+        \ SFTP provides both encryption for data in transit and server\nauthentication through SSH. It's\
+        \ the secure way to transfer files across\nuntrusted networks.\"\n\nYou have demonstrated understanding\
+        \ of SECURE PROTOCOLS.\n                "
+      failure_texts:
+        0: "\nFTP - File Transfer Protocol - transmits everything in cleartext,\nincluding usernames and\
+          \ passwords. Anyone intercepting the traffic reads\neverything. It provides no encryption and\
+          \ no server authentication. Never\nuse FTP for sensitive file transfers across untrusted networks.\n\
+          \                    "
+        1: "\nTFTP - Trivial File Transfer Protocol - has no authentication and no\nencryption whatsoever.\
+          \ It was designed for simple, trusted environments\nlike network boot sequences. Using TFTP\
+          \ across hostile territory would\nexpose everything to any interceptor.\n                  \
+          \  "
+        3: "\nTelnet transmits everything in cleartext, just like FTP. Using Telnet\nfor file transfer\
+          \ would expose all content and credentials. Even if you\nencoded files as text, interception\
+          \ would reveal everything. SSH/SFTP\nprovides actual encryption and server authentication.\n\
+          \                    "
+    corporate:
+      title: THE DEVELOPER'S DILEMMA
+      narrative: "\nThe development team needs to transfer build artifacts to a remote server.\nThe server\
+        \ is located in a cloud provider's network - traffic crosses the\npublic internet.\n\n\"Just FTP\
+        \ it,\" someone suggests. The security team's collective groan\nis audible three floors away.\n\
+        \n\"We have requirements,\" you explain patiently. \"First, encryption - the\nbuild artifacts\
+        \ contain proprietary code. They must be protected in transit.\nSecond, server authentication\
+        \ - we must verify we're actually connecting\nto our server, not some man-in-the-middle. Third,\
+        \ it should use standard\nprotocols - no weird custom solutions.\"\n\nThe developer looks confused.\
+        \ \"What's wrong with FTP?\"\n\n\"FTP sends everything in cleartext. Credentials, file contents,\
+        \ everything.\nAnyone between here and the server can read it all. And it doesn't verify\nyou're\
+        \ talking to the right server.\"\n\nWhich protocol is MOST appropriate for secure file transfer?\n\
+        \                "
+      choices:
+      - text: FTP - File Transfer Protocol
+      - text: TFTP - Trivial File Transfer Protocol
+      - text: SFTP - SSH File Transfer Protocol
+      - text: Telnet with file transfer commands
+      success_text: "\n\"SFTP - SSH File Transfer Protocol,\" you explain. \"It solves both problems.\n\
+        \n\"First, SFTP runs over SSH, which encrypts everything. The file contents,\nthe commands, even\
+        \ the authentication - all encrypted. Someone intercepting\ntraffic sees only encrypted noise.\n\
+        \n\"Second, SSH verifies the server's identity through host key checking.\nThe first time you\
+        \ connect, you verify the server's fingerprint. If\nsomeone tries a man-in-the-middle attack,\
+        \ the key mismatch triggers a\nwarning.\n\n\"Third, every Unix/Linux server supports SSH and SFTP\
+        \ natively. Windows\nservers can run OpenSSH. It's standard, secure, and mature.\"\n\n\"What about\
+        \ FTPS?\"\n\n\"FTPS adds TLS encryption to FTP. It works, but SFTP is generally simpler\nto implement\
+        \ and firewall - single port, single connection, encrypted\neverything.\"\n\nThe developer nods\
+        \ and updates the deployment scripts to use SFTP.\n\nYou have demonstrated understanding of SECURE\
+        \ PROTOCOLS.\n                "
+      failure_texts:
+        0: "\nFTP transmits data and credentials in cleartext - zero encryption. Anyone\non the network\
+          \ path can capture usernames, passwords, and file contents.\nFor sensitive transfers across\
+          \ untrusted networks, FTP is completely\nunacceptable. SFTP provides the required encryption.\n\
+          \                    "
+        1: "\nTFTP - Trivial FTP - has no authentication and no encryption. It was\ndesigned for simple\
+          \ trusted environments, not internet file transfers.\nUsing TFTP across the public internet\
+          \ would be catastrophically insecure.\nSFTP is the secure alternative.\n                    "
+        3: "\nTelnet transmits everything in cleartext, including file contents.\nIt's considered deprecated\
+          \ for any security-sensitive purpose. SSH\nreplaced Telnet specifically because of these security\
+          \ weaknesses.\nSFTP runs over SSH, providing both encryption and server authentication.\n  \
+          \                  "
+- id: d4_ddos_mitigation
+  domain: 4
+  correct_index: 2
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 4: Communication and Network Security - DDoS Mitigation'
+  failure_text: "\nCloud-based DDoS mitigation services have massive capacity distributed\nglobally. They\
+    \ absorb attack traffic at their edge locations before it\nreaches your network, handling volumes\
+    \ that would overwhelm any single-\nlocation defense.\n        "
+  themes:
+    fantasy:
+      title: THE SIEGE OF A THOUSAND MESSENGERS
+      narrative: "\nThe Citadel is under attack, but not by swords or siege engines. A thousand\nmessenger\
+        \ birds arrive each minute, each carrying a trivial request that\nmust be processed. The Message\
+        \ Hall is overwhelmed - scribes cannot sort\nthe flood of meaningless queries from legitimate\
+        \ communications.\n\n\"The road to our gates is choked with these false messengers,\" the Warden\n\
+        reports grimly. \"Even if we could identify and reject them at the Message\nHall, they've already\
+        \ consumed our capacity to receive anything. The\npathway itself is saturated.\"\n\nYou examine\
+        \ the situation. The Citadel's receiving capacity is 100\nmessages per minute. Enemies are sending\
+        \ 10,000 per minute from locations\nacross the realm. Even with perfect filtering, 9,900 malicious\
+        \ messages\nmust still travel the road to reach your filters.\n\n\"The attack volume exceeds our\
+        \ entire capacity to receive,\" you realize.\n\"Filtering at our gates is useless - the pathway\
+        \ is flooded before\nmessages reach us.\"\n\nWhat is the MOST effective mitigation approach?\n\
+        \                "
+      choices:
+      - text: Add more filtering scribes at the Message Hall to reject bad messages faster
+      - text: Double the size of our receiving pathway to handle more traffic
+      - text: Engage cloud scrubbing towers that absorb the flood before it reaches us
+      - text: Tell our Message Hall to process requests more slowly to reduce load
+      success_text: "\n\"You need a cloud-based DDoS mitigation service,\" you explain, conjuring\nan\
+        \ illustration. \"Think of it as a network of allied kingdoms with\nmassive message-handling capacity,\
+        \ positioned between you and the attackers.\"\n\n\"How would that help?\"\n\n\"The attack traffic\
+        \ never reaches your gates. The cloud service has\nreceiving capacity thousands of times greater\
+        \ than yours, distributed\nacross the realm. They absorb the flood of malicious messages at their\n\
+        locations, filter out the attacks, and forward only legitimate traffic\nto you.\"\n\n\"But can't\
+        \ the attackers just... send more?\"\n\n\"The cloud services are specifically designed for this\
+        \ battle. They\nhave more capacity than any attacker can generate. Your 100-message\ncapacity\
+        \ becomes irrelevant because you only receive the 10 legitimate\nmessages per minute that survive\
+        \ the filtering.\"\n\n\"Fighting at our gates was hopeless because the road was already flooded.\n\
+        Fighting in the cloud means the flood never reaches our road.\"\n\nYou have demonstrated understanding\
+        \ of DDOS MITIGATION.\n                "
+      failure_texts:
+        0: "\nIf traffic volume exceeds your connection capacity, malicious packets\nare dropped BEFORE\
+          \ reaching your firewall. Adding more filtering capacity\nat your location doesn't help because\
+          \ the flood has already consumed your\nbandwidth. Cloud-based mitigation absorbs attacks before\
+          \ they reach your\ninfrastructure.\n                    "
+        1: "\nAttackers can typically scale faster than you can buy bandwidth. This\nbecomes an economic\
+          \ war you cannot win - they generate traffic cheaply\nfrom botnets while you pay for expensive\
+          \ bandwidth upgrades. Cloud DDoS\nmitigation services have economy of scale that individual\
+          \ organizations\ncannot match.\n                    "
+        3: "\nRate limiting on your web server helps with application-layer attacks\nbut cannot stop volumetric\
+          \ attacks that saturate your connection before\ntraffic reaches the server. If the pipe is flooded,\
+          \ what happens at\nthe end of the pipe is irrelevant. Cloud mitigation stops the flood\nbefore\
+          \ it reaches your pipe.\n                    "
+    corporate:
+      title: THE BANDWIDTH APOCALYPSE
+      narrative: "\nYour company's website is dead. Not crashed - dead. The entire internet\nconnection\
+        \ is saturated with incoming traffic. Packet loss is at 90%.\nLegitimate customers can't reach\
+        \ you because the pipe is completely\nflooded with garbage traffic.\n\n\"Can't we just block the\
+        \ attacking IPs?\" the CEO demands during the\nemergency call.\n\n\"We're trying. But there are\
+        \ millions of source IPs - it's a distributed\nattack. And even if we could identify and block\
+        \ them all, the traffic\nstill hits our internet connection before reaching our firewall. The\n\
+        pipe is full. Nothing else fits.\"\n\n\"Add more bandwidth?\"\n\n\"We have 1 Gbps. The attack\
+        \ is 50 Gbps. Even if we upgraded to 10 Gbps\nby tomorrow, they'd just increase to 60 Gbps. We\
+        \ can't win this race.\"\n\nThe CFO looks pale. \"Every minute of downtime is costing us...\"\n\
+        \nWhat is the MOST effective mitigation approach?\n                "
+      choices:
+      - text: Increase local firewall rule capacity to block malicious IPs
+      - text: Upgrade to a faster internet connection
+      - text: Engage a cloud-based DDoS mitigation service
+      - text: Enable rate limiting on the web servers
+      success_text: "\n\"We need cloud-based DDoS mitigation,\" you explain. \"Here's why nothing\nelse\
+        \ works:\n\n\"Local firewall rules can't help because traffic is dropped before it\nreaches our\
+        \ firewall - the ISP link is saturated.\n\n\"Buying more bandwidth is a losing game - attackers\
+        \ rent botnets for\npennies while we pay for premium bandwidth.\n\n\"Rate limiting happens after\
+        \ traffic reaches our servers - which it\ncan't when the connection is flooded.\n\n\"Cloud DDoS\
+        \ services have massive globally distributed capacity. We\nroute our DNS to them. Attack traffic\
+        \ hits their scrubbing centers\ninstead of our pipe. They filter out the garbage and forward only\n\
+        legitimate traffic. Our 1 Gbps connection suddenly only carries the\nfew Mbps of real user traffic.\"\
+        \n\nWithin an hour of engaging the cloud service, the website is back.\nThe attack continues for\
+        \ days, absorbed harmlessly by the mitigation\nprovider.\n\nYou have demonstrated understanding\
+        \ of DDOS MITIGATION.\n                "
+      failure_texts:
+        0: "\nWhen traffic volume exceeds your connection capacity, packets are dropped\nat the ISP level\
+          \ before reaching your firewall. Adding more firewall\nrules is irrelevant - the traffic never\
+          \ gets there to be filtered. Cloud\nmitigation absorbs the attack before it reaches your network.\n\
+          \                    "
+        1: "\nAttackers can scale faster than you can buy bandwidth. Botnet capacity\nis effectively unlimited\
+          \ and cheap. Enterprise bandwidth is expensive\nand slow to provision. This is an economic battle\
+          \ you cannot win. Cloud\nDDoS services have economy of scale that makes them viable where direct\n\
+          bandwidth competition is not.\n                    "
+        3: "\nRate limiting only helps if traffic reaches your servers. When the\ninternet connection\
+          \ is saturated, requests never reach the servers at\nall. The congestion happens before your\
+          \ infrastructure. Cloud mitigation\nintercepts traffic before it reaches your connection, where\
+          \ your rate\nlimiting could theoretically apply.\n                    "
+- id: d4_load_balancing
+  domain: 4
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 4: Communication and Network Security - Load Balancing'
+  failure_text: "\nSSL offloading (termination) decrypts traffic at the load balancer,\nallowing it to\
+    \ inspect content, apply WAF rules, and make intelligent\nrouting decisions. Traffic can be re-encrypted\
+    \ to backend servers if\nneeded. Passthrough maintains encryption but prevents inspection.\n     \
+    \   "
+  themes:
+    fantasy:
+      title: THE ENCHANTED GATEWAY'S DILEMMA
+      narrative: "\nThe Citadel's main gateway has been enhanced with an enchanted distributor\nthat spreads\
+        \ incoming visitors across seven identical reception halls.\nThis prevents any single hall from\
+        \ being overwhelmed. But a new requirement\nhas arrived.\n\n\"The Council demands that we inspect\
+        \ all incoming messages for dark magic\nbefore allowing entry,\" the Gateway Keeper explains.\
+        \ \"We must also apply\nprotection wards to block malicious enchantments.\"\n\n\"That requires\
+        \ reading the content of sealed scrolls,\" you observe.\n\n\"Precisely the problem. Our scrolls\
+        \ travel in magical encrypted seals -\nSSL enchantments - that hide their contents. The distributor\
+        \ cannot\ninspect what it cannot read, nor can it apply protection wards to\nencrypted traffic.\"\
+        \n\n\"Could you simply ignore the encryption?\"\n\n\"Absolutely not! That would leave all messages\
+        \ vulnerable to eavesdroppers\nbetween the sender and our gates.\"\n\nHow should SSL/TLS be configured\
+        \ to enable inspection and protection\nat the load balancer?\n                "
+      choices:
+      - text: SSL passthrough - keep everything encrypted end-to-end without inspection
+      - text: SSL offloading/termination - decrypt at the gateway for inspection
+      - text: Disable SSL entirely for better performance
+      - text: Use different SSL certificates for each hall
+      success_text: "\n\"You need SSL offloading - also called SSL termination,\" you explain.\n\"The\
+        \ encrypted seals are opened at the gateway, allowing full inspection.\"\n\n\"But then the messages\
+        \ are exposed!\"\n\n\"Only between the gateway and the reception halls - inside your own\nprotected\
+        \ domain. The gateway can re-encrypt traffic for the internal\njourney if required. But the key\
+        \ is: at the gateway, you can read\nthe content.\"\n\n\"And the protection wards?\"\n\n\"Once\
+        \ traffic is decrypted, you can apply any inspection you need -\nweb application firewall rules,\
+        \ content scanning, dark magic detection.\nYou can make intelligent routing decisions based on\
+        \ content. You have\nfull visibility.\"\n\n\"What about performance?\"\n\n\"The gateway handles\
+        \ all encryption work, offloading it from the seven\nhalls. They receive already-decrypted traffic\
+        \ and focus on their primary\nfunction. Overall efficiency often improves.\"\n\nYou have demonstrated\
+        \ understanding of LOAD BALANCING SECURITY.\n                "
+      failure_texts:
+        0: "\nSSL passthrough maintains end-to-end encryption but completely prevents\nthe load balancer\
+          \ from inspecting traffic. It cannot see content, cannot\napply WAF rules, cannot make content-based\
+          \ routing decisions. If you need\ninspection and protection at the load balancer, you need SSL\
+          \ termination.\n                    "
+        2: "\nDisabling SSL entirely removes all encryption protection. Messages would\nbe readable by\
+          \ anyone on the network between sender and gateway. This is\ncompletely unacceptable for sensitive\
+          \ applications. SSL termination\nprovides inspection capability while maintaining encryption\
+          \ to the gateway.\n                    "
+        3: "\nDifferent certificates per backend server doesn't address the inspection\nrequirement at\
+          \ the load balancer. The load balancer still can't read\nencrypted traffic passing through it.\
+          \ SSL termination decrypts at the\nload balancer, enabling inspection before forwarding to backend\
+          \ servers.\n                    "
+    corporate:
+      title: THE WAF CONFIGURATION PROBLEM
+      narrative: "\nThe security team has a problem. They've deployed a web application\nfirewall to protect\
+        \ against SQL injection, XSS, and other attacks. The\nWAF is integrated with the load balancer.\
+        \ There's just one problem.\n\n\"It's not catching anything,\" the security analyst reports. \"\
+        We tested\nit with known attack patterns. Nothing. The WAF sees... nothing useful.\"\n\nYou examine\
+        \ the configuration. All traffic between users and the load\nbalancer is HTTPS - encrypted. The\
+        \ load balancer is configured for SSL\npassthrough, forwarding encrypted traffic directly to the\
+        \ backend servers.\n\n\"There's your problem,\" you explain. \"The load balancer can't inspect\n\
+        what it can't see. The traffic is encrypted. Your WAF is looking at\nencrypted ciphertext, not\
+        \ the actual HTTP requests.\"\n\n\"But we need HTTPS for security!\"\n\n\"You need HTTPS between\
+        \ users and your infrastructure. You don't\nnecessarily need it to pass through the load balancer\
+        \ uninspected.\"\n\nHow should SSL/TLS be configured to enable WAF functionality?\n          \
+        \      "
+      choices:
+      - text: SSL passthrough - maintains encryption but prevents inspection
+      - text: SSL offloading/termination - decrypt at load balancer for inspection
+      - text: Disable SSL entirely for better visibility
+      - text: Use different SSL certificates for each backend server
+      success_text: "\n\"We need SSL termination at the load balancer,\" you explain, sketching\nthe new\
+        \ architecture.\n\n\"Users connect via HTTPS to the load balancer. The load balancer terminates\n\
+        SSL - it decrypts the traffic using its certificate. Now the load balancer\nsees actual HTTP requests,\
+        \ not encrypted blobs.\"\n\n\"And the WAF?\"\n\n\"The WAF can now inspect every request. It sees\
+        \ the actual URLs, headers,\nparameters, POST bodies - everything it needs to detect attacks.\
+        \ SQL\ninjection attempts are caught. XSS payloads are blocked.\"\n\n\"But what about the traffic\
+        \ to the backend servers?\"\n\n\"You have two options: send it unencrypted over your trusted internal\n\
+        network, or re-encrypt it - SSL re-encryption. Either way, the inspection\nhappens at the load\
+        \ balancer where you have full visibility.\"\n\nThe configuration is updated. Within a week, the\
+        \ WAF has blocked\nhundreds of attack attempts that were previously invisible.\n\nYou have demonstrated\
+        \ understanding of LOAD BALANCING SECURITY.\n                "
+      failure_texts:
+        0: "\nSSL passthrough is exactly the problem! It maintains end-to-end encryption\nbut prevents\
+          \ any inspection at the load balancer. The WAF sees encrypted\ntraffic and cannot analyze HTTP\
+          \ content. SSL termination is required to\ndecrypt traffic for inspection.\n               \
+          \     "
+        2: "\nDisabling SSL entirely would expose all traffic to eavesdroppers on the\nnetwork. User credentials,\
+          \ session tokens, personal data - all visible to\nanyone who can intercept traffic. SSL termination\
+          \ provides inspection\ncapability at the load balancer while maintaining encryption from users.\n\
+          \                    "
+        3: "\nDifferent certificates per backend server doesn't help with inspection\nat the load balancer.\
+          \ The traffic is still encrypted as it passes through.\nSSL termination decrypts at the load\
+          \ balancer, enabling WAF inspection\nbefore forwarding to backend servers.\n               \
+          \     "
+- id: d4_cdn_security
+  domain: 4
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 4: Communication and Network Security - CDN Security'
+  failure_text: "\nCDNs distribute traffic across many edge locations globally. During DDoS\nattacks,\
+    \ this distributed infrastructure absorbs malicious traffic.\nAdditionally, properly configured CDNs\
+    \ hide origin server IP addresses,\nmaking direct attacks on your infrastructure much harder.\n  \
+    \      "
+  themes:
+    fantasy:
+      title: THE DISTRIBUTED WATCHTOWERS
+      narrative: "\nThe Citadel's public message boards are famous throughout the realm.\nVisitors from\
+        \ every kingdom access them constantly. But recently, a\ncoordinated attack targeted the boards\
+        \ directly, flooding the Citadel\nwith requests until the service collapsed.\n\n\"We've been attacked\
+        \ three times this month,\" the Public Affairs Minister\nsighs. \"Our message boards serve the\
+        \ entire realm, but we have only one\ntower. When enemies learn its location, they strike directly.\"\
+        \n\n\"You need Content Distribution Towers,\" you suggest. \"Copies of your\nmessage boards, positioned\
+        \ throughout the realm. Visitors access the\nnearest tower, not your central Citadel.\"\n\n\"\
+        How does that help with attacks?\"\n\n\"Beyond improved performance, there are security benefits.\
+        \ First, the\ndistributed towers can absorb attack traffic across many locations\ninstead of one.\
+        \ Second...\"\n\nWhat is a key security benefit CDNs provide beyond performance?\n           \
+        \     "
+      choices:
+      - text: CDNs automatically encrypt all origin databases
+      - text: CDN edge nodes absorb attack traffic and hide the origin server location
+      - text: CDNs eliminate the need for SSL certificates
+      - text: CDNs provide automatic vulnerability scanning of your code
+      success_text: "\n\"The security benefit is twofold,\" you explain. \"First, CDN edge nodes\nabsorb\
+        \ attack traffic. A DDoS attack targeting your message boards hits\nthe distributed edge locations\
+        \ instead of your central tower. Those edge\nlocations have massive capacity specifically designed\
+        \ to handle traffic\nfloods.\"\n\n\"And the second benefit?\"\n\n\"Origin hiding. Your actual\
+        \ Citadel tower address becomes secret. Public\nvisitors connect to CDN edge locations. The edge\
+        \ locations connect to\nyour origin, but attackers cannot directly target what they cannot find.\n\
+        Properly configured, your true location is invisible to the outside world.\"\n\n\"So even if attackers\
+        \ bypass the edge...\"\n\n\"They don't know WHERE to attack. Direct origin attacks become extremely\n\
+        difficult when the origin address is hidden behind the CDN layer. Combined\nwith the distributed\
+        \ attack absorption, you become a much harder target.\"\n\n\"The realm's visitors get faster access\
+        \ AND we're better protected.\"\n\nYou have demonstrated understanding of CDN SECURITY.\n    \
+        \            "
+      failure_texts:
+        0: "\nCDNs cache and deliver content - they don't interact with databases at\nall. Database encryption\
+          \ is a separate concern handled by the database\nand application layers. CDN security benefits\
+          \ relate to traffic handling\nand origin protection, not backend data security.\n          \
+          \          "
+        2: "\nCDNs don't eliminate the need for SSL certificates - they often provide\nthem! Many CDN\
+          \ services offer SSL certificates for edge locations. But\nthis is about providing SSL, not\
+          \ eliminating it. The security benefit\nis about attack absorption and origin hiding.\n    \
+          \                "
+        3: "\nCDNs deliver content to end users efficiently - they don't scan your\ncode for vulnerabilities.\
+          \ Code scanning is performed by SAST (Static\nApplication Security Testing) and DAST (Dynamic\
+          \ Application Security\nTesting) tools. CDN security relates to traffic handling and origin\n\
+          protection.\n                    "
+    corporate:
+      title: THE HIDDEN ORIGIN
+      narrative: "\nYour company's public website has been attacked repeatedly. Each time,\nattackers\
+        \ discover your origin server IP address and launch targeted\nDDoS attacks against it directly.\
+        \ The attacks bypass cloud-based\nprotections because they hit the origin directly.\n\n\"How do\
+        \ they keep finding our server?\" the frustrated CTO asks.\n\n\"DNS history, email headers, configuration\
+        \ leaks, failed requests that\nreveal origin... there are many ways,\" you explain. \"Every time\
+        \ we\nchange IPs, they find the new one within days.\"\n\nThe security architect proposes a solution:\
+        \ \"What if they couldn't find\nthe origin at all? What if every public request went through an\n\
+        intermediary that hid our actual server location?\"\n\n\"That's exactly what a properly configured\
+        \ CDN does,\" you realize.\n\nFrom a security perspective, what is a key benefit the CDN provides?\n\
+        \                "
+      choices:
+      - text: CDNs automatically encrypt all backend databases
+      - text: CDN edge nodes absorb attack traffic and hide origin server IPs
+      - text: CDNs eliminate the need for SSL certificates
+      - text: CDNs provide automatic code vulnerability scanning
+      success_text: "\n\"There are two security benefits,\" you explain in the architecture review.\n\n\
+        \"First, origin hiding. When properly configured, the CDN becomes the only\npublic face of our\
+        \ infrastructure. Users connect to CDN edge locations.\nThe edges connect to our origin over private\
+        \ networks. Our origin IP is\nnever exposed publicly. Attackers can't directly target what they\
+        \ can't\nfind.\"\n\n\"What if they somehow discover the origin?\"\n\n\"That's the second benefit\
+        \ - attack absorption. CDN edge locations are\ndesigned to handle massive traffic volumes. Even\
+        \ if attackers target the\nedges with DDoS attacks, the distributed infrastructure absorbs it\
+        \ across\nmany locations globally. The capacity is designed for exactly this threat.\"\n\n\"And\
+        \ our origin server?\"\n\n\"Only receives legitimate traffic forwarded by the CDN. The flood never\n\
+        reaches us because it's absorbed at the edge. Combined with origin hiding,\nthis creates a formidable\
+        \ defensive position.\"\n\nThe website hasn't suffered a successful DDoS attack since deployment.\n\
+        \nYou have demonstrated understanding of CDN SECURITY.\n                "
+      failure_texts:
+        0: "\nCDNs cache and deliver content - they don't touch databases. Database\nencryption is a completely\
+          \ separate concern handled at the database\nlayer. CDN security is about traffic handling and\
+          \ hiding your origin\ninfrastructure, not backend data protection.\n                    "
+        2: "\nCDNs don't eliminate SSL - they often provide it. Many CDNs offer\nmanaged SSL certificates\
+          \ for their edge locations. But SSL provision\nis about encryption, not the core security benefit\
+          \ of CDNs. The key\nbenefits are DDoS absorption and origin hiding.\n                    "
+        3: "\nCDNs optimize content delivery - they don't analyze your code. Code\nvulnerability scanning\
+          \ requires SAST/DAST tools that analyze source\ncode or running applications. CDN security relates\
+          \ to traffic handling\nand protecting infrastructure location.\n                    "
+- id: d4_sdwan_security
+  domain: 4
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 4: Communication and Network Security - SD-WAN Security'
+  failure_text: "\nUnlike private MPLS circuits, SD-WAN typically uses public internet\nconnections. All\
+    \ traffic between sites must be encrypted (IPSec, TLS)\nto maintain confidentiality, as it traverses\
+    \ networks you don't control.\nBranch offices still need local firewalls and security controls.\n\
+    \        "
+  themes:
+    fantasy:
+      title: THE NEW ROAD NETWORK
+      narrative: "\nThe Citadel is modernizing its communication routes to branch towers.\nFor decades,\
+        \ the kingdom maintained expensive private roads - MPLS\nenchanted pathways - connecting each\
+        \ tower. Secure, reliable, but\nenormously costly.\n\n\"We're switching to the common road network,\"\
+        \ the Logistics Minister\nannounces. \"Cheaper, more flexible, and we can add new towers quickly\n\
+        without building new private roads.\"\n\n\"The common roads are public,\" you warn. \"Anyone can\
+        \ travel them. Our\nmessages will pass alongside merchant caravans, traveling performers,\nand...\
+        \ those with less noble intentions.\"\n\n\"SD-WAN enchantments will manage the routing intelligently,\"\
+        \ the Minister\nexplains. \"But I need you to identify the MOST critical security\nconsideration\
+        \ for this transition.\"\n\nWhat security consideration is MOST critical when using internet-based\n\
+        SD-WAN connections?\n                "
+      choices:
+      - text: SD-WAN eliminates all need for tower firewalls
+      - text: All SD-WAN traffic must be encrypted since it traverses public roads
+      - text: SD-WAN automatically provides protection against curses and hexes
+      - text: Towers no longer need any local security controls
+      success_text: "\n\"Encryption is absolutely critical,\" you emphasize. \"MPLS private roads\nwere\
+        \ physically isolated - only authorized travelers could access them.\nThe public road network\
+        \ has no such isolation.\"\n\n\"But the SD-WAN enchantments...\"\n\n\"SD-WAN provides intelligent\
+        \ routing, failover, and traffic management.\nBut the underlying roads are PUBLIC. Anyone with\
+        \ access to those roads\ncan observe what passes. Without encryption, your messages are readable\n\
+        to any eavesdropper.\"\n\n\"So we need...\"\n\n\"IPSec or TLS encryption for ALL traffic between\
+        \ towers. The SD-WAN\nsolution must encrypt everything that crosses the public network. This\n\
+        is not optional - it's fundamental to the security model.\"\n\n\"What about the tower firewalls?\"\
+        \n\n\"Keep them. SD-WAN provides connectivity, not comprehensive security.\nTowers still need\
+        \ local protection. Defense in depth doesn't disappear\njust because your WAN technology changed.\"\
+        \n\nYou have demonstrated understanding of SD-WAN SECURITY.\n                "
+      failure_texts:
+        0: "\nBranch towers absolutely still need firewalls! SD-WAN handles connectivity\nbetween sites\
+          \ but doesn't replace local security controls. Each tower\nstill faces local threats and still\
+          \ needs firewall protection for its\nnetwork perimeter. Never remove firewalls just because\
+          \ you changed\nWAN technology.\n                    "
+        2: "\nSD-WAN provides intelligent network routing - it doesn't include antivirus\nor anti-malware\
+          \ functionality. Endpoint protection is a separate concern.\nTowers still need security software\
+          \ just like they did with MPLS. The\ncritical consideration is encryption for traffic crossing\
+          \ public networks.\n                    "
+        3: "\nTowers absolutely need local security controls. SD-WAN provides WAN\nconnectivity but doesn't\
+          \ replace defense in depth. Each site needs\nfirewalls, endpoint protection, and appropriate\
+          \ security measures.\nSD-WAN is about connectivity, not comprehensive security.\n          \
+          \          "
+    corporate:
+      title: THE MPLS MIGRATION
+      narrative: "\nBudget cuts have struck. The expensive MPLS circuits connecting your\nbranch offices\
+        \ are being replaced with SD-WAN over commodity internet\nconnections. The CFO is thrilled - costs\
+        \ drop by 60%.\n\n\"Same functionality for a fraction of the price!\" the CFO announces.\n\nThe\
+        \ network team looks less thrilled. \"MPLS was a private network. Our\ntraffic never touched the\
+        \ public internet. Now...\"\n\n\"Now your traffic crosses networks you don't control,\" you finish.\n\
+        \"Public internet infrastructure. Shared with everyone.\"\n\nThe CISO needs to sign off on the\
+        \ migration. \"What security considerations\nare most critical for this change?\"\n\nWhat is the\
+        \ MOST critical security consideration when moving from MPLS\nto internet-based SD-WAN?\n    \
+        \            "
+      choices:
+      - text: SD-WAN eliminates all need for branch firewalls
+      - text: All SD-WAN traffic must be encrypted since it traverses public internet
+      - text: SD-WAN automatically provides antivirus protection
+      - text: Branch offices no longer need any local security controls
+      success_text: "\n\"Encryption is non-negotiable,\" you state firmly for the record.\n\n\"MPLS circuits\
+        \ were private - our traffic traveled on infrastructure we\ncontrolled or that our provider isolated\
+        \ for us. Public internet has no\nsuch guarantees. Traffic crosses unknown networks, potentially\
+        \ hostile\ninfrastructure.\"\n\n\"The SD-WAN vendor says it's secure...\"\n\n\"SD-WAN provides\
+        \ intelligent routing, failover, quality of service. Those\nare valuable. But if the traffic isn't\
+        \ encrypted, anyone along the path\ncan read it. The SD-WAN solution MUST include strong encryption\
+        \ - IPSec,\nTLS, or equivalent - for all inter-site traffic.\"\n\n\"And the branch firewalls?\"\
+        \n\n\"Keep them. SD-WAN doesn't replace local security. Each branch still\nneeds firewall protection,\
+        \ endpoint security, the whole stack. SD-WAN\nchanges how sites connect, not whether they need\
+        \ protection.\"\n\nThe migration proceeds with mandatory encryption and retained branch\nsecurity\
+        \ controls.\n\nYou have demonstrated understanding of SD-WAN SECURITY.\n                "
+      failure_texts:
+        0: "\nBranch offices absolutely still need firewalls. SD-WAN handles WAN\nconnectivity but doesn't\
+          \ replace local perimeter security. Each branch\nstill needs protection from local threats,\
+          \ proper access control, and\ndefense in depth. Removing firewalls because you changed WAN technology\n\
+          would be a serious security regression.\n                    "
+        2: "\nSD-WAN provides network connectivity features - routing, failover, QoS.\nIt does not include\
+          \ endpoint protection or antivirus functionality.\nThose are separate security layers that branches\
+          \ still need. The critical\nSD-WAN consideration is encrypting traffic that crosses public networks.\n\
+          \                    "
+        3: "\nBranches absolutely need local security controls. SD-WAN replaces your\nWAN connectivity\
+          \ technology, not your entire security architecture.\nDefense in depth still applies. The critical\
+          \ SD-WAN-specific concern is\nencrypting traffic because it now crosses public networks instead\
+          \ of\nprivate MPLS circuits.\n                    "
+- id: d4_microsegmentation
+  domain: 4
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 4: Communication and Network Security - Microsegmentation'
+  failure_text: "\nMicrosegmentation applies security controls at the individual workload\nlevel (per\
+    \ VM, container, or host), enabling policies between systems\neven on the same network segment. This\
+    \ is finer-grained than traditional\nVLAN-based segmentation, which only controls traffic between\
+    \ segments.\n        "
+  themes:
+    fantasy:
+      title: THE INNER SANCTUM'S DILEMMA
+      narrative: "\nThe Citadel's magical compute crystals all reside in the same chamber.\nScrying crystals,\
+        \ calculation engines, and archive storage - all sharing\nthe same protected space. When one crystal\
+        \ was corrupted last month,\nthe infection spread to adjacent crystals before anyone noticed.\n\
+        \n\"We have network segments,\" the Crystal Master explains. \"The chamber\nis isolated from other\
+        \ parts of the Citadel. But WITHIN the chamber,\nall crystals can communicate freely with each\
+        \ other.\"\n\n\"That's the problem. Your segmentation divides the Citadel into zones,\nbut within\
+        \ each zone, there are no barriers. Once something is inside\nthe zone, it can reach everything.\"\
+        \n\n\"We need barriers between individual crystals? That seems... extreme.\"\n\n\"It seems extreme\
+        \ until one corrupted crystal compromises your entire\narchive because nothing prevented lateral\
+        \ movement within the zone.\"\n\nWhat approach enables security policies between individual workloads\n\
+        within the same network segment?\n                "
+      choices:
+      - text: Add more network segments - divide the chamber into smaller zones
+      - text: Implement microsegmentation - apply policies at the individual crystal level
+      - text: Add additional perimeter barriers at the chamber entrance
+      - text: Use address translation to hide crystal locations from each other
+      success_text: "\n\"You need microsegmentation,\" you explain, projecting an illustration.\n\"Rather\
+        \ than dividing spaces into zones, you apply security policies to\neach individual crystal.\"\n\
+        \n\"How is that different from more zones?\"\n\n\"Zones are coarse-grained. You separate chambers,\
+        \ but everything in a\nchamber can still talk freely. Microsegmentation is fine-grained - you\n\
+        control which SPECIFIC crystals can communicate with which others, even\nif they're in the same\
+        \ room.\"\n\n\"So the scrying crystal can only talk to specific calculation engines?\"\n\n\"Exactly.\
+        \ And if an archive crystal is corrupted, it cannot spread to\nscrying crystals because your policies\
+        \ say archive crystals don't talk\nto scrying crystals. The corruption is contained to only the\
+        \ systems\nit legitimately needs to access.\"\n\n\"This seems complex to manage.\"\n\n\"It is.\
+        \ But the alternative is losing everything when one crystal falls.\nMicrosegmentation provides\
+        \ the finest-grained lateral movement prevention\navailable.\"\n\nYou have demonstrated understanding\
+        \ of MICROSEGMENTATION.\n                "
+      failure_texts:
+        0: "\nMore VLANs/zones still operate at the network segment level. Within each\nsegment, systems\
+          \ can communicate freely. Microsegmentation provides\nper-workload policies, controlling communication\
+          \ between individual\nsystems even on the same network segment. It's finer-grained than any\n\
+          VLAN-based approach.\n                    "
+        2: "\nPerimeter firewalls control traffic entering and leaving a zone. They\ndon't control internal\
+          \ workload-to-workload communication. Once something\nis inside, perimeter controls don't help.\
+          \ Microsegmentation applies\ncontrols between individual workloads regardless of their network\
+          \ location.\n                    "
+        3: "\nNetwork Address Translation translates between address spaces. It doesn't\nenforce security\
+          \ policies between workloads. Systems can still communicate\nthrough NAT - the addresses are\
+          \ just translated. Microsegmentation\nprovides actual access control between individual workloads.\n\
+          \                    "
+    corporate:
+      title: THE FLAT SEGMENT PROBLEM
+      narrative: "\nThe security team is reviewing last month's breach. Attackers compromised\na development\
+        \ VM through a vulnerable application. From there, they moved\nlaterally to the CI/CD servers,\
+        \ then to production databases. All in the\nsame VLAN.\n\n\"But we have network segmentation!\"\
+        \ the network architect protests.\n\"Dev is in its own VLAN!\"\n\n\"The VLAN stopped them from\
+        \ reaching HR or Finance directly,\" you agree.\n\"But within the Dev VLAN, there are no restrictions.\
+        \ The compromised\ndev VM could freely access CI/CD servers, which could access production\ndatabases\
+        \ for deployments.\"\n\n\"So we need more VLANs? Separate the dev VMs from CI/CD from databases?\"\
+        \n\n\"That helps, but you'll always have workloads that need to be on the\nsame segment for performance\
+        \ or management reasons. The question is: how\ndo you enforce policies between individual workloads,\
+        \ not just between\nnetwork segments?\"\n\nWhat approach enables this fine-grained control?\n\
+        \                "
+      choices:
+      - text: Add more VLANs to further divide the network
+      - text: Implement microsegmentation
+      - text: Install additional perimeter firewalls
+      - text: Use network address translation
+      success_text: "\n\"Microsegmentation,\" you explain, pulling up a diagram. \"It applies\nsecurity\
+        \ policies at the individual workload level - per VM, per container,\nper host - not just at network\
+        \ segment boundaries.\"\n\n\"How is that different from more VLANs?\"\n\n\"VLANs are binary: same\
+        \ segment or different segment. Microsegmentation\nis granular: THIS specific VM can talk to THAT\
+        \ specific VM on THESE\nspecific ports. Even systems on the same VLAN have policies between them.\"\
+        \n\n\"So we could say: dev VMs only talk to specific CI/CD servers on specific\nports, and CI/CD\
+        \ servers only talk to specific production systems for\ndeployments?\"\n\n\"Exactly. And if a\
+        \ dev VM is compromised, it can't pivot to CI/CD servers\nit has no legitimate reason to access,\
+        \ even though they're on the same\nVLAN. The attacker is contained to only the systems the workload\n\
+        legitimately needs.\"\n\nThe microsegmentation project launches the following quarter.\n\nYou\
+        \ have demonstrated understanding of MICROSEGMENTATION.\n                "
+      failure_texts:
+        0: "\nMore VLANs operate at the network segment level. You can divide into\nsmaller segments,\
+          \ but within each segment, systems still communicate\nfreely. Microsegmentation provides per-workload\
+          \ policies regardless of\nnetwork location - it's fundamentally finer-grained than any VLAN\n\
+          approach.\n                    "
+        2: "\nPerimeter firewalls control traffic at network boundaries. They don't\ngovern workload-to-workload\
+          \ communication within a segment. Once an\nattacker is inside a VLAN, perimeter controls at\
+          \ the VLAN edge don't\nhelp. Microsegmentation applies controls between individual workloads.\n\
+          \                    "
+        3: "\nNAT translates addresses between networks. It doesn't enforce access\npolicies between workloads.\
+          \ Systems can still communicate through NAT -\nthe connection just gets address-translated.\
+          \ Microsegmentation provides\nactual access control at the individual workload level.\n    \
+          \                "
+- id: d4_network_flow_analysis
+  domain: 4
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 4: Communication and Network Security - Network Monitoring'
+  failure_text: "\nNetFlow/IPFIX captures metadata about network flows (source, destination,\nports, bytes,\
+    \ timing) without capturing payload contents. This enables\ntraffic pattern analysis, anomaly detection,\
+    \ and exfiltration detection\nwhile avoiding privacy concerns of full content capture.\n        "
+  themes:
+    fantasy:
+      title: THE PRIVACY PROBLEM
+      narrative: "\nThe Citadel's security council faces a dilemma. Recent incidents suggest\ndata is\
+        \ being smuggled out of the archives, but the council cannot agree\non how to detect it.\n\n\"\
+        We should read all messages!\" one councilor demands. \"Inspect every\nscroll for stolen secrets!\"\
+        \n\n\"That violates the privacy of every scribe in the Citadel,\" another\nobjects. \"We'd be\
+        \ reading personal correspondence, private matters,\neverything. The scribes' guild would revolt.\"\
+        \n\n\"Then how do we detect the theft?\"\n\nYou consider the problem. Full message inspection\
+        \ would reveal content -\nbut also invade privacy on a massive scale. What you really need is\n\
+        metadata: who sends how much to whom, when, how often. Patterns that\nmight indicate data exfiltration\
+        \ without reading actual content.\n\nWhat technology enables detecting unusual traffic patterns\
+        \ and potential\ndata exfiltration WITHOUT capturing full message contents?\n                "
+      choices:
+      - text: Full message capture with deep content inspection
+      - text: Flow data analysis - metadata about communications without content
+      - text: Message mirroring to a surveillance chamber
+      - text: Installing scrying crystals on every desk in the Citadel
+      success_text: "\n\"You need flow analysis,\" you explain. \"Think of it as analyzing the\noutside\
+        \ of envelopes without reading the letters inside.\"\n\n\"What can we learn from envelopes?\"\n\
+        \n\"Who sends to whom. How often. How much data. At what times. To what\ndestinations. This is\
+        \ metadata - information ABOUT communications, not\nthe content itself.\"\n\n\"And this helps\
+        \ detect theft?\"\n\n\"Absolutely. An archivist who normally sends five small messages per day\n\
+        suddenly sending gigabytes of data to an unknown external address? That's\na red flag. The pattern\
+        \ is suspicious even without reading the content.\"\n\n\"What about privacy?\"\n\n\"Flow analysis\
+        \ doesn't capture message contents. The privacy council\naccepts metadata collection where they'd\
+        \ reject content inspection. You\nget detection capability without the privacy nightmare of reading\n\
+        everyone's correspondence.\"\n\n\"NetFlow analysis provides pattern detection while respecting\
+        \ privacy\nconstraints.\"\n\nYou have demonstrated understanding of NETWORK FLOW ANALYSIS.\n \
+        \               "
+      failure_texts:
+        0: "\nFull packet capture includes complete message contents - exactly the\nprivacy violation\
+          \ the council wants to avoid. Deep packet inspection\nreads everything. Flow analysis captures\
+          \ metadata (source, destination,\nports, bytes, timing) WITHOUT capturing payload contents.\n\
+          \                    "
+        2: "\nPort mirroring copies ALL traffic, including content. This is the same\nas full packet capture\
+          \ from a privacy perspective - you're duplicating\ncomplete messages for analysis. Flow analysis\
+          \ captures only metadata,\nnot message contents.\n                    "
+        3: "\nWireshark and similar tools capture complete packets including content.\nThis is impractical\
+          \ at scale AND creates the same privacy issues as any\nfull-content capture. Flow analysis specifically\
+          \ avoids content capture\nwhile still enabling pattern analysis.\n                    "
+    corporate:
+      title: THE LEGAL CONSTRAINT
+      narrative: "\nThe security team wants to detect data exfiltration. Legal has concerns.\n\n\"We can't\
+        \ capture full packet contents,\" the General Counsel states.\n\"Employee communications, personal\
+        \ data, protected information - if we\ncapture it all, we're liable for a massive privacy violation.\"\
+        \n\n\"But we need to detect unusual traffic patterns!\" the security analyst\nprotests. \"How\
+        \ do we know if someone's exfiltrating data if we can't\nsee the data?\"\n\n\"You can't see the\
+        \ data. Find another way.\"\n\nThe CISO turns to you. \"There must be a way to detect suspicious\
+        \ patterns\nwithout capturing content. Something that gives us traffic metadata -\nwho's talking\
+        \ to whom, how much data, when - without the actual payload.\"\n\nWhat technology meets these\
+        \ requirements?\n                "
+      choices:
+      - text: Full packet capture with deep packet inspection
+      - text: NetFlow/IPFIX flow data analysis
+      - text: Port mirroring to a SIEM
+      - text: Deploy Wireshark on every network segment
+      success_text: "\n\"NetFlow or IPFIX,\" you explain. \"Flow data captures metadata ABOUT\nnetwork\
+        \ connections without capturing the actual content.\"\n\n\"What exactly do we get?\"\n\n\"Source\
+        \ and destination IP addresses. Source and destination ports.\nProtocol used. Bytes transferred.\
+        \ Timing - when the flow started and\nended. Packet counts. All the metadata that describes a\
+        \ conversation\nwithout the conversation itself.\"\n\n\"And this is enough to detect exfiltration?\"\
+        \n\n\"Absolutely. A user suddenly uploading 50GB to an IP in a foreign country\nat 2 AM? Suspicious\
+        \ pattern. Regular small transfers to a cloud storage\nIP? Worth investigating. We see the shapes\
+        \ of suspicious behavior without\nneeding the content.\"\n\n\"Legal approves?\"\n\n\"Metadata\
+        \ collection typically gets approval where content capture\ndoesn't. We can detect anomalies,\
+        \ investigate patterns, identify\npotential exfiltration - all without reading anyone's email\
+        \ content.\"\n\nYou have demonstrated understanding of NETWORK FLOW ANALYSIS.\n              \
+        \  "
+      failure_texts:
+        0: "\nFull packet capture includes complete content - exactly what Legal\nprohibited. Deep packet\
+          \ inspection reads payloads. Flow data analysis\nspecifically captures metadata (source, destination,\
+          \ ports, bytes)\nWITHOUT payload content, avoiding the privacy concerns.\n                 \
+          \   "
+        2: "\nPort mirroring copies complete traffic including content to the SIEM.\nThis is equivalent\
+          \ to full packet capture from a privacy perspective -\nyou're duplicating all network data.\
+          \ Flow analysis avoids content capture\nentirely.\n                    "
+        3: "\nWireshark captures complete packets including all content. It's also\ncompletely impractical\
+          \ at enterprise scale - you can't run packet capture\non every segment continuously. Flow data\
+          \ analysis is designed for scale\nand specifically avoids content capture.\n               \
+          \     "
+- id: d4_secure_remote_access
+  domain: 4
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 4: Communication and Network Security - Secure Remote Access'
+  failure_text: "\nSSH key-based authentication is significantly stronger than passwords.\nKeys are much\
+    \ longer and not vulnerable to brute force or phishing.\nAdding passphrases to keys provides two-factor\
+    \ protection: something you\nhave (the key file) plus something you know (the passphrase).\n     \
+    \   "
+  themes:
+    fantasy:
+      title: THE DISTANT TOWER ACCESS
+      narrative: "\nThe Citadel's arcane scribes must access enchanted calculation engines\nin distant\
+        \ towers. Currently, they speak a password phrase, and if it\nmatches, the tower grants entry.\
+        \ Simple, but problems have emerged.\n\n\"Our passwords travel across many lands to reach the\
+        \ towers,\" the Chief\nScribe explains. \"Even with basic protection, a determined adversary\n\
+        could intercept and reuse them. And scribes choose weak phrases - 'magic123'\nwas used by three\
+        \ people last month.\"\n\n\"We need something beyond passwords,\" you agree. \"Something that\
+        \ cannot\nbe intercepted and reused. Something stronger than words a scribe can\nremember.\"\n\
+        \n\"The towers support magical seal verification,\" the Scribe continues.\n\"Each authorized scribe\
+        \ could carry a unique sealed key, protected by\na personal phrase known only to them. The tower\
+        \ would verify both the\nseal and... require the phrase to activate it?\"\n\nWhat approach improves\
+        \ SSH security beyond password authentication?\n                "
+      choices:
+      - text: Change the entry port from standard to something obscure
+      - text: Implement key-based authentication with passphrase-protected keys
+      - text: Allow access from any origin location without restriction
+      - text: Remove the protection enchantments for faster access
+      success_text: "\n\"SSH key-based authentication with passphrases,\" you confirm. \"This\nprovides\
+        \ two-factor protection far superior to passwords alone.\"\n\n\"Explain how it works.\"\n\n\"\
+        Each scribe generates a unique key pair - a private key they keep\nsecret, and a public key installed\
+        \ on authorized towers. The private\nkey is protected by a passphrase only the scribe knows.\"\
+        \n\n\"Two factors?\"\n\n\"Something you HAVE - the private key file. Something you KNOW - the\n\
+        passphrase. An attacker who steals the key file still needs the\npassphrase. An attacker who guesses\
+        \ the passphrase still needs the\nkey file.\"\n\n\"And the keys themselves?\"\n\n\"Far stronger\
+        \ than any password a human could remember. Keys are typically\nthousands of bits long. Brute-forcing\
+        \ them is computationally infeasible.\nAnd they're never transmitted - only cryptographic proof\
+        \ of possession\ncrosses the network.\"\n\n\"No more 'magic123' passwords?\"\n\n\"No more passwords\
+        \ at all for SSH. Just secure keys and protected\npassphrases.\"\n\nYou have demonstrated understanding\
+        \ of SECURE REMOTE ACCESS.\n                "
+      failure_texts:
+        0: "\nChanging SSH from port 22 to a non-standard port is 'security through\nobscurity' - easily\
+          \ defeated. Port scanners trivially find SSH on any\nport. Attackers specifically look for non-standard\
+          \ ports as a sign of\namateur security. Real security comes from strong authentication like\n\
+          SSH keys.\n                    "
+        2: "\nAllowing SSH from any IP address INCREASES attack surface dramatically.\nEvery scanner on\
+          \ the internet can probe your SSH service. IP restrictions\nprovide defense in depth - limiting\
+          \ who can even attempt authentication.\nCombined with key-based auth, this significantly hardens\
+          \ SSH access.\n                    "
+        3: "\nDisabling SSH encryption defeats the entire purpose of SSH! Without\nencryption, credentials\
+          \ and session content are visible to any\neavesdropper. SSH exists to provide encrypted remote\
+          \ access. The goal\nis stronger authentication (keys), not weaker encryption.\n            \
+          \        "
+    corporate:
+      title: THE SSH HARDENING PROJECT
+      narrative: "\nThe security audit came back with findings about your SSH configuration.\nPassword\
+        \ authentication is enabled. Weak passwords are common. The\npen test team cracked three admin\
+        \ accounts with dictionary attacks.\n\n\"We need to harden SSH access,\" the IT manager acknowledges.\
+        \ \"But our\nadmins are complaining that keys are 'too complicated' and they want\nto keep passwords.\"\
+        \n\n\"The pen testers cracked their passwords in under an hour,\" you point\nout. \"Including\
+        \ root on the production database server.\"\n\nThe color drains from the manager's face.\n\n\"\
+        Keys are more secure,\" you continue. \"And with proper implementation,\nnot that complicated.\
+        \ The question is: what specific improvement to SSH\nprovides the strongest security enhancement\
+        \ over simple passwords?\"\n\nWhat should be implemented?\n                "
+      choices:
+      - text: Move SSH to a non-standard port
+      - text: Implement SSH key-based authentication with passphrase-protected keys
+      - text: Allow SSH access from any IP address
+      - text: Disable SSH encryption for better performance
+      success_text: "\n\"SSH key-based authentication with passphrase-protected keys,\" you\nrecommend.\
+        \ \"Here's why it's dramatically more secure:\n\n\"First, keys are much longer than passwords.\
+        \ A 4096-bit RSA key versus\na 12-character password? No comparison. Brute-forcing keys is\ncomputationally\
+        \ infeasible.\n\n\"Second, keys aren't vulnerable to phishing. Users don't type them,\nso attackers\
+        \ can't trick them into revealing them.\n\n\"Third, passphrase protection adds a second factor.\
+        \ Even if an attacker\nsteals a key file, they need the passphrase to use it. Something you\n\
+        have plus something you know.\"\n\n\"But the admins say it's complicated...\"\n\n\"SSH agents\
+        \ cache unlocked keys in memory. Once you authenticate in the\nmorning, you don't type passphrases\
+        \ for every connection. It's actually\nmore convenient AND more secure once properly configured.\"\
+        \n\nPassword authentication is disabled the following month.\n\nYou have demonstrated understanding\
+        \ of SECURE REMOTE ACCESS.\n                "
+      failure_texts:
+        0: "\nSecurity through obscurity is not security. Port scanners find SSH on\nany port in seconds.\
+          \ Attackers specifically target non-standard ports\nbecause they often indicate weaker security\
+          \ awareness. Real SSH\nhardening means key-based authentication, not port shuffling.\n     \
+          \               "
+        2: "\nAllowing SSH from any IP is the opposite of hardening! You're expanding\nthe attack surface\
+          \ to include every IP address on the internet. IP\nrestrictions limit who can even attempt authentication.\
+          \ Combined with\nkey-based auth, this provides defense in depth.\n                    "
+        3: "\nDisabling encryption would make SSH pointless - you'd be sending\neverything in cleartext!\
+          \ The goal is stronger authentication, not\nweaker encryption. SSH keys provide dramatically\
+          \ stronger authentication\nwhile maintaining full encryption.\n                    "

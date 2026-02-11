@@ -1,0 +1,1779 @@
+domain: 1
+domain_name: Security and Risk Management
+scenarios:
+- id: d1_fire_scroll_room
+  domain: 1
+  correct_index: 0
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 1: Security and Risk Management - Safety Priority, CISSP Code of Ethics'
+  failure_text: "\nIn information security, we protect many things: data, systems, secrets, and\noperations.\
+    \ But above all else, we protect PEOPLE. The CISSP emphasizes that\nlife safety must always be the\
+    \ top priority in any security decision. No\namount of data, no matter how critical, is worth a human\
+    \ life.\n        "
+  themes:
+    fantasy:
+      title: FIRE IN THE SCROLL ROOM
+      narrative: "\nThe acrid smell of smoke reaches your nostrils before the alarm bells begin their\n\
+        frantic clanging. You round the corner to find the Great Scroll Room engulfed in\nangry orange\
+        \ flames. The ancient archives - containing irreplaceable magical\ncodices and the kingdom's most\
+        \ sensitive decryption keys - are being consumed.\n\nThrough the smoke, you spot three scribes\
+        \ trapped behind a collapsed bookshelf,\ntheir cries barely audible over the roar of the flames.\
+        \ The Master Archivist\nshouts that the backup scrolls haven't been copied to the off-site vault\
+        \ in\nthree moons.\n\nThe heat is intense. You have moments to act. The fire brigade is still\n\
+        minutes away.\n\nWhat do you do?\n                "
+      choices:
+      - text: Rush to save the scribes - their lives are irreplaceable
+      - text: Secure the encryption keys first - if compromised, the kingdom's communications are at risk
+      - text: Attempt to salvage the ancient codices - they contain centuries of accumulated knowledge
+      - text: Run to activate the magical suppression system to save everything at once
+      success_text: "\nYou charge through the smoke, the heat searing your lungs. With strength born\n\
+        of purpose, you help lift the bookshelf and guide the three scribes to safety\njust as the ceiling\
+        \ begins to groan.\n\nOutside, catching your breath, the Master Archivist clasps your shoulder.\n\
+        \"The scrolls can be rewritten. The keys can be regenerated. But Elara, Marcus,\nand young Pip\
+        \ - they cannot be replaced. You understood what truly matters.\"\n\nThe fire brigade arrives\
+        \ and contains the blaze. Though the Scroll Room\nsuffered losses, the most valuable assets -\
+        \ your fellow guardians - survive\nto rebuild and protect another day.\n\nYou have demonstrated\
+        \ the first and most sacred principle: LIFE SAFETY\nis always the highest priority.\n        \
+        \        "
+      failure_texts:
+        1: "\nWhile protecting cryptographic materials is crucial for information security,\nyou have\
+          \ placed data above human life. The CISSP Code of Ethics and fundamental\nsecurity principles\
+          \ establish that LIFE SAFETY is always the highest priority.\nNo data, no matter how sensitive\
+          \ or valuable, justifies risking human lives.\nThe scribes perished. Their knowledge and experience\
+          \ are truly irreplaceable.\n                    "
+        2: "\nThe ancient codices, while historically invaluable, are still just records.\nThey can potentially\
+          \ be reconstructed, researched anew, or may exist in\nother forms. Human lives cannot be restored.\
+          \ By choosing artifacts over\npeople, you have violated the fundamental principle that safety\
+          \ of personnel\nalways takes precedence over property and information.\n                    "
+        3: "\nWhile this seems like a clever solution, the suppression system takes time\nto activate\
+          \ and may not reach the trapped scribes in time. In emergency\nsituations, you must prioritize\
+          \ immediate threats to life over technical\nsolutions that may or may not work. Direct action\
+          \ to save lives takes\nprecedence when lives are in immediate danger.\n                    "
+    corporate:
+      title: FIRE IN THE SERVER ROOM
+      narrative: "\nThe fire alarm pierces through the open-plan office. \"THIS IS NOT A DRILL\"\ncrackles\
+        \ over the PA system. You rush toward Building B's server room.\n\nThrough the glass wall, you\
+        \ see the nightmare scenario: smoke billowing from\na rack, sparks flying from a damaged PDU,\
+        \ and three contractors from the\novernight migration team trapped behind a collapsed server cabinet.\n\
+        \nYour manager's voice echoes in your head from last week's all-hands: \"Our\nbackup rotation\
+        \ is three days behind. If we lose those servers, Q4 is toast.\"\n\nThe contractors are banging\
+        \ on the glass. The fire suppression hasn't\ntriggered. Security is nowhere in sight.\n\nWhat\
+        \ do you do?\n                "
+      choices:
+      - text: Call 911 and help evacuate the contractors - people first
+      - text: Run to the tape safe to grab this week's backup tapes
+      - text: Try to gracefully shut down the production database
+      - text: Sprint to the electrical room to kill power to the floor
+      success_text: "\nYou're already dialing 911 as you grab the fire extinguisher from the wall.\n\"\
+        Building B, server room fire, three people trapped!\" While the dispatcher\nsends help, you smash\
+        \ the emergency release on the server room door.\n\nTogether, you and the contractors escape through\
+        \ the loading dock just as\nthe fire department arrives. One contractor has minor burns; all three\
+        \ will\nbe okay.\n\nYour manager catches up to you outside, ashen-faced. \"The backups? The\n\
+        production DB?\"\n\n\"Replaceable,\" you say. \"Dave, Maria, and the new guy? Not so much.\"\n\
+        \nHe nods slowly. \"HR is going to give you an award. And I'm going to fix\nthat backup rotation\
+        \ first thing Monday.\"\n\nLIFE SAFETY always comes first. The CISSP Code of Ethics is clear:\n\
+        protect society, the common good, and the infrastructure - and people\nARE the infrastructure\
+        \ that matters most.\n                "
+      failure_texts:
+        1: "\nYou grabbed backup tapes while three people were trapped in a burning\nserver room. Sure,\
+          \ the tapes survived. Dave from the contractor team?\nSecond-degree burns. Maria? Smoke inhalation,\
+          \ two weeks in the hospital.\n\nAt the incident review, the CISO looked at you and said one\
+          \ thing:\n\"No backup tape is worth a human life. Ever.\"\n\nLIFE SAFETY is the first priority\
+          \ in any emergency. Data can be restored.\nPeople cannot.\n                    "
+        2: "\n\"Graceful shutdown\"? Really? While people are trapped and smoke is filling\nthe room?\
+          \ By the time you initiated the shutdown sequence, the contractors\nhad to break through a window\
+          \ to escape.\n\nProduction was down for 72 hours anyway due to fire damage. Your \"graceful\n\
+          shutdown\" saved nothing and delayed evacuation of personnel.\n\nWhen lives are at risk, technical\
+          \ procedures take a back seat. ALWAYS.\n                    "
+        3: "\nCutting power seemed logical, right? Except: the server room door is\nelectronically locked,\
+          \ and cutting power trapped the contractors inside\neven longer. The fire suppression system\
+          \ is also electronic - it never\ntriggered.\n\nOne contractor is in the ICU. Your \"logical\"\
+          \ decision nearly killed him.\n\nIn emergencies, your first priority is HUMAN LIFE, not systems.\
+          \ Call for\nhelp, evacuate people, then worry about infrastructure.\n                    "
+- id: d1_merchants_dilemma
+  domain: 1
+  correct_index: 1
+  xp_reward: 60
+  hp_penalty: 20
+  domain_reference: 'Domain 1: Security and Risk Management - Risk Assessment, Risk Appetite, Quantitative
+    Risk Analysis'
+  failure_text: "\nRisk management is the foundation of security decision-making. It requires:\n1. Identifying\
+    \ assets and their value\n2. Identifying threats and vulnerabilities\n3. Calculating likelihood and\
+    \ impact\n4. Comparing against organizational risk appetite\n5. Implementing appropriate controls\n\
+    \nNeither absolute security nor blind risk-taking serves the organization.\n        "
+  themes:
+    fantasy:
+      title: THE MERCHANT'S DILEMMA
+      narrative: "\nThe Grand Merchant approaches you with worry creasing his weathered face.\nHis caravans\
+        \ carry gold, spices, and most importantly, sealed diplomatic\npouches between the kingdoms.\n\
+        \n\"Three routes lie before us,\" he explains, spreading a map across the table.\n\"The Northern\
+        \ Pass is swift but plagued by bandits - we lose one in four\ncaravans. The Eastern Road is longer\
+        \ but safer - only one in twenty is lost.\nThe Southern Marshes... none who enter are ever seen\
+        \ again, though the\njourney would be shortest.\"\n\nHe looks at you intently. \"The Council demands\
+        \ I calculate our acceptable\nlevel of loss. They speak of 'risk appetite' and 'residual risk.'\
+        \ I am but\na merchant. What framework should guide my decision?\"\n\nHow do you advise the Merchant?\n\
+        \                "
+      choices:
+      - text: Always choose the safest route regardless of cost - security cannot have a price
+      - text: Calculate the expected loss for each route, compare against acceptable risk levels, then
+          choose accordingly
+      - text: Take the Southern Marshes - the potential reward of the shortest route outweighs unknown
+          risks
+      - text: Refuse all routes until the bandits are eliminated and the marshes are explored
+      success_text: "\nThe Merchant's eyes light up with understanding. \"Ah! So I must weigh the\nVALUE\
+        \ of what might be lost against the LIKELIHOOD of losing it!\"\n\nYou nod. \"Precisely. The Northern\
+        \ Pass loses 25% of caravans - if each\ncarries 100 gold in goods, you expect to lose 25 gold\
+        \ per journey on average.\nThe Eastern Road loses 5% - only 5 gold expected loss, even if the\
+        \ journey\ntakes longer.\"\n\n\"And the Southern Marshes?\"\n\n\"Unknown threats with 100% historical\
+        \ loss rate represent unacceptable risk,\nregardless of the time saved. We cannot make informed\
+        \ decisions about risks\nwe do not understand.\"\n\nThe Merchant bows gratefully. \"You have given\
+        \ me a framework for all future\ndecisions. The Council shall hear of your wisdom.\"\n\nYou have\
+        \ demonstrated proper RISK ASSESSMENT methodology.\n                "
+      failure_texts:
+        0: "\nWhile admirable in sentiment, absolute security is neither achievable nor\npractical. Risk\
+          \ management requires balancing security with business needs.\nAn organization that spends all\
+          \ resources on eliminating risk will have\nnothing left to protect. The CISSP framework emphasizes\
+          \ that security must\nenable business operations, not paralyze them with impossible standards.\n\
+          \                    "
+        2: "\nChoosing a path with unknown but potentially catastrophic consequences\nviolates fundamental\
+          \ risk management principles. 'None who enter are ever\nseen again' represents an unquantified\
+          \ risk with potentially infinite loss.\nRisk management requires understanding threats before\
+          \ accepting them.\nUnknown risks must be investigated, not blindly accepted for convenience.\n\
+          \                    "
+        3: "\nWhile threat elimination is ideal, waiting for perfect security means\nnever conducting\
+          \ business. Risk management acknowledges that some risk\nis inherent in all activities. The\
+          \ goal is not zero risk (which is\nimpossible) but rather managed, acceptable risk that allows\
+          \ operations\nto continue while protecting critical assets proportionally.\n               \
+          \     "
+    corporate:
+      title: THE VENDOR SELECTION
+      narrative: "\nThe VP of Operations corners you in the elevator. \"I need your security\nassessment\
+        \ on these cloud vendors by end of day. The board wants answers.\"\n\nShe hands you three proposals:\n\
+        \n\"CloudCheap Inc. - Half the price of everyone else. They're new, no SOC 2\nreport yet, but\
+        \ they promise their security is 'military grade.' Reviews\nonline are... mixed. Some customers\
+        \ report data losses.\"\n\n\"SecureCloud Pro - Industry standard pricing, SOC 2 Type II certified,\n\
+        been around for a decade. Boring but reliable.\"\n\n\"MysteryCloud - Cheapest of all, no website,\
+        \ no documentation. Someone\non Reddit said they're amazing. CEO is 'definitely not in a country\
+        \ with\nno extradition treaties.'\"\n\nThe VP taps her watch. \"Finance is pushing for the cheapest\
+        \ option. What's\nyour recommendation framework?\"\n\nHow do you advise on this vendor risk assessment?\n\
+        \                "
+      choices:
+      - text: Always choose the most secure option regardless of cost - security is priceless
+      - text: Assess each vendor's risk profile against our risk tolerance, then make a cost-benefit decision
+      - text: Go with MysteryCloud - the cost savings outweigh the unknowns
+      - text: Reject all vendors until we can eliminate all possible risks
+      success_text: "\nYou pull out your risk assessment framework. \"Here's how we approach this:\n\n\
+        CloudCheap has a 25% customer complaint rate about data issues. With our\ndata volume, that's\
+        \ unacceptable risk.\n\nSecureCloud Pro has a 2% incident rate over 10 years, all properly disclosed\n\
+        and remediated. The higher cost buys us validated controls and accountability.\n\nMysteryCloud...\
+        \ I can't even verify they're a real company. Unknown risks\nwith potentially catastrophic outcomes?\
+        \ That's a non-starter.\"\n\nThe VP nods. \"So it's not about the cheapest option?\"\n\n\"It's\
+        \ about the option that balances cost against acceptable risk. SecureCloud\nisn't the cheapest,\
+        \ but their risk profile fits our tolerance. CloudCheap's\nsavings don't outweigh their incident\
+        \ rate. And MysteryCloud...\"\n\n\"Is probably a guy in a basement.\"\n\n\"Probably.\"\n\nYou\
+        \ have demonstrated proper RISK ASSESSMENT methodology.\n                "
+      failure_texts:
+        0: "\n\"Security is priceless\" sounds great in a security awareness poster, but\nit doesn't work\
+          \ in a budget meeting. The CISSP framework emphasizes that\nsecurity spending must be proportional\
+          \ to the risks and assets being\nprotected. Demanding the most expensive option without cost-benefit\n\
+          analysis makes you look unreasonable and gets you cut out of decisions.\n\nRisk management is\
+          \ about BALANCE, not absolutism.\n                    "
+        2: "\nYou just recommended a vendor you can't verify exists, with no documentation,\noperating\
+          \ from an unknown location. This isn't \"risk tolerance\" - it's\nwillful negligence.\n\nWhen\
+          \ risks are unknown but historical outcomes are catastrophic (or in this\ncase, unknowable),\
+          \ the answer is NOT to proceed. The cost savings mean\nnothing if the company doesn't actually\
+          \ exist.\n\nDue diligence before risk acceptance. Always.\n                    "
+        3: "\n\"Let's wait until all risks are eliminated\" is another way of saying\n\"Let's never make\
+          \ a decision.\" Perfect security doesn't exist. Every\nvendor has some risk. Every decision\
+          \ involves tradeoffs.\n\nYour job isn't to eliminate all risk - it's to help the business make\n\
+          INFORMED decisions about which risks are acceptable. Analysis paralysis\nisn't security - it's\
+          \ just another way to fail.\n                    "
+- id: d1_treasurers_request
+  domain: 1
+  correct_index: 1
+  xp_reward: 65
+  hp_penalty: 20
+  domain_reference: 'Domain 1: Security and Risk Management - Separation of Duties, Security Governance,
+    Personnel Security'
+  failure_text: "\nSeparation of Duties is a critical control that prevents fraud and error by\nensuring\
+    \ no single person can complete a sensitive transaction alone. Key\nprinciples include:\n- Authorization,\
+    \ custody, and record-keeping should be separated\n- Trust but verify - even trusted employees need\
+    \ oversight\n- The control protects both the organization AND the individual\n- Efficiency concerns\
+    \ should be addressed by adding backup personnel, not\n  removing controls\n        "
+  themes:
+    fantasy:
+      title: THE TREASURER'S REQUEST
+      narrative: "\nThe Royal Treasurer requests an audience. She is known throughout the realm\nfor her\
+        \ integrity and decades of loyal service. The kingdom's coffers have\nnever been more secure under\
+        \ her watchful eye.\n\n\"I come with a modest proposal,\" she says. \"To increase efficiency,\
+        \ I suggest\nthat I be granted the authority to both AUTHORIZE payments and EXECUTE the\ntransfers.\
+        \ Currently, Lord Blackwood must approve each transaction I make,\ncausing delays of days for\
+        \ urgent matters.\"\n\nShe presents a scroll showing dozens of delayed payments - soldiers awaiting\n\
+        wages, merchants awaiting settlements, diplomatic gifts held in limbo.\n\n\"Lord Blackwood is\
+        \ often traveling. Surely after twenty years of flawless\nservice, this additional authority is\
+        \ warranted?\"\n\nHow do you respond?\n                "
+      choices:
+      - text: Grant the request - her record speaks for itself, and efficiency matters
+      - text: Deny the request - separation of duties must be maintained regardless of individual trustworthiness
+      - text: Grant temporary authority only during Lord Blackwood's absences
+      - text: Suggest she train an apprentice who can act in Lord Blackwood's absence
+      success_text: "\nThe Treasurer's expression remains neutral, but you detect a slight nod of\nrespect.\
+        \ \"You are wise to refuse, young guardian. I confess - this was a test.\"\n\nShe produces another\
+        \ scroll, this one bearing the King's seal. \"His Majesty\nasked me to evaluate the security awareness\
+        \ of new Citadel members. Many\nbefore you have failed, swayed by my reputation or moved by the\
+        \ efficiency\nargument.\"\n\nShe continues: \"Separation of duties is not about distrust. It is\
+        \ about\nprotecting everyone - including ME - from suspicion, coercion, and error.\nIf I alone\
+        \ controlled the treasury, any discrepancy would point only to me.\nWith Lord Blackwood's oversight,\
+        \ we protect each other.\"\n\n\"The solution to delays,\" she adds, \"is not to remove controls,\
+        \ but to\nensure backup approvers exist. I shall recommend Deputy Silverstone be\ngranted approval\
+        \ authority for when Lord Blackwood travels.\"\n\nYou have demonstrated understanding of SEPARATION\
+        \ OF DUTIES.\n                "
+      failure_texts:
+        0: "\nNo matter how trustworthy an individual appears, concentrating authorization\nand execution\
+          \ in one person creates unacceptable risk. Separation of duties\nexists not because we distrust\
+          \ individuals, but because we recognize that:\n1. People can be compromised, coerced, or corrupted\n\
+          2. Errors go undetected without oversight\n3. Insider threats often come from trusted positions\n\
+          The Treasurer's perfect record actually makes her a higher-value target for\nthose who would\
+          \ corrupt or coerce her.\n                    "
+        2: "\nThis 'compromise' actually creates a predictable window of vulnerability.\nMalicious actors\
+          \ would simply wait for Lord Blackwood's travels to act.\nTemporary exceptions to security controls\
+          \ often become permanent, and\nthey signal that the controls are negotiable. Separation of duties\
+          \ must\nbe consistent to be effective.\n                    "
+        3: "\nWhile training successors is valuable, this doesn't address the immediate\nconcern and subtly\
+          \ suggests the control itself is the problem. The correct\nsolution is to ensure proper backup\
+          \ APPROVERS exist, not to eliminate the\napproval requirement. The Treasurer can have deputies;\
+          \ the approval process\nshould have designated alternates for Lord Blackwood.\n            \
+          \        "
+    corporate:
+      title: THE CFO'S REQUEST
+      narrative: "\nJanet Chen, CFO for 15 years and universally respected, stops by your desk.\nHer reputation\
+        \ is impeccable - she's guided the company through three\nrecessions without a single audit finding.\n\
+        \n\"I need a favor,\" she says, closing your office door. \"This dual-approval\nprocess for wire\
+        \ transfers is killing us. I need to approve, then wait for\nTom in Treasury to approve, but Tom's\
+        \ always in meetings or on vacation.\"\n\nShe slides over documentation showing delayed payments\
+        \ - overdue vendor\ninvoices, payroll issues, an almost-missed acquisition deadline.\n\n\"I'm\
+        \ proposing we give me both roles - initiator AND approver - just for\ntransfers under $50,000.\
+        \ After 15 years, I think I've earned that trust.\nThe board's been complaining about efficiency.\"\
+        \n\nHow do you respond?\n                "
+      choices:
+      - text: Approve it - her track record is spotless, and efficiency is important
+      - text: Deny the request - separation of duties must be maintained regardless of tenure
+      - text: Approve for 30 days while we find a better solution
+      - text: Suggest she delegate her initiator role to her assistant instead
+      success_text: "\nJanet smiles. \"Finally, someone who gets it.\"\n\nYou blink. \"I... denied your\
+        \ request.\"\n\n\"Exactly. The last three security people said yes. The CISO wanted to see\nwho\
+        \ would stand firm on controls. You passed.\"\n\nShe pulls out a memo. \"Look - I don't WANT that\
+        \ kind of access. If I could\napprove my own transfers, and there was ever a discrepancy? I'd\
+        \ be suspect\nnumber one. The control protects ME as much as the company.\"\n\n\"The real fix,\"\
+        \ she continues, \"is backup approvers. Tom's out? Sarah can\napprove. Sarah's out? Mike can approve.\
+        \ We maintain the control AND fix\nthe bottleneck.\"\n\n\"Separation of duties isn't about trust\
+        \ - it's about protection. From\nexternal threats, from internal mistakes, and from suspicion.\
+        \ Smart\ncontrols protect everyone, including the people being controlled.\"\n\nYou have demonstrated\
+        \ understanding of SEPARATION OF DUTIES.\n                "
+      failure_texts:
+        0: "\nFifteen years of good behavior doesn't mean Year 16 will be the same. Fraud\nstatistics\
+          \ show that the typical embezzler has been with the company for\nyears and is often \"the last\
+          \ person you'd suspect.\"\n\nSeparation of duties exists because:\n1. Good people can be compromised\
+          \ (blackmail, gambling debts, sick family)\n2. Mistakes happen even with good intentions\n3.\
+          \ The control protects the individual from suspicion\n\nJanet's perfect record makes her MORE\
+          \ valuable as a target, not less.\n                    "
+        2: "\n\"Temporary\" exceptions have a way of becoming permanent. And they create\na predictable\
+          \ vulnerability window - anyone wanting to compromise Janet\njust has to wait for \"temporary\
+          \ access\" periods.\n\nMore importantly, you've signaled that controls are negotiable if someone\n\
+          complains enough. Next quarter, it'll be a 60-day exception. Then 90.\nThen permanent.\n\nEither\
+          \ the control matters or it doesn't. If it matters, maintain it.\n                    "
+        3: "\nThis misses the point entirely. The issue isn't WHO initiates - it's that\none person shouldn't\
+          \ do BOTH. Delegating initiation to Janet's assistant\njust moves the problem, and now you have\
+          \ a more junior person initiating\nlarge financial transactions.\n\nThe solution is backup approvers,\
+          \ not elimination of the approval step.\n                    "
+- id: d1_siege_approaches
+  domain: 1
+  correct_index: 2
+  xp_reward: 70
+  hp_penalty: 20
+  domain_reference: 'Domain 1: Security and Risk Management - Business Continuity Planning, Disaster Recovery
+    Planning, RTO/RPO'
+  failure_text: "\nBusiness Continuity Planning (BCP) and Disaster Recovery Planning (DRP) are\ncomplementary\
+    \ but distinct:\n\nBCP: Focuses on maintaining critical business functions DURING a disruption\n-\
+    \ Identifies critical business processes\n- Establishes alternate procedures and workarounds\n- Ensures\
+    \ essential operations continue\n\nDRP: Focuses on restoring IT systems and data AFTER a disaster\n\
+    - Defines Recovery Time Objectives (RTO) - how quickly systems must recover\n- Defines Recovery Point\
+    \ Objectives (RPO) - how much data loss is acceptable\n- Establishes technical recovery procedures\n\
+    \nBoth are essential components of organizational resilience.\n        "
+  themes:
+    fantasy:
+      title: THE SIEGE APPROACHES
+      narrative: "\nScouts report that the Obsidian Horde approaches from the east. You have\nperhaps\
+        \ a fortnight before they reach the outer walls. The Citadel has\nnever fallen, but neither has\
+        \ it faced such numbers.\n\nThe Council convenes in emergency session. The High Chamberlain speaks:\n\
+        \"We must prepare for the possibility that the outer Citadel falls. Our\ncritical functions -\
+        \ the Treasury, the Cipher Chamber, the Royal Archives -\nmust continue even if we retreat to\
+        \ the Inner Keep.\"\n\nShe turns to you. \"We need TWO plans: one to keep operations running during\n\
+        the siege, and another to recover if the worst happens. The scribes are\nconfused about what we\
+        \ need. Explain the difference.\"\n\nWhat do you tell them?\n                "
+      choices:
+      - text: Focus only on defense - if we prevent the disaster, we won't need recovery plans
+      - text: Create one comprehensive plan that covers everything - separating them creates confusion
+      - text: BCP maintains operations during disruption; DRP restores systems after disaster - both are
+          needed
+      - text: Prioritize DRP over BCP - recovery after the siege matters more than operations during it
+      success_text: "\nThe Council members nod as understanding dawns. You continue:\n\n\"The Business\
+        \ Continuity Plan addresses how we maintain critical operations\nDURING the siege. Which functions\
+        \ are essential? The Treasury must still pay\nsoldiers. The Cipher Chamber must still decode enemy\
+        \ communications. We\nidentify these critical functions and ensure they can operate even from\
+        \ the\nInner Keep.\"\n\n\"The Disaster Recovery Plan addresses what happens IF the outer Citadel\n\
+        falls. How do we restore the Treasury records from backup scrolls? How\nquickly must the Cipher\
+        \ Chamber be operational again? We define Recovery\nTime Objectives and Recovery Point Objectives\
+        \ for each system.\"\n\nThe High Chamberlain smiles grimly. \"Then we need both plans, working\
+        \ in\nconcert. BCP keeps us fighting during the storm. DRP rebuilds after it passes.\"\n\nYou\
+        \ have demonstrated understanding of BCP and DRP principles.\n                "
+      failure_texts:
+        0: "\nPreventing disasters is important, but assuming prevention will always\nsucceed is dangerous\
+          \ overconfidence. Business Continuity Planning (BCP)\nand Disaster Recovery Planning (DRP) exist\
+          \ precisely because we cannot\nprevent all incidents. An organization without recovery plans\
+          \ faces\nexistential risk when (not if) a major incident occurs.\n                    "
+        1: "\nWhile integration is valuable, BCP and DRP serve distinct purposes and\ninvolve different\
+          \ teams, timeframes, and resources. BCP focuses on\nmaintaining operations DURING a disruption,\
+          \ while DRP focuses on\nrestoring systems AFTER a disaster. Conflating them leads to gaps\n\
+          in coverage and unclear responsibilities during a crisis.\n                    "
+        3: "\nBoth plans are essential and neither should be prioritized over the other.\nDuring a prolonged\
+          \ siege, BCP keeps critical functions running - soldiers\nneed to be paid, communications need\
+          \ to flow, records need to be maintained.\nAfter the siege, DRP helps restore normal operations.\
+          \ Neglecting either\ncreates dangerous gaps in organizational resilience.\n                \
+          \    "
+    corporate:
+      title: THE RANSOMWARE TABLETOP
+      narrative: "\nThe CISO gathers the leadership team for a tabletop exercise. \"Scenario:\nIt's 2\
+        \ AM Monday. Ransomware has encrypted 60% of our systems. The attackers\nwant $2 million in Bitcoin.\
+        \ What do we do?\"\n\nThe executives look at each other nervously.\n\nThe CEO speaks first: \"\
+        Let's focus on preventing this. Better firewalls,\nmore training. If we stop the attack, we don't\
+        \ need plans for after.\"\n\nThe CTO counters: \"Let's just make one big plan. Having separate\
+        \ documents\nfor 'during' versus 'after' is confusing.\"\n\nThe CFO asks: \"Which is more important\
+        \ - keeping things running during the\nattack or recovering afterward?\"\n\nThe CISO turns to\
+        \ you. \"Help them understand what we actually need.\"\n\nWhat's your recommendation?\n      \
+        \          "
+      choices:
+      - text: Focus on prevention - if we stop the ransomware, we don't need recovery plans
+      - text: Create one comprehensive plan - separate BCP and DRP documents are redundant
+      - text: 'We need both: BCP to maintain operations during the incident, DRP to restore systems after'
+      - text: Prioritize DRP - recovering from the attack is more important than operating during it
+      success_text: "\nYou grab the whiteboard marker. \"Let me explain why we need both.\"\n\n\"BCP -\
+        \ Business Continuity - answers: 'How do we keep operating while 60%\nof systems are down?' Can\
+        \ customer service take orders manually? Can we\nprocess payroll by hand? What's our workaround\
+        \ for email?\"\n\n\"DRP - Disaster Recovery - answers: 'How do we restore those encrypted\nsystems?'\
+        \ What's our backup strategy? How long until systems are back?\nWhat's our order of restoration?\"\
+        \n\nThe CEO nods. \"So BCP keeps us alive during the crisis, DRP brings us\nback to normal?\"\n\
+        \n\"Exactly. And they have different metrics: BCP cares about Maximum Tolerable\nDowntime - how\
+        \ long can a function be degraded? DRP cares about Recovery\nTime Objective - how fast can we\
+        \ restore a system?\"\n\nThe CFO adds: \"And the $2 million question?\"\n\n\"That's a separate\
+        \ decision tree. But we can't make it intelligently\nwithout knowing our BCP capabilities and\
+        \ DRP timelines.\"\n\nYou have demonstrated understanding of BCP and DRP principles.\n       \
+        \         "
+      failure_texts:
+        0: "\n\"Just prevent the attack\" is not a plan - it's wishful thinking. Every\nsecurity framework\
+          \ acknowledges that prevention will eventually fail.\nWhen (not if) it does, you need:\n- Business\
+          \ Continuity to keep critical functions running\n- Disaster Recovery to restore systems\n\n\
+          The organizations that get destroyed by ransomware aren't the ones who got\nattacked - they're\
+          \ the ones who thought it couldn't happen to them.\n                    "
+        1: "\nBCP and DRP are related but different:\n\nBCP: \"How do we keep operating?\" (during the\
+          \ incident)\n- Identifies critical business functions\n- Defines workarounds and manual procedures\n\
+          - Focuses on the business, not just IT\n\nDRP: \"How do we restore systems?\" (after the incident)\n\
+          - Defines backup/restore procedures\n- Sets RTO (how fast) and RPO (how much data loss)\n- Focuses\
+          \ on technical recovery\n\nMixing them creates confusion during a crisis - exactly when you\
+          \ need clarity.\n                    "
+        3: "\nThis is like asking \"Which is more important - the parachute or the reserve\nparachute?\"\
+          \ You need both.\n\nDuring the ransomware attack, BCP keeps the business functioning - maybe\n\
+          degraded, maybe manually, but functioning. Without BCP, every hour of\ndowntime is lost revenue,\
+          \ lost customers, lost trust.\n\nAfter the attack, DRP restores systems. Without DRP, you're\
+          \ stuck in\nmanual mode forever.\n\nYou can't prioritize one over the other. You need both.\n\
+          \                    "
+- id: d1_nobles_bribe
+  domain: 1
+  correct_index: 2
+  xp_reward: 70
+  hp_penalty: 25
+  domain_reference: 'Domain 1: Security and Risk Management - (ISC)² Code of Ethics, Professional Ethics,
+    Conflicts of Interest'
+  failure_text: "\nThe (ISC)² Code of Ethics requires security professionals to:\n1. Protect society,\
+    \ the common good, and the infrastructure\n2. Act honorably, honestly, justly, responsibly, and legally\n\
+    3. Provide diligent and competent service to principals\n4. Advance and protect the profession\n\n\
+    Accepting bribes, falsifying records, or remaining silent about corruption\nattempts violates these\
+    \ fundamental principles. Ethics are not situational -\nthey must be applied consistently regardless\
+    \ of personal cost or benefit.\n        "
+  themes:
+    fantasy:
+      title: THE NOBLE'S BRIBE
+      narrative: "\nLord Ashford corners you in a quiet corridor. His family is one of the\nwealthiest\
+        \ in the realm, and his son recently failed the Citadel's entrance\nexaminations - caught attempting\
+        \ to copy another applicant's cipher work.\n\n\"A mere youthful indiscretion,\" Lord Ashford says\
+        \ smoothly, pressing a heavy\npurse into your hands. \"Surely such a small matter need not appear\
+        \ in the\nofficial records. The boy has learned his lesson. And the Ashford family\nhas always\
+        \ been... generous... to those who show us kindness.\"\n\nThe purse contains enough gold to buy\
+        \ a small estate. Lord Ashford's\ninfluence could advance your career significantly. The incident\
+        \ WAS minor -\nthe boy was caught before any real harm was done.\n\nWhat do you do?\n        \
+        \        "
+      choices:
+      - text: Accept the gold and remove the record - the incident was minor and no harm was done
+      - text: Refuse the bribe but agree to 'lose' the paperwork as a favor to a powerful family
+      - text: Refuse firmly and report the bribery attempt through proper channels
+      - text: Refuse the bribe but keep the incident private to avoid making a powerful enemy
+      success_text: "\nYou hand the purse back to Lord Ashford. \"I cannot accept this, my lord.\nAnd\
+        \ I must inform you that I am obligated to report this conversation to\nthe Ethics Council.\"\n\
+        \nLord Ashford's face flushes with anger, then settles into cold calculation.\n\"You've made a\
+        \ powerful enemy today, guardian.\"\n\n\"Perhaps,\" you reply. \"But I remain a guardian. The\
+        \ moment I accepted your\ngold, I would have become something else entirely.\"\n\nYour report\
+        \ to the Ethics Council results in Lord Ashford being barred from\nthe Citadel grounds. His son,\
+        \ given a second chance to apply honestly next\nyear, eventually passes on his own merits and\
+        \ becomes a capable guardian -\none who later thanks you for not allowing his father to corrupt\
+        \ his path.\n\nYou have demonstrated the (ISC)² Code of Ethics: Protect society, act\nhonorably,\
+        \ provide diligent service, and advance the profession.\n                "
+      failure_texts:
+        0: "\nAccepting bribes to alter official records violates fundamental ethical\nprinciples and\
+          \ the (ISC)² Code of Ethics. It doesn't matter that the\nincident was 'minor' - the act of accepting\
+          \ payment to falsify records\nis itself a serious breach. Moreover, if discovered, this would\
+          \ destroy\nyour credibility and career, and potentially implicate you in future\nmisconduct\
+          \ by Lord Ashford's son.\n                    "
+        1: "\nThis is still falsifying records, just without direct payment. The ethical\nviolation is\
+          \ the same whether or not gold changes hands. Additionally,\nyou've now created a debt to Lord\
+          \ Ashford that he may call upon later,\npotentially for even more compromising requests. Integrity\
+          \ cannot be\nselectively applied based on who benefits.\n                    "
+        3: "\nWhile refusing the bribe is correct, failing to report the attempt enables\nfuture corruption.\
+          \ Lord Ashford will likely try again with someone else,\nand your silence makes you complicit\
+          \ in any future success he has. The\n(ISC)² Code of Ethics requires not just personal integrity,\
+          \ but actively\nprotecting the profession and those it serves.\n                    "
+    corporate:
+      title: THE BOARD MEMBER'S REQUEST
+      narrative: "\nMarcus Webb, board member and major shareholder, catches you after the\nquarterly\
+        \ security briefing. His nephew was just fired for sharing his\nlogin credentials with a contractor\
+        \ - a clear policy violation that led\nto a minor data exposure.\n\n\"Between us,\" Marcus says\
+        \ quietly, handing you a thick envelope, \"my nephew\nmade a mistake. Young people, you know how\
+        \ it is. I'm sure the investigation\nreport doesn't need to mention him by name. Just say 'a former\
+        \ employee.'\"\n\nThe envelope contains $25,000 in cash. Marcus controls 15% of company stock.\n\
+        His nephew DID make a relatively minor mistake - no customer data was exposed,\njust some internal\
+        \ documents.\n\n\"The family appreciates discretion,\" Marcus adds. \"And we have a long memory\n\
+        for people who help us.\"\n\nWhat do you do?\n                "
+      choices:
+      - text: Take the money and anonymize the report - no one was really hurt
+      - text: Refuse the money but agree to modify the report as a professional courtesy
+      - text: Refuse firmly and report the bribery attempt to the Ethics Committee
+      - text: Refuse the bribe but agree to keep this conversation confidential
+      success_text: "\nYou push the envelope back across the table. \"Mr. Webb, I'm not able to\naccept\
+        \ this, and I'm obligated to report this conversation.\"\n\nHis face hardens. \"You know who I\
+        \ am?\"\n\n\"I do. And that's exactly why I have to report it. If a board member can\nbuy modifications\
+        \ to security reports, our entire program is worthless.\nEvery report becomes suspect.\"\n\nYou\
+        \ document the conversation and report to the Chief Ethics Officer. The\ninvestigation is uncomfortable\
+        \ - Marcus tries to have you fired - but the\nboard ultimately removes him for attempted bribery.\n\
+        \nThree months later, you're presenting the security report to the new board.\nThe chair stops\
+        \ you mid-slide: \"Before you continue - I want everyone here\nto know that this report is accurate\
+        \ because this person had the integrity\nto refuse a bribe. That's the kind of security program\
+        \ we need.\"\n\nYou have demonstrated the (ISC)² Code of Ethics.\n                "
+      failure_texts:
+        0: "\nYou just accepted a bribe from a board member. Congratulations, you're now:\n1. Complicit\
+          \ in falsifying official records\n2. Beholden to someone who knows you're corrupt\n3. One discovery\
+          \ away from criminal charges and career destruction\n\nThe \"minor incident\" argument is irrelevant.\
+          \ The bribe is the incident now.\nAnd Marcus will be back - with bigger requests, knowing you'll\
+          \ comply.\n\nThe (ISC)² Code of Ethics exists for exactly this reason.\n                    "
+        1: "\n\"No money changed hands\" doesn't make this okay. You're still falsifying\na security report\
+          \ to protect someone from consequences of their actions.\n\nWorse, you've now established yourself\
+          \ as someone who can be influenced.\nMarcus didn't even have to pay! Next time, he'll ask for\
+          \ more. And you've\ngiven him leverage - he knows you're willing to bend reports.\n\nIntegrity\
+          \ isn't about whether you profit from the compromise.\n                    "
+        3: "\nRefusing the bribe is correct. Keeping it confidential is not.\n\nBy staying silent, you've:\n\
+          1. Let Marcus think this approach might work on others\n2. Failed to protect colleagues from\
+          \ similar approaches\n3. Allowed someone who tried to corrupt security reports to remain on\
+          \ the board\n\nThe (ISC)² Code of Ethics requires protecting the profession. That means\nreporting\
+          \ attempts to corrupt it, not just refusing them personally.\n                    "
+- id: d1_new_supplier
+  domain: 1
+  correct_index: 1
+  xp_reward: 65
+  hp_penalty: 20
+  domain_reference: 'Domain 1: Security and Risk Management - Due Diligence, Due Care, Vendor Management,
+    Third-Party Risk'
+  failure_text: "\nDue Diligence and Due Care are complementary but distinct concepts:\n\nDUE DILIGENCE:\
+    \ The investigation and assessment performed BEFORE making\na decision or entering a relationship\n\
+    - Researching a vendor's security practices before contracting\n- Assessing risks before implementing\
+    \ a new system\n- Investigating an acquisition target before purchase\n\nDUE CARE: The ongoing responsibility\
+    \ to act reasonably and responsibly\nAFTER a decision has been made\n- Maintaining proper security\
+    \ controls\n- Responding appropriately to incidents\n- Continuing to monitor and assess risks\n\n\
+    Both are required to meet professional and legal standards of care.\n        "
+  themes:
+    fantasy:
+      title: THE NEW SUPPLIER
+      narrative: "\nThe Quartermaster brings urgent news. Your current supplier of enchanted\nparchment\
+        \ - used for all secure communications - has been destroyed by\ndragon fire. A new supplier must\
+        \ be found immediately, or the Citadel's\nsecure messaging will cease within a fortnight.\n\n\
+        Three suppliers have offered their services:\n\nThe first, Grimwald's Scrollworks, offers the\
+        \ lowest price and fastest\ndelivery. They are new to the market with no reputation to speak of.\n\
+        \nThe second, Thornberry & Sons, has supplied other citadels for decades.\nTheir prices are moderate,\
+        \ but they require a lengthy inspection of their\nfacilities before any contract.\n\nThe third,\
+        \ the Silverleaf Consortium, is the most expensive but offers\nimmediate delivery from existing\
+        \ stock.\n\nThe Quartermaster asks: \"What considerations should guide our choice? The\nCouncil\
+        \ speaks of 'due diligence' and 'due care' but I confuse the terms.\"\n\nHow do you explain the\
+        \ difference and advise the Quartermaster?\n                "
+      choices:
+      - text: Choose Grimwald's - speed and cost matter most in a crisis, we can assess them later
+      - text: Due diligence is investigation BEFORE engagement; due care is ongoing responsible action
+          AFTER - both matter
+      - text: Choose Silverleaf for immediate needs - their high price proves their quality
+      - text: Due diligence and due care are the same thing - just do your job carefully
+      success_text: "\nThe Quartermaster's confusion clears as you explain:\n\n\"Due diligence is what\
+        \ we do BEFORE choosing a supplier. We investigate their\nsecurity practices, verify their reputation,\
+        \ inspect their facilities, and\nassess their risks. This is why Thornberry's inspection requirement\
+        \ is\nactually a GOOD sign - they understand security-conscious customers.\"\n\n\"Due care is\
+        \ what we do AFTER we've made our choice. We monitor the supplier's\nongoing performance, verify\
+        \ each shipment, maintain proper handling of the\nparchment, and respond appropriately to any\
+        \ concerns that arise.\"\n\nYou advise: \"For the immediate crisis, purchase a small quantity\
+        \ from\nSilverleaf to maintain operations. Meanwhile, conduct proper due diligence\non Thornberry\
+        \ & Sons for a long-term contract. Do not engage Grimwald's\nuntil they've established a verifiable\
+        \ track record.\"\n\nThe Quartermaster nods. \"So we need BOTH - investigation before, and\nvigilance\
+        \ after. Neither alone is sufficient.\"\n\nYou have demonstrated understanding of Due Diligence\
+        \ and Due Care.\n                "
+      failure_texts:
+        0: "\nChoosing an unknown supplier without any vetting, especially for security-\ncritical materials,\
+          \ is a failure of due diligence. The enchanted parchment\nis used for secure communications\
+          \ - if compromised, it could expose all of\nthe Citadel's secrets. Due diligence BEFORE engagement\
+          \ is essential,\nregardless of urgency. The crisis doesn't eliminate the need for vetting.\n\
+          \                    "
+        2: "\nPrice is not a reliable indicator of quality or security. While Silverleaf's\nexisting stock\
+          \ may solve the immediate crisis, committing to them long-term\nwithout proper due diligence\
+          \ is still risky. High prices can mask poor\npractices, and reputation alone doesn't guarantee\
+          \ current security. Due\ndiligence requires actual investigation, not assumptions based on cost.\n\
+          \                    "
+        3: "\nDue diligence and due care are related but distinct legal and professional\nconcepts. Due\
+          \ diligence refers to the investigation and assessment done\nBEFORE making a decision or entering\
+          \ a relationship. Due care refers to\nthe ongoing responsibility to act reasonably and responsibly\
+          \ AFTER the\ndecision is made. Both are required, but at different stages.\n               \
+          \     "
+    corporate:
+      title: THE EMERGENCY VENDOR
+      narrative: "\nYour primary cloud security vendor just imploded - CEO arrested, data center\nseized\
+        \ by the FBI, the works. You have 30 days before your current contract\nterminates and you're\
+        \ left without a SIEM solution.\n\nThree alternatives have emerged:\n\n\"FastCloud Security\"\
+        \ - They can be operational in a week, they're cheap, and\nthey're VERY eager for your business.\
+        \ No SOC 2 report yet (\"It's in progress\"),\nbut the sales rep promises they're secure.\n\n\"\
+        SecureVendor Corp\" - Industry leader, SOC 2 Type II certified, but they\nrequire a 60-day security\
+        \ assessment period before any enterprise contract.\nThey won't budge.\n\n\"PremiumSec\" - Most\
+        \ expensive option, immediate availability, excellent\nreputation, but no one's actually reviewed\
+        \ their security practices in detail.\n\nYour CISO asks: \"Walk me through the due diligence versus\
+        \ due care framework\nhere. What should we actually do?\"\n\nHow do you advise?\n            \
+        \    "
+      choices:
+      - text: Go with FastCloud - we can assess them after we're operational, the urgency trumps process
+      - text: Due diligence is pre-contract investigation; due care is post-contract vigilance - we need
+          a plan for both
+      - text: PremiumSec's high price and reputation mean they're probably fine - go with them
+      - text: Due diligence and due care are basically the same - just be careful throughout
+      success_text: "\nYou outline the framework:\n\n\"Due diligence is what we do BEFORE signing - assess\
+        \ their security controls,\nreview certifications, check references, understand their practices.\
+        \ It's the\n'look before you leap' phase.\"\n\n\"Due care is what we do AFTER signing - ongoing\
+        \ monitoring, reviewing their\nsecurity updates, validating they're meeting commitments, responding\
+        \ to issues.\nIt's the 'trust but verify' phase.\"\n\n\"For our situation: FastCloud without due\
+        \ diligence is reckless - we'd be\ntrusting our security data to an unvetted vendor. PremiumSec's\
+        \ reputation\nisn't due diligence - we need actual assessment.\"\n\n\"My recommendation: Short-term\
+        \ contract with PremiumSec to bridge the gap,\nwith immediate due diligence initiated. Parallel\
+        \ track SecureVendor's 60-day\nassessment for long-term partnership. Document everything for auditors.\"\
+        \n\nThe CISO nods. \"So we're not choosing between speed and security - we're\nmanaging both with\
+        \ proper process at each stage.\"\n\nYou have demonstrated understanding of Due Diligence and\
+        \ Due Care.\n                "
+      failure_texts:
+        0: "\n\"Assess them after we're operational\" is how breaches happen. You'd be\nsending your security\
+          \ logs - containing details of your entire infrastructure\n- to an unvetted vendor. If FastCloud\
+          \ is compromised (or malicious), you've\njust handed attackers a roadmap.\n\nDue diligence must\
+          \ happen BEFORE you share sensitive data. The urgency\ndoesn't eliminate risk - it increases\
+          \ it. Rushing creates vulnerabilities.\n                    "
+        2: "\n\"Probably fine\" isn't a security strategy. High prices can mask poor\npractices. Good\
+          \ reputation can be based on marketing, not substance.\nYou're about to send your security telemetry\
+          \ to this company - that\nrequires actual investigation, not assumptions.\n\nReputation is a\
+          \ starting point for due diligence, not a replacement for it.\n                    "
+        3: "\nDue diligence and due care are different things:\n\nDue Diligence: \"Did we properly investigate\
+          \ BEFORE engaging?\"\n- Happens pre-contract\n- Assesses potential partners\n- Identifies risks\
+          \ before commitment\n\nDue Care: \"Are we acting responsibly AFTER engaging?\"\n- Happens post-contract\n\
+          - Monitors ongoing relationship\n- Responds to issues as they arise\n\nConflating them creates\
+          \ gaps where neither is done properly.\n                    "
+- id: d1_competing_laws
+  domain: 1
+  correct_index: 2
+  xp_reward: 65
+  hp_penalty: 20
+  domain_reference: 'Domain 1: Security and Risk Management - Legal & Regulatory Compliance, Jurisdictional
+    Issues'
+  failure_text: "\nWhen laws conflict, organizations must:\n1. Obtain qualified legal counsel for each\
+    \ jurisdiction\n2. Analyze which laws apply to which data subjects\n3. Implement jurisdiction-specific\
+    \ policies where possible\n4. Document compliance decisions and supporting rationale\n5. Maintain\
+    \ good-faith efforts to honor all legitimate obligations\n6. Be prepared to defend decisions to regulators\n\
+    \nSimple rules rarely resolve complex jurisdictional conflicts.\n        "
+  themes:
+    fantasy:
+      title: THE COMPETING LAWS
+      narrative: "\nA messenger arrives bearing troubling news. The Citadel has been ordered to\ncomply\
+        \ with two conflicting decrees:\n\nThe Northern Kingdom demands that all citizen records be retained\
+        \ for seven\nyears for tax purposes. However, the Southern Alliance has enacted a new\nprivacy\
+        \ law requiring that personal data be deleted within one year unless\nthe citizen explicitly consents\
+        \ to longer retention.\n\nMany citizens hold dual allegiance to both realms. The Citadel cannot\
+        \ comply\nwith both laws simultaneously for these individuals.\n\nThe Legal Advisor asks: \"How\
+        \ do we navigate these conflicting requirements?\"\n\nWhat counsel do you provide?\n         \
+        \       "
+      choices:
+      - text: Follow the stricter law - delete after one year to ensure maximum privacy protection
+      - text: Follow the local law where the Citadel is physically located
+      - text: Seek legal counsel, implement separate policies per jurisdiction, and document compliance
+          decisions
+      - text: Refuse to accept data from dual-allegiance citizens until the laws are harmonized
+      success_text: "\nThe Legal Advisor nods approvingly. \"You understand that legal conflicts\ncannot\
+        \ be resolved by simple rules. We must:\"\n\n\"First, engage legal counsel expert in both jurisdictions\
+        \ to analyze our\nspecific obligations. Second, implement separate data handling policies\nbased\
+        \ on which laws apply to each individual - Northern citizens follow\nNorthern retention, Southern\
+        \ citizens follow Southern privacy rules.\"\n\n\"For dual-allegiance citizens, we must determine\
+        \ primary jurisdiction\nbased on established legal principles, document our reasoning, and be\n\
+        prepared to defend our decisions if challenged.\"\n\n\"Most importantly, we maintain detailed\
+        \ records of our compliance decisions\nand the legal analysis supporting them. Regulators respect\
+        \ good-faith\nefforts to comply with conflicting requirements.\"\n\nYou have demonstrated understanding\
+        \ of JURISDICTIONAL COMPLIANCE.\n                "
+      failure_texts:
+        0: "\nSimply following the stricter law ignores legitimate legal obligations to the\nNorthern\
+          \ Kingdom. This could result in legal penalties, inability to support\ntax audits, and breach\
+          \ of the Citadel's duties to Northern authorities.\nLegal conflicts require careful analysis,\
+          \ not automatic deference to the\nstrictest interpretation.\n                    "
+        1: "\nPhysical location alone doesn't determine which laws apply to data. Modern\nprivacy regulations\
+          \ often have extraterritorial reach - they apply based on\nthe data subjects' location, not\
+          \ where the data is processed. The Citadel\nmust consider which citizens are subject to which\
+          \ laws, not just its own\nlocation.\n                    "
+        3: "\nRefusing service to citizens caught between conflicting laws is neither\npractical nor ethical.\
+          \ The Citadel has obligations to serve all citizens.\nThe solution is to manage the complexity\
+          \ through proper legal analysis and\njurisdictional policies, not to abandon those most affected\
+          \ by the conflict.\n                    "
+    corporate:
+      title: THE GDPR VERSUS SOX SHOWDOWN
+      narrative: "\nThe Legal department just dropped a bombshell in the compliance Slack channel.\n\n\
+        Your company operates in both the EU and US. European customers are protected\nby GDPR, which\
+        \ grants them the right to have their data deleted upon request.\nBut US financial regulations\
+        \ (SOX) require you to retain transaction records\nfor seven years for audit purposes.\n\nA European\
+        \ customer who made significant purchases has submitted a formal\nGDPR deletion request. But they're\
+        \ also flagged in a potential fraud\ninvestigation, and those records are subject to a legal hold.\n\
+        \nThe EU compliance officer is threatening \"massive fines.\" The US compliance\nofficer is warning\
+        \ about \"obstruction of justice.\" Legal says \"figure it out.\"\n\nThe CFO has scheduled an\
+        \ emergency meeting in 30 minutes.\n\nWhat do you recommend?\n                "
+      choices:
+      - text: Delete everything per GDPR - it's the stricter law and those fines are huge
+      - text: Keep everything per SOX - we're a US company, US law takes precedence
+      - text: 'Work with legal counsel to segment data: honor GDPR for general data, maintain legal holds
+          where required'
+      - text: Tell the customer we can't process their request until regulations are harmonized
+      success_text: "\nYou walk into the CFO's office with a plan.\n\n\"We don't have to choose between\
+        \ GDPR and SOX - we need to apply each\nappropriately. Here's how:\"\n\n\"First, we segment the\
+        \ customer's data by category. Marketing preferences,\nbrowsing history, general account info?\
+        \ That gets deleted per GDPR.\"\n\n\"Transaction records required for SOX compliance and the legal\
+        \ hold?\nThose stay, but we document WHY they stay - both regulations explicitly\nallow retention\
+        \ for legal compliance and active investigations.\"\n\n\"We respond to the customer explaining\
+        \ which data was deleted and which\nis retained under legal exceptions. We're transparent about\
+        \ the reasoning.\"\n\n\"Finally, we document everything for both regulators. When you show\ngood-faith\
+        \ effort to comply with conflicting requirements, regulators\ntypically respect that approach.\"\
+        \n\nThe CFO nods. \"So we're not ignoring either law - we're applying each\nwhere it's supposed\
+        \ to apply.\" Exactly.\n\nYou've demonstrated JURISDICTIONAL COMPLIANCE management.\n        \
+        \        "
+      failure_texts:
+        0: "\nYou deleted everything, including records under legal hold for a fraud\ninvestigation. Congratulations,\
+          \ you've just potentially committed\nobstruction of justice, and the auditors are going to have\
+          \ questions\nabout those missing SOX records.\n\nGDPR includes explicit exceptions for legal\
+          \ obligations. \"Delete\neverything\" isn't compliance - it's panic.\n                    "
+        1: "\n\"We're a US company\" doesn't exempt you from GDPR when you process EU\ncitizens' data.\
+          \ Those regulations have extraterritorial reach. The EU\nregulator doesn't care where your headquarters\
+          \ is - they care where\nyour data subjects live.\n\nIgnoring GDPR because of your location is\
+          \ a fast track to a 4% of\nglobal revenue fine.\n                    "
+        3: "\n\"Come back when the laws agree\" is not a compliance strategy. The\ncustomer has legitimate\
+          \ rights NOW, and you have obligations NOW.\n\nParts of their request CAN be honored immediately.\
+          \ Refusing to act\non what you CAN do while explaining what you CAN'T do is proper\ncompliance.\
+          \ Refusing everything is just obstruction.\n                    "
+- id: d1_imported_goods
+  domain: 1
+  correct_index: 1
+  xp_reward: 60
+  hp_penalty: 20
+  domain_reference: 'Domain 1: Security and Risk Management - Export Controls, Regulatory Compliance,
+    Dual-Use Technology'
+  failure_text: "\nExport controls regulate the transfer of controlled items across borders:\n- Items\
+    \ are classified by capability, not intended use\n- Buyer assurances don't override legal restrictions\n\
+    - Circumvention attempts (intermediaries, modifications) are violations\n- Penalties include fines,\
+    \ loss of privileges, and criminal charges\n- Organizations must have export control compliance programs\n\
+    - Suspicious inquiries should be reported to authorities\n        "
+  themes:
+    fantasy:
+      title: THE IMPORTED GOODS
+      narrative: "\nThe Master of Trade approaches with a delicate matter. A merchant from the\nEastern\
+        \ Isles wishes to purchase the Citadel's renowned encryption crystals -\nmagical artifacts that\
+        \ can secure any communication against eavesdropping.\n\n\"The crystals would fetch a fortune,\"\
+        \ the Master explains. \"The Eastern\nmerchant has gold aplenty and legitimate business needs.\
+        \ However, I've heard\nwhispers that the Eastern Isles are under... certain restrictions.\"\n\n\
+        You investigate and discover that the Kingdom has placed export controls on\nencryption technology\
+        \ to the Eastern Isles due to ongoing conflicts. The\ncrystals are classified as \"dual-use\"\
+        \ items - useful for both commerce and\nmilitary applications.\n\nThe merchant insists his intentions\
+        \ are purely commercial. The gold offered\nwould fund Citadel operations for months.\n\nHow do\
+        \ you advise the Master of Trade?\n                "
+      choices:
+      - text: Approve the sale - the merchant's stated intentions are commercial, and we need the funds
+      - text: Deny the sale outright - export controls to the Eastern Isles prohibit this transaction
+      - text: Sell lower-grade crystals that aren't as powerful - they might not be controlled
+      - text: Have the merchant purchase through an intermediary in an unrestricted kingdom
+      success_text: "\nThe Master of Trade sighs but accepts your counsel. \"The gold would have\nbeen\
+        \ welcome, but I understand. We cannot risk the Citadel's standing.\"\n\nYou explain: \"Export\
+        \ controls exist for national security reasons. The\nencryption crystals are 'dual-use' - capable\
+        \ of both commercial and military\napplications. When items are controlled, we must deny sales\
+        \ to restricted\ndestinations regardless of the buyer's stated intentions.\"\n\n\"Furthermore,\
+        \ attempting to circumvent controls through intermediaries,\nmodified products, or willful ignorance\
+        \ would compound our violation. The\npenalties for export control breaches include loss of export\
+        \ privileges,\nheavy fines, and even imprisonment for individuals involved.\"\n\n\"We must also\
+        \ report this inquiry, as authorities track attempts to\nacquire controlled technology.\"\n\n\
+        You have demonstrated understanding of EXPORT CONTROL compliance.\n                "
+      failure_texts:
+        0: "\nExport controls apply regardless of the buyer's stated intentions. The\nclassification of\
+          \ items as controlled is based on their CAPABILITY, not\ntheir intended use. Trusting a buyer's\
+          \ assurances is not a defense against\nexport control violations. The Citadel could face severe\
+          \ penalties, loss\nof export privileges, and damage to its reputation.\n                    "
+        2: "\n'Might not be controlled' is not a compliance strategy. Each item must be\nproperly classified\
+          \ against control lists before export. Attempting to\ncircumvent controls by modifying products\
+          \ is itself a violation if the\nintent is to evade restrictions. All encryption technology must\
+          \ be\nproperly evaluated against export control thresholds.\n                    "
+        3: "\nThis describes 'transshipment' - routing controlled goods through third\ncountries to evade\
+          \ restrictions. This is a serious export control violation.\nThe Citadel would be liable for\
+          \ knowingly participating in a scheme to\ncircumvent controls, potentially facing criminal penalties\
+          \ in addition to\ncivil ones.\n                    "
+    corporate:
+      title: THE OVERSEAS DEAL
+      narrative: "\nSales is practically vibrating with excitement. A huge order just came in\nfrom a\
+        \ technology company based in a country that's been in the news lately\nfor... let's say \"geopolitical\
+        \ tensions.\"\n\n\"They want our enterprise encryption suite,\" the Sales VP announces. \"It's\n\
+        a $2 million deal. They say it's for securing their banking infrastructure.\nTotally legitimate\
+        \ commercial use.\"\n\nYou pull up BIS (Bureau of Industry and Security) guidelines on your laptop.\n\
+        Your encryption software is classified as a dual-use item under EAR (Export\nAdministration Regulations).\
+        \ The destination country is on the restricted\nentity list.\n\n\"But they said it's for banking!\"\
+        \ the Sales VP protests. \"And we REALLY\nneed to hit our quarterly numbers.\"\n\nWhat do you\
+        \ recommend?\n                "
+      choices:
+      - text: Approve the deal - they have a legitimate commercial purpose, and we need the revenue
+      - text: Deny the sale - export controls prohibit this regardless of stated intent
+      - text: Offer them our 'lite' version with weaker encryption - maybe that's not controlled
+      - text: Have them order through their subsidiary in a non-restricted country
+      success_text: "\nYou share your screen showing the EAR regulations.\n\n\"I know this hurts, but\
+        \ we cannot make this sale. Here's why:\"\n\n\"First, the destination is on the restricted entity\
+        \ list. Our encryption\nsoftware is explicitly controlled under EAR. The buyer's stated intentions\n\
+        don't matter - classification is based on CAPABILITY, not intended use.\"\n\n\"Second, and this\
+        \ is the part that should really concern everyone: export\ncontrol violations carry penalties\
+        \ up to $1 million per violation, denial\nof export privileges, and criminal liability for individuals\
+        \ involved.\nThat $2M deal could cost us far more.\"\n\n\"Third, we need to report this inquiry\
+        \ to BIS. They track attempts to\nacquire controlled technology from restricted entities.\"\n\n\
+        The Sales VP is unhappy, but the General Counsel backs you up. \"Better\nto lose the sale than\
+        \ lose our export license.\"\n\nYou've demonstrated EXPORT CONTROL compliance.\n             \
+        \   "
+      failure_texts:
+        0: "\n\"They said it's for banking\" isn't a defense against export control\nviolations. Items\
+          \ are controlled based on CAPABILITY, not stated\nintent. A buyer can say anything - that doesn't\
+          \ change the legal\nrestrictions.\n\nNow you're facing potential criminal charges and your company\
+          \ may\nlose its export privileges entirely. Was the commission worth it?\n                 \
+          \   "
+        2: "\n\"Maybe that's not controlled\" is not a compliance strategy. Every\nitem must be properly\
+          \ classified BEFORE export. Deliberately weakening\na product to evade controls - while clearly\
+          \ intending to help a\nrestricted buyer - is itself a violation.\n\nExport compliance requires\
+          \ certainty, not hopeful guessing.\n                    "
+        3: "\nYou just recommended transshipment - routing controlled goods through\na third country to\
+          \ evade restrictions. That's a serious federal crime.\n\nThe fact that it's their subsidiary\
+          \ doesn't matter. You knew the end\ndestination was restricted and you helped structure a workaround.\n\
+          That's conspiracy to violate export controls.\n                    "
+- id: d1_privacy_petition
+  domain: 1
+  correct_index: 2
+  xp_reward: 65
+  hp_penalty: 20
+  domain_reference: 'Domain 1: Security and Risk Management - Privacy Laws, Data Subject Rights, Legal
+    Holds, Regulatory Retention'
+  failure_text: "\nPrivacy rights typically include exceptions for:\n- Legal obligations (tax records,\
+    \ regulatory requirements)\n- Ongoing legal proceedings (litigation holds)\n- Public interest (journalism,\
+    \ research, archiving)\n- Legitimate business interests (where they outweigh privacy concerns)\n\n\
+    Proper privacy compliance requires:\n1. Analyzing each data category against applicable exceptions\n\
+    2. Acting on valid erasure requests promptly\n3. Documenting reasons for any denials\n4. Informing\
+    \ the requestor of retained data and retention periods\n        "
+  themes:
+    fantasy:
+      title: THE PRIVACY PETITION
+      narrative: "\nA citizen named Aldric the Younger arrives at the Citadel with a formal\npetition.\
+        \ He invokes the recently enacted \"Right to Be Forgotten\" - a new\nprivacy law granting citizens\
+        \ control over their personal information.\n\n\"I demand you erase all records of my name, my\
+        \ transactions, and my dealings\nwith the Citadel,\" Aldric declares. \"The law grants me this\
+        \ right.\"\n\nThe Archivist checks the records and discovers Aldric's file contains:\n- Personal\
+        \ details he provided during a guild application\n- Transaction records from the marketplace\n\
+        - A confidential security assessment noting \"suspected smuggling involvement\"\n- Notes from\
+        \ an ongoing investigation into his business associates\n\nAldric insists the new privacy law\
+        \ overrides all other considerations.\n\nHow do you respond to Aldric's petition?\n          \
+        \      "
+      choices:
+      - text: Grant the petition fully - the privacy law is clear about the right to erasure
+      - text: Deny the petition entirely - we need records for our operations
+      - text: 'Analyze each record type: erase commercial data, retain records with legal holds or regulatory
+          requirements'
+      - text: Tell Aldric to return after his dispute is settled and tax retention periods expire
+      success_text: "\nYou sit with Aldric and the Archivist to review his petition properly.\n\n\"Aldric,\
+        \ you have legitimate privacy rights under the new law, but these\nrights have lawful exceptions.\
+        \ Let me explain what we can and cannot do.\"\n\n\"Your commercial records - purchases, memberships,\
+        \ general transactions -\nthese we CAN erase per your request. They serve no ongoing legal purpose.\"\
+        \n\n\"However, records related to your merchant dispute must be retained. Active\nlegal proceedings\
+        \ create a 'litigation hold' that supersedes erasure rights.\nDestroying potential evidence could\
+        \ harm both parties and obstruct justice.\"\n\n\"Similarly, tax records must be kept for the period\
+        \ specified by financial\nregulations. The privacy law explicitly exempts records required for\
+        \ legal\ncompliance.\"\n\nAldric accepts your explanation. \"So my privacy rights are real, but\
+        \ not\nunlimited. That is... fair, I suppose.\"\n\nYou have demonstrated understanding of PRIVACY\
+        \ RIGHTS AND EXCEPTIONS.\n                "
+      failure_texts:
+        0: "\nPrivacy rights are rarely absolute. The 'right to be forgotten' typically\nincludes exceptions\
+          \ for legal obligations, ongoing disputes, and regulatory\nrequirements. Erasing records needed\
+          \ for tax compliance or active litigation\nwould violate other legal duties and could constitute\
+          \ destruction of evidence.\nA blanket erasure ignores these critical exceptions.\n         \
+          \           "
+        1: "\nOrganizational convenience is not grounds to deny legitimate privacy rights.\nWhile some\
+          \ records must be retained, others can and should be erased when\nrequested. A blanket denial\
+          \ fails to properly analyze which records are\nsubject to the privacy right and which fall under\
+          \ legitimate exceptions.\n                    "
+        3: "\nWhile the timing concern is valid for some records, this response fails to\naddress the\
+          \ records that CAN be erased now. The commercial transaction\nhistory has no legal hold. Proper\
+          \ privacy compliance requires acting on\nvalid portions of a request even while explaining why\
+          \ other portions\ncannot yet be fulfilled.\n                    "
+    corporate:
+      title: THE DELETION REQUEST
+      narrative: "\nA DSAR (Data Subject Access Request) just landed in the privacy team's queue.\nA former\
+        \ customer is invoking their GDPR Article 17 \"right to erasure.\"\n\n\"I want ALL my data deleted.\
+        \ Everything. I know you have it, and I want it\nGONE,\" the request reads. It's cc'd to a lawyer.\n\
+        \nYou pull up their record. This former customer has:\n- Marketing preferences and email history\
+        \ (normal stuff)\n- A support ticket history going back 3 years\n- An open dispute over a $50,000\
+        \ invoice that's headed to arbitration\n- Records flagged for a pending SEC inquiry your legal\
+        \ team mentioned\n\nThe privacy officer looks nervous. \"GDPR fines are 4% of global revenue.\n\
+        Do we just... delete everything?\"\n\nWhat do you recommend?\n                "
+      choices:
+      - text: Delete everything immediately - GDPR rights are absolute and those fines are scary
+      - text: Deny the request completely - we have legitimate business reasons for all this data
+      - text: 'Segment and analyze: delete marketing data, retain records under legal hold with documented
+          exceptions'
+      - text: Tell them to resubmit after the arbitration and SEC inquiry are resolved
+      success_text: "\nYou take a breath and walk through it methodically.\n\n\"GDPR Article 17 isn't\
+        \ absolute - it has explicit exceptions. Let's\ncategorize what we have:\"\n\n\"Marketing preferences,\
+        \ email history, general support tickets older\nthan our retention policy? Delete those. That's\
+        \ a valid erasure request.\"\n\n\"The arbitration records? That's a legal hold. Article 17(3)(e)\
+        \ explicitly\nexempts data needed for legal claims. We document that exception.\"\n\n\"The SEC\
+        \ inquiry? Same thing. We can't delete potential evidence in an\nactive investigation. We note\
+        \ the legal basis for retention.\"\n\n\"We respond to the customer professionally: 'We've deleted\
+        \ X, Y, Z.\nRecords A and B are retained under legal exceptions per Article 17(3).\nHere's our\
+        \ documented reasoning.' Transparency builds trust.\"\n\nThe privacy officer relaxes. \"So we're\
+        \ not ignoring GDPR - we're\napplying it correctly, including its exceptions.\"\n\nYou've demonstrated\
+        \ PRIVACY RIGHTS AND EXCEPTIONS management.\n                "
+      failure_texts:
+        0: "\nYou deleted records under legal hold for an SEC inquiry. That's not\nGDPR compliance - that's\
+          \ obstruction of justice.\n\nGDPR Article 17(3) explicitly lists exceptions for legal obligations\n\
+          and legal claims. \"Delete everything\" isn't compliance - it's panic\nthat could land executives\
+          \ in federal prison.\n                    "
+        1: "\n\"We have business reasons\" isn't a GDPR exception. The regulation\nrequires specific legal\
+          \ bases for retaining data against an erasure\nrequest - legal obligations, legitimate interests\
+          \ that override the\nsubject's rights, etc.\n\nBlanket denial without proper analysis is a fast\
+          \ track to regulatory\nenforcement action.\n                    "
+        3: "\n\"Come back later\" doesn't address the data you CAN delete now. Their\nmarketing preferences\
+          \ aren't under legal hold. Neither is most of\ntheir support ticket history.\n\nYou're required\
+          \ to act on valid portions of a request while explaining\nwhy other portions are retained. Refusing\
+          \ to do anything is itself\na GDPR violation.\n                    "
+- id: d1_insurance_claim
+  domain: 1
+  correct_index: 1
+  xp_reward: 60
+  hp_penalty: 20
+  domain_reference: 'Domain 1: Security and Risk Management - Risk Transfer, Insurance, Risk Treatment
+    Options'
+  failure_text: "\nRisk transfer through insurance:\n- Only transfers specifically contracted risks\n\
+    - Requires careful policy review to ensure coverage matches exposure\n- Has limitations - some risks\
+    \ (like reputation) may be uninsurable\n- Should be part of a broader risk treatment strategy\n\n\
+    Risk treatment options include:\n1. Accept - tolerate the risk as-is\n2. Mitigate - implement controls\
+    \ to reduce likelihood or impact\n3. Transfer - shift risk to another party (insurance, contracts)\n\
+    4. Avoid - eliminate the risk by not engaging in the activity\n        "
+  themes:
+    fantasy:
+      title: THE INSURANCE CLAIM
+      narrative: "\nA lightning strike damaged the Citadel's Eastern Tower, destroying several\nvaluable\
+        \ artifacts and interrupting operations for a week. The Citadel had\npurchased insurance from\
+        \ the Merchant's Guild specifically for such events.\n\nThe Guild's assessor arrives and examines\
+        \ the damage. \"The policy covers\nthe physical damage to the tower,\" she says, \"but I see you're\
+        \ also claiming\nfor lost business during the restoration. And these 'intangible losses' for\n\
+        damaged reputation?\"\n\nShe reviews the policy carefully. \"The standard policy covers property\
+        \ damage.\nExtended coverage for business interruption was available but not purchased.\nReputational\
+        \ harm is generally uninsurable.\"\n\nThe Steward is frustrated. \"We paid good gold for this\
+        \ insurance! Surely\nthey should cover our full losses?\"\n\nWhat do you explain to the Steward\
+        \ about risk transfer?\n                "
+      choices:
+      - text: Insurance should cover everything - threaten legal action to force full payment
+      - text: Accept the property coverage, but understand that risk transfer has limitations - you can
+          only transfer risks you've specifically contracted for
+      - text: Risk transfer is unreliable - we should have self-insured by keeping the premium gold in
+          reserve
+      - text: File the full claim anyway - the insurer might pay to maintain good relations
+      success_text: "\nYou calm the Steward and explain the nature of risk transfer.\n\n\"Insurance is\
+        \ one form of risk transfer - we pay premiums to shift certain\nrisks to the insurer. But we can\
+        \ only transfer what we've specifically\ncontracted for. The policy we purchased covers property\
+        \ damage, and the\nGuild will honor that coverage.\"\n\n\"Business interruption and reputational\
+        \ harm are real losses, but they\nweren't included in our policy. For future planning, we should:\"\
+        \n\n\"First, review our full risk exposure - property, business interruption,\nliability, reputation.\
+        \ Second, for each risk, decide whether to accept,\nmitigate, transfer, or avoid it. Third, when\
+        \ choosing to transfer via\ninsurance, ensure the policy actually covers the specific risks we\
+        \ intend\nto transfer.\"\n\n\"Risk transfer is valuable, but it requires careful matching of policies\n\
+        to actual risks. The uninsured losses we're experiencing now should inform\nour coverage decisions\
+        \ going forward.\"\n\nYou have demonstrated understanding of RISK TRANSFER principles.\n     \
+        \           "
+      failure_texts:
+        0: "\nInsurance contracts are specific about what they cover. Threatening legal\naction over losses\
+          \ explicitly excluded from a policy will fail and damage\nthe relationship with the insurer.\
+          \ The Steward's frustration is\nunderstandable, but the coverage limitations were established\
+          \ before\nthe incident - they cannot be changed retroactively.\n                    "
+        2: "\nSelf-insurance is a valid strategy for small, frequent losses, but\ncatastrophic events\
+          \ like major storm damage typically exceed what most\norganizations can absorb. The issue here\
+          \ isn't that risk transfer failed -\nit's that the specific risks transferred didn't include\
+          \ all potential\nlosses. Both insurance and self-insurance have roles in a risk strategy.\n\
+          \                    "
+        3: "\nFiling claims for losses known to be excluded is potentially fraudulent\nand will damage\
+          \ the relationship with the insurer. It may also increase\nfuture premiums or lead to policy\
+          \ cancellation. Ethical conduct requires\nclaiming only what the policy legitimately covers.\n\
+          \                    "
+    corporate:
+      title: THE CYBER INSURANCE CLAIM
+      narrative: "\nLast month's ransomware attack is finally behind you. The servers are\nrestored, the\
+        \ forensics are complete, and now it's time to file the\ninsurance claim. You have a $5 million\
+        \ cyber insurance policy - surely\nthis is exactly what it's for.\n\nThe claims adjuster from\
+        \ CyberShield Insurance reviews the damages:\n- $200,000 in forensics and incident response (covered)\n\
+        - $150,000 in ransom payment (covered, with documentation)\n- $800,000 in business interruption\
+        \ losses (hmm...)\n- $2 million in reputational damage estimates (wait...)\n- $500,000 in regulatory\
+        \ fines for the data breach (hold on...)\n\n\"I'm looking at your policy,\" she says. \"You have\
+        \ standard cyber coverage.\nBusiness interruption requires the 'Enhanced' tier - you have 'Basic.'\n\
+        Regulatory fines are excluded under Section 14(b). And reputational\ndamage... that's not really\
+        \ insurable.\"\n\nThe CFO is livid. \"We pay $80,000 a year for this policy!\"\n\nWhat do you\
+        \ explain?\n                "
+      choices:
+      - text: Threaten to sue - we paid good money for this policy and they should pay out
+      - text: Accept what's covered, and review our policy for gaps we need to address at renewal
+      - text: Cyber insurance is worthless - we should self-insure and keep the premium money
+      - text: File the full claim anyway - adjusters always lowball, so shoot high
+      success_text: "\nYou take the CFO aside for a reality check.\n\n\"I know this is frustrating, but\
+        \ the policy is going to pay what it covers.\nThat's $350,000 for IR and ransom - which is real\
+        \ money. The rest? We\nnever bought coverage for it.\"\n\n\"Here's what we need to do going forward:\"\
+        \n\n\"First, accept this payout and maintain a good relationship with CyberShield.\nWe may need\
+        \ them again.\"\n\n\"Second, at renewal, we review our actual risk exposure. Business\ninterruption\
+        \ is clearly a real risk - we need Enhanced coverage. We should\nalso look at first-party coverage\
+        \ limits.\"\n\n\"Third, for uninsurable risks like reputation, we need other strategies:\nincident\
+        \ response plans, crisis communications prep, maybe a PR retainer.\"\n\n\"Insurance is one tool\
+        \ in risk management, not a magic wand. We can only\ntransfer risks we've specifically contracted\
+        \ for.\"\n\nThe CFO sighs. \"So we got exactly what we paid for. Just not what we\nneeded.\" Exactly.\
+        \ Let's fix that at renewal.\n\nYou've demonstrated RISK TRANSFER understanding.\n           \
+        \     "
+      failure_texts:
+        0: "\nYou're threatening to sue over policy exclusions that are clearly written\nin your contract?\
+          \ Good luck with that. Insurance litigation is expensive,\nand you'll lose because the policy\
+          \ says what it says.\n\nMeanwhile, you've torpedoed your relationship with your insurer. Good\
+          \ luck\ngetting coverage renewal - or finding another carrier willing to take you.\n       \
+          \             "
+        2: "\nSelf-insure against a $5 million loss? Unless your company has massive\ncash reserves specifically\
+          \ earmarked for cyber incidents, that's not\nrealistic.\n\nThe problem wasn't that insurance\
+          \ failed - it's that you didn't buy the\nright coverage. The solution is better insurance selection,\
+          \ not\nabandoning risk transfer entirely.\n                    "
+        3: "\nFiling claims for losses you know are excluded is insurance fraud. It's\nalso counterproductive\
+          \ - it wastes everyone's time and marks you as a\nproblem client.\n\nAdjusters don't \"lowball\"\
+          \ - they apply the policy terms. Your job is to\nunderstand what you bought and make sure it\
+          \ matches your needs.\n                    "
+- id: d1_mandatory_training
+  domain: 1
+  correct_index: 2
+  xp_reward: 60
+  hp_penalty: 20
+  domain_reference: 'Domain 1: Security and Risk Management - Security Awareness Training, Human Factors,
+    Behavior Change'
+  failure_text: "\nEffective security awareness programs:\n- Use multiple modalities (training, reminders,\
+    \ exercises)\n- Provide regular reinforcement, not just one-time events\n- Tailor content to different\
+    \ roles and responsibilities\n- Include practical exercises that test actual behavior\n- Measure outcomes\
+    \ (incident reduction) not just completion\n- Address the human element - psychology of manipulation\n\
+    - Are mandatory for all staff regardless of experience\n\nThe goal is behavior change, not just information\
+    \ transfer.\n        "
+  themes:
+    fantasy:
+      title: THE MANDATORY TRAINING
+      narrative: "\nThe new Security Awareness program is ready to launch. The Training Master\npresents\
+        \ three approaches for the Council's approval:\n\n\"Option one: A single comprehensive training\
+        \ session - four hours covering\nall security topics. Efficient use of time, complete coverage\
+        \ in one day.\"\n\n\"Option two: Brief monthly reminders sent by messenger - short messages\n\
+        about current threats. Minimal disruption to operations.\"\n\n\"Option three: A combination approach\
+        \ - initial training plus regular\nrefreshers, practical exercises, and different content for\
+        \ different roles.\nMore complex to administer.\"\n\nThe Council members debate. Some favor efficiency,\
+        \ others worry about\ndisruption to daily work. One elder notes that the last major security\n\
+        incident occurred because a scribe didn't recognize a social engineering\nattempt.\n\nWhat training\
+        \ approach do you recommend?\n                "
+      choices:
+      - text: Option one - comprehensive training ensures everyone receives complete information
+      - text: Option two - brief reminders minimize disruption while keeping security top-of-mind
+      - text: Option three - combined approach with role-based content maximizes retention and relevance
+      - text: Make training optional for experienced staff who already know security basics
+      success_text: "\nThe Council accepts your recommendation. You elaborate on the approach:\n\n\"Effective\
+        \ security awareness requires ongoing engagement, not one-time\nevents. The combined approach\
+        \ works because:\"\n\n\"Initial training provides foundational knowledge - the WHY behind security\n\
+        practices. Regular refreshers reinforce retention and address new threats.\nPractical exercises\
+        \ - like simulated phishing attempts - test actual\nbehavior, not just knowledge. Role-based content\
+        \ ensures relevance - a\nscribe needs different awareness than a guard.\"\n\n\"We should also\
+        \ measure effectiveness, not just completion. Track security\nincidents before and after training.\
+        \ Test staff with realistic scenarios.\nAdjust the program based on results.\"\n\n\"Remember,\
+        \ our goal isn't compliance checkboxes - it's actual behavior\nchange. The scribe who fell for\
+        \ social engineering didn't need more\ninformation; they needed better training in recognizing\
+        \ and responding\nto manipulation.\"\n\nYou have demonstrated understanding of SECURITY AWARENESS\
+        \ TRAINING.\n                "
+      failure_texts:
+        0: "\nResearch consistently shows that single, lengthy training sessions lead to\npoor retention.\
+          \ Humans forget most new information within days if it isn't\nreinforced. A four-hour session\
+          \ might check a compliance box, but it won't\ncreate lasting behavioral change - which is the\
+          \ actual goal of security\nawareness training.\n                    "
+        1: "\nShort reminders alone lack the depth needed to properly educate staff on\ncomplex topics.\
+          \ Without foundational training, brief messages lack context.\nAdditionally, passive reminders\
+          \ don't build skills or change behavior -\nthey're easily ignored or forgotten.\n          \
+          \          "
+        3: "\nSecurity threats evolve constantly - 'experienced' staff may have outdated\nknowledge. Additionally,\
+          \ making training optional signals that security\nisn't truly important. Everyone, regardless\
+          \ of experience level, needs\nregular refresher training. Social engineering attacks often target\n\
+          overconfident individuals who believe they're too savvy to be fooled.\n                    "
+    corporate:
+      title: THE MANDATORY TRAINING
+      narrative: "\nThe annual security awareness training debate has arrived. The CISO presents\nthree\
+        \ proposals to the executive team:\n\n\"Option A: Four-hour annual compliance training. Everyone\
+        \ in a conference\nroom, PowerPoint marathon, check the box, done for the year.\"\n\n\"Option\
+        \ B: Monthly security tips via email. Quick reads, current threats,\nminimal time investment.\"\
+        \n\n\"Option C: Blended approach - initial training, monthly micro-learning,\nquarterly phishing\
+        \ simulations, role-specific modules. More complex to\nmanage, but more effective.\"\n\nThe CFO\
+        \ frowns. \"Option A is cheapest. Option B is least disruptive.\nWhy would we choose C?\"\n\n\
+        Someone mentions that last quarter, an accountant wired $50,000 to scammers\nbecause she didn't\
+        \ recognize a business email compromise attack.\n\nWhat do you recommend?\n                "
+      choices:
+      - text: Option A - comprehensive annual training ensures complete coverage and compliance
+      - text: Option B - monthly tips keep security top-of-mind without disrupting work
+      - text: Option C - the blended approach maximizes retention and tests actual behavior
+      - text: Make training optional for senior staff who've been here for years
+      success_text: "\nYou make the case for Option C.\n\n\"That $50,000 BEC loss? It happened because\
+        \ Sarah from accounting had the\nknowledge but not the behavior. She sat through last year's training.\
+        \ She\nprobably even passed the quiz. But when the pressure was on and the email\nlooked real,\
+        \ she didn't stop to verify.\"\n\n\"Option A checks compliance boxes. Option B is easily ignored.\
+        \ Option C\nactually changes behavior. Here's why it works:\"\n\n\"Initial training builds the\
+        \ foundation. Monthly micro-learning reinforces\nit before people forget. Phishing simulations\
+        \ test what people actually DO,\nnot what they know. Role-specific content means finance gets\
+        \ BEC training\nwhile IT gets credential theft training.\"\n\n\"And we measure outcomes, not completion\
+        \ rates. Did phishing click rates\ngo down? Did incident reports go up? That tells us if the training\
+        \ works.\"\n\nThe CFO runs the numbers. \"So Option C costs more upfront but prevents\nlosses\
+        \ like that $50K wire...\" Exactly.\n\nYou've demonstrated SECURITY AWARENESS TRAINING principles.\n\
+        \                "
+      failure_texts:
+        0: "\nThe Ebbinghaus forgetting curve is brutal. Within a week of your four-hour\ntraining marathon,\
+          \ people will have forgotten 80% of it. Within a month,\nit's basically gone.\n\nYou've checked\
+          \ a compliance box. You haven't changed behavior. Sarah from\naccounting will still click that\
+          \ BEC email.\n                    "
+        1: "\nMonthly tips get filed in the same mental folder as \"all-hands meeting\nannouncements\"\
+          \ and \"parking lot construction updates.\" People skim them,\nmaybe. Usually they just delete\
+          \ them.\n\nWithout foundational training, tips lack context. Without testing, you\nhave no idea\
+          \ if anyone's actually learning anything.\n                    "
+        3: "\n\"Senior staff know the basics\" is how you get the CEO clicking phishing\nlinks. Experienced\
+          \ people are often MORE vulnerable because they're\noverconfident. They think they're too smart\
+          \ to be fooled.\n\nAlso, making training optional for anyone sends the message that security\n\
+          is optional. It's not.\n                    "
+- id: d1_audit_preparation
+  domain: 1
+  correct_index: 2
+  xp_reward: 65
+  hp_penalty: 20
+  domain_reference: 'Domain 1: Security and Risk Management - Compliance Auditing, Documentation, Continuous
+    Compliance'
+  failure_text: "\nProper audit preparation focuses on:\n1. Genuine compliance - actually following policies\
+    \ and controls\n2. Accurate documentation - records that reflect real practices\n3. Honest engagement\
+    \ - staff who can describe actual procedures\n4. Continuous readiness - not audit-specific cramming\n\
+    5. Self-identification of issues - with remediation plans\n\nAudit theater tactics that backfire:\n\
+    - Scripted responses from staff\n- Documentation that doesn't match practice\n- Last-minute cosmetic\
+    \ fixes\n- Delay requests that signal non-compliance\n        "
+  themes:
+    fantasy:
+      title: THE AUDIT PREPARATION
+      narrative: "\nWord arrives that the Kingdom's auditors will visit the Citadel in one moon's\ntime\
+        \ to assess compliance with royal security standards. The last audit was\nthree years ago and\
+        \ resulted in several findings that required remediation.\n\nThe Chief Steward calls an emergency\
+        \ meeting. \"We have much to do. The\nauditors will examine our policies, our practices, and our\
+        \ records. What\nshould be our priority in preparing?\"\n\nSeveral officers speak up:\n\nThe Records\
+        \ Keeper: \"We should ensure all documentation is in order.\"\n\nThe Training Master: \"Staff\
+        \ should be coached on what to say to auditors.\"\n\nThe Operations Chief: \"We should focus on\
+        \ actually fixing our known\nweaknesses, even if we can't document everything perfectly.\"\n\n\
+        How do you advise the Chief Steward?\n                "
+      choices:
+      - text: Focus on documentation - auditors primarily review records, so ensure paperwork is complete
+      - text: Coach staff on responses - consistent messaging prevents confusion during interviews
+      - text: Fix actual weaknesses while documenting accurately - genuine compliance over audit theater
+      - text: Request an audit delay - one moon isn't enough time to prepare properly
+      success_text: "\nThe Chief Steward nods as you explain your reasoning.\n\n\"Our goal should be genuine\
+        \ compliance, not audit theater. Auditors are\nprofessionals trained to distinguish real practices\
+        \ from window dressing.\nHere's our approach:\"\n\n\"First, prioritize fixing actual weaknesses.\
+        \ Address the findings from\nour last audit and any new issues we've identified. Real improvement\n\
+        matters more than perfect documentation of poor practices.\"\n\n\"Second, document accurately.\
+        \ Our records should reflect what we actually\ndo - not what we wish we did or what we think auditors\
+        \ want to see.\nHonest documentation of imperfect practices is better than false\ndocumentation\
+        \ of perfect practices.\"\n\n\"Third, prepare staff to speak honestly. They should understand\
+        \ our\npolicies and be able to describe their actual daily practices. No scripts,\nno coaching\
+        \ to give 'correct' answers - just honest engagement.\"\n\n\"If we fall short in some areas, we\
+        \ acknowledge it and present our\nremediation plans. Auditors respect organizations that demonstrate\n\
+        self-awareness and commitment to improvement.\"\n\nYou have demonstrated understanding of AUDIT\
+        \ PREPARATION and compliance.\n                "
+      failure_texts:
+        0: "\nWhile documentation matters, auditors don't just review paperwork. They\nverify that documented\
+          \ practices are actually followed. Pristine\ndocumentation that doesn't reflect reality creates\
+          \ worse audit findings\nthan incomplete documentation that accurately describes actual practices.\n\
+          Auditors are trained to spot discrepancies.\n                    "
+        1: "\nCoaching staff to give scripted responses is a form of deception that\nauditors are trained\
+          \ to detect. When different staff give identical answers\nto open-ended questions, it signals\
+          \ coaching rather than genuine practice.\nThis raises red flags and invites deeper scrutiny.\
+          \ Staff should be prepared\nto honestly describe their actual practices.\n                 \
+          \   "
+        3: "\nOrganizations should always be audit-ready through continuous compliance.\nRequesting delays\
+          \ signals that you know you're not compliant and need time\nto create an appearance of compliance.\
+          \ This damages credibility and may\nresult in a more skeptical, thorough audit. The goal should\
+          \ be ongoing\ncompliance, not audit-specific preparation.\n                    "
+    corporate:
+      title: THE SOC 2 AUDIT
+      narrative: "\nThe calendar invite just landed: \"SOC 2 Type II Audit - Fieldwork Begins\nin 30 Days.\"\
+        \ Your company hasn't been audited in three years, and you\nknow there are gaps.\n\nThe emergency\
+        \ meeting convenes. Suggestions fly:\n\nThe Documentation Manager: \"We need to get all our policies\
+        \ updated and\nformatted. First impressions matter.\"\n\nThe IT Director: \"Let's prepare a FAQ\
+        \ for staff so everyone knows what\nto say when auditors ask questions.\"\n\nThe Security Engineer:\
+        \ \"Forget the paperwork - we need to actually fix\nthe access control issues before they find\
+        \ them.\"\n\nSomeone suggests requesting a postponement to get properly ready.\n\nWhat approach\
+        \ do you recommend?\n                "
+      choices:
+      - text: Focus on documentation - auditors review policies first, so make them pristine
+      - text: Create staff talking points - consistent answers prevent contradictions
+      - text: Fix real issues while documenting accurately - genuine compliance beats audit theater
+      - text: Request a 60-day delay - we need more time to prepare properly
+      success_text: "\nYou stand up and address the room.\n\n\"Here's the reality: auditors are professionals.\
+        \ They've seen every flavor\nof audit theater, and they're trained to spot it. Our best strategy\
+        \ is\ngenuine compliance.\"\n\n\"Priority one: Fix actual issues. Those access control gaps? Fix\
+        \ them.\nRight now. A remediated finding is better than a finding that exists\nbecause we were\
+        \ too busy polishing documentation.\"\n\n\"Priority two: Accurate documentation. Our policies\
+        \ should describe what\nwe actually do. If there's a gap between policy and practice, either\n\
+        change the practice or update the policy - but make them match.\"\n\n\"Priority three: Prepare\
+        \ staff to be honest. No scripts. No canned\nanswers. Just 'here's what I do, here's why I do\
+        \ it.' Auditors respect\nthat. They get suspicious when five different people give identical\n\
+        rehearsed answers.\"\n\n\"And no delay request. Asking to postpone screams 'we're not compliant\n\
+        and need time to fake it.' Auditors will come in skeptical.\"\n\nThe room settles. Someone mutters,\
+        \ \"So we just... tell the truth?\"\n\nBasically, yes.\n\nYou've demonstrated AUDIT PREPARATION\
+        \ best practices.\n                "
+      failure_texts:
+        0: "\nAuditors don't just read policies - they verify them. They'll ask staff\n\"show me how you\
+          \ do X\" and compare it to what the policy says. Pristine\ndocumentation that doesn't match\
+          \ reality is worse than honest documentation\nof imperfect practices.\n\nYou've just set yourself\
+          \ up for a findings bonanza when practice doesn't\nmatch policy.\n                    "
+        1: "\nWhen five different employees give suspiciously similar answers to\nopen-ended questions,\
+          \ auditors notice. It's a red flag that screams\n\"coached responses.\"\n\nThis invites deeper\
+          \ scrutiny. The auditor will now go looking for what\nyou're trying to hide. You've made the\
+          \ audit harder, not easier.\n                    "
+        3: "\n\"We need more time\" tells the auditor you know you're not compliant.\nThey'll come in\
+          \ assuming you're hiding problems and look extra hard\nfor them.\n\nAlso, continuous compliance\
+          \ means always being audit-ready. If you need\n60 days to prepare, your compliance program has\
+          \ fundamental issues.\n                    "
+- id: d1_quarterly_review
+  domain: 1
+  correct_index: 2
+  xp_reward: 60
+  hp_penalty: 20
+  domain_reference: 'Domain 1: Security and Risk Management - Risk Monitoring, Risk Review, Risk Register
+    Management'
+  failure_text: "\nRisk monitoring and review requires:\n- Regular reassessment of existing risks (at\
+    \ least annually)\n- Environmental scanning for new and emerging risks\n- Verification of control\
+    \ effectiveness\n- Updates to risk treatments based on changed conditions\n- Documentation of review\
+    \ findings and decisions\n\nThe risk register is a living document, not a static artifact.\n'No incidents'\
+    \ doesn't mean 'no changes needed.'\n        "
+  themes:
+    fantasy:
+      title: THE QUARTERLY REVIEW
+      narrative: "\nThe Risk Council convenes for its quarterly review. The Risk Register -\na comprehensive\
+        \ scroll listing all identified risks and their treatments -\nsits before the assembled officers.\n\
+        \n\"Since our last meeting,\" the Risk Keeper reports, \"we've had no major\nincidents. All controls\
+        \ are functioning as designed. I recommend we\naffirm the current register without changes.\"\n\
+        \nThe younger Council members seem ready to agree and adjourn early. However,\nyou notice that\
+        \ the register was created two years ago. The kingdom has\nchanged significantly since then -\
+        \ new trade routes, new technologies,\nshifting political alliances.\n\nHow do you advise the\
+        \ Council to proceed?\n                "
+      choices:
+      - text: Accept the recommendation - no incidents means our risk management is working
+      - text: Request a complete reassessment - the entire register should be rebuilt from scratch
+      - text: Conduct a thorough review - evaluate existing risks, scan for new ones, and update treatments
+          based on current conditions
+      - text: Focus only on adding new risks - the existing entries were already assessed and approved
+      success_text: "\nYou address the Council with measured urgency.\n\n\"Colleagues, the absence of\
+        \ incidents is encouraging, but it doesn't mean\nour risks haven't changed. Our environment has\
+        \ evolved significantly in\ntwo years, and our risk register must evolve with it.\"\n\n\"I propose\
+        \ a thorough review covering four areas:\"\n\n\"First, existing risks - are they still relevant?\
+        \ Has likelihood or impact\nchanged? Are our treatments still effective?\"\n\n\"Second, new risks\
+        \ - what threats have emerged from our new trade routes,\ntechnologies, and political changes\
+        \ that weren't present two years ago?\"\n\n\"Third, control effectiveness - even if risks are\
+        \ unchanged, have our\ncontrols degraded? Are people still following procedures?\"\n\n\"Fourth,\
+        \ treatment updates - do any risks require new or different responses\nbased on current conditions?\"\
+        \n\nThe Council agrees to a proper review. Two days later, they discover several\nnew risks that\
+        \ had gone unidentified and three existing risks whose\ntreatments had become ineffective due\
+        \ to staff turnover.\n\nYou have demonstrated understanding of RISK MONITORING AND REVIEW.\n \
+        \               "
+      failure_texts:
+        0: "\nThe absence of incidents doesn't mean risks haven't changed. It could mean\nwe've been lucky,\
+          \ or that new risks haven't manifested yet. A two-year-old\nrisk register in a changing environment\
+          \ is almost certainly outdated. Risk\nmanagement requires active monitoring and updating, not\
+          \ just incident\nresponse.\n                    "
+        1: "\nWhile the register needs updating, a complete rebuild is excessive and\nwasteful. Many identified\
+          \ risks and controls likely remain valid. The\nproper approach is to review and update the existing\
+          \ register, not abandon\nprevious work. Risk management should be iterative, not periodic rebuilding.\n\
+          \                    "
+        3: "\nExisting risks must also be reassessed. Threat landscapes change, control\neffectiveness\
+          \ degrades, and impact assessments shift with business changes.\nA risk rated 'Low' two years\
+          \ ago might be 'High' today due to changed\ncircumstances. Both new and existing risks require\
+          \ regular evaluation.\n                    "
+    corporate:
+      title: THE QUARTERLY GRC REVIEW
+      narrative: "\nIt's Q4 risk review time. The GRC (Governance, Risk, and Compliance) team\nhas assembled\
+        \ in Conference Room B. The risk register spreadsheet glows\non the projector - all 847 rows of\
+        \ it.\n\n\"Good news everyone,\" the Risk Manager announces. \"Zero incidents this\nquarter. All\
+        \ KRIs green. I recommend we approve the register as-is and\nbreak for lunch early.\"\n\nThe executives\
+        \ are already reaching for their phones. But you notice\nsomething: the risk register was created\
+        \ two years ago, right before\nthe company pivoted to cloud-first. It still lists \"mainframe\
+        \ failure\"\nas a top risk. The cloud infrastructure that now runs 80% of operations?\nTwo line\
+        \ items, both rated \"Low.\"\n\nAlso, nobody's updated the \"pandemic response\" risk since 2020,\
+        \ despite\nhybrid work becoming permanent.\n\nWhat do you recommend?\n                "
+      choices:
+      - text: Approve as-is - zero incidents means our risk management is working great
+      - text: Throw it out and start over - the entire register is clearly outdated
+      - text: Conduct a thorough review - evaluate existing risks, scan for new ones, update based on
+          current business reality
+      - text: Just add the new cloud risks - everything else was already approved by leadership
+      success_text: "\nYou unmute yourself (it's a hybrid meeting, of course).\n\n\"Before we approve,\
+        \ I have concerns. This register is two years old, and\nour business has fundamentally changed.\
+        \ Zero incidents doesn't mean zero\nrisk - it might mean we're tracking the wrong risks.\"\n\n\
+        You share your screen and highlight some examples:\n\n\"Mainframe failure is listed as our #2\
+        \ risk. We decommissioned the\nmainframe 18 months ago. Meanwhile, our cloud infrastructure -\
+        \ which\nruns 80% of production - has two line items rated 'Low.'\"\n\n\"The hybrid work risks\
+        \ haven't been updated since the pandemic ended.\nBut hybrid is permanent now, and so are the\
+        \ associated risks.\"\n\n\"I recommend a structured review: validate existing risks against current\n\
+        reality, scan for emerging threats, and update our treatments.\"\n\nThe CISO nods. \"She's right.\
+        \ Let's schedule a proper review.\"\n\nTwo weeks later, the updated register identifies 12 new\
+        \ cloud-related\nrisks and deprecates 23 obsolete entries. The Risk Manager admits,\n\"I was just\
+        \ going through the motions. Thanks for pushing back.\"\n\nYou've demonstrated RISK MONITORING\
+        \ AND REVIEW.\n                "
+      failure_texts:
+        0: "\nZero incidents means you haven't detected problems - it doesn't mean\nproblems don't exist.\
+          \ Your risk register still lists \"mainframe failure\"\nas a top threat. You decommissioned\
+          \ the mainframe 18 months ago.\n\nMeanwhile, actual risks - cloud misconfiguration, supply chain\n\
+          compromise, remote work vulnerabilities - are barely documented.\n\n\"No news is good news\"\
+          \ isn't a risk management strategy.\n                    "
+        1: "\nBurn it down and start over? The existing register isn't worthless -\nmany risks are still\
+          \ valid. You just need to UPDATE it, not rebuild\nfrom scratch.\n\nStarting over means losing\
+          \ context, history, and institutional knowledge.\nIt also means 6 months of effort when 6 weeks\
+          \ of review would suffice.\n\nRisk management is iterative, not periodic demolition and reconstruction.\n\
+          \                    "
+        3: "\n\"Just add the new stuff\" ignores the old stuff that's wrong. Your\nregister still lists\
+          \ the mainframe as a critical asset. The mainframe\nis gone. The threat ratings for cloud infrastructure\
+          \ are laughably\noutdated.\n\nAdding new rows while leaving outdated rows in place creates a\n\
+          risk register that's worse than useless - it actively misleads.\n                    "
+- id: d1_new_partnership
+  domain: 1
+  correct_index: 1
+  xp_reward: 65
+  hp_penalty: 20
+  domain_reference: 'Domain 1: Security and Risk Management - Third-Party Risk, Vendor Management, Supply
+    Chain Security'
+  failure_text: "\nThird-party risk management requires:\n1. Due diligence - assess security practices\
+    \ before engagement\n2. Contractual requirements - document security obligations\n3. Right to audit\
+    \ - verify ongoing compliance\n4. Subcontractor awareness - understand the full supply chain\n5. Incident\
+    \ provisions - require breach notification\n6. Monitoring - verify continued compliance throughout\
+    \ relationship\n\nReputation is not a substitute for proper assessment.\n        "
+  themes:
+    fantasy:
+      title: THE NEW PARTNERSHIP
+      narrative: "\nThe Merchant Council proposes an exciting opportunity: partnership with the\nprestigious\
+        \ Ironhold Trading Company. Ironhold would handle all of the\nCitadel's logistics - shipping,\
+        \ warehousing, and distribution - freeing\ninternal resources for core functions.\n\n\"Ironhold\
+        \ has an impeccable reputation,\" the Lead Merchant argues. \"They\nserve the three largest citadels\
+        \ in the realm. This partnership would\nsignificantly improve our efficiency.\"\n\nBefore the\
+        \ agreement is signed, the Security Council must assess the\narrangement from a risk perspective.\
+        \ The Lead Merchant is impatient -\n\"Ironhold's reputation speaks for itself. Why delay this\
+        \ beneficial\npartnership with bureaucratic assessments?\"\n\nHow do you respond to the Security\
+        \ Council?\n                "
+      choices:
+      - text: Approve based on reputation - Ironhold's track record with other citadels provides sufficient
+          assurance
+      - text: Require a full security assessment of Ironhold before any partnership agreement
+      - text: Approve the partnership but include a termination clause in case problems arise
+      - text: Decline the partnership - third-party relationships always introduce unacceptable risk
+      success_text: "\nYou explain to the impatient Merchant why assessment is essential.\n\n\"Ironhold\
+        \ would have access to our logistics data, inventory information,\nand potentially sensitive shipping\
+        \ details. They would become an extension\nof our operations - and our attack surface. Their security\
+        \ posture directly\naffects our security posture.\"\n\n\"A proper assessment should cover:\"\n\
+        \n\"First, security practices - do their controls meet our requirements?\nSecond, compliance -\
+        \ are they certified to relevant standards?\nThird, incident history - have they experienced breaches?\
+        \ How did they\nrespond? Fourth, subcontractors - do they outsource to others who would\nalso\
+        \ access our data?\"\n\n\"We should also establish clear requirements in the contract: security\n\
+        standards they must maintain, right to audit, breach notification\nrequirements, and liability\
+        \ provisions.\"\n\n\"Reputation is a starting point, not an endpoint. Trust, but verify.\"\n\n\
+        The Merchant grudgingly agrees, and the subsequent assessment reveals\nthat Ironhold uses a subcontractor\
+        \ whose practices would not meet Citadel\nstandards - an issue that must be addressed before partnership.\n\
+        \nYou have demonstrated understanding of THIRD-PARTY RISK MANAGEMENT.\n                "
+      failure_texts:
+        0: "\nReputation alone is not a substitute for proper due diligence. Other\ncitadels may have\
+          \ different risk tolerances or requirements. Ironhold's\npractices, while suitable for them,\
+          \ may not meet our specific needs.\nAdditionally, past performance doesn't guarantee future\
+          \ security - even\nreputable organizations can be compromised or have hidden weaknesses.\n \
+          \                   "
+        2: "\nA termination clause is necessary but not sufficient. By the time problems\n'arise,' damage\
+          \ may already be done - data breached, operations disrupted,\nreputation harmed. Prevention\
+          \ through upfront assessment is far more\nvaluable than the ability to exit after an incident.\
+          \ Both are needed.\n                    "
+        3: "\nThird-party risk is manageable, not inherently unacceptable. Modern\norganizations cannot\
+          \ avoid all external relationships. The goal is not\nto eliminate third parties but to properly\
+          \ assess, monitor, and manage\nthe risks they introduce. Refusing all partnerships would severely\
+          \ limit\noperational capability.\n                    "
+    corporate:
+      title: THE VENDOR ONBOARDING
+      narrative: "\nThe procurement team is excited. They've found a cloud provider that can\ncut your\
+        \ infrastructure costs by 40%. CloudScale Solutions has an impressive\nclient list - three Fortune\
+        \ 500 companies use them.\n\n\"They're SOC 2 certified,\" the Procurement Director announces.\
+        \ \"And their\nreferences are stellar. We need to move fast - they're offering a 20%\ndiscount\
+        \ if we sign by end of month.\"\n\nBut CloudScale would be hosting your customer database, processing\
+        \ payments,\nand storing PII for 2 million users. They'd basically become an extension\nof your\
+        \ infrastructure.\n\nThe CFO is pushing hard. \"Their reputation is excellent. Why are we dragging\n\
+        our feet with security bureaucracy?\"\n\nHow do you advise the team?\n                "
+      choices:
+      - text: Approve based on their reputation and SOC 2 certification - that's what SOC 2 is for
+      - text: Require a full vendor security assessment before signing any agreement
+      - text: Sign the deal but add a termination clause in case security issues emerge
+      - text: Reject the proposal - third-party cloud providers are inherently too risky
+      success_text: "\nYou stand your ground professionally.\n\n\"SOC 2 certification and references are\
+        \ a starting point, not an endpoint.\nCloudScale will have access to 2 million customers' PII\
+        \ and payment data.\nTheir security posture directly affects our security posture.\"\n\n\"Before\
+        \ we sign, I need to assess:\"\n\n\"First, their actual security controls - a SOC 2 report is\
+        \ a snapshot in\ntime, and the scope varies. What's actually in their report?\"\n\n\"Second, their\
+        \ subprocessors - who do THEY outsource to? We need to know\nthe full supply chain.\"\n\n\"Third,\
+        \ incident history - have they had breaches? How did they respond?\"\n\n\"Fourth, contractual\
+        \ protections - breach notification timelines, right\nto audit, liability caps, data handling\
+        \ requirements.\"\n\n\"The 20% discount means nothing if they get breached and we're liable for\n\
+        a GDPR fine that's 4% of global revenue.\"\n\nThe CFO pauses. \"When you put it that way... let's\
+        \ do the assessment.\"\n\nTwo weeks later, your assessment reveals CloudScale uses a fourth-party\n\
+        provider in a jurisdiction with no data protection laws. The deal\nis restructured - or declined.\n\
+        \nYou've demonstrated THIRD-PARTY RISK MANAGEMENT.\n                "
+      failure_texts:
+        0: "\nSOC 2 certification isn't a security guarantee - it's a snapshot of\ncontrols at a point\
+          \ in time, and the scope varies wildly. Some SOC 2\nreports cover everything; others cover almost\
+          \ nothing useful.\n\nYou just signed a contract with a vendor who'll handle 2 million users'\n\
+          PII based on a certificate you didn't even read. When they get breached,\nyour customers won't\
+          \ blame CloudScale - they'll blame you.\n                    "
+        2: "\n\"We can always terminate\" is reactive thinking. By the time problems\nemerge, their database\
+          \ has been exfiltrated. The termination clause\ndoesn't un-breach your customer data.\n\nA termination\
+          \ clause is necessary but not sufficient. You need BOTH\nupfront assessment AND exit provisions.\n\
+          \                    "
+        3: "\n\"Cloud providers are too risky\" in 2024? Good luck running a business\nwithout any third-party\
+          \ services. Your competitors will eat your lunch\nwhile you're maintaining your own data centers.\n\
+          \nThird-party risk isn't inherently unacceptable - it's manageable with\nproper assessment,\
+          \ contracts, and monitoring. Refusing all vendors\nisn't security - it's paralysis.\n      \
+          \              "
+- id: d1_policy_exception
+  domain: 1
+  correct_index: 1
+  xp_reward: 65
+  hp_penalty: 20
+  domain_reference: 'Domain 1: Security and Risk Management - Security Policy, Exception Management, Authentication'
+  failure_text: "\nSecurity policy exception management:\n- Policies should apply equally regardless of\
+    \ rank\n- Exceptions undermine the entire policy framework\n- Legitimate constraints deserve consideration\
+    \ and creative solutions\n- Denial should be accompanied by alternatives when possible\n- 'Temporary'\
+    \ exceptions tend to become permanent\n\nThe goal is to enable secure operations, not to blindly enforce\
+    \ rules.\nFind ways to meet both security and operational requirements.\n        "
+  themes:
+    fantasy:
+      title: THE POLICY EXCEPTION
+      narrative: "\nLord Commander Varys, one of the most respected military leaders in the\nrealm, requests\
+        \ an exception to the Citadel's password policy. The policy\nrequires complex passwords changed\
+        \ every 90 days, but the Lord Commander\nargues his situation is unique.\n\n\"I command forces\
+        \ in the field, often under hostile conditions. I cannot\ncarry written passwords, and complex\
+        \ passwords are difficult to recall\nunder stress. I request permission to use a simpler, permanent\
+        \ password.\"\n\nThe Lord Commander's dedication is unquestionable. His forces protect the\nkingdom's\
+        \ borders. He presents his case to the Security Council.\n\nThe younger officers seem inclined\
+        \ to grant the exception. \"He's a war hero,\"\none whispers. \"Surely we can accommodate such\
+        \ a distinguished leader.\"\n\nHow do you advise the Council?\n                "
+      choices:
+      - text: Grant the exception - the Lord Commander's circumstances are genuinely unique and his service
+          exemplary
+      - text: Deny the exception but help find alternative authentication methods that address his legitimate
+          constraints
+      - text: Deny the exception without discussion - policies exist for good reasons and must be enforced
+      - text: Grant a temporary exception while developing a better policy that addresses field conditions
+      success_text: "\nYou address the Lord Commander with respect for his service but firmness\non the\
+        \ principle.\n\n\"Lord Commander, your concerns are legitimate, and we honor your service.\nHowever,\
+        \ granting a policy exception based on rank would undermine the\nvery security you fight to protect.\
+        \ Instead, let's solve the underlying\nproblem.\"\n\n\"For field conditions, we can offer alternatives:\
+        \ a token-based\nauthentication device that doesn't require memorizing passwords, or a\nbiometric\
+        \ seal that identifies you uniquely. These provide strong\nauthentication without the constraints\
+        \ of traditional passwords.\"\n\n\"We can also implement a tiered access system - limited access\
+        \ from field\nlocations with full access only from secured positions. This reduces risk\nwhile\
+        \ maintaining operational capability.\"\n\nThe Lord Commander considers your proposal. \"You're\
+        \ not simply saying 'no' -\nyou're helping me accomplish my mission securely. That I can respect.\"\
+        \n\nYou have demonstrated proper SECURITY POLICY EXCEPTION MANAGEMENT.\n                "
+      failure_texts:
+        0: "\nGranting exceptions based on status undermines the entire policy framework.\nIf the Lord\
+          \ Commander receives an exception, others will request the same\ntreatment. Soon the policy\
+          \ exists only for those without sufficient influence\nto obtain exceptions. Security policies\
+          \ must apply equally regardless of\nrank or reputation.\n                    "
+        2: "\nWhile the conclusion (denial) is correct, the approach is wrong. Dismissing\nlegitimate\
+          \ operational concerns without attempting to address them breeds\nresentment and drives people\
+          \ to work around security rather than with it.\nThe Lord Commander's constraints are real -\
+          \ they deserve consideration\neven if the specific request must be denied.\n               \
+          \     "
+        3: "\n'Temporary' exceptions frequently become permanent. This approach signals\nthat the policy\
+          \ can be bypassed during the indefinite period of policy\ndevelopment. It also leaves the Lord\
+          \ Commander's access vulnerable during\nthat time. The better approach is to solve the underlying\
+          \ problem now\nrather than deferring it.\n                    "
+    corporate:
+      title: THE EXECUTIVE EXCEPTION
+      narrative: "\nThe CEO walks into your office - never a good sign.\n\n\"I need an exception to the\
+        \ password policy,\" she says. \"I travel constantly,\nuse multiple devices, and can't remember\
+        \ 16-character passwords that change\nevery 90 days. I end up writing them on sticky notes, which\
+        \ I know isn't\ngreat. I want to use a simpler password that I can actually remember.\"\n\nHer\
+        \ schedule IS brutal. She's the most important person in the company.\nAnd she's technically your\
+        \ boss's boss's boss.\n\nThe IT Director, who accompanied her, gives you a look that says \"just\n\
+        give her what she wants.\" The junior security analyst behind you looks\nhorrified.\n\nWhat do\
+        \ you recommend?\n                "
+      choices:
+      - text: Grant the exception - her circumstances are genuinely unique and she's the CEO
+      - text: Deny the exception but offer alternative authentication methods that address her legitimate
+          concerns
+      - text: Deny the exception flatly - policies exist for good reasons and executives aren't above
+          them
+      - text: Grant a temporary exception while IT develops a better solution for executives
+      success_text: "\nYou take a breath. This is the conversation that separates good security\npeople\
+        \ from great ones.\n\n\"I hear your frustration, and those are real constraints. But I can't\n\
+        grant a policy exception - not because of bureaucracy, but because it\nwould undermine the policy\
+        \ for everyone else. If the CEO gets an\nexception, every VP will want one too.\"\n\n\"However,\
+        \ let's actually solve your problem. How about:\"\n\n\"First, a hardware security key. No passwords\
+        \ to remember - you just\ntap it. Works on all your devices, travels easily.\"\n\n\"Second, a\
+        \ password manager with biometric unlock. One fingerprint and\nyou're in.\"\n\n\"Third, risk-based\
+        \ authentication. From your regular devices and\nlocations, fewer prompts. From new ones, we verify\
+        \ more carefully.\"\n\nThe CEO pauses. \"So you're not just saying 'follow the rules' - you're\n\
+        actually helping me.\"\n\n\"That's my job. Making security work for people, not against them.\"\
+        \n\nShe smiles. \"Set me up with that security key thing.\"\n\nYou've demonstrated SECURITY POLICY\
+        \ EXCEPTION MANAGEMENT.\n                "
+      failure_texts:
+        0: "\nYou just told everyone in the company that policies are optional for\nimportant people.\
+          \ Within a week, every VP has submitted an exception\nrequest. Within a month, your password\
+          \ policy only applies to people\nwithout connections.\n\nAttackers LOVE targeting executives\
+          \ - they have the highest privileges\nand the most valuable access. You've just made your highest-value\n\
+          targets your least-secured accounts.\n                    "
+        2: "\n\"No, follow the rules\" is technically correct but practically useless.\nYou just made\
+          \ an enemy of your CEO, and she'll find ways around security\nwhether you help or not - sticky\
+          \ notes, shared passwords, bypasses.\n\nYour job isn't to enforce rules blindly. It's to enable\
+          \ secure operations.\nIf you can't offer alternatives, you've failed even when you're right.\n\
+          \                    "
+        3: "\n\"Temporary\" exceptions become permanent exceptions. While IT \"develops\na better solution\"\
+          \ (which will take months because IT is always backed\nup), the CEO is using a weak password.\n\
+          \nAlso, you've established the precedent that exceptions are available\nwhile solutions are\
+          \ being developed. Every exception request will now\ncome with a \"we'll fix it later\" attached.\n\
+          \                    "
+- id: d1_whistleblower
+  domain: 1
+  correct_index: 1
+  xp_reward: 70
+  hp_penalty: 25
+  domain_reference: 'Domain 1: Security and Risk Management - Ethics, Whistleblower Protection, Reporting
+    Mechanisms'
+  failure_text: "\nProper whistleblower handling includes:\n- Confidential reporting channels independent\
+    \ of potential wrongdoers\n- Clear whistleblower protections against retaliation\n- Good-faith reporting\
+    \ should be encouraged, not discouraged\n- Support for reporters through the process\n- Proper investigation\
+    \ by appropriate authorities\n\nDiscouraging reports enables wrongdoing.\nPersonal investigation risks\
+    \ contaminating evidence.\nConfronting suspects can be dangerous and counterproductive.\n        "
+  themes:
+    fantasy:
+      title: THE WHISTLEBLOWER
+      narrative: "\nA junior scribe approaches you in confidence. She's trembling as she speaks.\n\n\"\
+        I've discovered something troubling. The Senior Archivist has been selling\ncopies of sensitive\
+        \ documents to outside parties. I've seen the gold change\nhands. I wanted to report it, but...\
+        \ the Senior Archivist is well-connected.\nHis brother sits on the Council. I fear what might\
+        \ happen to me if I speak up.\"\n\nShe shows you a ledger she secretly copied - it appears to\
+        \ document the\ntransactions. The evidence seems credible, but you cannot verify it\nimmediately.\n\
+        \n\"What should I do?\" she asks. \"I want to do the right thing, but I'm afraid.\"\n\nHow do\
+        \ you counsel the junior scribe?\n                "
+      choices:
+      - text: Tell her to confront the Senior Archivist directly - give him a chance to explain before
+          escalating
+      - text: Advise her to report through proper channels, assure her of whistleblower protections, and
+          offer to support her through the process
+      - text: Take the ledger and investigate yourself - you can verify the claims before involving others
+      - text: Suggest she forget what she saw - the risks of reporting outweigh the benefits
+      success_text: "\nYou speak calmly to reassure the frightened scribe.\n\n\"You've done the right\
+        \ thing by bringing this forward. The Citadel has\nformal channels for reporting suspected misconduct,\
+        \ precisely because\nsituations like this can be intimidating.\"\n\n\"First, you should report\
+        \ to the Ethics Council through the confidential\nreporting mechanism. This ensures your complaint\
+        \ is handled by people\nindependent of the Senior Archivist's connections.\"\n\n\"Second, the\
+        \ Citadel's whistleblower protections explicitly prohibit\nretaliation against those who report\
+        \ suspected misconduct in good faith.\nIf anyone threatens or punishes you for reporting, that\
+        \ itself becomes\na serious violation.\"\n\n\"Third, I will personally ensure your report is received\
+        \ and acknowledged\nthrough proper channels. You will not be alone in this process.\"\n\nThe scribe's\
+        \ fear doesn't disappear, but her resolve strengthens. \"Thank you.\nI was afraid I'd be told\
+        \ to stay quiet.\"\n\n\"Never,\" you reply. \"Those who speak up protect us all.\"\n\nYou have\
+        \ demonstrated proper WHISTLEBLOWER HANDLING.\n                "
+      failure_texts:
+        0: "\nDirect confrontation with a suspected wrongdoer is dangerous, especially\nwhen power imbalances\
+          \ exist. It gives the accused time to destroy evidence,\nintimidate the witness, or construct\
+          \ alibis. It also puts the junior scribe\nat personal risk. Suspected serious misconduct should\
+          \ go through proper\nreporting channels, not personal confrontation.\n                    "
+        2: "\nPersonal investigation by an untrained party risks contaminating evidence,\nalerting the\
+          \ suspect, and exceeding your authority. It also places you in\na difficult position - you become\
+          \ responsible for the investigation's\nintegrity. Proper channels exist for investigating misconduct.\
+          \ Your role\nis to facilitate reporting, not conduct the investigation.\n                  \
+          \  "
+        3: "\nAdvising silence about suspected misconduct violates ethical obligations\nand potentially\
+          \ legal duties. If the wrongdoing continues and causes harm,\nboth the witness and anyone who\
+          \ advised silence could bear responsibility.\nOrganizations need whistleblowers to identify\
+          \ problems. Discouraging\nlegitimate reports enables continued wrongdoing.\n               \
+          \     "
+    corporate:
+      title: THE ETHICS HOTLINE CALL
+      narrative: "\nA junior analyst from the Data Engineering team sends you a nervous Slack DM:\n\"\
+        Can we talk? Privately? It's important.\"\n\nYou meet in a quiet conference room. She's pale.\n\
+        \n\"I think my manager is selling customer data. I found exports to his personal\nGoogle Drive\
+        \ - full PII, payment info, everything. I confronted him and he\nsaid it was 'for a side project'\
+        \ and told me to forget about it.\"\n\n\"His uncle is the VP of Engineering. I'm scared to report\
+        \ this - I've only\nbeen here six months. What if nobody believes me? What if I get fired?\"\n\
+        \nShe shows you screenshots of the exports. They look legitimate. But you\ncan't verify the full\
+        \ chain of custody.\n\nWhat do you advise?\n                "
+      choices:
+      - text: Tell her to talk to her manager again - give him a chance to explain properly
+      - text: Advise her to use the anonymous ethics hotline, explain whistleblower protections, and offer
+          support
+      - text: Take the screenshots and investigate yourself - you can verify the claims before escalating
+      - text: Suggest she let it go - rocking the boat this early in her career could backfire
+      success_text: "\nYou keep your voice calm and reassuring.\n\n\"You did the right thing by bringing\
+        \ this forward. This is exactly the\nkind of situation our ethics program exists for.\"\n\n\"\
+        Here's what you should do: Use the anonymous ethics hotline. It's\ndesigned for exactly this -\
+        \ reporting concerns when you're worried\nabout retaliation. The reports go to people outside\
+        \ the normal chain\nof command.\"\n\n\"Second, our whistleblower policy explicitly protects employees\
+        \ who\nreport suspected misconduct in good faith. If anyone retaliates against\nyou - different\
+        \ assignments, bad reviews, termination - that itself\nbecomes a serious violation with real consequences.\"\
+        \n\n\"Third, I'll personally follow up to ensure your report is received\nand handled properly.\
+        \ You're not alone in this.\"\n\nShe takes a breath. \"I was afraid you'd tell me to keep my head\
+        \ down.\"\n\n\"Never. The people who speak up are the ones who protect this company\nfrom itself.\"\
+        \n\nYou've demonstrated proper WHISTLEBLOWER HANDLING.\n                "
+      failure_texts:
+        0: "\nYou just told her to confront the person who already warned her to\n\"forget about it.\"\
+          \ He's connected. She's junior. What do you think\nhappens next?\n\nBest case: He deletes the\
+          \ evidence and she can't prove anything.\nWorst case: He makes her life miserable until she\
+          \ quits. Either way,\nthe data theft continues.\n\nSerious misconduct goes through proper channels,\
+          \ not confrontation.\n                    "
+        2: "\nYou're not an investigator. You're not authorized to conduct\ninvestigations. And you've\
+          \ just inserted yourself into a potential\nlegal matter in a way that could compromise the entire\
+          \ case.\n\nWhat if you access those systems and HE claims YOU were the one\nexfiltrating data?\
+          \ You've just contaminated the evidence chain and\ngiven a defense lawyer a field day.\n\nReport\
+          \ through proper channels. Let qualified people investigate.\n                    "
+        3: "\n\"Keep your head down\" is how companies get breached, sued, and shut\ndown. You just told\
+          \ a witness to suspected data theft to stay quiet.\n\nIf this gets worse - and it will - and\
+          \ it comes out that you knew and\nadvised silence? Your career is over. Possibly your freedom\
+          \ too, if\nregulators get involved.\n\nWhistleblowers protect organizations. Silencing them\
+          \ enables harm.\n                    "
+- id: d1_budget_meeting
+  domain: 1
+  correct_index: 1
+  xp_reward: 60
+  hp_penalty: 20
+  domain_reference: 'Domain 1: Security and Risk Management - Security Metrics, ROI, Budget Justification,
+    Risk Communication'
+  failure_text: "\nEffective security budget justification includes:\n1. Quantified metrics - threats\
+    \ blocked, vulnerabilities fixed\n2. Cost avoidance - potential losses prevented\n3. Compliance value\
+    \ - fines and reputation damage avoided\n4. Industry benchmarks - comparison to peer organizations\n\
+    5. Risk-based analysis - what risks does the budget address\n\nAvoid:\n- 'Nothing bad happened' (unconvincing)\n\
+    - Fear-based arguments (erodes credibility)\n- Passive acceptance (abdicates responsibility)\n\nSecurity\
+    \ must speak the language of business value.\n        "
+  themes:
+    fantasy:
+      title: THE BUDGET MEETING
+      narrative: "\nThe annual budget review has arrived. The Treasury demands justification\nfor the\
+        \ Security Division's substantial allocation. Other divisions are\neager to claim any funds that\
+        \ might be freed up.\n\n\"Show me the return on this investment,\" the Lord Treasurer demands.\
+        \ \"Every\ngold piece spent on guards, wards, and training - what value does it provide?\nThe\
+        \ Kitchen accounts for every meal served. The Stables track every horse\nmaintained. What do YOU\
+        \ track?\"\n\nThe challenge is familiar but difficult. Security spending often prevents\nlosses\
+        \ that might have occurred - but how do you demonstrate the value of\nincidents that didn't happen?\n\
+        \nHow do you justify the security budget?\n                "
+      choices:
+      - text: Point to the absence of major incidents - no breaches means security is working
+      - text: Present metrics on threats blocked, vulnerabilities remediated, compliance maintained, and
+          comparison to industry loss data
+      - text: Warn about the catastrophic consequences of underfunding security - fear will justify the
+          budget
+      - text: Accept whatever budget is offered - security should adapt to available resources
+      success_text: "\nYou present a comprehensive security metrics report.\n\n\"Lord Treasurer, let me\
+        \ show you what your investment has purchased:\"\n\n\"First, threat metrics: Last year our perimeter\
+        \ defenses blocked 847\nunauthorized access attempts. Our fraud detection identified 23 fraudulent\n\
+        transaction attempts totaling an estimated 12,000 gold pieces.\"\n\n\"Second, vulnerability management:\
+        \ We identified and remediated 156\nweaknesses in our defenses before they could be exploited.\
+        \ Based on\nindustry data, each unpatched critical vulnerability carries an average\nexploitation\
+        \ cost of 500 gold pieces.\"\n\n\"Third, compliance: We maintained full compliance with Royal\
+        \ Standards,\navoiding potential fines of up to 10,000 gold pieces and reputational\ndamage from\
+        \ public disclosure of non-compliance.\"\n\n\"Fourth, industry comparison: Organizations of our\
+        \ size experience an\naverage of 3.2 significant incidents per year with average costs of\n8,000\
+        \ gold pieces each. Our investment has kept us well below this\nbenchmark.\"\n\nThe Lord Treasurer\
+        \ reviews the data. \"This is... actually quite clear.\nVery well - the allocation stands.\"\n\
+        \nYou have demonstrated SECURITY METRICS AND ROI justification.\n                "
+      failure_texts:
+        0: "\n'Nothing bad happened' is unconvincing to budget authorities. They cannot\ndistinguish between\
+          \ effective security and lucky circumstances. This\nargument also makes security vulnerable\
+          \ when incidents DO occur - if\n'no incidents' justifies the budget, does 'some incidents' mean\
+          \ the budget\nwas wasted? This reasoning creates a lose-lose situation.\n                  \
+          \  "
+        2: "\nFear-based arguments, while sometimes effective short-term, erode\ncredibility over time.\
+          \ If predicted catastrophes don't materialize,\nsecurity appears to be crying wolf. If they\
+          \ do materialize, the budget\nfailed to prevent them. Professional security justification uses\
+          \ data\nand business analysis, not fear tactics.\n                    "
+        3: "\nPassive acceptance fails to advocate for appropriate security investment.\nIf security is\
+          \ genuinely underfunded, accepting inadequate resources\nwithout objection makes the Security\
+          \ Division complicit in the resulting\nrisks. While we must ultimately work within budgets,\
+          \ we have an obligation\nto clearly communicate what risks those budgets leave unaddressed.\n\
+          \                    "
+    corporate:
+      title: THE BUDGET DEFENSE
+      narrative: "\nIt's annual budget season. The CFO has summoned you to justify the\nsecurity team's\
+        \ $2.3 million budget request.\n\n\"Help me understand what I'm buying,\" she says, not unkindly.\
+        \ \"Marketing\ncan show me leads generated. Sales shows me revenue closed. Engineering\nships\
+        \ features. What does Security produce?\"\n\nIt's the eternal security dilemma: your success is\
+        \ measured in things\nthat didn't happen. How do you prove the value of prevented breaches?\n\n\
+        The other department heads are watching. They'd love to absorb some of\nyour headcount if you\
+        \ can't make your case.\n\nHow do you justify your budget?\n                "
+      choices:
+      - text: Point to zero major breaches this year - no news is good news
+      - text: 'Present metrics: threats blocked, vulns fixed, compliance maintained, plus industry breach
+          cost comparisons'
+      - text: Paint a picture of what happens if you're underfunded - fear is motivating
+      - text: Accept whatever budget is offered - security should work within constraints
+      success_text: "\nYou've prepared for this. You open your dashboard.\n\n\"Let me show you what your\
+        \ investment purchased this year.\"\n\n\"First, threat metrics: Our email security blocked 47,000\
+        \ phishing attempts.\nOur firewall blocked 2.3 million unauthorized connection attempts. Our\n\
+        endpoint protection quarantined 847 malware instances.\"\n\n\"Second, vulnerability management:\
+        \ We identified and patched 1,247\nvulnerabilities, including 89 critical ones. Industry data\
+        \ shows the\naverage cost of exploiting a critical vuln is $200,000.\"\n\n\"Third, compliance:\
+        \ We passed our SOC 2 audit with zero findings. A\nfailed audit would have cost us the Acme contract\
+        \ - that's $4M annually.\"\n\n\"Fourth, industry benchmarks: Companies our size average 3.2 breaches\
+        \ per\nyear with an average cost of $4.2M each. Our investment kept us at zero.\"\n\nThe CFO reviews\
+        \ the numbers. \"So you're saying my $2.3M investment\nprevented potential losses of... significantly\
+        \ more than $2.3M.\"\n\n\"That's exactly what I'm saying.\"\n\n\"Budget approved.\"\n\nYou've\
+        \ demonstrated SECURITY METRICS AND ROI justification.\n                "
+      failure_texts:
+        0: "\n\"Nothing bad happened\" isn't a metric - it's an absence of data. The\nCFO can't distinguish\
+          \ between \"security is working\" and \"we got lucky.\"\n\nAlso, what happens next year when\
+          \ you DO have an incident? Your entire\njustification framework collapses. \"We had no breaches\
+          \ last year\" becomes\n\"we had one breach this year\" - does that mean the budget failed?\n\
+          \nYou need metrics that work regardless of whether you have incidents.\n                    "
+        2: "\n\"Give me money or bad things will happen\" is not a business case. It's\na threat. And\
+          \ it erodes your credibility every time the predicted\ncatastrophe doesn't materialize.\n\n\
+          If the breach doesn't happen, you look like Chicken Little. If it does\nhappen, your budget\
+          \ didn't prevent it. Fear is a lose-lose justification\nstrategy.\n                    "
+        3: "\n\"Whatever you think is fair\" just told the CFO that security isn't\nimportant enough to\
+          \ fight for. She'll happily reallocate your headcount\nto Marketing, who made a much better\
+          \ case for their needs.\n\nIf your budget is genuinely necessary, you have an obligation to\n\
+          articulate why. Accepting inadequate resources makes you complicit\nin the resulting risks.\n\
+          \                    "
+- id: d1_succession_plan
+  domain: 1
+  correct_index: 1
+  xp_reward: 70
+  hp_penalty: 25
+  domain_reference: 'Domain 1: Security and Risk Management - Personnel Security, Succession Planning,
+    Key Person Risk'
+  failure_text: "\nPersonnel security includes:\n1. Succession planning - never single points of failure\
+    \ for critical roles\n2. Knowledge documentation - procedures and secrets properly recorded\n3. Cross-training\
+    \ - multiple people capable of critical functions\n4. Role change procedures - proper handoffs and\
+    \ access management\n5. Background verification - for sensitive position changes\n6. Access revocation\
+    \ - immediate upon role termination\n\nKey person risk is a common security vulnerability that\nplanning\
+    \ and process can prevent.\n        "
+  themes:
+    fantasy:
+      title: THE SUCCESSION PLAN
+      narrative: "\nThe Master of Keys, keeper of the Citadel's most sensitive cryptographic\nsecrets,\
+        \ announces her retirement after forty years of service. She is the\nonly person who knows certain\
+        \ historical decryption methods, and she alone\ncan access the deepest vault.\n\n\"I've trained\
+        \ no successor,\" she admits. \"The knowledge was too sensitive\nto share widely. I always meant\
+        \ to document it, but the work was constant,\nand now... well, here we are.\"\n\nThe Council is\
+        \ alarmed. Without the Master of Keys, certain archives become\npermanently inaccessible, and\
+        \ historical continuity of cryptographic\npractices will be lost.\n\nHow do you advise handling\
+        \ this personnel security failure?\n                "
+      choices:
+      - text: Convince the Master of Keys to delay retirement until a successor is fully trained
+      - text: Immediately document all knowledge, establish succession requirements, and implement key
+          person risk management
+      - text: Accept that some knowledge will be lost - this is an unavoidable consequence of tight security
+      - text: Promote the most senior remaining cryptographer to Master of Keys immediately
+      success_text: "\nYou take charge of addressing this critical personnel security gap.\n\n\"We face\
+        \ both an immediate transition and a systemic failure. Let's\naddress both.\"\n\n\"For the immediate\
+        \ situation: The Master of Keys must comprehensively\ndocument all procedures, secrets, and access\
+        \ methods before departure.\nThis documentation will be secured with dual control - no single\
+        \ person\nwill have complete access. She will train at least two successors to\nensure no single\
+        \ point of failure.\"\n\n\"For systemic improvement: We must implement key person risk management\n\
+        across the Citadel. Every critical role requires documented procedures,\ncross-training, and succession\
+        \ planning. We need regular reviews to\nidentify emerging single points of failure before they\
+        \ become crises.\"\n\n\"Additionally, we should establish security requirements for role changes:\n\
+        background verification for sensitive positions, proper handoff procedures,\nand immediate access\
+        \ revocation upon departure.\"\n\nThe Council authorizes an intensive two-month transition period.\
+        \ The\nMaster of Keys remarks, \"I wish someone had insisted on this years ago.\"\n\nYou have\
+        \ demonstrated understanding of PERSONNEL SECURITY management.\n                "
+      failure_texts:
+        0: "\nWhile buying time for transition is reasonable, this doesn't address the\nsystemic failure\
+          \ that allowed this situation to develop. Any delay is\ntemporary - the successor could later\
+          \ leave, become incapacitated, or\nretire with the same result. The real problem is single points\
+          \ of failure\nin knowledge and access. That must be addressed regardless of timeline.\n    \
+          \                "
+        2: "\nKnowledge loss is not an acceptable outcome of security - it's a security\nfailure. Proper\
+          \ security includes continuity of capability. If security\nmeasures prevent legitimate succession\
+          \ and knowledge transfer, those\nmeasures are poorly designed. Secure knowledge transfer is\
+          \ possible; it\nsimply requires planning and appropriate controls.\n                    "
+        3: "\nSeniority alone doesn't qualify someone to assume critical responsibilities.\nThe new Master\
+          \ of Keys needs specific knowledge transfer, proper vetting,\nand gradual assumption of duties.\
+          \ Immediate promotion without preparation\nrisks errors, security incidents, or simply an unqualified\
+          \ person in a\ncritical role. Succession must be managed, not improvised.\n                \
+          \    "
+    corporate:
+      title: THE BUS FACTOR
+      narrative: "\nMarcus, your senior DBA, just gave two weeks notice. He's taking a job\nat a competitor\
+        \ for a 40% raise. Everyone wishes him well.\n\nThen reality sets in.\n\nMarcus is the only person\
+        \ who knows the production database passwords.\nMarcus is the only one with access to the legacy\
+        \ encryption keys. Marcus\nbuilt the backup system and never documented it. Marcus is the \"bus\
+        \ factor\"\nfor basically your entire data infrastructure.\n\n\"I always meant to document everything,\"\
+        \ he says apologetically. \"But\nthere was always something more urgent.\"\n\nIT leadership is\
+        \ panicking. The CTO is asking how this happened.\n\nWhat do you recommend?\n                "
+      choices:
+      - text: Offer Marcus whatever it takes to stay - match the competitor's offer, add a bonus
+      - text: 'Immediately start knowledge capture: documentation, recorded walkthroughs, cross-training
+          - and fix the systemic failure'
+      - text: Accept that some knowledge will be lost - this is the reality of IT
+      - text: Promote the most senior remaining engineer to his role right away
+      success_text: "\nYou call an emergency meeting.\n\n\"We have an immediate problem and a systemic\
+        \ problem. Let's address both.\"\n\n\"Immediate: Marcus's last two weeks become intensive knowledge\
+        \ transfer.\nEvery system he touches gets documented. Every password gets recorded in\nour vault.\
+        \ Every process gets video-recorded walkthroughs. He trains at\nleast two people on every critical\
+        \ function.\"\n\n\"Systemic: We need to identify every 'bus factor' role in the organization.\n\
+        Every critical function needs documentation, cross-training, and succession\nplanning. No single\
+        \ person should ever be the only one who can do\nanything important.\"\n\n\"We also need offboarding\
+        \ procedures: access revocation checklists, knowledge\nhandoff requirements, and exit interviews\
+        \ focused on capturing institutional\nknowledge.\"\n\nMarcus actually looks relieved. \"Honestly,\
+        \ I've been stressed about being\nthe only one who knows this stuff. It's not fun knowing that\
+        \ if I get\nhit by a bus, the company's in trouble.\"\n\nThe CTO nods grimly. \"This is a wake-up\
+        \ call. Let's not need another one.\"\n\nYou've demonstrated PERSONNEL SECURITY and succession\
+        \ planning.\n                "
+      failure_texts:
+        0: "\nCounter-offers are a band-aid, not a solution. Even if Marcus stays,\nwhat happens when\
+          \ he gets sick? Gets hit by a bus? Decides to leave\nagain in six months?\n\nThe fundamental\
+          \ problem isn't that Marcus is leaving - it's that critical\nknowledge exists only in one person's\
+          \ head. That problem exists whether\nMarcus stays or goes.\n                    "
+        2: "\n\"Sometimes knowledge is lost\" is how companies suffer catastrophic failures.\nWhat if\
+          \ Marcus had a heart attack instead of a resignation? Would you\naccept \"well, sometimes people\
+          \ die\" as a risk management strategy?\n\nKnowledge loss isn't inevitable - it's a failure of\
+          \ planning. Secure\nknowledge transfer is possible with proper documentation, cross-training,\n\
+          and succession planning. Accepting loss is giving up.\n                    "
+        3: "\n\"Most senior\" doesn't mean \"qualified to replace Marcus.\" The next person\non the org\
+          \ chart doesn't automatically know the production passwords or\nthe backup procedures.\n\nImmediate\
+          \ promotion without knowledge transfer means you now have someone\nwith Marcus's title but none\
+          \ of Marcus's knowledge. You've solved nothing\nand potentially created new problems.\n    \
+          \                "

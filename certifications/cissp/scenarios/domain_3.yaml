@@ -1,0 +1,1643 @@
+domain: 3
+domain_name: Security Architecture and Engineering
+scenarios:
+- id: d3_single_wall
+  domain: 3
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 3: Security Architecture and Engineering - Defense in Depth'
+  failure_text: "\nDefense in depth is a fundamental security architecture principle that ensures\nif\
+    \ one control fails or is bypassed, additional layers provide continued protection.\nKey concepts:\n\
+    - Multiple security controls at different layers\n- Diverse control types (not just more of the same)\n\
+    - Each layer addresses different threats or attack vectors\n- No single point of failure should lead\
+    \ to complete compromise\n        "
+  themes:
+    fantasy:
+      title: THE SINGLE WALL FALLACY
+      narrative: "\nThe Kingdom of Valorheim boasts the mightiest wall ever constructed - forty feet\n\
+        of enchanted stone, warded by seven archmages, and defended by the finest archers\nin the realm.\
+        \ The King has poured the entire defense budget into this singular\nbarrier. No army has ever\
+        \ breached it.\n\nA traveling war wizard visits your court and shakes his head grimly. \"Your\
+        \ Majesty,\nI have seen walls greater than this fall. What lies beyond the wall, should an\nenemy\
+        \ pass it?\"\n\nThe King gestures proudly. \"Nothing can pass the wall! That is the point!\"\n\
+        \nThe wizard turns to you, the newly appointed Security Advisor. \"Tell your King\nwhy this concerns\
+        \ me so.\"\n\nWhat do you advise?\n                "
+      choices:
+      - text: The wall vendor might abandon the enchantments - we need backup suppliers
+      - text: A single point of failure can be bypassed, leaving no additional protection behind it
+      - text: We should build three more identical walls behind this one
+      - text: Ancient regulations require exactly three defensive layers
+      success_text: "\nThe King's brow furrows as you explain. \"Your Majesty, last winter the Obsidian\n\
+        Horde bypassed the walls of Ironkeep entirely - they tunneled beneath. What defenses\nexisted\
+        \ inside? None. The city fell in a single night.\"\n\nThe wizard nods approvingly. \"Your advisor\
+        \ speaks wisdom. Defense in depth means\nMULTIPLE, DIFFERENT layers. The wall stops armies. But\
+        \ what stops the assassin who\nscales it? The saboteur who tunnels? The traitor who opens the\
+        \ gate?\"\n\nYou continue: \"We need inner checkpoints, palace guards, trapped corridors, and\n\
+        vault protections. Each layer should be DIFFERENT - diverse controls that address\ndifferent threats.\"\
+        \n\nThe King strokes his beard. \"So my wall is not worthless?\"\n\n\"It is your first layer,\
+        \ Majesty. But it should not be your only one.\"\n\nYou have demonstrated understanding of DEFENSE\
+        \ IN DEPTH.\n                "
+      failure_texts:
+        0: "\nWhile vendor stability matters for long-term maintenance, this misses the core\nsecurity\
+          \ principle. The issue isn't WHO maintains the wall - it's that the wall\nis the ONLY defense.\
+          \ Defense in depth isn't about backup vendors; it's about\nmultiple, diverse security layers\
+          \ that protect even when one layer fails.\n                    "
+        2: "\nSimply adding more of the same control doesn't provide true defense in depth.\nThree more\
+          \ walls still all fail to the same threats: tunneling, flying, treachery.\nDefense in depth\
+          \ requires DIVERSE, COMPLEMENTARY controls - walls, guards, traps,\nvaults - each addressing\
+          \ different attack vectors and providing protection when\nothers fail.\n                    "
+        3: "\nNo ancient law mandates a specific number of defensive layers. Defense in depth\nis a security\
+          \ principle, not a compliance checkbox. The goal is multiple,\ncomplementary controls that provide\
+          \ continued protection when one fails - not\nhitting an arbitrary number to satisfy auditors.\n\
+          \                    "
+    corporate:
+      title: THE FIREWALL FANTASY
+      narrative: "\nThe IT Director beams with pride during the security review. \"We've invested $2\n\
+        million in the most advanced next-generation firewall on the market. AI-powered\nthreat detection,\
+        \ deep packet inspection, sandboxing - the works. Our perimeter\nis IMPENETRABLE.\"\n\nYou notice\
+        \ something concerning: the network diagram shows the firewall as the\nONLY security control between\
+        \ the internet and the production databases.\n\nA consultant from the audit firm leans over and\
+        \ whispers, \"Ask about what happens\nwhen - not if - something gets past their firewall.\"\n\n\
+        The IT Director catches your expression. \"Is there a problem? This firewall has\na 99.9% detection\
+        \ rate!\"\n\nWhat do you recommend?\n\n                "
+      choices:
+      - text: The firewall vendor might go out of business - we need vendor diversity
+      - text: Single points of failure can be bypassed, leaving no additional protection
+      - text: We should buy three more identical firewalls in sequence
+      - text: Compliance requires exactly three security layers
+      success_text: "\nYou pull up the network diagram. \"That 99.9% detection rate sounds impressive.\n\
+        But with 10,000 attempts per day, that's 10 threats getting through. Every. Single.\nDay. What's\
+        \ waiting on the other side?\"\n\nThe IT Director blinks. \"The... the production servers.\"\n\
+        \n\"Exactly. Defense in depth means layers. The firewall is your perimeter. But we\nalso need\
+        \ network segmentation, host-based firewalls, endpoint detection,\napplication-level controls,\
+        \ and database activity monitoring. DIFFERENT types\nof controls at DIFFERENT layers.\"\n\nThe\
+        \ consultant nods. \"The firewall stops 99.9% at the edge. The network segments\nstop lateral\
+        \ movement. EDR catches what runs on hosts. Each layer catches what\nthe previous one missed.\"\
+        \n\nThe IT Director sighs. \"So my expensive firewall...\"\n\n\"Is still valuable. It's your first\
+        \ layer. But you need depth behind it.\"\n\nYou have demonstrated understanding of DEFENSE IN\
+        \ DEPTH.\n                "
+      failure_texts:
+        0: "\nVendor stability is a valid concern for long-term operations, but it's not the\nPRIMARY\
+          \ security issue here. The problem isn't who makes the firewall - it's\nthat it's the ONLY control.\
+          \ Defense in depth focuses on layered, diverse controls\nthat protect even when one layer fails\
+          \ or is bypassed.\n                    "
+        2: "\nBuying three identical firewalls in sequence doesn't provide defense in depth.\nThey all\
+          \ fail to the same zero-day. They all miss the same evasion technique.\nTrue layered security\
+          \ requires DIVERSE controls: firewalls, IDS, EDR, network\nsegmentation, application controls\
+          \ - each catching what others miss.\n                    "
+        3: "\nNo compliance framework mandates exactly three layers. The principle of defense\nin depth\
+          \ is about effective security architecture, not hitting an arbitrary number.\nThe goal is multiple,\
+          \ complementary controls that provide continued protection\nwhen individual controls fail.\n\
+          \                    "
+- id: d3_scroll_classification
+  domain: 3
+  correct_index: 1
+  xp_reward: 80
+  hp_penalty: 30
+  domain_reference: 'Domain 3: Security Architecture and Engineering - Security Models'
+  failure_text: "\nBell-LaPadula is a formal security model focused on CONFIDENTIALITY. Its core rules:\n\
+    - Simple Security Property: 'No read up' - subjects cannot read objects at higher\n  classification\
+    \ levels\n- *-Property (Star Property): 'No write down' - subjects cannot write to objects\n  at lower\
+    \ classification levels\nThis ensures information only flows UPWARD in classification, preventing\
+    \ leakage.\n        "
+  themes:
+    fantasy:
+      title: THE CLASSIFICATION CRISIS
+      narrative: "\nThe Citadel's archives contain scrolls of varying sensitivity: PUBLIC proclamations,\n\
+        CONFIDENTIAL trade agreements, SECRET military dispatches, and TOP SECRET royal\nsuccession plans.\n\
+        \nYoung Scribe Aldric holds a SECRET clearance. He approaches you with a dilemma:\n\n\"I need\
+        \ to read a CONFIDENTIAL trade agreement to update my summary of merchant\nroutes - that's fine,\
+        \ I can read below my level. But I've also discovered a critical\ninsight that should be added\
+        \ to the TOP SECRET succession plans...\"\n\nHe pauses. \"Master Theron says I can WRITE to higher\
+        \ classifications but cannot\nREAD them. Is this true? It seems backward - shouldn't I be able\
+        \ to see what I'm\nadding to?\"\n\nWhich security model does Master Theron describe?\n       \
+        \         "
+      choices:
+      - text: Biba Model - 'No read down, no write up' for integrity
+      - text: Bell-LaPadula Model - 'No read up, no write down' for confidentiality
+      - text: Clark-Wilson Model - Separation of duties enforcement
+      - text: Brewer-Nash Model - Chinese Wall for conflicts of interest
+      success_text: "\nYou nod at young Aldric. \"Master Theron speaks of the Bell-LaPadula model, which\n\
+        protects CONFIDENTIALITY - ensuring secrets flow only upward, never down.\"\n\nYou draw a diagram\
+        \ in the dust. \"You hold SECRET clearance. Under Bell-LaPadula:\n'No read up' means you cannot\
+        \ READ Top Secret - you might learn things above your\nclearance. 'No write down' means you cannot\
+        \ WRITE to Confidential - you might\naccidentally leak Secret information into a less protected\
+        \ document.\"\n\n\"So I CAN read Confidential scrolls - that's reading DOWN, which is permitted.\n\
+        But writing my insight into Top Secret documents? That's writing UP, which is\nalso permitted\
+        \ - you can contribute to higher levels without compromising them.\"\n\nAldric's face lights up.\
+        \ \"So the model prevents secrets from LEAKING DOWN, not\nfrom being ADDED UP!\"\n\n\"Exactly.\
+        \ Bell-LaPadula protects confidentiality by ensuring information only\nflows toward higher classification,\
+        \ never lower.\"\n\nYou have demonstrated understanding of the BELL-LAPADULA MODEL.\n        \
+        \        "
+      failure_texts:
+        0: "\nThe Biba model is actually the OPPOSITE - it protects INTEGRITY, not confidentiality.\n\
+          Biba says 'No read down' (don't read less trusted sources that might corrupt your\nwork) and\
+          \ 'No write up' (don't corrupt higher-integrity data). The scenario\ndescribes protecting secrets\
+          \ from leaking to lower classifications, which is\nBell-LaPadula's confidentiality focus.\n\
+          \                    "
+        2: "\nClark-Wilson focuses on data integrity through well-formed transactions and\nseparation\
+          \ of duties. It doesn't address classification levels or information\nflow between security\
+          \ levels. The scenario specifically involves reading/writing\nbetween classification levels,\
+          \ which is Bell-LaPadula's domain.\n                    "
+        3: "\nBrewer-Nash (Chinese Wall) prevents conflicts of interest - ensuring someone who\naccesses\
+          \ data from one competitor cannot then access data from another. It's not\nabout classification\
+          \ levels or directional information flow. The scenario is\nabout military-style classification,\
+          \ which is Bell-LaPadula.\n                    "
+    corporate:
+      title: THE DOCUMENT CLASSIFICATION DEBACLE
+      narrative: "\nThe legal department has implemented a new document classification system:\nPUBLIC,\
+        \ INTERNAL, CONFIDENTIAL, and RESTRICTED.\n\nA junior analyst with CONFIDENTIAL clearance comes\
+        \ to you frustrated. \"The system\nis broken! I need to read an INTERNAL memo to update my analysis\
+        \ - and it won't\nlet me because it's 'below my level.' But it ALSO won't let me view RESTRICTED\n\
+        board minutes that relate to my project.\"\n\nHer manager chimes in: \"Actually, the system is\
+        \ working correctly. You can read\ndown but not up. And when you write, you can only write to\
+        \ your level or higher\nto prevent information leakage.\"\n\nThe analyst looks confused. \"What\
+        \ model is this even based on? It seems designed\nto make my job impossible!\"\n\nWhat security\
+        \ model is being implemented?\n                "
+      choices:
+      - text: Biba Model - protecting data integrity
+      - text: Bell-LaPadula Model - protecting data confidentiality
+      - text: Clark-Wilson Model - enforcing separation of duties
+      - text: Brewer-Nash Model - preventing conflicts of interest
+      success_text: "\nYou open a whiteboard to explain. \"This is the Bell-LaPadula model, designed to\n\
+        protect CONFIDENTIALITY - keeping secrets from leaking to people without clearance.\"\n\n\"The\
+        \ rules are simple: 'No read up' means you can't access documents above your\nclearance - so RESTRICTED\
+        \ is off-limits. 'No write down' means you can't write\nto documents below your level - this prevents\
+        \ you from accidentally copying\nconfidential data into a less-protected document.\"\n\nThe analyst\
+        \ interrupts: \"But I should be able to read INTERNAL memos - that's\nBELOW my clearance!\"\n\n\
+        \"Exactly - you CAN read down. If the system is blocking that, it's misconfigured.\nBell-LaPadula\
+        \ permits reading at or below your level. It only blocks reading ABOVE\nyour level.\"\n\nThe manager\
+        \ nods. \"So the model assumes information should only flow UPWARD in\nclassification, never downward.\
+        \ Secrets go into the vault, not out of it.\"\n\n\"Precisely. Bell-LaPadula is all about preventing\
+        \ data leakage.\"\n\nYou have demonstrated understanding of the BELL-LAPADULA MODEL.\n       \
+        \         "
+      failure_texts:
+        0: "\nBiba model protects INTEGRITY, not confidentiality, with opposite rules: 'No read\ndown'\
+          \ (don't read untrusted sources) and 'No write up' (don't corrupt trusted data).\nThe scenario\
+          \ describes a system preventing reading above clearance and writing\nbelow clearance - that's\
+          \ Bell-LaPadula's confidentiality model.\n                    "
+        2: "\nClark-Wilson focuses on integrity through well-formed transactions and separation\nof duties.\
+          \ It's about ensuring data is only modified through controlled procedures\nby authorized users.\
+          \ The scenario describes classification-based read/write\nrestrictions, which is the Bell-LaPadula\
+          \ model.\n                    "
+        3: "\nBrewer-Nash (Chinese Wall) is about conflicts of interest - ensuring analysts who\naccess\
+          \ one client's data can't access a competitor's data. It has nothing to do\nwith hierarchical\
+          \ classification levels. The scenario describes a military-style\nclassification system, which\
+          \ is Bell-LaPadula.\n                    "
+- id: d3_key_distribution
+  domain: 3
+  correct_index: 0
+  xp_reward: 70
+  hp_penalty: 25
+  domain_reference: 'Domain 3: Security Architecture and Engineering - Cryptography'
+  failure_text: "\nSymmetric key distribution depends on the communication model:\n- Hub-and-spoke: n\
+    \ keys (one per relationship with central node)\n- Full mesh: n(n-1)/2 keys (every party needs unique\
+    \ key with every other party)\n\nSymmetric encryption uses the same key for encryption and decryption,\
+    \ so each\nbilateral relationship requires only ONE shared key that works in both directions.\n  \
+    \      "
+  themes:
+    fantasy:
+      title: THE HUNDRED KINGDOMS CIPHER
+      narrative: "\nThe Grand Alliance of 100 kingdoms requires secure communication. Each kingdom\nmust\
+        \ exchange secret messages with the central Citadel using enchanted cipher\nscrolls that require\
+        \ shared magical keys.\n\nThe Court Cryptographer presents his calculations: \"If we use symmetric\
+        \ cipher\nmagic - where each kingdom shares a unique secret key with only the Citadel -\nhow many\
+        \ enchanted keys must we create and distribute?\"\n\nHis apprentice, eager to show off, shouts:\
+        \ \"I know this! If all 100 kingdoms need\nto talk to EACH OTHER as well, we'd need 4,950 keys\
+        \ using the n(n-1)/2 formula!\"\n\nThe Cryptographer sighs. \"That's not what I asked. They only\
+        \ need to communicate\nwith the CITADEL, not with each other. It's a hub-and-spoke arrangement.\"\
+        \n\nHow many symmetric keys are needed for 100 kingdoms to each communicate securely\nwith the\
+        \ central Citadel?\n                "
+      choices:
+      - text: 100 keys - one unique shared key per kingdom-Citadel pair
+      - text: 200 keys - two keys per kingdom for sending and receiving
+      - text: 4,950 keys - using the n(n-1)/2 formula for all pairings
+      - text: 10,000 keys - using the n-squared formula
+      success_text: "\nThe Cryptographer smiles as you give the correct answer. \"Precisely! Hub-and-spoke\n\
+        requires only ONE key per spoke.\"\n\nHe draws a diagram with the Citadel in the center and kingdoms\
+        \ around it. \"Each\nkingdom shares ONE unique symmetric key with us. Kingdom of the North has\
+        \ Key_North.\nKingdom of the East has Key_East. Each key encrypts messages in BOTH directions\
+        \ -\nthat's how symmetric encryption works.\"\n\nThe apprentice looks embarrassed. \"So the 4,950\
+        \ formula...\"\n\n\"Only applies if EVERY kingdom needed to communicate directly with EVERY OTHER\n\
+        kingdom - a full mesh. In that case, each pair needs a unique key, giving us\nn(n-1)/2 combinations.\
+        \ But that's not our requirement.\"\n\nThe Cryptographer turns to you. \"You understand the fundamental\
+        \ difference between\nhub-and-spoke and full-mesh key distribution. This is why many organizations\
+        \ use\nasymmetric encryption for key exchange - it scales better.\"\n\nYou have demonstrated understanding\
+        \ of SYMMETRIC KEY DISTRIBUTION.\n                "
+      failure_texts:
+        1: "\nSymmetric encryption uses the SAME key for both encryption and decryption - that's\nwhat\
+          \ makes it 'symmetric.' You don't need separate keys for sending and receiving.\nEach kingdom-Citadel\
+          \ pair shares ONE key that works in both directions.\n                    "
+        2: "\nThe n(n-1)/2 formula (giving 4,950 keys for 100 parties) applies only when ALL\nparties\
+          \ need to communicate with ALL OTHER parties - a full mesh network. The\nscenario specifies\
+          \ hub-and-spoke: each kingdom only talks to the Citadel, not to\nother kingdoms. That requires\
+          \ only 100 keys - one per kingdom-Citadel relationship.\n                    "
+        3: "\nThe n-squared formula doesn't apply to symmetric key distribution in any standard\nmodel.\
+          \ For hub-and-spoke with 100 kingdoms, you need exactly 100 keys - one shared\nsecret between\
+          \ each kingdom and the Citadel. Symmetric keys work in both directions.\n                  \
+          \  "
+    corporate:
+      title: THE PARTNER ENCRYPTION PROBLEM
+      narrative: "\nThe security team is planning encrypted file transfers with 100 external business\n\
+        partners. Each partner needs to securely exchange files with your organization's\ncentral file\
+        \ server.\n\nThe junior security analyst has been researching encryption and is confused:\n\n\"\
+        So if we use symmetric encryption - like AES - we need a shared secret with each\npartner. That's\
+        \ 100 unique keys we need to manage securely. But I found this\nformula online that says we need\
+        \ n(n-1)/2 keys, which would be 4,950!\"\n\nThe senior analyst shakes her head. \"That formula\
+        \ is for a different scenario.\nThink about our actual architecture.\"\n\nShe turns to you. \"\
+        Help our junior colleague understand. For point-to-point\nsymmetric encryption between our server\
+        \ and 100 individual partners, how many\nkeys do we actually need?\"\n                "
+      choices:
+      - text: 100 keys - one unique key per partner relationship
+      - text: 200 keys - we need separate encrypt and decrypt keys
+      - text: 4,950 keys - using the n(n-1)/2 formula
+      - text: 10,000 keys - using the n-squared formula
+      success_text: "\nYou sketch a hub-and-spoke diagram. \"In our architecture, each partner only\n\
+        communicates with OUR server. Partner A doesn't need to talk to Partner B. So:\"\n\n\"Partner\
+        \ A and our server share Key_A. Partner B and our server share Key_B.\nEach partner relationship\
+        \ needs exactly ONE symmetric key.\"\n\nThe junior analyst nods slowly. \"So 100 partners means\
+        \ 100 keys...\"\n\n\"Exactly. The n(n-1)/2 formula applies when EVERYONE needs to talk to EVERYONE\
+        \ -\nlike a peer-to-peer network where all 100 parties exchange files directly with\neach other.\
+        \ That's a full mesh, requiring 4,950 unique key pairs.\"\n\nThe senior analyst adds: \"This is\
+        \ actually why many organizations prefer asymmetric\nencryption for these scenarios. With public\
+        \ key infrastructure, each party just\npublishes a public key. No shared secrets to distribute\
+        \ securely.\"\n\n\"But for AES hub-and-spoke? One hundred partners, one hundred keys.\"\n\nYou\
+        \ have demonstrated understanding of SYMMETRIC KEY DISTRIBUTION.\n                "
+      failure_texts:
+        1: "\nSymmetric encryption uses the SAME key for encryption and decryption - that's the\ndefinition\
+          \ of symmetric. AES with a 256-bit key uses that same key for both\noperations. You don't need\
+          \ separate keys for each direction.\n                    "
+        2: "\nThe n(n-1)/2 formula calculates unique pairs when all parties need to communicate\nwith\
+          \ all other parties. With 100 partners: (100 x 99) / 2 = 4,950. But this applies\nto FULL MESH\
+          \ networks, not hub-and-spoke. Our partners only talk to OUR server,\nnot to each other. That's\
+          \ 100 bilateral relationships = 100 keys.\n                    "
+        3: "\nThere's no standard symmetric key distribution model that uses n-squared. For\nhub-and-spoke\
+          \ with 100 partners connecting to one central server, you need 100\nunique shared keys - one\
+          \ per partner relationship. Each symmetric key is used\nfor both encryption and decryption.\n\
+          \                    "
+- id: d3_scroll_verification
+  domain: 3
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 3: Security Architecture and Engineering - Cryptographic Hash Functions'
+  failure_text: "\nHash functions provide INTEGRITY verification - proving that data was not modified.\n\
+    \nHash functions do NOT provide:\n- Confidentiality: Hashes don't encrypt; data travels in plaintext\n\
+    - Authentication: Anyone can compute a hash; it doesn't prove origin\n- Non-repudiation: No tie to\
+    \ a specific sender without digital signatures\n\nFor authentication and non-repudiation, you need\
+    \ DIGITAL SIGNATURES: the hash\nencrypted with the sender's private key, which only they possess.\n\
+    \        "
+  themes:
+    fantasy:
+      title: THE TAMPERED TOME
+      narrative: "\nThe Arcane Library receives a critical spellbook from a distant tower. Given the\n\
+        dangerous journey through bandit-infested roads, the sending mage computed a\n'magical fingerprint'\
+        \ of the book - a SHA-256 hash - and sent it by separate\nmagical courier.\n\nWhen the book arrives,\
+        \ the librarian computes her own hash and compares it to\nthe one received. They match perfectly.\n\
+        \nA young apprentice asks: \"Master, what exactly does this matching hash prove?\nDoes it mean\
+        \ the book is truly from Master Eldwin? Does it mean no one can read\nthe spells during transit?\
+        \ Does it prove Master Eldwin cannot deny sending it?\"\n\nThe librarian turns to you. \"Explain\
+        \ to the apprentice what property the hash\nverification provides.\"\n\nWhat security property\
+        \ does hash verification prove?\n                "
+      choices:
+      - text: Confidentiality - the spellbook contents were encrypted during transit
+      - text: Integrity - the spellbook was not modified during transit
+      - text: Authentication - the spellbook genuinely came from Master Eldwin
+      - text: Non-repudiation - Master Eldwin cannot deny sending the spellbook
+      success_text: "\nYou address the apprentice carefully. \"The matching hash proves one thing and\
+        \ one\nthing only: INTEGRITY. The spellbook you received is bit-for-bit identical to\nwhat Master\
+        \ Eldwin sent. Not a single rune was changed.\"\n\nThe apprentice frowns. \"But doesn't that mean\
+        \ it's really from him?\"\n\n\"No. Consider: what if a bandit intercepted the book, replaced it\
+        \ with a cursed\nforgery, computed a NEW hash for that forgery, and killed the courier carrying\n\
+        the original hash? You'd receive a matching hash - but for the wrong book.\"\n\nThe librarian\
+        \ nods approvingly. \"Hashes prove integrity, not authenticity. For\nauthentication and non-repudiation,\
+        \ Master Eldwin would need to SIGN the hash\nwith his private key - creating a digital signature\
+        \ that only he could produce.\"\n\n\"And confidentiality?\" the apprentice asks.\n\n\"Hashes don't\
+        \ encrypt anything. The spellbook traveled in readable form. Anyone\nwho intercepted it could\
+        \ read every spell. Hashes verify integrity, nothing more.\"\n\nYou have demonstrated understanding\
+        \ of HASH FUNCTIONS AND INTEGRITY.\n                "
+      failure_texts:
+        0: "\nHashes do not provide confidentiality. A hash is a one-way fingerprint, not\nencryption.\
+          \ The spellbook contents travel in plaintext - anyone intercepting\nit could read everything.\
+          \ The hash only verifies that what was received matches\nwhat was sent, not that it was protected\
+          \ from viewing during transit.\n                    "
+        2: "\nA hash alone does NOT prove authentication. An attacker could intercept the book,\nreplace\
+          \ it with a malicious version, and compute a new valid hash for their\nversion. The recipient\
+          \ would see a matching hash but receive forged content.\nAuthentication requires digital signatures\
+          \ (hash + private key), not just hashes.\n                    "
+        3: "\nNon-repudiation requires something only the sender could produce - specifically,\na digital\
+          \ signature using their private key. Anyone can compute a hash of any\ndocument. There's nothing\
+          \ in a hash that ties it to a specific sender. Without\ncryptographic proof of origin, the sender\
+          \ can simply deny involvement.\n                    "
+    corporate:
+      title: THE SOFTWARE UPDATE VERIFICATION
+      narrative: "\nThe IT team is deploying a critical software update downloaded from the vendor's\n\
+        website. Per security policy, they verify the SHA-256 hash published on the\nvendor's HTTPS-secured\
+        \ download page.\n\nThe hash matches. The deployment engineer is about to approve installation\
+        \ when\na junior team member asks: \"Wait, what does this hash actually prove? Does it\nprove\
+        \ the software is really from the vendor? Does it mean no malware got added?\"\n\nThe senior engineer\
+        \ pauses. \"Good question. Let's be precise about what hash\nverification tells us and what it\
+        \ doesn't.\"\n\nWhat security property does the matching hash verification provide?\n        \
+        \        "
+      choices:
+      - text: Confidentiality - the file was encrypted during download
+      - text: Integrity - the file was not modified during download
+      - text: Authentication - the file genuinely came from the vendor
+      - text: Non-repudiation - the vendor cannot deny publishing this file
+      success_text: "\nYou explain carefully: \"The matching hash proves INTEGRITY. The file you downloaded\n\
+        is exactly what was on the server when you downloaded it. No bits were corrupted\nor modified\
+        \ in transit.\"\n\nThe junior team member asks: \"But doesn't that prove it's really from the\
+        \ vendor?\"\n\n\"Not quite. Consider: if an attacker compromised the vendor's website, they could\n\
+        replace BOTH the software AND the hash. You'd download malware with a perfectly\nmatching hash.\
+        \ The hash proves the download wasn't modified - not that the source\nis legitimate.\"\n\nThe\
+        \ senior engineer adds: \"For authentication, we'd want the hash signed with the\nvendor's code-signing\
+        \ certificate. That proves the vendor's private key was used -\nsomething only they should possess.\"\
+        \n\n\"And confidentiality?\"\n\n\"Hashes don't encrypt anything. You downloaded the file in the\
+        \ clear over HTTPS -\nbut that's the transport layer, not the hash. The hash is just a fingerprint.\"\
+        \n\nYou have demonstrated understanding of HASH FUNCTIONS AND INTEGRITY.\n                "
+      failure_texts:
+        0: "\nHash functions don't provide confidentiality at all. A hash is a one-way fingerprint\nof\
+          \ data, not encryption. In this case, HTTPS provides transport encryption, but\nthat's separate\
+          \ from the hash. The hash only verifies that what you downloaded\nmatches what was on the server\
+          \ - not that it was encrypted.\n                    "
+        2: "\nA hash alone cannot prove authentication. If an attacker compromised the vendor's\nwebsite,\
+          \ they could post malicious software along with a valid hash of that\nmalware. You'd verify\
+          \ the hash and install compromised software. True authentication\nrequires digital signatures\
+          \ - the hash encrypted with the vendor's private key.\n                    "
+        3: "\nNon-repudiation requires cryptographic proof that only the vendor could produce -\nspecifically,\
+          \ a digital signature using their private key. Anyone can compute a\nhash of any file. The hash\
+          \ itself contains no proof of WHO created or published\nthe file. Only code signing provides\
+          \ non-repudiation.\n                    "
+- id: d3_seal_of_trust
+  domain: 3
+  correct_index: 2
+  xp_reward: 80
+  hp_penalty: 30
+  domain_reference: 'Domain 3: Security Architecture and Engineering - PKI and Certificate Management'
+  failure_text: "\nPKI trust must be properly configured, not bypassed:\n\n- Never train users to ignore\
+    \ certificate warnings - this enables phishing\n- Internal resources should use internal CAs, not\
+    \ public CAs\n- Deploy internal CA root certificates to managed devices through proper channels\n\
+    - Certificate validation should never be disabled - configure trust instead\n\nThe goal is meaningful\
+    \ security warnings that users can actually respond to\ncorrectly, not constant warnings that become\
+    \ background noise.\n        "
+  themes:
+    fantasy:
+      title: THE UNTRUSTED SEAL
+      narrative: "\nA messenger from the Duke's castle arrives with a wax-sealed scroll. The seal\nbears\
+        \ the Duke's sigil, but your ward-scrying crystal flashes a warning:\n\"SEAL AUTHORITY NOT RECOGNIZED.\"\
+        \n\nInvestigation reveals that the Duke recently created his own official seal-making\napparatus\
+        \ - legitimate, but not recognized by the Kingdom's central Seal Authority.\nAll your ward crystals\
+        \ were enchanted to trust only seals verified by the Crown.\n\nThe castle's young squires have\
+        \ been trained to click \"proceed anyway\" whenever\nthe crystals flash warnings - \"they flash\
+        \ all the time,\" they say dismissively.\n\nHow should you resolve this seal validation issue?\n\
+        \                "
+      choices:
+      - text: Train everyone to click 'proceed anyway' - the warnings are annoying
+      - text: Have the Duke purchase his seals from the Crown's Seal Authority
+      - text: Add the Duke's seal authority to your ward crystals' trusted list
+      - text: Disable seal validation entirely for messages from known castles
+      success_text: "\nYou immediately order: \"No one clicks 'proceed anyway' without investigating.\n\
+        That's how forgeries get accepted.\"\n\nThen you contact the Citadel's crystal enchanters. \"\
+        The Duke is an ally using\nlegitimate seals from his own authority. We need to add his seal authority\
+        \ - his\nroot certificate - to our ward crystals' trusted store.\"\n\nWithin hours, the enchantment\
+        \ is updated across all Citadel devices. The Duke's\nseals now validate without warning, while\
+        \ true forgeries still trigger alerts.\n\nThe castle guard captain asks about the 'proceed anyway'\
+        \ habit. You shake your\nhead. \"That trains people to ignore ALL warnings. When a real forgery\
+        \ arrives,\nthey'll click through just as easily. We validate properly, or we don't validate\n\
+        at all - and if we don't validate, we shouldn't pretend we do.\"\n\nYou have demonstrated proper\
+        \ PKI CERTIFICATE TRUST MANAGEMENT.\n                "
+      failure_texts:
+        0: "\nTraining users to ignore security warnings is catastrophically dangerous. They'll\nclick\
+          \ through legitimate threats just as easily as false positives. Every phishing\nattack and forgery\
+          \ becomes easier to execute. The correct solution is to properly\nconfigure trust relationships,\
+          \ not to bypass validation entirely.\n                    "
+        1: "\nFor INTERNAL resources like allied castles, using the Crown's (public CA) seals\nis inappropriate.\
+          \ Public CAs shouldn't issue certificates for internal-only\nresources. The Duke should maintain\
+          \ his own seal authority (internal CA), and\nyour crystals should be configured to trust it.\
+          \ This is proper PKI hierarchy.\n                    "
+        3: "\nDisabling certificate validation removes ALL protection against forgery and\nman-in-the-middle\
+          \ attacks. An enemy could forge the Duke's seal with impunity.\nThe solution is to properly\
+          \ configure trust, not abandon validation. Security\ncontrols should be tuned, not bypassed.\n\
+          \                    "
+    corporate:
+      title: THE CERTIFICATE WARNING EPIDEMIC
+      narrative: "\nHelp desk tickets are flooding in: \"Browser shows certificate warning for the\nHR\
+        \ Portal!\" Investigation reveals the portal uses a certificate from your\norganization's internal\
+        \ Certificate Authority - legitimate, but not in the\ndefault browser trust store.\n\nThe IT director\
+        \ is annoyed. \"Just tell everyone to click 'proceed anyway.'\nIt's an internal site, so it's\
+        \ safe.\"\n\nThe security team lead objects. \"That's training users to ignore certificate\nwarnings\
+        \ everywhere. What happens when they get a phishing email with a link\nto fake-hr-portal.company.evil.com?\"\
+        \n\nYou're asked to recommend the proper solution.\n                "
+      choices:
+      - text: Train users to click 'proceed anyway' for internal sites
+      - text: Purchase a public CA certificate for the internal HR portal
+      - text: Deploy the internal CA's root certificate to all managed devices
+      - text: Disable certificate validation for the corporate network
+      success_text: "\nYou explain the solution: \"We deploy our internal CA's root certificate to all\n\
+        managed devices through group policy. The browser will then trust our internal\nCA, and certificates\
+        \ issued by it will validate without warnings.\"\n\nThe IT director asks about unmanaged devices.\n\
+        \n\"BYOD users either install our root certificate manually, or they use the\ncertificate warning\
+        \ as a reminder they're on an untrusted device accessing\ninternal resources. The warning becomes\
+        \ meaningful rather than noise.\"\n\nThe security lead nods approvingly. \"And this preserves\
+        \ the integrity of\ncertificate warnings. When users DO see a warning, they'll know it matters\
+        \ -\nbecause they don't see them constantly on legitimate sites.\"\n\nYou add: \"Never train users\
+        \ to ignore security warnings. When they become\nmuscle memory, real attacks slip through. Configure\
+        \ trust properly.\"\n\nYou have demonstrated proper PKI CERTIFICATE TRUST MANAGEMENT.\n      \
+        \          "
+      failure_texts:
+        0: "\nTraining users to click through certificate warnings is a security disaster\nwaiting to\
+          \ happen. When a real phishing site shows a warning, conditioned users\nwill click 'proceed'\
+          \ without thinking. This is how credential theft succeeds.\nThe solution is proper trust configuration,\
+          \ not normalized warning fatigue.\n                    "
+        1: "\nPublic CAs shouldn't issue certificates for internal-only resources. This exposes\ninternal\
+          \ infrastructure details in Certificate Transparency logs, may violate\nCA policies, and adds\
+          \ unnecessary cost. Internal resources should use internal\nCAs - you just need to distribute\
+          \ the root certificate to client devices.\n                    "
+        3: "\nDisabling certificate validation removes protection against man-in-the-middle\nattacks entirely.\
+          \ An attacker on the network could impersonate any internal\nservice with impunity. The solution\
+          \ is proper trust configuration - adding\nyour internal CA to the trust store - not abandoning\
+          \ validation.\n                    "
+- id: d3_treaty_signature
+  domain: 3
+  correct_index: 1
+  xp_reward: 80
+  hp_penalty: 30
+  domain_reference: 'Domain 3: Security Architecture and Engineering - Digital Signatures'
+  failure_text: "\nDigital signatures provide authentication, integrity, and non-repudiation:\n\n1. Hash\
+    \ the document (binds signature to exact contents)\n2. Encrypt the hash with the signer's PRIVATE\
+    \ key (only they can create it)\n3. Anyone with the public key can verify (but cannot forge)\n\nKey\
+    \ insight: PUBLIC key encryption = confidentiality (anyone can encrypt, only\nkey holder can decrypt).\
+    \ PRIVATE key encryption = authentication (only key\nholder can create, anyone can verify).\n    \
+    \    "
+  themes:
+    fantasy:
+      title: THE BINDING TREATY
+      narrative: "\nThe peace treaty between the kingdoms must be signed in a way that proves the\nKing's\
+        \ agreement and prevents him from later denying he agreed to the terms.\nThe treaty will be copied\
+        \ and sent to dozens of kingdoms - all must be certain\nthe King actually approved.\n\nThe Royal\
+        \ Cryptographer presents options:\n\n\"We could encrypt the treaty with the King's public key\
+        \ - only he could decrypt\nit. Or we could encrypt it with a symmetric key shared with the receiving\
+        \ kingdom.\nOr we could compute a hash and send it alongside. Or...\"\n\nHe pauses dramatically.\
+        \ \"We could encrypt a hash of the treaty with the King's\nPRIVATE key.\"\n\nWhich approach provides\
+        \ both authenticity and non-repudiation?\n                "
+      choices:
+      - text: Encrypt the treaty with the King's public key
+      - text: Encrypt a hash of the treaty with the King's private key
+      - text: Encrypt the treaty with a symmetric key shared with recipients
+      - text: Compute a hash of the treaty and send it alongside
+      success_text: "\nYou confirm the Cryptographer's suggestion. \"Only the King possesses his private\n\
+        key. If we encrypt a hash of the treaty with that private key, anyone with his\npublic key can\
+        \ verify it - but only the King could have created it.\"\n\nThe Cryptographer nods. \"This is\
+        \ a digital signature. The hash binds the signature\nto this SPECIFIC treaty - change one word,\
+        \ and the hash changes, invalidating\nthe signature. And since only the King has the private key...\"\
+        \n\n\"He cannot deny signing it,\" you conclude. \"Non-repudiation.\"\n\nThe King's chancellor\
+        \ looks concerned. \"What if the King's private seal is stolen?\"\n\n\"Then we have a revocation\
+        \ crisis. But with proper key protection - which is why\nwe use the enchanted seal-ring that never\
+        \ leaves his finger - the signature\nprovides authentication AND non-repudiation. The treaty is\
+        \ bound to the King's\nidentity permanently.\"\n\nYou have demonstrated understanding of DIGITAL\
+        \ SIGNATURES.\n                "
+      failure_texts:
+        0: "\nEncrypting with the King's PUBLIC key provides confidentiality - only the King\ncould decrypt\
+          \ it. But it proves nothing about WHO encrypted it - anyone can use\nthe public key. It provides\
+          \ no authentication or non-repudiation. You want the\nopposite: encrypt with the PRIVATE key\
+          \ so only the King could have done it.\n                    "
+        2: "\nSymmetric encryption cannot provide non-repudiation because BOTH parties share\nthe key.\
+          \ Either party could have encrypted the document. The King could claim\nthe recipient forged\
+          \ it. Only asymmetric cryptography, where the King alone\nholds his private key, provides non-repudiation.\n\
+          \                    "
+        3: "\nA hash alone proves integrity but nothing about WHO created the document.\nAnyone can compute\
+          \ a hash. There's no proof that the King created or approved\nthe treaty. For authentication\
+          \ and non-repudiation, the hash must be SIGNED\nwith the King's private key - creating a digital\
+          \ signature.\n                    "
+    corporate:
+      title: THE CONTRACT SIGNATURE REQUIREMENT
+      narrative: "\nA major contract requires a digital signature that proves the CEO signed it\nand prevents\
+        \ the CEO from later denying the signature. The legal team needs\ncryptographic non-repudiation.\n\
+        \nThe IT security team presents options:\n\n\"We could encrypt the contract with the CEO's public\
+        \ key for confidentiality.\nWe could use a shared symmetric key with the other party. We could\
+        \ compute a\nhash to prove integrity. Or we could encrypt a hash of the contract using the\nCEO's\
+        \ private key...\"\n\nThe legal counsel interrupts: \"I need to explain this in court if challenged.\n\
+        Which option provides proof that our CEO specifically signed this document?\"\n              \
+        \  "
+      choices:
+      - text: Encrypt the contract with the CEO's public key
+      - text: Encrypt a hash of the contract with the CEO's private key
+      - text: Encrypt the contract with a symmetric key shared with the recipient
+      - text: Compute a hash of the contract and send it alongside
+      success_text: "\nYou explain to legal counsel: \"A digital signature is created by hashing the\n\
+        document and encrypting that hash with the CEO's private key. This provides:\"\n\n\"Authentication:\
+        \ Anyone with the CEO's public key can decrypt and verify the\nhash, confirming it was signed\
+        \ by someone holding the private key.\"\n\n\"Integrity: The hash is bound to the exact document\
+        \ contents. Any modification\ninvalidates the signature.\"\n\n\"Non-repudiation: Assuming proper\
+        \ key management, only the CEO has access to\nthe private key. She cannot claim someone else signed\
+        \ it.\"\n\nThe legal counsel nods. \"So in court, we show: here's the signed hash, here's\nthe\
+        \ CEO's public key, the math checks out, and only she could have created it.\"\n\n\"Exactly. This\
+        \ is the cryptographic equivalent of a witnessed signature, but\nmathematically verifiable.\"\n\
+        \nYou have demonstrated understanding of DIGITAL SIGNATURES.\n                "
+      failure_texts:
+        0: "\nEncrypting with the CEO's public key provides confidentiality (only she can\ndecrypt), but\
+          \ offers no proof SHE created the document. Anyone can encrypt\nwith a public key. For non-repudiation,\
+          \ you need the PRIVATE key - something\nonly the CEO possesses - to create proof of authorship.\n\
+          \                    "
+        2: "\nSymmetric encryption fundamentally cannot provide non-repudiation. If both\nparties share\
+          \ the key, either could have created the encrypted document.\nThe CEO could claim the counterparty\
+          \ forged it using the shared key. Only\nasymmetric cryptography with private keys provides non-repudiation.\n\
+          \                    "
+        3: "\nA hash alone proves the document wasn't modified, but anyone can compute a\nhash of any\
+          \ document. There's no proof of who created the hash or approved\nthe document. For non-repudiation,\
+          \ the hash must be encrypted with the CEO's\nprivate key - something only she possesses.\n \
+          \                   "
+- id: d3_castle_design
+  domain: 3
+  correct_index: 1
+  xp_reward: 70
+  hp_penalty: 20
+  domain_reference: 'Domain 3: Security Architecture and Engineering - Physical Security'
+  failure_text: "\nPhysical security uses concentric layers from OUTERMOST to INNERMOST:\n\n1. Perimeter\
+    \ (parking lot, fencing, gates) - controls approach\n2. Building entrance (lobby, reception, badge\
+    \ access) - controls building access\n3. Restricted areas (data hall, secure floors) - limits internal\
+    \ movement\n4. High-security zones (server cages, vaults) - protects most sensitive assets\n\nEach\
+    \ layer requires successfully passing through all previous layers. An\nattacker must defeat every\
+    \ control in sequence to reach the target.\n        "
+  themes:
+    fantasy:
+      title: THE ARCHITECT'S QUESTION
+      narrative: "\nThe Master Architect is designing a new secure fortress for the realm's most\nprecious\
+        \ treasures. She presents her plans, showing concentric rings of security:\n\n\"Visitors first\
+        \ encounter the outer perimeter, then the fortress walls, then\nthe great hall, and finally the\
+        \ vault chamber. But I need to verify: what is\nthe correct order of physical security zones from\
+        \ OUTERMOST to INNERMOST?\"\n\nHer apprentice has scrambled the notes. The zones listed are:\n\
+        - Vault chamber (individual secure cages)\n- Main hall (general controlled area)\n- Fortress entrance\
+        \ (building access point)\n- Outer grounds (perimeter with walls and guards)\n\nWhat is the correct\
+        \ order from outermost to innermost?\n                "
+      choices:
+      - text: Vault chamber - Fortress entrance - Outer grounds - Main hall
+      - text: Outer grounds - Fortress entrance - Main hall - Vault chamber
+      - text: Fortress entrance - Outer grounds - Vault chamber - Main hall
+      - text: Main hall - Vault chamber - Fortress entrance - Outer grounds
+      success_text: "\nYou trace the proper progression on the architect's plans. \"A visitor must pass\n\
+        through each layer in sequence, from outside to inside:\"\n\n\"First, the OUTER GROUNDS - the\
+        \ perimeter. Guards, walls, gates that control\nwho can even approach the fortress.\"\n\n\"Then,\
+        \ the FORTRESS ENTRANCE - the building itself. Additional verification\nbefore entering the structure.\"\
+        \n\n\"Next, the MAIN HALL - the controlled interior space. General access areas\nwhere authorized\
+        \ visitors may conduct business.\"\n\n\"Finally, the VAULT CHAMBER - the innermost sanctum. Individual\
+        \ secure cages\ncontaining the most sensitive treasures, with the highest access controls.\"\n\
+        \nThe Architect nods. \"Each layer requires successfully passing through all\nprevious layers.\
+        \ An intruder must defeat every defense in sequence.\"\n\nYou have demonstrated understanding\
+        \ of PHYSICAL SECURITY LAYERING.\n                "
+      failure_texts:
+        0: "\nThis order is completely inverted - it lists innermost to outermost. Physical\nsecurity\
+          \ uses concentric rings from the perimeter inward: first you must pass\nthe outer perimeter,\
+          \ then building access, then restricted areas, then the\nmost secure inner sanctum. Each layer\
+          \ requires passing all previous layers.\n                    "
+        2: "\nThe fortress entrance cannot come before the outer grounds - you must pass\nthrough the\
+          \ perimeter before reaching the building entrance. Physical security\nzones are concentric:\
+          \ perimeter first, then building access, then interior\nzones, then high-security areas.\n \
+          \                   "
+        3: "\nThis order is reversed. The main hall (interior space) comes AFTER the\nentrance, not before.\
+          \ And the vault is innermost, not second. Physical security\nlayers progress inward: perimeter,\
+          \ building access, general interior, secure\ninterior.\n                    "
+    corporate:
+      title: THE DATA CENTER DESIGN REVIEW
+      narrative: "\nThe facilities team presents their new data center security design for review.\nThey've\
+        \ planned concentric security zones, but want verification they have\nthe layers in the correct\
+        \ order from outermost to innermost:\n\nThe zones listed are:\n- Server cages (individual locked\
+        \ enclosures for servers)\n- Data hall (the main server room floor)\n- Building entrance (lobby,\
+        \ reception, badge access)\n- Parking lot (perimeter fence, gate, guards)\n\n\"We want to ensure\
+        \ someone must pass through each zone in sequence to reach\nthe servers. What's the correct order\
+        \ from the outside in?\"\n                "
+      choices:
+      - text: Server cages - Building entrance - Parking lot - Data hall
+      - text: Parking lot - Building entrance - Data hall - Server cages
+      - text: Building entrance - Parking lot - Server cages - Data hall
+      - text: Data hall - Server cages - Building entrance - Parking lot
+      success_text: "\nYou walk through the correct sequence. \"Think about what a visitor - or an\nattacker\
+        \ - must pass through to reach the servers:\"\n\n\"PARKING LOT first - the outer perimeter. Fencing,\
+        \ gates, security cameras,\nmaybe a guard booth. This controls who can even approach the building.\"\
+        \n\n\"BUILDING ENTRANCE next - lobby, reception, badge readers, mantraps perhaps.\nThis is building\
+        \ access control - proving you're authorized to be in the\nfacility.\"\n\n\"DATA HALL follows\
+        \ - the server room floor itself. Biometric access, escorts\nfor visitors, environmental controls.\
+        \ A restricted zone within the building.\"\n\n\"SERVER CAGES innermost - individual locked enclosures.\
+        \ The specific rack\nor cage containing the most sensitive equipment. Highest access restrictions.\"\
+        \n\nThe facilities manager nods. \"So each layer adds security, and you must\ndefeat all previous\
+        \ layers to reach the next.\"\n\nYou have demonstrated understanding of PHYSICAL SECURITY LAYERING.\n\
+        \                "
+      failure_texts:
+        0: "\nThis order starts with the innermost layer and scrambles the rest. Server cages\nare the\
+          \ INNERMOST protection, not the first. Physical security is concentric:\nperimeter (parking\
+          \ lot) first, then building access, then restricted areas\n(data hall), then high-security zones\
+          \ (server cages).\n                    "
+        2: "\nYou must pass through the parking lot (perimeter) BEFORE reaching the building\nentrance.\
+          \ Physical security zones progress inward: perimeter first, then\nbuilding access, then interior\
+          \ zones. You can't enter a building you can't\napproach.\n                    "
+        3: "\nThis order is completely reversed. Physical security layers from outermost to\ninnermost\
+          \ are: perimeter (parking lot), building access (entrance), restricted\narea (data hall), high-security\
+          \ zone (server cages). Each layer requires\ndefeating all previous layers.\n               \
+          \     "
+- id: d3_scroll_room_fire
+  domain: 3
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 3: Security Architecture and Engineering - Environmental Controls'
+  failure_text: "\nFire suppression for sensitive areas must balance asset protection and personnel safety:\n\
+    \n- Wet pipe (water): Damages electronics and documents; inappropriate for server rooms\n- Dry chemical:\
+    \ Leaves corrosive residue; damages sensitive equipment\n- CO2 flooding: Displaces oxygen; lethal\
+    \ to personnel; for unoccupied spaces only\n- Clean agent (FM-200, Novec): Safe for occupied spaces,\
+    \ no residue, no damage to equipment\n\nFor occupied spaces with sensitive equipment, clean agent\
+    \ suppression is the\nstandard solution.\n        "
+  themes:
+    fantasy:
+      title: THE ARCHIVE FIRE DEBATE
+      narrative: "\nThe new Archive of Infinite Scrolls is being designed, and a fierce debate has\nerupted\
+        \ about fire suppression. The scrolls are irreplaceable, but scribes work\nin the archive day\
+        \ and night.\n\nThe Builder's Guild proposes four options:\n\n\"Water pipes running throughout\
+        \ - proven effective against fires!\"\n\n\"Enchanted gas that smothers flames - no water damage,\
+        \ safe for workers to\nbreathe and evacuate!\"\n\n\"Alchemical powder deployed from the ceiling\
+        \ - instant fire suppression!\"\n\n\"Heavy suffocating mist that displaces all air - fire cannot\
+        \ burn without air!\"\n\nThe Head Librarian is adamant: \"The scrolls cannot be damaged. But our\
+        \ scribes\nmust have time to evacuate safely!\"\n\nWhich suppression system meets both requirements?\n\
+        \                "
+      choices:
+      - text: Water pipes throughout the archive
+      - text: Enchanted gas that smothers flames (clean agent)
+      - text: Alchemical powder from the ceiling (dry chemical)
+      - text: Heavy suffocating mist that displaces all air (CO2 flooding)
+      success_text: "\nYou recommend the enchanted gas system. \"Clean agent suppression - like the\n\
+        modern FM-200 or Novec 1230 - provides everything we need.\"\n\n\"It suppresses fire effectively\
+        \ through chemical interruption of the combustion\nreaction, not by removing oxygen. This means\
+        \ scribes can breathe during\nevacuation. The design concentration allows several minutes for\
+        \ safe egress.\"\n\n\"It leaves no residue - no water damage to scrolls, no corrosive powder coating\n\
+        ancient parchment. After the fire is suppressed, the gas dissipates cleanly.\"\n\nThe Builder's\
+        \ Guild Master nods. \"And the alternatives?\"\n\n\"Water destroys the scrolls as surely as fire.\
+        \ Dry powder leaves corrosive\nresidue that damages delicate materials over time. CO2 flooding\
+        \ displaces\noxygen so completely that anyone trapped would suffocate - it's designed\nfor unoccupied\
+        \ spaces.\"\n\nThe Librarian sighs with relief. \"Then clean agent it is.\"\n\nYou have demonstrated\
+        \ understanding of FIRE SUPPRESSION SYSTEMS for sensitive areas.\n                "
+      failure_texts:
+        0: "\nWater is absolutely inappropriate for archives containing valuable documents.\nWater damage\
+          \ from sprinklers often destroys more than the fire itself. For\ndocument storage, server rooms,\
+          \ and museums, clean agent suppression protects\nassets without causing secondary damage.\n\
+          \                    "
+        2: "\nDry chemical suppression leaves corrosive residue that damages sensitive\nequipment and\
+          \ materials. The powder coats everything and requires extensive\ncleanup. It's inappropriate\
+          \ for data centers, archives, or areas with delicate\nelectronics or documents.\n          \
+          \          "
+        3: "\nCO2 flooding displaces oxygen to suffocate fires - but it also suffocates\npeople. It's\
+          \ only appropriate for normally unoccupied spaces with proper\nwarning systems and evacuation\
+          \ procedures. For occupied spaces like an archive\nwith scribes, clean agent systems (FM-200,\
+          \ Novec) are the correct choice as\nthey allow safe evacuation.\n                    "
+    corporate:
+      title: THE SERVER ROOM SUPPRESSION SELECTION
+      narrative: "\nThe new server room needs fire suppression. The facilities manager presents\nthe options\
+        \ to the decision committee:\n\n\"Wet pipe sprinklers - standard building code, lowest cost, proven\
+        \ effective.\"\n\n\"Clean agent gas system - FM-200 or Novec 1230. More expensive, but no water.\"\
+        \n\n\"Dry chemical system - industrial grade, fast knockdown of fires.\"\n\n\"CO2 flooding system\
+        \ - removes oxygen so fire cannot burn.\"\n\nThe CTO speaks up: \"Whatever we choose, remember\
+        \ that the night operations\nteam works in there 24/7. We can't choose something that kills our\
+        \ employees.\"\n\nThe CFO counters: \"And we can't choose something that destroys $10 million\n\
+        in servers during a false activation.\"\n\nWhich system meets both requirements?\n           \
+        \     "
+      choices:
+      - text: Wet pipe sprinkler system
+      - text: Clean agent gas suppression (FM-200/Novec)
+      - text: Dry chemical extinguisher system
+      - text: CO2 flooding system
+      success_text: "\nYou recommend clean agent gas. \"FM-200 or Novec 1230 provides exactly what\nwe\
+        \ need.\"\n\n\"First, it's safe for occupied spaces at design concentrations. The night\nteam\
+        \ will have time to evacuate, and the gas isn't an asphyxiant like CO2.\nThey can breathe while\
+        \ exiting.\"\n\n\"Second, it leaves no residue. No water damage to servers, no corrosive\npowder\
+        \ coating circuit boards. After activation, the gas dissipates and\nequipment can be powered back\
+        \ on after inspection.\"\n\nThe CFO asks about cost. \"It's more expensive upfront, but consider:\
+        \ one\nwet pipe activation destroys everything. One dry chemical activation\nrequires extensive\
+        \ cleaning and may still cause corrosion damage. CO2\nrequires the room to be completely evacuated\
+        \ before activation - risky\nwith 24/7 operations.\"\n\n\"Clean agent has the highest upfront\
+        \ cost but lowest risk of secondary\ndamage and highest personnel safety.\"\n\nYou have demonstrated\
+        \ understanding of FIRE SUPPRESSION SYSTEMS for data centers.\n                "
+      failure_texts:
+        0: "\nWater and electronics don't mix. A wet pipe sprinkler activation - or worse,\na false activation\
+          \ - would destroy the servers as effectively as fire. Server\nrooms, data centers, and telecom\
+          \ facilities require clean agent suppression\nthat won't cause water damage.\n             \
+          \       "
+        2: "\nDry chemical leaves corrosive residue that damages sensitive electronics.\nThe powder coats\
+          \ everything, gets into equipment, and requires extensive\ncleanup. It can cause more long-term\
+          \ damage than a small fire. Clean agent\nsystems are specifically designed for electronics environments.\n\
+          \                    "
+        3: "\nCO2 systems remove oxygen to suppress fire - but this is lethal to personnel.\nWith 24/7\
+          \ operations, you cannot use a system that kills anyone who doesn't\nevacuate immediately. CO2\
+          \ is for unmanned spaces only. Clean agent systems\n(FM-200, Novec) are safe for occupied spaces\
+          \ while still protecting equipment.\n                    "
+- id: d3_key_vault
+  domain: 3
+  correct_index: 1
+  xp_reward: 85
+  hp_penalty: 30
+  domain_reference: 'Domain 3: Security Architecture and Engineering - Hardware Security'
+  failure_text: "\nHardware Security Modules (HSMs) provide unique protection for cryptographic keys:\n\
+    \n- Keys are generated INSIDE the HSM and never leave\n- All cryptographic operations happen INSIDE\
+    \ the HSM\n- Keys never exist in plaintext in system memory\n- Tamper-resistant hardware provides\
+    \ physical protection\n\nFor compliance requirements like PCI DSS that mandate keys never exist in\n\
+    plaintext outside secure hardware, HSMs are the only compliant solution.\nSoftware encryption always\
+    \ exposes keys in memory during operations.\n        "
+  themes:
+    fantasy:
+      title: THE KEY KEEPER'S DILEMMA
+      narrative: "\nThe Kingdom's payment system for merchant transactions requires protecting the\nmaster\
+        \ encryption keys that secure all gold transfers. The Royal Auditors\nhave decreed: \"The keys\
+        \ must NEVER exist in readable form outside of tamper-proof\nmagical protection.\"\n\nThe Treasurer\
+        \ presents options for storing the master keys:\n\n\"We could lock them in an enchanted database\
+        \ with powerful access wards.\"\n\n\"We could use a Cryptographic Keystone - a magical artifact\
+        \ that holds keys\ninternally and performs all encryption operations within itself, never\nexposing\
+        \ the keys.\"\n\n\"We could inscribe them on protected scrolls locked in a warded vault.\"\n\n\
+        \"We could encrypt them with secondary magic and rotate them monthly.\"\n\nWhich approach satisfies\
+        \ the auditors' requirement?\n                "
+      choices:
+      - text: Store keys in an enchanted database with access controls
+      - text: Use a Cryptographic Keystone (Hardware Security Module)
+      - text: Keep keys on protected scrolls in a physical vault
+      - text: Implement magical encryption with regular key rotation
+      success_text: "\nYou advise using the Cryptographic Keystone. \"This is the only solution that\n\
+        truly keeps keys protected at ALL times.\"\n\n\"A Hardware Security Module - our Keystone - generates\
+        \ keys internally. Stores\nthem internally. Performs all cryptographic operations internally.\
+        \ The keys\nNEVER leave the tamper-resistant boundary, never exist in readable form\nanywhere\
+        \ else.\"\n\nThe Treasurer looks puzzled. \"But the encrypted database also protects them...\"\
+        \n\n\"Until you need to USE them. When encrypting a transaction, the key must be\ndecrypted into\
+        \ memory to perform the operation. For that moment, the key\nexists in plaintext in the server's\
+        \ memory - and could be extracted by an\nattacker with memory access.\"\n\n\"The Keystone does\
+        \ the encryption INSIDE itself. You send it the data, it\nencrypts with the internal key, returns\
+        \ the result. The key never leaves.\"\n\nThe auditors nod approvingly. \"This meets our requirement.\"\
+        \n\nYou have demonstrated understanding of HARDWARE SECURITY MODULES.\n                "
+      failure_texts:
+        0: "\nAn encrypted database protects keys at rest, but not in use. When you need to\nencrypt a\
+          \ transaction, the key must be decrypted and loaded into memory -\ncreating a window where it\
+          \ exists in plaintext. An attacker with memory access\ncould extract it. HSMs keep keys protected\
+          \ even during operations.\n                    "
+        2: "\nPhysical vault storage protects keys when not in use, but to use a key you must\nretrieve\
+          \ it, load it into memory, perform operations, then secure it again.\nDuring that entire time,\
+          \ the key exists in readable form. HSMs perform operations\ninternally without ever exposing\
+          \ the key.\n                    "
+        3: "\nEncryption-at-rest and key rotation are good practices, but don't solve the\nfundamental\
+          \ problem: at some point, the key must be decrypted to be used. That\nmoment of plaintext exposure\
+          \ is what the auditors are concerned about. Only\nHSMs perform operations without ever exposing\
+          \ keys in plaintext.\n                    "
+    corporate:
+      title: THE PCI COMPLIANCE CHALLENGE
+      narrative: "\nThe payment security audit is next week, and the auditors have flagged a critical\n\
+        requirement: \"Cryptographic keys used for PIN encryption must NEVER exist in\nplaintext outside\
+        \ of tamper-resistant hardware. NEVER.\"\n\nThe IT team presents their options:\n\n\"We currently\
+        \ store keys in an encrypted database with strict access controls.\nWe could strengthen the encryption\
+        \ and add more logging.\"\n\n\"We could implement a Hardware Security Module that performs all\
+        \ cryptographic\noperations internally without exposing keys.\"\n\n\"We could keep keys on encrypted\
+        \ USB drives in a physical safe, retrieved\nonly when needed.\"\n\n\"We could implement software-based\
+        \ key encryption with monthly rotation.\"\n\nThe CISO looks grim. \"If we fail this requirement,\
+        \ we lose our ability to\nprocess payments. Which option actually satisfies the auditors?\"\n\
+        \                "
+      choices:
+      - text: Strengthen database encryption with better access controls
+      - text: Deploy a Hardware Security Module for all key operations
+      - text: Keep keys on encrypted USB drives in a physical safe
+      - text: Implement software encryption with monthly rotation
+      success_text: "\nYou recommend the HSM. \"There's only one way to satisfy 'NEVER in plaintext\n\
+        outside tamper-resistant hardware' - use tamper-resistant hardware.\"\n\n\"An HSM generates keys\
+        \ inside itself. They're stored inside. When we need to\nencrypt a PIN, we send the PIN to the\
+        \ HSM, it encrypts using the internal\nkey, and returns the encrypted result. The key NEVER leaves\
+        \ the HSM boundary.\"\n\nThe IT lead asks: \"What about the encrypted database approach?\"\n\n\
+        \"When the application needs to encrypt something, it decrypts the key from\nthe database, loads\
+        \ it into memory, performs the operation, then erases it.\nFor that period - even if it's milliseconds\
+        \ - the key exists in plaintext\nin memory. An attacker with memory access or a core dump could\
+        \ extract it.\"\n\n\"USB drives in a safe?\"\n\n\"Same problem. You have to load the key into\
+        \ memory to use it.\"\n\n\"The HSM is the only solution where keys are NEVER exposed.\"\n\nYou\
+        \ have demonstrated understanding of HARDWARE SECURITY MODULES.\n                "
+      failure_texts:
+        0: "\nDatabase encryption protects keys at rest but not in use. When performing\ncryptographic\
+          \ operations, the key must be decrypted into system memory. Even\nbriefly, it exists in plaintext\
+          \ and could be extracted through memory analysis.\nPCI DSS requires keys NEVER exist in plaintext\
+          \ outside secure hardware - only\nHSMs meet this requirement.\n                    "
+        2: "\nPhysical security for key storage doesn't address the operational problem.\nWhen you retrieve\
+          \ the USB drive and load the key for use, it exists in plaintext\nin memory. PCI DSS explicitly\
+          \ requires keys never exist in plaintext outside\ntamper-resistant hardware - including during\
+          \ operations. Only HSMs perform\noperations internally.\n                    "
+        3: "\nSoftware encryption and rotation improve security but don't satisfy the\nrequirement. At\
+          \ some point, the key must be in plaintext memory to perform\noperations. No amount of software\
+          \ security changes this fundamental issue.\nOnly hardware security modules keep keys permanently\
+          \ protected, even during\ncryptographic operations.\n                    "
+- id: d3_ancient_spell
+  domain: 3
+  correct_index: 0
+  xp_reward: 90
+  hp_penalty: 35
+  domain_reference: 'Domain 3: Security Architecture and Engineering - Vulnerability Mitigation'
+  failure_text: "\nBuffer overflow mitigations at the OS level:\n\n- ASLR (Address Space Layout Randomization):\
+    \ Randomizes memory addresses, making\n  it difficult for attackers to predict where to redirect execution\n\
+    - DEP (Data Execution Prevention): Marks memory as non-executable, preventing\n  injected code from\
+    \ running even if written to memory\n\nTogether, these make exploitation significantly harder even\
+    \ when the underlying\nvulnerability cannot be patched. Other controls (IDS, WAF, AV) may detect\n\
+    attacks but don't prevent exploitation if bypassed.\n        "
+  themes:
+    fantasy:
+      title: THE CORRUPTED SPELLBOOK
+      narrative: "\nThe ancient spell compiler - used for generations to create magical artifacts -\n\
+        has a fatal flaw. Malicious input can overflow the rune buffer, allowing\nattackers to inject\
+        \ their own spell commands into the compiler's execution.\n\nComplete rewriting of the ancient\
+        \ compiler is impossible - generations of\nspells depend on its exact quirks. The Archmage asks\
+        \ what protective\nenchantments can be layered around it to mitigate the vulnerability.\n\n\"\
+        We have several options,\" the Security Enchanter explains:\n\n\"Scrying wards that detect unusual\
+        \ behavior - but cannot stop attacks in progress.\"\n\n\"Input purification at the castle gates\
+        \ - but many attack vectors bypass the gates.\"\n\n\"Memory randomization so attackers cannot\
+        \ predict where to inject, plus\nexecution barriers on memory regions containing data.\"\n\n\"\
+        Isolation wards around the compiler - limit damage but don't prevent the attack.\"\n\nWhich combination\
+        \ best mitigates the buffer overflow vulnerability?\n                "
+      choices:
+      - text: Address Space Layout Randomization (ASLR) + Data Execution Prevention (DEP)
+      - text: Intrusion Detection System (IDS) + Web Application Firewall (WAF)
+      - text: Input validation at the network tier + Database encryption
+      - text: Network segmentation + Endpoint antivirus
+      success_text: "\nYou recommend the combination of memory randomization and execution barriers.\n\
+        \"ASLR and DEP work together to make buffer overflows much harder to exploit,\neven when we can't\
+        \ fix the underlying vulnerability.\"\n\n\"ASLR - Address Space Layout Randomization - shuffles\
+        \ where code and data are\nloaded in memory. An attacker crafting an overflow doesn't know where\
+        \ to point\ntheir injected code. They might guess, but with randomization, they'll almost\ncertainly\
+        \ guess wrong.\"\n\n\"DEP - Data Execution Prevention - marks data memory regions as non-executable.\n\
+        Even if an attacker successfully overflows the buffer and injects code, the\nprocessor refuses\
+        \ to execute it. The data stack isn't for code.\"\n\nThe Security Enchanter nods. \"Together,\
+        \ they don't patch the hole, but they\nmake it nearly impossible to exploit. The attacker can't\
+        \ find their target,\nand can't execute their payload if they somehow do.\"\n\nYou have demonstrated\
+        \ understanding of BUFFER OVERFLOW MITIGATIONS.\n                "
+      failure_texts:
+        0: "\nIDS and WAF may detect some attack patterns, but they don't prevent exploitation\nif an\
+          \ attack gets through. They're detective and preventive at the network layer,\nbut buffer overflows\
+          \ happen at the host layer. If an attacker bypasses the WAF\nsignature, the vulnerable application\
+          \ is still exploitable.\n                    "
+        2: "\nInput validation at the web tier helps with web-based attacks but doesn't\nprotect against\
+          \ all buffer overflow vectors. And database encryption has\nnothing to do with buffer overflows\
+          \ - it protects data at rest, not in-memory\ncode execution. These are unrelated to the vulnerability.\n\
+          \                    "
+        3: "\nNetwork segmentation limits lateral movement AFTER a compromise, and antivirus\nmay catch\
+          \ known malware, but neither prevents buffer overflow exploitation.\nThe attack happens before\
+          \ segmentation helps, and custom exploit code won't\nmatch antivirus signatures. ASLR + DEP\
+          \ directly address the overflow mechanics.\n                    "
+    corporate:
+      title: THE LEGACY APPLICATION CRISIS
+      narrative: "\nA critical legacy application has a known buffer overflow vulnerability, but\nthe\
+        \ vendor is defunct and source code was never provided. Rewriting is impossible\nin the short\
+        \ term - the business cannot function without this application.\n\nThe security team needs to\
+        \ implement compensating controls while long-term\nreplacement is planned. The options:\n\n\"\
+        Deploy IDS and WAF to detect and block attack signatures.\"\n\n\"Implement ASLR and DEP through\
+        \ operating system settings.\"\n\n\"Add input validation at the application gateway and encrypt\
+        \ the database.\"\n\n\"Segment the network and deploy enhanced antivirus.\"\n\nThe CISO asks:\
+        \ \"Which option most directly mitigates the buffer overflow risk?\"\n                "
+      choices:
+      - text: ASLR (Address Space Layout Randomization) + DEP (Data Execution Prevention)
+      - text: IDS (Intrusion Detection) + WAF (Web Application Firewall)
+      - text: Input validation + Database encryption
+      - text: Network segmentation + Endpoint antivirus
+      success_text: "\nYou explain the recommendation: \"ASLR and DEP are the most direct mitigations\n\
+        for buffer overflow vulnerabilities, even without application changes.\"\n\n\"ASLR randomizes\
+        \ where the application and libraries are loaded in memory.\nBuffer overflow exploits need to\
+        \ know WHERE to redirect execution. With\nrandomization, they're shooting in the dark - most attempts\
+        \ will crash the\napp harmlessly rather than executing malicious code.\"\n\n\"DEP marks memory\
+        \ regions as either executable OR writable, not both. Even if\nan attacker successfully overwrites\
+        \ a return pointer, the injected shellcode\nsits in a data region that won't execute. The processor\
+        \ refuses to run it.\"\n\nThe team lead asks about the other options.\n\n\"IDS/WAF might catch\
+        \ known attack patterns but miss variants. Input validation\nhelps but may have bypasses. Network\
+        \ segmentation limits damage AFTER compromise.\nAV misses custom exploits. Only ASLR + DEP address\
+        \ the vulnerability mechanics\ndirectly.\"\n\nYou have demonstrated understanding of BUFFER OVERFLOW\
+        \ MITIGATIONS.\n                "
+      failure_texts:
+        0: "\nIDS and WAF can detect known attack patterns, but they operate at the network\nlayer and\
+          \ can be bypassed. They don't prevent exploitation if an attacker\ncrafts an unrecognized payload.\
+          \ For buffer overflows, you need host-level\nprotections that make exploitation mechanically\
+          \ difficult: ASLR and DEP.\n                    "
+        2: "\nInput validation may prevent some attack vectors but not all - buffer overflows\ncan occur\
+          \ through many input paths. And database encryption is completely\nunrelated to buffer overflow\
+          \ protection - it protects data at rest, not\nin-memory code execution. These don't address\
+          \ the core vulnerability.\n                    "
+        3: "\nNetwork segmentation limits the blast radius AFTER an attacker gains code\nexecution - it\
+          \ doesn't prevent the initial exploit. Antivirus relies on\nsignatures that custom exploit code\
+          \ won't match. Neither directly addresses\nthe buffer overflow mechanics. ASLR + DEP make exploitation\
+          \ difficult at\nthe host level.\n                    "
+- id: d3_cloud_castle
+  domain: 3
+  correct_index: 2
+  xp_reward: 80
+  hp_penalty: 25
+  domain_reference: 'Domain 3: Security Architecture and Engineering - Cloud Security'
+  failure_text: "\nCloud Shared Responsibility Model for IaaS:\n\nProvider (security OF the cloud):\n\
+    - Physical security\n- Network infrastructure\n- Hypervisor/virtualization\n\nCustomer (security IN\
+    \ the cloud):\n- Operating systems\n- Applications\n- Data and encryption\n- Access management\n-\
+    \ Network configuration (security groups, NACLs)\n\nIn IaaS, everything from the OS layer up is the\
+    \ customer's responsibility.\nThe provider only handles infrastructure underneath.\n        "
+  themes:
+    fantasy:
+      title: THE FLOATING FORTRESS ACCORD
+      narrative: "\nThe Kingdom has contracted with the Sky Mages to host their war planning\nchambers\
+        \ in a Floating Fortress - a magical cloud platform. The accord\nclearly divides responsibilities.\n\
+        \nThe Sky Mages provide: the physical fortress structure, the levitation\nenchantments, the defensive\
+        \ wards around the platform, and the magical\nconduits connecting fortress sections.\n\nThe Kingdom\
+        \ provides: their own scrying orbs, spell books, warding schemes\nfor their specific chambers,\
+        \ and decisions about what treasures to store there.\n\nA dispute arises: the Kingdom's battle\
+        \ maps were corrupted by a miscast spell.\nThe Kingdom blames the Sky Mages. The Sky Mages say\
+        \ operating the scrying\norbs is the Kingdom's responsibility.\n\nIn this Infrastructure as a\
+        \ Service arrangement, who is responsible for\nthe \"operating systems\" of the scrying orbs?\n\
+        \                "
+      choices:
+      - text: The Sky Mages - they provide all magical infrastructure
+      - text: The Sky Mages - they maintain the levitation enchantments
+      - text: The Kingdom - they are responsible for their own systems and spells
+      - text: Shared equally - both parties maintain everything together
+      success_text: "\nYou clarify the shared responsibility model. \"In an Infrastructure as a Service\n\
+        arrangement - which this Floating Fortress represents - the provider handles\nthe infrastructure\
+        \ layer while the customer handles everything above it.\"\n\n\"The Sky Mages are responsible for:\
+        \ physical fortress security, levitation\nmagic, the platform's structural integrity, and the\
+        \ magical conduits - think\nof these as physical security, hypervisor, and network infrastructure.\"\
+        \n\n\"The Kingdom is responsible for: the scrying orbs themselves, how they're\nconfigured, what\
+        \ spells run on them, and their security settings. These are\nanalogous to operating systems,\
+        \ applications, and data.\"\n\nThe Sky Mage ambassador nods. \"So when the Kingdom's miscast spell\
+        \ corrupted\ntheir battle maps, that was their operating system - their responsibility.\"\n\n\"\
+        Exactly. In IaaS, customers are responsible for OS hardening and patching.\nThe provider only\
+        \ handles the infrastructure 'of' the cloud, not what the\ncustomer runs 'in' the cloud.\"\n\n\
+        You have demonstrated understanding of CLOUD SHARED RESPONSIBILITY.\n                "
+      failure_texts:
+        0: "\nIn IaaS (Infrastructure as a Service), the provider does NOT handle customer\noperating\
+          \ systems. They provide the infrastructure: physical security, network,\nvirtualization. The\
+          \ customer is responsible for everything they deploy ON that\ninfrastructure: OS, applications,\
+          \ configurations, and data.\n                    "
+        1: "\nLevitation enchantments represent hypervisor/virtualization - that IS the\nprovider's responsibility.\
+          \ But operating system management is the customer's\nresponsibility in IaaS. The provider manages\
+          \ the PLATFORM; the customer manages\nwhat runs ON the platform.\n                    "
+        3: "\nCloud shared responsibility is NOT shared equally - it's divided by layer.\nIn IaaS, the\
+          \ provider handles infrastructure (physical, network, virtualization)\nand the customer handles\
+          \ everything above (OS, applications, data). Clear\nboundaries prevent confusion and gaps in\
+          \ security coverage.\n                    "
+    corporate:
+      title: THE CLOUD BLAME GAME
+      narrative: "\nThe company's web application was compromised through an unpatched operating\nsystem\
+        \ vulnerability on their IaaS cloud instances. Customer data was stolen.\n\nThe VP of IT storms\
+        \ into the post-incident meeting. \"This is AWS's fault!\nWe're paying them for cloud services\
+        \ and they let our servers get hacked!\"\n\nThe AWS representative calmly pulls up the shared\
+        \ responsibility model.\n\"In IaaS, we handle security OF the cloud - physical, network, and hypervisor.\n\
+        You handle security IN the cloud - operating systems, applications, and data.\"\n\nThe VP isn't\
+        \ satisfied. \"Then what are we paying you for?\"\n\nYou're asked to clarify: In IaaS, which security\
+        \ control is the CUSTOMER's\nresponsibility?\n                "
+      choices:
+      - text: Physical security of the data center
+      - text: Hypervisor patching and security
+      - text: Operating system hardening and patching
+      - text: Network infrastructure redundancy
+      success_text: "\nYou explain the shared responsibility model. \"Let me walk through what\neach party\
+        \ owns in IaaS.\"\n\n\"AWS handles security OF the cloud: physical data center security - locks,\n\
+        guards, environmental controls. Network infrastructure - switches, routers,\nDDoS protection.\
+        \ Virtualization layer - hypervisor patching and isolation.\"\n\n\"We handle security IN the cloud:\
+        \ operating system selection, hardening, and\npatching. Application deployment and security. Data\
+        \ encryption and access\ncontrols. Network configurations within our VPC.\"\n\nThe VP interjects:\
+        \ \"So the unpatched OS...\"\n\n\"Is entirely our responsibility. We chose to deploy that OS.\
+        \ We chose not to\npatch it. AWS provides the compute instance; we're responsible for what runs\n\
+        on it. This attack succeeded because WE didn't patch - not because AWS failed.\"\n\n\"In IaaS,\
+        \ 'you build it, you secure it' applies to everything above the\nhypervisor layer.\"\n\nYou have\
+        \ demonstrated understanding of CLOUD SHARED RESPONSIBILITY.\n                "
+      failure_texts:
+        0: "\nPhysical security of the data center is ALWAYS the cloud provider's\nresponsibility, regardless\
+          \ of the service model (IaaS, PaaS, or SaaS).\nCustomers cannot access or secure physical infrastructure\
+          \ they don't own.\nThis is fundamental to the shared responsibility model.\n               \
+          \     "
+        1: "\nHypervisor security is the cloud provider's responsibility in IaaS. They manage\nthe virtualization\
+          \ layer that separates customer instances. If a hypervisor\nvulnerability allowed cross-VM attacks,\
+          \ that would be AWS's failure. The\ncustomer's responsibility starts at the operating system\
+          \ layer.\n                    "
+        3: "\nNetwork infrastructure redundancy (physical switches, routers, connectivity)\nis the provider's\
+          \ responsibility. They ensure the infrastructure OF the cloud\nis reliable. Customers manage\
+          \ their network CONFIGURATIONS within that\ninfrastructure - security groups, NACLs, VPC design\
+          \ - but not the underlying\nnetwork hardware.\n                    "
+- id: d3_mirror_realms
+  domain: 3
+  correct_index: 1
+  xp_reward: 85
+  hp_penalty: 30
+  domain_reference: 'Domain 3: Security Architecture and Engineering - Virtualization Security'
+  failure_text: "\nVM Escape (Hypervisor Breakout) occurs when code running in a virtual machine\ncan\
+    \ break through the hypervisor's isolation to:\n- Access other VMs on the same host\n- Access the\
+    \ hypervisor itself\n- Read or modify memory across VM boundaries\n\nThis differs from:\n- Container\
+    \ escape (weaker isolation, shared kernel)\n- Side-channel attacks (indirect information leakage,\
+    \ not direct access)\n- Privilege escalation (higher privileges within the SAME system, not across\
+    \ VMs)\n\nVM escape is catastrophic because it invalidates the entire isolation model.\n        "
+  themes:
+    fantasy:
+      title: THE MIRROR REALM BREACH
+      narrative: "\nThe Citadel uses Mirror Realms - pocket dimensions created and managed by\na powerful\
+        \ Dimension Weaver - to isolate sensitive operations. Each realm\nis supposed to be completely\
+        \ separate from others.\n\nA terrifying report arrives: a demon summoned in one Mirror Realm somehow\n\
+        reached through the dimensional barriers and read the memories of an archmage\nworking in an adjacent\
+        \ realm. The Weaver's isolation magic was supposed to\nprevent any cross-realm interference.\n\
+        \nThe Dimension Weaver is horrified. \"This should be impossible! Each realm\nexists in its own\
+        \ isolated space, managed by my enchantments...\"\n\nWhat type of security breach has occurred?\n\
+        \                "
+      choices:
+      - text: Container escape - the demon broke out of a weaker container boundary
+      - text: VM escape / Hypervisor breakout - the demon bypassed realm isolation
+      - text: Side-channel attack - the demon observed indirect magical resonance
+      - text: Privilege escalation - the demon gained higher permissions within its realm
+      success_text: "\nYou identify the breach type. \"This is a VM escape - what we'd call hypervisor\n\
+        breakout. The demon broke through the fundamental isolation boundary between\nrealms.\"\n\nThe\
+        \ Dimension Weaver looks stricken. \"My isolation enchantments...\"\n\n\"Are analogous to a hypervisor\
+        \ - the magical layer that creates and separates\nthe realms. A VM escape occurs when code running\
+        \ inside a virtual machine\ncan break out to access the hypervisor or other VMs. The demon found\
+        \ a flaw\nin your dimensional boundaries.\"\n\n\"But I maintain those boundaries so carefully!\"\
+        \n\n\"Hypervisor vulnerabilities are rare but catastrophic. They invalidate the\nentire isolation\
+        \ model that virtualization depends on. One compromised realm\ncan now reach ALL realms you manage\
+        \ - the Weaver itself, and every mirror\ndimension it controls.\"\n\n\"We need to find and patch\
+        \ this dimensional flaw immediately.\"\n\nYou have demonstrated understanding of VIRTUALIZATION\
+        \ SECURITY BREACHES.\n                "
+      failure_texts:
+        0: "\nContainer escape involves breaking out of container isolation - a different\nand weaker\
+          \ boundary than VM isolation. Mirror Realms (full pocket dimensions)\nare analogous to full\
+          \ virtual machines, not containers. The breach of realm\nboundaries is VM escape, not container\
+          \ escape.\n                    "
+        2: "\nSide-channel attacks extract information through indirect observation - timing,\npower consumption,\
+          \ electromagnetic emissions. The demon directly accessed\nanother realm's memory, not indirect\
+          \ leakage. This is direct boundary\nviolation (VM escape), not side-channel analysis.\n    \
+          \                "
+        3: "\nPrivilege escalation involves gaining higher permissions within the SAME system.\nThe demon\
+          \ didn't get root access in its own realm - it reached a completely\nseparate realm. Crossing\
+          \ isolation boundaries between VMs is hypervisor\nbreakout, not privilege escalation.\n    \
+          \                "
+    corporate:
+      title: THE VIRTUAL INFRASTRUCTURE NIGHTMARE
+      narrative: "\nA security researcher discloses a terrifying vulnerability: a process running\ninside\
+        \ a virtual machine can read memory from OTHER virtual machines running\non the same hypervisor.\
+        \ The isolation boundary that keeps VMs separate has\nbeen breached.\n\nThe CTO is in crisis mode.\
+        \ \"If one customer VM can read another customer's\nmemory, our entire multi-tenant infrastructure\
+        \ is compromised. What type of\nattack is this?\"\n\nThe security team debates:\n\n\"Could be\
+        \ a container escape...\"\n\"Maybe it's a side-channel attack...\"\n\"I think it's privilege escalation...\"\
+        \n\"No, this is hypervisor breakout...\"\n\nYou're asked to clarify the attack type.\n       \
+        \         "
+      choices:
+      - text: Container escape
+      - text: VM escape / Hypervisor breakout
+      - text: Side-channel attack
+      - text: Privilege escalation
+      success_text: "\nYou confirm the attack classification. \"This is VM escape, also called\nhypervisor\
+        \ breakout. The fundamental isolation boundary between virtual\nmachines has been compromised.\"\
+        \n\nThe CTO asks for clarification. \"How is this different from the other attack\ntypes?\"\n\n\
+        \"Container escape breaks out of container isolation - but containers share\nthe host kernel.\
+        \ VMs have stronger isolation through the hypervisor.\"\n\n\"Side-channel attacks extract information\
+        \ indirectly - through timing, cache\nbehavior, power analysis. This is DIRECT memory access across\
+        \ VM boundaries.\"\n\n\"Privilege escalation gains higher permissions within a single system.\
+        \ This\ncrosses system boundaries entirely.\"\n\n\"VM escape is the worst-case scenario for virtualized\
+        \ infrastructure. The\nhypervisor is the security boundary - if code inside a VM can reach outside\n\
+        it, every VM on that host is compromised. The attacker can read memory from\nany VM, potentially\
+        \ including the hypervisor itself.\"\n\nYou have demonstrated understanding of VIRTUALIZATION\
+        \ SECURITY BREACHES.\n                "
+      failure_texts:
+        0: "\nContainer escape breaks container isolation, which is weaker than VM isolation.\nContainers\
+          \ share the host kernel; VMs have separate kernels and are isolated\nby a hypervisor. The vulnerability\
+          \ described breaches HYPERVISOR isolation\nbetween full VMs, not container boundaries.\n   \
+          \                 "
+        2: "\nSide-channel attacks extract secrets through indirect observation: timing\ndifferences,\
+          \ cache behavior, power consumption. The vulnerability described\nallows DIRECT memory reads\
+          \ across VM boundaries - that's not a side channel,\nit's a direct breach of the isolation boundary.\n\
+          \                    "
+        3: "\nPrivilege escalation gains higher privileges within a SINGLE system - like\ngaining root\
+          \ access from a regular user. This vulnerability allows reading\nmemory from DIFFERENT VMs -\
+          \ it crosses system boundaries, not permission\nlevels. That's VM escape, not privilege escalation.\n\
+          \                    "
+- id: d3_castle_within
+  domain: 3
+  correct_index: 1
+  xp_reward: 80
+  hp_penalty: 25
+  domain_reference: 'Domain 3: Security Architecture and Engineering - Zero Trust Architecture'
+  failure_text: "\nZero Trust Architecture core principles:\n\n1. Never trust, always verify - no implicit\
+    \ trust based on location\n2. Assume breach - design as if attackers are already inside\n3. Verify\
+    \ explicitly - authenticate and authorize every access request\n4. Least privilege access - grant\
+    \ only what's needed for each request\n5. Verify device health - ensure the connecting device meets\
+    \ security requirements\n\nNetwork location (inside/outside corporate network) grants NOTHING in Zero\
+    \ Trust.\nEvery access is verified the same way regardless of origin.\n        "
+  themes:
+    fantasy:
+      title: THE TRUST ASSUMPTION
+      narrative: "\nThe Citadel's inner halls have traditionally operated on simple principles:\nonce\
+        \ someone passes the outer gates and enters the castle, they're considered\ntrusted and can access\
+        \ most areas freely.\n\nA visiting Security Sage from distant lands shakes his head. \"This is\
+        \ the old\nway. We now know that attackers often breach outer walls and then move freely\nwithin.\
+        \ Your model assumes the walls will never fail.\"\n\nHe proposes a new philosophy: \"Never trust,\
+        \ always verify. Even within your\nwalls, every access request must prove identity and authorization.\
+        \ Location\nwithin the castle should grant nothing automatically.\"\n\nA knight on patrol questions\
+        \ this approach: \"But I'm walking through the\ncastle right now. Surely my presence here means\
+        \ I'm trusted?\"\n\nUnder Zero Trust principles, what should happen when the knight tries to\n\
+        access the armory?\n                "
+      choices:
+      - text: Grant access - he's inside the castle, so he's trusted
+      - text: Verify identity, check authorization, confirm he's a knight before granting access
+      - text: Deny access until a commander approves the request
+      - text: Grant read-only access from within the castle, full access only from the barracks
+      success_text: "\nYou explain the Zero Trust approach. \"The knight's physical presence in the\n\
+        castle proves nothing. An attacker who scaled the walls looks the same\nfrom the inside.\"\n\n\
+        \"Under Zero Trust: every access request requires verification. The armory\ndoor checks the knight's\
+        \ identity - is this actually Sir Aldric? It checks\nhis authorization - is Sir Aldric permitted\
+        \ to access the armory? It might\neven check his 'device health' - is he wearing the enchanted\
+        \ badge that\nconfirms he's on active duty?\"\n\nThe knight looks skeptical. \"That sounds exhausting.\"\
+        \n\n\"It's continuous verification. Your presence inside the network - or the\ncastle - grants\
+        \ you nothing automatically. 'Trust but verify' is replaced\nwith 'never trust, always verify.'\
+        \ Every access, every time.\"\n\nThe Sage nods approvingly. \"This way, even if an attacker breaches\
+        \ your walls,\nthey cannot simply move freely. Every door asks the same questions.\"\n\nYou have\
+        \ demonstrated understanding of ZERO TRUST ARCHITECTURE.\n                "
+      failure_texts:
+        0: "\n\"Inside the castle = trusted\" is exactly the assumption Zero Trust eliminates.\nThis perimeter-based\
+          \ model fails when attackers breach the perimeter (which\nthey inevitably do). Zero Trust says\
+          \ location grants nothing - every access\nmust be verified regardless of where the request originates.\n\
+          \                    "
+        2: "\nManager approval for every access might be part of some authorization schemes,\nbut it's\
+          \ not the core Zero Trust principle. Zero Trust focuses on continuous\nVERIFICATION of identity\
+          \ and authorization, not adding human approval steps.\nThe system should verify automatically,\
+          \ not wait for commander sign-off.\n                    "
+        3: "\nZero Trust doesn't grant different trust levels based on location. \"Read-only\nfrom here,\
+          \ full access from there\" is still a location-based trust model.\nZero Trust eliminates location\
+          \ as a trust factor entirely - verification\nhappens the same way regardless of where you are.\n\
+          \                    "
+    corporate:
+      title: THE ZERO TRUST IMPLEMENTATION
+      narrative: "\nThe security team is implementing Zero Trust architecture. A marketing manager\nis\
+        \ working from her desk in the corporate headquarters and tries to access\na sensitive customer\
+        \ database.\n\nThe legacy system would have granted access automatically - she's on the\ncorporate\
+        \ network, behind the firewall, connected to the trusted LAN.\n\nUnder the new Zero Trust model,\
+        \ what should the system do?\n                "
+      choices:
+      - text: Grant access automatically - she's on the trusted corporate network
+      - text: Require authentication and verify device health before granting access
+      - text: Deny access until her manager approves the specific request
+      - text: Allow read-only access from corporate network, full access from VPN only
+      success_text: "\nYou explain the Zero Trust response. \"Under Zero Trust, network location is\n\
+        irrelevant. Being on the corporate network grants nothing.\"\n\n\"The system should verify her\
+        \ identity - is she actually logged in as herself?\nMulti-factor authentication, not just network\
+        \ presence. It should check her\nauthorization - is this role permitted to access customer data?\
+        \ It should\nverify device posture - is her laptop compliant, patched, not compromised?\"\n\n\
+        The IT director asks: \"So what's the point of our network perimeter?\"\n\n\"Defense in depth\
+        \ - but not the only layer. Attackers inside the network\nused to move freely because everything\
+        \ trusted the perimeter. Now, every\nresource verifies every request independently. An attacker\
+        \ who compromises\nthe network still can't access resources they're not authorized for.\"\n\n\"\
+        'Never trust, always verify' applies even - especially - on the corporate\nnetwork. That's where\
+        \ lateral movement happens after a breach.\"\n\nYou have demonstrated understanding of ZERO TRUST\
+        \ ARCHITECTURE.\n                "
+      failure_texts:
+        0: "\n\"Trusted corporate network\" is exactly what Zero Trust eliminates. This\nperimeter-based\
+          \ model assumes network location equals trust. Zero Trust\nsays: network location grants nothing.\
+          \ Every access must be authenticated,\nauthorized, and validated regardless of where it originates.\n\
+          \                    "
+        2: "\nManager approval for every access isn't Zero Trust - it's just adding human\nbottlenecks.\
+          \ Zero Trust focuses on automated, continuous verification of\nidentity, authorization, and\
+          \ device health. The system should verify these\nfactors automatically, not wait for human approval.\n\
+          \                    "
+        3: "\nGranting different access based on network location (LAN vs VPN) is still\nlocation-based\
+          \ trust. Zero Trust eliminates location as a trust factor\nentirely. The same verification should\
+          \ happen whether you're in the office,\nat home on VPN, or in a coffee shop. Location is irrelevant.\n\
+          \                    "
+- id: d3_core_enchantment
+  domain: 3
+  correct_index: 2
+  xp_reward: 85
+  hp_penalty: 30
+  domain_reference: 'Domain 3: Security Architecture and Engineering - Trusted Computing Base'
+  failure_text: "\nTrusted Computing Base (TCB) minimization:\n\nThe TCB includes all hardware, firmware,\
+    \ and software critical to security\nenforcement. Everything in the TCB MUST be correct for security\
+    \ to work.\n\nWhy minimize the TCB?\n- Smaller = easier to verify and audit\n- Fewer components =\
+    \ fewer potential vulnerabilities\n- Less complexity = fewer unexpected interactions\n- Can potentially\
+    \ achieve formal verification for very small TCBs\n\n\"Complexity is the enemy of security\" - A minimal\
+    \ TCB can be thoroughly\nexamined; a large TCB cannot be fully understood.\n        "
+  themes:
+    fantasy:
+      title: THE CORE ENCHANTMENT
+      narrative: "\nThe Grand Architect is designing the most secure magical vault ever conceived.\nShe\
+        \ explains her philosophy: \"The Core Enchantment is the magical foundation\nthat everything else\
+        \ depends on. If the Core is flawed, nothing built upon\nit can be trusted.\"\n\n\"Therefore,\"\
+        \ she continues, \"I am making the Core as SMALL as possible. Every\nenchantment I exclude is\
+        \ one less thing that can go wrong. The Core will\ncontain ONLY what is absolutely essential for\
+        \ security.\"\n\nA young apprentice challenges her: \"But wouldn't a larger, more powerful Core\n\
+        be more secure? More enchantments means more protection!\"\n\nThe Architect asks you to explain\
+        \ why she's correct about minimizing the Core.\n\nWhat is the PRIMARY security reason for minimizing\
+        \ the Trusted Computing Base?\n                "
+      choices:
+      - text: Smaller systems are faster and more efficient
+      - text: Fewer enchantments mean lower licensing costs
+      - text: A smaller TCB is easier to verify, audit, and secure
+      - text: Regulations require minimal magical footprints
+      success_text: "\nYou explain the principle to the apprentice. \"The Trusted Computing Base is\n\
+        everything we must trust to be correct for security to work. Every component\nin the TCB is a\
+        \ potential source of vulnerabilities.\"\n\n\"Consider: if the Core contains 100 enchantments,\
+        \ we must verify ALL 100 are\ncorrect. Each one could hide a flaw that undermines everything.\
+        \ But if the\nCore contains only 10 essential enchantments? We only need to verify 10.\"\n\nThe\
+        \ apprentice persists: \"But more enchantments...\"\n\n\"Create more places for errors. More code\
+        \ means more bugs. More complexity\nmeans more unexpected interactions. The Architect is wise:\
+        \ security comes\nfrom SIMPLICITY, not complexity. A small TCB can be thoroughly examined,\nmathematically\
+        \ verified, and carefully audited. A large TCB is too complex\nto fully understand.\"\n\nThe Architect\
+        \ nods. \"Complexity is the enemy of security. What we don't\ninclude can't betray us.\"\n\nYou\
+        \ have demonstrated understanding of TRUSTED COMPUTING BASE.\n                "
+      failure_texts:
+        0: "\nWhile smaller systems may perform better, that's not the PRIMARY security\nmotivation. A\
+          \ minimal TCB is about reducing the amount of code that must be\ntrusted and verified. Security,\
+          \ not performance, drives TCB minimization.\n                    "
+        1: "\nCost reduction is a possible side benefit, but not the security reason for\nminimizing TCB.\
+          \ The principle is about verification and trustworthiness -\nsmaller systems are easier to examine\
+          \ for flaws, not cheaper to license.\n                    "
+        3: "\nNo regulation mandates a specific TCB size. Minimizing the TCB is a security\ndesign principle,\
+          \ not a compliance requirement. The goal is reducing\ncomplexity to enable thorough verification\
+          \ - a security benefit, not a\nregulatory checkbox.\n                    "
+    corporate:
+      title: THE SECURITY ARCHITECTURE DEBATE
+      narrative: "\nThe security architecture team is debating the design of a new high-security\nsystem.\
+        \ The lead architect argues for minimizing the Trusted Computing Base.\n\n\"I want the TCB as\
+        \ small as possible. Every component we add to the security-\ncritical foundation is another potential\
+        \ vulnerability.\"\n\nA junior architect pushes back: \"But more security features mean more\n\
+        protection! Let's include everything - full antivirus, endpoint detection,\nbehavioral analytics,\
+        \ threat intelligence, the works!\"\n\nThe lead architect sighs. \"You're missing the point. Why\
+        \ do we want a\nMINIMAL TCB?\"\n                "
+      choices:
+      - text: Smaller systems have better performance
+      - text: Fewer components mean lower licensing costs
+      - text: A smaller TCB is easier to verify, audit, and secure
+      - text: Regulatory compliance requires minimal system footprint
+      success_text: "\nYou explain the principle. \"The TCB includes ALL components that must be\ntrusted\
+        \ for security to work. Every line of code in the TCB could contain\na vulnerability that undermines\
+        \ the entire system.\"\n\n\"With a small TCB, we can actually VERIFY it works correctly. We can\
+        \ audit\nevery function. We can potentially even mathematically prove certain\nproperties. Security\
+        \ researchers can examine it thoroughly.\"\n\nThe junior architect asks: \"But don't we want all\
+        \ those security features?\"\n\n\"Defense in depth is valuable, but the TCB itself should be minimal.\
+        \ The\nantivirus and EDR run ON TOP of the TCB - they're applications. The TCB is\nthe kernel,\
+        \ the security reference monitor, the components that MUST be\ncorrect or nothing works.\"\n\n\
+        \"Think of it this way: we can't fully verify a million lines of code.\nBut we might be able to\
+        \ verify ten thousand. A smaller TCB means higher\nconfidence in the components we MUST trust.\"\
+        \n\nYou have demonstrated understanding of TRUSTED COMPUTING BASE.\n                "
+      failure_texts:
+        0: "\nPerformance benefits from a smaller system are real but secondary. The PRIMARY\nsecurity\
+          \ motivation for minimizing TCB is verification - smaller systems can\nbe more thoroughly examined,\
+          \ audited, and proven correct. Security, not speed,\nis the driver.\n                    "
+        1: "\nLicensing costs are a business concern, not a security principle. The reason\nto minimize\
+          \ TCB is that smaller systems are easier to verify and trust.\nEvery line of code in the TCB\
+          \ is a potential vulnerability - fewer lines means\nfewer potential flaws.\n               \
+          \     "
+        3: "\nNo specific regulation mandates TCB size. Minimizing the TCB is a security\ndesign principle\
+          \ based on the idea that simplicity aids security. Smaller\nsystems can be verified; complex\
+          \ systems hide vulnerabilities. This is about\nsecurity engineering, not compliance.\n     \
+          \               "
+- id: d3_artifact_certification
+  domain: 3
+  correct_index: 1
+  xp_reward: 80
+  hp_penalty: 30
+  domain_reference: 'Domain 3: Security Architecture and Engineering - Security Evaluation Criteria'
+  failure_text: "\nCommon Criteria Evaluation Assurance Levels:\n\nEAL1: Functionally Tested\nEAL2: Structurally\
+    \ Tested\nEAL3: Methodically Tested and Checked\nEAL4: Methodically Designed, Tested, and Reviewed\
+    \ (highest for most commercial products)\nEAL5: Semiformally Designed and Tested\nEAL6: Semiformally\
+    \ Verified Design and Tested\nEAL7: Formally Verified Design and Tested (requires mathematical proofs)\n\
+    \nKey understanding: Higher EALs indicate more rigorous development and evaluation\nPROCESSES, not\
+    \ guarantees of zero vulnerabilities.\n        "
+  themes:
+    fantasy:
+      title: THE CERTIFIED ARTIFACT
+      narrative: "\nThe Kingdom requires a magical barrier artifact certified by the Council of\nArcane\
+        \ Evaluation at their fourth level of assurance - EAL4 equivalent.\n\nA merchant presents his\
+        \ barrier with the certification: \"Evaluated Assurance\nLevel 4 - Methodically Designed, Tested,\
+        \ and Reviewed!\"\n\nThe King's advisor is uncertain what this means. \"Does this guarantee the\n\
+        artifact has no flaws? That the Council's master wizards tried to break it?\nThat it was created\
+        \ by pure mathematical proof?\"\n\nYou are asked to explain what EAL4 certification actually indicates.\n\
+        \                "
+      choices:
+      - text: The artifact has no known vulnerabilities or flaws
+      - text: The artifact was methodically designed, tested, and reviewed
+      - text: The artifact passed penetration testing by kingdom hackers
+      - text: All enchantment runes were formally verified mathematically
+      success_text: "\nYou clarify the certification meaning. \"EAL4 means 'Methodically Designed,\nTested,\
+        \ and Reviewed.' It indicates the artifact was created following\nrigorous development practices\
+        \ with thorough documentation and independent\ntesting.\"\n\nThe advisor asks: \"So it's guaranteed\
+        \ secure?\"\n\n\"No certification guarantees zero vulnerabilities. EAL4 means the development\n\
+        PROCESS was sound. Design documentation exists. The artifact was tested\nagainst its claimed security\
+        \ functions. Independent evaluators reviewed the\nevidence. But 'no known flaws' would require\
+        \ infinite testing.\"\n\n\"What about mathematical proof?\"\n\n\"That's EAL7 - the highest level.\
+        \ It requires formal methods and mathematical\nverification. EAL4 is the highest level typically\
+        \ achieved by commercial\nproducts without specialized techniques. It indicates HIGH confidence\
+        \ through\nrigorous process, not absolute certainty through formal proof.\"\n\nYou have demonstrated\
+        \ understanding of COMMON CRITERIA EVALUATION.\n                "
+      failure_texts:
+        0: "\nNo certification level guarantees zero vulnerabilities. EAL4 indicates the\nproduct was\
+          \ developed using sound methodology and tested rigorously, but\nvulnerabilities may still exist.\
+          \ The certification is about development\nPROCESS quality, not a guarantee of perfection.\n\
+          \                    "
+        2: "\nEAL4 involves independent testing by evaluation labs, but not specifically\n\"penetration\
+          \ testing by government hackers.\" The evaluation confirms the\nproduct meets its security claims\
+          \ through methodical testing and review.\nPenetration testing may be part of the process but\
+          \ isn't the defining\ncharacteristic of EAL4.\n                    "
+        3: "\nFormal mathematical verification is EAL7, not EAL4. EAL4 is \"Methodically\nDesigned, Tested,\
+          \ and Reviewed\" - rigorous development practices and\nindependent testing. EAL7 requires semiformal\
+          \ design and formal methods,\nwhich is rarely achieved by commercial products.\n           \
+          \         "
+    corporate:
+      title: THE COMMON CRITERIA REQUIREMENT
+      narrative: "\nThe government contract requires all network security products to have Common\nCriteria\
+        \ certification at Evaluation Assurance Level 4 (EAL4).\n\nThe procurement officer is reviewing\
+        \ a firewall that meets this requirement\nbut wants clarification: \"What exactly does EAL4 tell\
+        \ us about this product?\nDoes it mean it's unhackable? That the NSA tested it? That it was built\
+        \ using\nmathematical proofs?\"\n\nYou're asked to explain what EAL4 certification actually means.\n\
+        \                "
+      choices:
+      - text: The firewall has no known vulnerabilities
+      - text: The product was methodically designed, tested, and reviewed
+      - text: The firewall passed penetration testing by government hackers
+      - text: All source code was formally verified mathematically
+      success_text: "\nYou explain EAL4. \"Evaluation Assurance Level 4 means 'Methodically Designed,\n\
+        Tested, and Reviewed.' This is the highest level commonly achieved by\ncommercial off-the-shelf\
+        \ products.\"\n\n\"What does that mean practically?\"\n\n\"The vendor followed rigorous development\
+        \ practices. Design documentation\nwas created and reviewed. Independent evaluators examined the\
+        \ product and\nverified it meets its claimed security functions. Testing was conducted\nagainst\
+        \ the security target.\"\n\nThe procurement officer asks: \"So no bugs?\"\n\n\"Not guaranteed.\
+        \ EAL4 indicates confidence in the development PROCESS, not\nperfection in the result. Vulnerabilities\
+        \ may still exist. The certification\nmeans: if there are flaws, they're not due to sloppy development.\
+        \ The\nmethodology was sound.\"\n\n\"What would 'no vulnerabilities' require?\"\n\n\"Infinite\
+        \ testing. Even EAL7 - which requires formal mathematical methods -\ndoesn't guarantee zero bugs.\
+        \ But EAL4 gives us high confidence that the\nproduct was developed and tested professionally.\"\
+        \n\nYou have demonstrated understanding of COMMON CRITERIA EVALUATION.\n                "
+      failure_texts:
+        0: "\nNo EAL level guarantees zero vulnerabilities. EAL4 certifies that the\ndevelopment process\
+          \ was methodical and the product was independently tested,\nbut bugs can still exist. The certification\
+          \ is about process rigor, not\na warranty of perfection.\n                    "
+        2: "\nEAL4 evaluation is performed by accredited commercial testing laboratories,\nnot specifically\
+          \ by government penetration testers. The evaluation confirms\nthe product meets its security\
+          \ claims through methodical testing and\ndocumentation review, not through adversarial hacking.\n\
+          \                    "
+        3: "\nFormal mathematical verification is characteristic of EAL7, the highest\nlevel. EAL4 is\
+          \ \"Methodically Designed, Tested, and Reviewed\" - it involves\nrigorous development and independent\
+          \ evaluation but not formal proofs.\nVery few products achieve EAL7 due to the extreme effort\
+          \ required.\n                    "
+- id: d3_timing_oracle
+  domain: 3
+  correct_index: 1
+  xp_reward: 85
+  hp_penalty: 30
+  domain_reference: 'Domain 3: Security Architecture and Engineering - Side-Channel Attacks'
+  failure_text: "\nSide-channel attacks extract secrets through indirect observation of system\nbehavior,\
+    \ rather than direct attack on the cryptographic algorithm:\n\n- Timing: Measure how long operations\
+    \ take\n- Power analysis: Monitor power consumption patterns\n- Electromagnetic: Detect EM emissions\
+    \ during operations\n- Cache: Observe cache access patterns\n- Acoustic: Listen to sounds during computation\n\
+    \nDefense: Constant-time implementations that behave identically regardless\nof secret values. No\
+    \ data-dependent branches, comparisons, or operations.\n        "
+  themes:
+    fantasy:
+      title: THE TIMING ORACLE
+      narrative: "\nThe Citadel's master vault uses a magical lock that requires a spoken password.\n\
+        When the wrong password is spoken, the lock glows red and refuses entry.\n\nA clever thief has\
+        \ discovered something peculiar: when she speaks a password\nthat's ALMOST correct, the lock takes\
+        \ slightly longer to respond than when\nthe password is completely wrong. By measuring these tiny\
+        \ timing differences\nacross thousands of attempts, she's reconstructing the password one rune\
+        \ at a time.\n\nThe Master Locksmith is horrified. \"She never broke the lock! She never used\n\
+        force! She simply... observed how long it took to respond?\"\n\nWhat type of attack is the thief\
+        \ using?\n                "
+      choices:
+      - text: Brute force attack - trying all possible passwords
+      - text: Timing side-channel attack - extracting secrets from response timing
+      - text: SQL injection attack - manipulating the lock's internal commands
+      - text: Man-in-the-middle attack - intercepting communications
+      success_text: "\nYou identify the technique. \"This is a timing side-channel attack. The thief\n\
+        isn't breaking the lock's encryption or guessing passwords randomly - she's\nanalyzing HOW LONG\
+        \ the lock takes to process different inputs.\"\n\nThe Locksmith is fascinated and horrified.\
+        \ \"But why would the timing vary?\"\n\n\"Consider how the lock checks passwords: it compares\
+        \ rune by rune. If the\nfirst rune matches, it checks the second. If it doesn't, it rejects immediately.\n\
+        A password with a correct first rune takes slightly longer to reject than\none that's wrong from\
+        \ the start.\"\n\n\"By measuring thousands of attempts, the thief can determine when the first\n\
+        rune is correct (slightly longer response), then work on the second rune,\nand so on. She extracts\
+        \ the password through timing information that was\nnever meant to be revealed.\"\n\n\"The defense\
+        \ is to make all comparisons take EXACTLY the same time, regardless\nof where they fail - constant-time\
+        \ comparison.\"\n\nYou have demonstrated understanding of SIDE-CHANNEL ATTACKS.\n            \
+        \    "
+      failure_texts:
+        0: "\nBrute force attacks try all possible combinations until one works. This attack\nis much\
+          \ more sophisticated - it uses timing information to narrow down the\npassword intelligently.\
+          \ Instead of trying billions of combinations, the thief\nidentifies correct characters one at\
+          \ a time through timing analysis.\n                    "
+        2: "\nSQL injection manipulates database queries through malicious input. This attack\ndoesn't\
+          \ inject commands or manipulate the lock's logic at all - it simply\nobserves response times\
+          \ and draws conclusions from those observations. The\nlock functions exactly as designed; its\
+          \ timing leaks information.\n                    "
+        3: "\nMan-in-the-middle attacks intercept communications between two parties. This\nattack doesn't\
+          \ intercept anything - the thief interacts directly with the\nlock and measures its response\
+          \ times. No communication channel is being\nintercepted; rather, the lock's own behavior reveals\
+          \ secrets.\n                    "
+    corporate:
+      title: THE CRYPTOGRAPHIC TIMING LEAK
+      narrative: "\nSecurity researchers have published a paper: by measuring precisely how long\na server\
+        \ takes to respond to different inputs, they can reconstruct the\nserver's private encryption\
+        \ key. The attack works because certain cryptographic\noperations take slightly different amounts\
+        \ of time depending on the key bits\nbeing processed.\n\nThe CEO is baffled. \"They didn't hack\
+        \ the server? They didn't steal the key\nfile? They just... measured response times?\"\n\nThe\
+        \ CISO confirms: \"They sent millions of requests, recorded the response\ntimes down to the nanosecond,\
+        \ and performed statistical analysis. The key\nwas extracted entirely from timing variations.\"\
+        \n\nWhat type of attack is this?\n                "
+      choices:
+      - text: Brute force attack
+      - text: Timing side-channel attack
+      - text: SQL injection attack
+      - text: Man-in-the-middle attack
+      success_text: "\nYou explain the attack type. \"This is a timing side-channel attack - one of\n\
+        several types of side-channel attacks that extract secrets through indirect\nobservation rather\
+        \ than direct access.\"\n\n\"The cryptographic implementation leaks information through timing.\
+        \ Perhaps\na modular exponentiation takes longer when a key bit is 1 versus 0. Or a\ncomparison\
+        \ branches differently based on key material. These tiny timing\ndifferences accumulate into statistically\
+        \ detectable patterns.\"\n\nThe CEO asks: \"How do we prevent this?\"\n\n\"Constant-time implementations.\
+        \ The cryptographic code must take exactly the\nsame time regardless of the key value. No early\
+        \ exits when comparisons fail.\nNo data-dependent branches. Every operation completes in the same\
+        \ number of\ncycles regardless of the secret values involved.\"\n\n\"This is why security-critical\
+        \ code is written so carefully. Not just\nfunctionally correct, but constant-time correct. Any\
+        \ timing variation is\na potential information leak.\"\n\nYou have demonstrated understanding\
+        \ of SIDE-CHANNEL ATTACKS.\n                "
+      failure_texts:
+        0: "\nBrute force attacks try all possible keys until finding the correct one.\nThis attack is\
+          \ far more efficient - it uses timing information to deduce\nkey bits directly. Instead of 2^256\
+          \ guesses, the attacker might need only\nmillions of measurements to extract a 256-bit key.\n\
+          \                    "
+        2: "\nSQL injection attacks manipulate database queries through malicious input.\nThis attack\
+          \ doesn't inject anything - it simply observes how long the server\ntakes to respond to normal\
+          \ inputs. The server functions correctly; its timing\nbehavior unintentionally leaks cryptographic\
+          \ secrets.\n                    "
+        3: "\nMan-in-the-middle attacks intercept and potentially modify communications\nbetween parties.\
+          \ This attack works by directly interacting with the server\nand measuring response times -\
+          \ no interception required. The attacker learns\nsecrets from the server's own observable behavior.\n\
+          \                    "
+- id: d3_enchanted_sensors
+  domain: 3
+  correct_index: 0
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 3: Security Architecture and Engineering - IoT Security'
+  failure_text: "\nIoT Security Challenges stem primarily from resource constraints:\n\nLimited Resources\
+    \ Lead To:\n- Weak or no encryption (CPU/power overhead)\n- Default or simple credentials\n- No patching\
+    \ capability\n- Minimal security logging\n- Long deployment lifecycles with no updates\n\nIoT devices\
+    \ are:\n- Cheap (cost-cutting affects security)\n- Connected (network attack surface)\n- Numerous\
+    \ (hard to manage at scale)\n- Persistent (rarely replaced)\n\nCompensating controls: Network segmentation,\
+    \ traffic monitoring, assume breach.\n        "
+  themes:
+    fantasy:
+      title: THE ENCHANTED SENSORS
+      narrative: "\nThe castle is deploying hundreds of small enchanted sensors throughout the\ngrounds\
+        \ - motion detectors, temperature monitors, door sensors. They're\nmarvels of efficient enchantment,\
+        \ requiring only the tiniest spark of\nmagical power.\n\nThe Security Enchanter raises concerns:\
+        \ \"These sensors are wonderfully\nefficient, but their efficiency comes at a cost. They can only\
+        \ hold the\nsimplest enchantments - no room for complex protective wards, strong\nauthentication\
+        \ spells, or self-updating capabilities.\"\n\nA nobleman scoffs. \"They're just sensors! What\
+        \ could go wrong?\"\n\nThe Enchanter turns to you. \"Explain the GREATEST security challenge with\n\
+        these constrained magical devices.\"\n                "
+      choices:
+      - text: They have limited resources for security controls
+      - text: They are more expensive than traditional defenses
+      - text: They cannot connect to castle communication networks
+      - text: They require wired connections to power sources
+      success_text: "\nYou explain the fundamental challenge. \"These sensors have CONSTRAINED RESOURCES.\n\
+        Their small size and low power consumption mean limited space for security.\"\n\n\"Consider what\
+        \ they lack: Not enough magical capacity for strong encryption\nspells - they might use weak or\
+        \ no encryption. No room for complex authentication -\nthey might use default or simple credentials.\
+        \ No ability to update their\nenchantments - vulnerabilities discovered later cannot be patched.\"\
+        \n\nThe nobleman persists: \"But they're inside our walls!\"\n\n\"That's the danger. Once on your\
+        \ network, a compromised sensor becomes an\nattack platform. Limited resources mean limited security\
+        \ means easy\ncompromise. And because they're 'just sensors,' they're often overlooked in\nsecurity\
+        \ monitoring.\"\n\nThe Enchanter adds: \"We must compensate with network segmentation, monitoring,\n\
+        and accepting that these devices cannot secure themselves. Their limitations\nrequire us to secure\
+        \ the ENVIRONMENT around them.\"\n\nYou have demonstrated understanding of IOT SECURITY CHALLENGES.\n\
+        \                "
+      failure_texts:
+        0: "\nIoT devices are typically LESS expensive than traditional computing, not more.\nThis low\
+          \ cost often contributes to the security problem - manufacturers cut\ncorners on security to\
+          \ meet price points. The challenge is limited resources\nfor security controls, not high cost.\n\
+          \                    "
+        2: "\nIoT devices DO connect to networks - that's often their primary purpose.\nThe challenge\
+          \ is that they connect with limited security capabilities.\nTheir network connectivity combined\
+          \ with weak security makes them attractive\ntargets and potential entry points for attackers.\n\
+          \                    "
+        3: "\nMost IoT devices use WIRELESS connectivity, not wired. This wireless nature\nactually adds\
+          \ to security challenges - radio communications can be intercepted,\nand wireless protocols\
+          \ may have their own vulnerabilities. The core challenge\nis limited resources for security\
+          \ controls.\n                    "
+    corporate:
+      title: THE IOT DEPLOYMENT DEBATE
+      narrative: "\nThe facilities team wants to deploy hundreds of IoT sensors throughout the\nmanufacturing\
+        \ floor - temperature monitors, equipment sensors, access trackers.\nThe pitch emphasizes cost\
+        \ savings and operational efficiency.\n\nThe security team raises objections. The CISO asks you\
+        \ to explain the primary\nsecurity concern.\n\n\"These devices are simple, efficient, and cheap.\
+        \ We're getting thousands of\ndata points we never had before. What's the security team so worried\
+        \ about?\"\n\nWhat is the GREATEST security challenge specific to these IoT devices?\n       \
+        \         "
+      choices:
+      - text: IoT devices have limited resources for security controls
+      - text: IoT devices are more expensive than traditional computers
+      - text: IoT sensors cannot connect to corporate networks
+      - text: IoT devices always require wired connections
+      success_text: "\nYou explain the core challenge. \"IoT devices are constrained by design.\nLimited\
+        \ CPU, limited memory, limited power. This efficiency comes at a cost:\nlimited security capabilities.\"\
+        \n\n\"Consider what these constraints mean:\n- Weak or no encryption (processing overhead too\
+        \ high)\n- Default or simple credentials (no interface for complex passwords)\n- No patching capability\
+        \ (limited storage, no update mechanism)\n- Minimal logging (no storage for security events)\n\
+        - Long lifecycles (deployed for years, never updated)\"\n\nThe facilities manager asks: \"But\
+        \ they're on a separate network...\"\n\n\"Network segmentation helps but doesn't eliminate the\
+        \ risk. These devices are\nattack surfaces - entry points that attackers love because they're\
+        \ overlooked.\nA compromised IoT device is a beachhead for lateral movement.\"\n\n\"We need to\
+        \ treat IoT as inherently insecure and compensate with network\ncontrols, monitoring, and assuming\
+        \ they WILL be compromised.\"\n\nYou have demonstrated understanding of IOT SECURITY CHALLENGES.\n\
+        \                "
+      failure_texts:
+        0: "\nIoT devices are typically CHEAP - that's part of the problem. Manufacturers\ncompete on\
+          \ price, often cutting security features to hit price points. The\nchallenge is that their low\
+          \ cost and limited resources mean inadequate\nsecurity controls.\n                    "
+        2: "\nIoT devices absolutely connect to networks - network connectivity is often\ntheir primary\
+          \ purpose. The security concern is that they connect with\nINADEQUATE SECURITY. Their network\
+          \ presence plus weak security makes them\nattractive targets for attackers seeking network access.\n\
+          \                    "
+        3: "\nMost IoT devices use wireless connectivity - WiFi, Zigbee, Z-Wave, cellular.\nWired connections\
+          \ are the exception. The wireless nature adds to security\nchallenges but isn't the primary\
+          \ concern. Limited resources for implementing\nsecurity controls is the fundamental IoT security\
+          \ challenge.\n                    "
+- id: d3_door_failure
+  domain: 3
+  correct_index: 2
+  xp_reward: 80
+  hp_penalty: 25
+  domain_reference: 'Domain 3: Security Architecture and Engineering - Secure Design Principles'
+  failure_text: "\nSecure Design Principles - Fail-Safe vs Fail-Secure:\n\nFAIL-SAFE: System fails to\
+    \ a safe state (usually OPEN)\n- Applied to: Life safety systems, emergency exits, fire doors\n- Rationale:\
+    \ Human life must never be endangered by security controls\n\nFAIL-SECURE: System fails to a secure\
+    \ state (usually LOCKED)\n- Applied to: Asset protection systems, vault doors, server rooms\n- Rationale:\
+    \ Security is maintained even during system failures\n\nBest Practice: Apply both principles appropriately:\n\
+    - Exterior doors / emergency exits: FAIL-SAFE (life safety)\n- Interior high-security areas: FAIL-SECURE\
+    \ (asset protection)\n        "
+  themes:
+    fantasy:
+      title: THE POWER FAILURE PROTOCOL
+      narrative: "\nThe castle's enchanted door system requires a design decision. When the magic\nfails\
+        \ - and someday it will - what should the doors do?\n\nThe Knight Commander argues: \"All doors\
+        \ should remain LOCKED! If magic fails,\nwe must assume an attack. Protect the treasury at all\
+        \ costs!\"\n\nThe Fire Marshall counters: \"All doors should UNLOCK! People must be able to\n\
+        evacuate. Life safety comes first!\"\n\nThe Master Architect proposes a middle ground: \"Perhaps\
+        \ EXTERIOR doors for\nevacuation should unlock for life safety, while INTERIOR secure areas like\n\
+        the treasury remain locked to protect assets?\"\n\nThe King asks for your recommendation on secure\
+        \ door design.\n                "
+      choices:
+      - text: All doors unlock to allow evacuation (all fail-safe)
+      - text: All doors remain locked to protect assets (all fail-secure)
+      - text: Exterior doors unlock for egress; interior secure areas stay locked
+      - text: The system should switch to backup power indefinitely
+      success_text: "\nYou recommend the balanced approach. \"Secure design must consider BOTH life\n\
+        safety AND asset protection. The answer depends on the door's PURPOSE.\"\n\n\"EXTERIOR doors and\
+        \ emergency exits must FAIL-SAFE - unlock during power loss.\nPeople trapped inside a burning\
+        \ building cannot be sacrificed for security.\nLife safety always takes priority over asset protection.\"\
+        \n\n\"INTERIOR secure areas like the treasury should FAIL-SECURE - remain locked.\nPeople are\
+        \ already evacuating through exterior doors. Keeping the vault locked\nprevents opportunistic\
+        \ theft during the chaos of an emergency.\"\n\nThe Knight Commander nods. \"So the principle isn't\
+        \ all-or-nothing?\"\n\n\"Correct. 'Fail-safe' and 'fail-secure' are applied appropriately based\
+        \ on\nwhat each control protects. Exterior = life safety = fail-safe. Interior\nhigh-security\
+        \ = asset protection = fail-secure. The design balances both\nrequirements.\"\n\nYou have demonstrated\
+        \ understanding of FAIL-SAFE vs FAIL-SECURE design.\n                "
+      failure_texts:
+        0: "\nUnlocking ALL doors compromises security of sensitive areas unnecessarily.\nWhile life safety\
+          \ is paramount for egress points, internal high-security\nareas like the treasury don't need\
+          \ to unlock for evacuation - people exit\nthrough exterior doors. Fail-safe for exterior, fail-secure\
+          \ for interior\nsecure areas is the appropriate balance.\n                    "
+        1: "\nLocking ALL doors creates life safety hazards. People must be able to\nevacuate during emergencies.\
+          \ If the power fails during a fire and all doors\nlock, people die. Exterior doors and emergency\
+          \ exits MUST fail-safe (unlock)\nfor egress. Only interior high-security areas should fail-secure.\n\
+          \                    "
+        3: "\nBackup power is a good additional control but doesn't answer the design\nquestion. Backup\
+          \ power eventually fails too. The design must handle COMPLETE\npower loss - and that means defining\
+          \ fail-safe vs fail-secure behavior for\neach door type. You can't rely on backup power forever.\n\
+          \                    "
+    corporate:
+      title: THE ACCESS CONTROL DESIGN DECISION
+      narrative: "\nThe data center is installing a new access control system. A critical design\ndecision:\
+        \ what happens when the system loses power?\n\nThe Facilities Manager wants all doors to unlock:\
+        \ \"Fire code requires egress!\"\n\nThe CISO wants all doors to remain locked: \"Security must\
+        \ be maintained!\"\n\nA senior architect proposes: \"External doors to the building should unlock\n\
+        for life safety. The secure door to the server room should remain locked.\"\n\nThe CTO asks for\
+        \ your security design recommendation.\n                "
+      choices:
+      - text: All doors should unlock to allow evacuation
+      - text: All doors should remain locked to protect assets
+      - text: Exterior doors unlock for egress; interior secure areas remain locked
+      - text: The system should switch to backup power indefinitely
+      success_text: "\nYou explain the balanced design. \"The principle is 'fail-safe' for life\nsafety,\
+        \ 'fail-secure' for asset protection. Apply each where appropriate.\"\n\n\"EXTERIOR doors and\
+        \ emergency exits must FAIL-SAFE. Fire code requires it,\nand more importantly, human life requires\
+        \ it. You cannot trap people inside\na building during an emergency. These doors unlock when power\
+        \ fails.\"\n\n\"INTERIOR high-security areas like the server room should FAIL-SECURE. People\n\
+        evacuate through exterior doors, so the server room staying locked doesn't\ntrap anyone - but\
+        \ it DOES prevent opportunistic access during the confusion\nof an emergency.\"\n\nThe CISO asks:\
+        \ \"So we get both life safety AND security?\"\n\n\"Exactly. The design applies the right principle\
+        \ to each door based on its\npurpose. Life safety doors unlock. Asset protection doors lock. This\
+        \ is\nwhy access control design considers door PURPOSE, not just a global policy.\"\n\nYou have\
+        \ demonstrated understanding of FAIL-SAFE vs FAIL-SECURE design.\n                "
+      failure_texts:
+        0: "\nUnlocking all doors, including the server room, creates unnecessary security\nrisk. People\
+          \ evacuate through exterior doors - the server room doesn't need\nto unlock for egress. Keeping\
+          \ it locked during emergencies prevents\nopportunistic theft when attention is elsewhere. Apply\
+          \ fail-safe only where\nlife safety requires it.\n                    "
+        1: "\nLocking all doors, including exterior exits, violates fire code and\nendangers lives. If\
+          \ power fails during a fire, people die. Life safety\nMUST take priority for egress points.\
+          \ Exterior doors and emergency exits\nmust fail-safe (unlock) while only interior high-security\
+          \ areas fail-secure.\n                    "
+        3: "\nBackup power provides additional resilience but doesn't answer the design\nquestion. All\
+          \ backup power eventually fails - batteries deplete, generators\nrun out of fuel. The system\
+          \ MUST define behavior for complete power loss.\nFail-safe exterior, fail-secure interior is\
+          \ the appropriate design.\n                    "

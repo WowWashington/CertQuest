@@ -1,0 +1,1650 @@
+domain: 5
+domain_name: Identity and Access Management
+scenarios:
+- id: d5_two_keys_gate
+  domain: 5
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 5: Identity and Access Management - Authentication Factors'
+  failure_text: "\nTwo-factor authentication (2FA) requires two different types of authentication\nfactors:\
+    \ something you KNOW (password, PIN), something you HAVE (token, phone),\nor something you ARE (biometric).\
+    \ Using two factors from the same category\n(like two passwords) is NOT two-factor authentication.\
+    \ The strength comes\nfrom requiring different types, so compromising one doesn't compromise both.\n\
+    \        "
+  themes:
+    fantasy:
+      title: THE TWO KEYS OF THE INNER SANCTUM
+      narrative: "\nThe gates to the Inner Sanctum stand before you, guarded by ancient magic and\nolder\
+        \ tradition. The Gatekeeper, a wizened figure whose beard touches the floor,\nregards you with\
+        \ knowing eyes.\n\n\"To enter,\" he intones, \"one must present proof of identity. We require\
+        \ two\nthings: the Passphrase of your House - words known only to you - and the\nEnchanted Sigil\
+        \ that each guardian carries upon their person.\"\n\nHe gestures to the great doors, inscribed\
+        \ with glowing runes. \"Many have tried\nwith false words. Many have tried with stolen sigils.\
+        \ But the combination of\nwhat you KNOW and what you CARRY has protected this sanctum for a thousand\
+        \ years.\"\n\nA young apprentice nearby whispers, \"Is this not excessive? Surely one proof\n\
+        should suffice?\"\n\nThe Gatekeeper turns to you. \"Explain to this youngling: what type of\n\
+        authentication guards our sanctum?\"\n                "
+      choices:
+      - text: Single-factor authentication - one strong proof is all that's needed
+      - text: Two-factor authentication - combining something you know with something you have
+      - text: Biometric authentication - the sigil reads your life force
+      - text: Risk-based authentication - the gate adapts to the threat level
+      success_text: "\nYou nod sagely at the apprentice. \"The Gatekeeper speaks of two-factor\nauthentication.\
+        \ The passphrase is something you KNOW - it exists only in your\nmind. The Enchanted Sigil is\
+        \ something you HAVE - a physical token you carry.\nBy requiring both, we ensure that neither\
+        \ a spy who overhears words nor a thief\nwho steals a sigil alone can breach our sanctum.\"\n\n\
+        The Gatekeeper's eyes crinkle with approval. \"Well spoken. A stolen passphrase\nis useless without\
+        \ the sigil. A stolen sigil is useless without the passphrase.\nThis is the strength of combining\
+        \ different authentication factors.\"\n\nThe great doors swing open, acknowledging your wisdom.\n\
+        \nTWO-FACTOR AUTHENTICATION (2FA) combines two different types of factors,\nproviding stronger\
+        \ security than any single factor alone.\n                "
+      failure_texts:
+        0: "\nThe Gatekeeper shakes his head slowly. \"Single factor? If a spy learns\nyour passphrase,\
+          \ they walk freely into our sanctum. If a thief steals\nyour sigil, the same. We require BOTH\
+          \ precisely because two factors are\nstronger than one. This is the essence of multi-factor\
+          \ authentication.\"\n                    "
+        2: "\n\"Biometrics?\" The Gatekeeper chuckles. \"The sigil reads enchantment, not\nlife force.\
+          \ Biometrics would be something you ARE - a fingerprint, an\niris pattern, the unique pattern\
+          \ of your aura. The sigil is something\nyou HAVE - a physical token. Know the difference between\
+          \ factors.\"\n                    "
+        3: "\n\"Risk-based authentication adapts requirements based on context - location,\ntime, behavior\
+          \ patterns. Our gate does not change its requirements based\non perceived risk. It always demands\
+          \ the same two factors: something\nKNOWN and something CARRIED. Consistency is our strength\
+          \ here.\"\n                    "
+    corporate:
+      title: THE SECURITY TOKEN TRAINING
+      narrative: "\nYou're sitting through the mandatory quarterly security training when Sharon\nfrom\
+        \ HR pauses the video and turns to the room.\n\n\"Okay, before we continue, pop quiz!\" She holds\
+        \ up her phone. \"Our new\nlogin system requires you to enter your password AND a code from your\n\
+        authenticator app. Jenkins in Accounting keeps complaining this is\n'overkill' and 'nobody has\
+        \ time for this.'\"\n\nShe pulls up a slide showing the login screen with both fields. \"For the\n\
+        training record, I need someone to explain what type of authentication\nthis is. Don't all volunteer\
+        \ at once.\"\n\nYour manager nudges you. \"You're the security liaison. This is literally\nyour\
+        \ job.\"\n\nThe room waits expectantly. Even Jenkins stops checking his fantasy\nfootball scores\
+        \ to glare at you.\n                "
+      choices:
+      - text: Single-factor authentication - one strong password should be enough
+      - text: Two-factor authentication - something you know plus something you have
+      - text: Biometric authentication - the app reads your fingerprint
+      - text: Risk-based authentication - it adapts to threat levels
+      success_text: "\n\"This is two-factor authentication,\" you explain. \"The password is\nsomething\
+        \ you KNOW - it's in your head. The authenticator code is\nsomething you HAVE - it requires possession\
+        \ of your phone. Two\ndifferent factor types.\"\n\nYou turn to Jenkins. \"If someone shoulder-surfs\
+        \ your password at the\ncoffee shop, they still can't log in without your phone. If someone\n\
+        steals your phone, they still need your password. That's the point.\"\n\nSharon beams. \"Exactly!\
+        \ Thank you. Moving on - Jenkins, you can put\nyour phone away now.\"\n\nJenkins mutters something\
+        \ about \"security theater\" but you know the\ntruth: TWO-FACTOR AUTHENTICATION with two distinct\
+        \ factor types is\ngenuinely stronger than any single factor, no matter how complex.\n       \
+        \         "
+      failure_texts:
+        0: "\nJenkins actually high-fives you before Sharon cuts in: \"No, no. If we\nonly used a password,\
+          \ one phishing email and someone's in your account.\nThe whole point of the second factor is\
+          \ that compromising one isn't\nenough. This is two-factor authentication, not single-factor.\"\
+          \n                    "
+        2: "\nSharon frowns. \"The authenticator app doesn't read your fingerprint -\nwell, your phone\
+          \ might, but that's separate. The CODE from the app is\nsomething you HAVE because you possess\
+          \ the phone. Biometrics would\nbe something you ARE, like a fingerprint scan. Different factor\
+          \ types.\"\n                    "
+        3: "\n\"Risk-based authentication would change requirements based on context,\"\nSharon explains.\
+          \ \"Like requiring extra verification for unusual locations.\nOur system always requires both\
+          \ password AND code, regardless of risk.\nIt's two-factor authentication - two different factor\
+          \ types, every time.\"\n                    "
+- id: d5_master_key_peril
+  domain: 5
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 5: Identity and Access Management - Single Sign-On Risks'
+  failure_text: "\nSingle Sign-On (SSO) provides tremendous convenience but creates a critical\nsecurity\
+    \ concern: a SINGLE POINT OF COMPROMISE. If an attacker steals SSO\ncredentials or hijacks an SSO\
+    \ session, they gain access to ALL connected\napplications, not just one. This requires compensating\
+    \ controls like strong\nMFA, session monitoring, and robust credential protection.\n        "
+  themes:
+    fantasy:
+      title: THE MASTER KEY'S PERIL
+      narrative: "\nThe Council of Realms has implemented a grand new system: the Master Key.\nWith one\
+        \ enchanted token, authenticated at the Central Gate, a guardian may\nfreely access the Treasury,\
+        \ the Armory, the Scroll Archives, and all\nconnected guildhalls throughout the realm.\n\n\"Such\
+        \ convenience!\" the Trade Minister exclaims. \"No more remembering dozens\nof passphrases! One\
+        \ authentication and our people move freely!\"\n\nBut the Security Council has called this emergency\
+        \ session. The Master of\nShadows speaks grimly: \"We have intercepted intelligence. Enemy agents\
+        \ seek\nto obtain a Master Key. The High Councilor wishes to know the PRIMARY\nsecurity concern\
+        \ this poses.\"\n\nAll eyes turn to you. The High Councilor taps her fingers impatiently.\n\"\
+        Speak plainly. What risk does this unified access create?\"\n                "
+      choices:
+      - text: The Master Key makes accessing the guildhalls slower
+      - text: Compromised credentials grant access to ALL connected locations
+      - text: Guardians must now remember more passphrases than before
+      - text: The Master Key doesn't work with allied kingdoms' gates
+      success_text: "\n\"The peril is clear,\" you address the Council. \"If an enemy agent steals or\n\
+        counterfeits a single Master Key, they gain access not to one guildhall, but\nto ALL connected\
+        \ locations simultaneously. The Treasury, the Armory, the\nArchives - all fall with one compromised\
+        \ credential.\"\n\nThe Master of Shadows nods approvingly. \"Precisely. The convenience that\n\
+        serves our guardians also serves our enemies - should they breach the\nsingle point of authentication.\"\
+        \n\nThe High Councilor leans forward. \"Then our Master Key system requires\nthe strongest possible\
+        \ protections. Multiple factors of authentication.\nConstant vigilance over those tokens. The\
+        \ convenience is worth the risk\nonly if we defend that single point with our utmost effort.\"\
+        \n\nSINGLE SIGN-ON creates a single point of compromise - protect it fiercely.\n             \
+        \   "
+      failure_texts:
+        0: "\nThe Trade Minister snorts. \"Slower? The Master Key is FASTER! One\nauthentication instead\
+          \ of many!\" The High Councilor sighs. \"We are\ndiscussing security risks, not user experience.\
+          \ Think: what happens\nif an enemy obtains a Master Key? They access EVERYTHING. That is\nthe\
+          \ primary concern with unified authentication.\"\n                    "
+        2: "\nThe High Councilor raises an eyebrow. \"More passphrases? The entire\npurpose of the Master\
+          \ Key is to REDUCE the number of credentials.\nOne authentication grants all access. The risk\
+          \ is that compromising\nthat ONE credential compromises EVERYTHING. Think it through.\"\n  \
+          \                  "
+        3: "\n\"Allied kingdoms use their own systems - that is federation, a\nseparate matter,\" the\
+          \ Master of Shadows interjects. \"The PRIMARY\nrisk is internal: if an enemy steals a Master\
+          \ Key, they access\nevery connected location with that single stolen credential.\nOne breach,\
+          \ total access.\"\n                    "
+    corporate:
+      title: THE SSO SECURITY REVIEW
+      narrative: "\nThe IT Director stands before the executive team, presenting the quarterly\nsecurity\
+        \ review. You've been pulled in as the security subject matter expert.\n\n\"Our SSO implementation\
+        \ has been a huge success!\" she announces. \"Users log\nin once and get access to email, Salesforce,\
+        \ the HR system, code repos,\nfinancial systems - everything. Help desk tickets for password resets\
+        \ are\ndown 60%!\"\n\nThe CISO clears his throat. \"That's wonderful for productivity. But for\n\
+        this review, I need the security team's assessment. What is the PRIMARY\nsecurity concern with\
+        \ our SSO implementation?\"\n\nThe CFO checks his watch. The CEO is already on her phone. But\
+        \ the CISO\nstares directly at you, waiting for the security perspective that justifies\nhis budget.\n\
+        \nWhat do you tell them?\n                "
+      choices:
+      - text: SSO makes applications slower to load
+      - text: Compromised credentials grant access to all connected applications
+      - text: SSO requires users to remember more passwords than before
+      - text: SSO doesn't work with our cloud applications
+      success_text: "\n\"The primary security concern,\" you explain, \"is that SSO creates a single\n\
+        point of compromise. If an attacker steals a user's SSO credentials - through\nphishing, malware,\
+        \ or session hijacking - they don't just get access to email.\nThey get access to EVERY application\
+        \ connected to SSO.\"\n\nYou pull up a diagram. \"With separate logins, stealing the HR system\
+        \ password\nonly compromises HR. With SSO, one stolen credential means email, financial\nsystems,\
+        \ code repos, HR - everything falls at once.\"\n\nThe CISO nods. \"Which is why we require MFA\
+        \ for SSO authentication and\nhave invested in session monitoring. The convenience of SSO is worth\
+        \ the\nrisk only with strong compensating controls.\"\n\nThe CEO actually looks up from her phone.\
+        \ \"So the security budget for\nSSO protection is justified.\" \"Absolutely,\" you confirm.\n\
+        \                "
+      failure_texts:
+        0: "\nThe IT Director looks confused. \"Slower? SSO makes things faster - users\naren't constantly\
+          \ re-authenticating!\" The CISO sighs. \"The security\nconcern isn't performance. It's that\
+          \ one compromised credential grants\naccess to EVERYTHING. That's the risk we need to mitigate.\"\
+          \n                    "
+        2: "\nThe CFO actually laughs. \"More passwords? The whole point of SSO is\nONE password for everything!\"\
+          \ The CISO pinches the bridge of his nose.\n\"The concern is that when that ONE password is\
+          \ stolen, the attacker\ngets access to ALL systems. Single point of failure, single point of\n\
+          compromise.\"\n                    "
+        3: "\nThe IT Director waves dismissively. \"All our cloud apps use SAML and\nOIDC - they work\
+          \ fine with SSO.\" The CISO leans forward. \"Focus on\nthe security concern: one compromised\
+          \ account means total access to\neverything. That's what keeps me up at night.\"\n         \
+          \           "
+- id: d5_allied_kingdoms_treaty
+  domain: 5
+  correct_index: 2
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 5: Identity and Access Management - Federated Identity'
+  failure_text: "\nFederated Identity allows users to authenticate with their home organization\n(the\
+    \ Identity Provider) and access partner services (Service Providers)\nthrough trusted assertions/tokens\
+    \ like SAML or OIDC. Actual credentials\nnever leave the home organization - only cryptographically\
+    \ signed assertions\nof identity are shared. This enables secure cross-organization access without\n\
+    duplicating accounts or sharing passwords.\n        "
+  themes:
+    fantasy:
+      title: THE TREATY OF TRUSTED REALMS
+      narrative: "\nThe Ambassador from the Eastern Kingdom arrives with an urgent request.\n\"Our realms\
+        \ have long been allies,\" she begins. \"Our scholars need access\nto your Great Library. Your\
+        \ merchants need access to our trading halls.\nCurrently, each must obtain separate credentials\
+        \ in each realm - it is\ncumbersome and insecure.\"\n\nShe unfurls a proposal scroll. \"We propose\
+        \ a Treaty of Trusted Realms.\nYour people authenticate with YOUR kingdom's credentials, and we\
+        \ accept\nthat authentication through magical trust tokens. Our people do the same\nwhen visiting\
+        \ you. No sharing of actual secrets between our realms.\"\n\nThe Lord Chancellor strokes his beard.\
+        \ \"You mean our Court Wizards vouch\nfor our people's identity, and your realm accepts our word\
+        \ through\nthese... trust tokens?\"\n\n\"Precisely,\" the Ambassador nods. \"What term do your\
+        \ security scholars\nuse for such an arrangement?\"\n                "
+      choices:
+      - text: Share a master password between both kingdoms
+      - text: Create duplicate accounts for users in both realms
+      - text: Implement federated identity using trust tokens (like SAML)
+      - text: Give the Eastern Kingdom access to our identity vaults
+      success_text: "\n\"This is federated identity,\" you explain. \"Each realm maintains its own\nidentity\
+        \ system - its own Court Wizards who verify and vouch for their\npeople. When a scholar from our\
+        \ realm visits the Eastern Kingdom, our\nCourt Wizards issue a trust token - an assertion that\
+        \ says 'We have\nverified this person's identity.'\"\n\nYou continue, \"The Eastern Kingdom's\
+        \ gates accept this token because of\nthe treaty - they TRUST our Court Wizards to do proper verification.\
+        \ The\nactual credentials - our passphrases and secrets - never leave our realm.\nOnly the assertion\
+        \ of identity crosses the border.\"\n\nThe Ambassador smiles. \"In your technical tongue, your\
+        \ realm is the\nIdentity Provider. Our trading halls are the Service Providers. The\ntrust tokens\
+        \ might be called SAML assertions or OIDC tokens. But the\nprinciple is the same: trusted authentication\
+        \ without shared secrets.\"\n\nFEDERATED IDENTITY allows cross-organization authentication through\
+        \ trust.\n                "
+      failure_texts:
+        0: "\nThe Ambassador recoils. \"Share a master password? Between kingdoms?\nIf that password were\
+          \ ever discovered, both realms would fall! No - the\nvery point of federation is that we NEVER\
+          \ share actual credentials.\nOnly assertions of verified identity cross between our realms.\"\
+          \n                    "
+        1: "\nThe Lord Chancellor shakes his head. \"Duplicate accounts in both realms?\nThe administrative\
+          \ burden would be immense! When someone leaves service,\nwe would need to coordinate with the\
+          \ Eastern Kingdom to revoke their\naccess. Federation means we each manage only our own people.\"\
+          \n                    "
+        3: "\nThe Ambassador stands abruptly. \"Access to your identity vaults? What\nmanner of madness\
+          \ is this? We ask for TRUST, not access to your secrets!\nFederation means we trust each other's\
+          \ authentication - not that we\nexpose our internal systems to each other!\"\n             \
+          \       "
+    corporate:
+      title: THE PARTNER PORTAL PROJECT
+      narrative: "\nThe business development team has landed a major partnership, and now\nthey're in\
+        \ your office with \"just a small technical requirement.\"\n\n\"So our employees need to access\
+        \ PartnerCo's supply chain portal,\" the\nBD lead explains. \"And their engineers need to access\
+        \ our API documentation\nsystem. Currently, everyone's creating separate accounts with separate\n\
+        passwords and it's a mess.\"\n\nShe continues, \"PartnerCo's IT team mentioned something called\
+        \ 'federation'?\nThey said their people could use their PartnerCo credentials to access\nour systems,\
+        \ and our people could use our corporate credentials to access\ntheirs. No sharing of actual passwords\
+        \ between companies.\"\n\nYour manager nods. \"Sounds reasonable. Can you explain how this would\n\
+        actually work and what we'd need to implement?\"\n\nThe BD lead waits expectantly. \"I need to\
+        \ tell their IT team we know what\nwe're talking about.\"\n                "
+      choices:
+      - text: Share a master password with PartnerCo's IT team
+      - text: Create duplicate user accounts in each other's systems
+      - text: Implement federated identity using SAML or OIDC
+      - text: Give PartnerCo access to our Active Directory
+      success_text: "\n\"Federated identity using SAML or OIDC is exactly right,\" you confirm.\n\"Here's\
+        \ how it works: we remain the Identity Provider for our employees.\nWhen one of our people accesses\
+        \ PartnerCo's portal, they're redirected\nto our login. They authenticate with us - with their\
+        \ normal corporate\ncredentials that never leave our control.\"\n\nYou sketch a quick diagram.\
+        \ \"We then issue a signed assertion - a\ncryptographic token - that says 'We've verified this\
+        \ is Jane from the\nSecurity team.' PartnerCo's system trusts that assertion because of the\n\
+        federation agreement. They never see Jane's actual password.\"\n\nThe BD lead nods. \"So the same\
+        \ happens in reverse when their people\naccess our systems?\" \"Exactly. Their IT team authenticates\
+        \ their people,\nissues tokens, and our systems trust those tokens. Identity stays\ncontrolled\
+        \ by each organization. Only trusted assertions cross boundaries.\"\n\nFEDERATED IDENTITY enables\
+        \ secure cross-organization access without\nsharing credentials.\n                "
+      failure_texts:
+        0: "\nYour manager stares at you. \"Share a password with another company?\nThat violates about\
+          \ six of our security policies. The whole point of\nfederation is that credentials NEVER leave\
+          \ their home organization.\nWe trust their authentication, not access their passwords.\"\n \
+          \                   "
+        1: "\n\"Duplicate accounts?\" The BD lead frowns. \"So every time someone joins\nor leaves either\
+          \ company, both IT teams need to coordinate? That's not\nscalable. Federation means each company\
+          \ manages only their own identities.\nWe just trust each other's authentication.\"\n       \
+          \             "
+        3: "\n\"Give them access to Active Directory?!\" Your manager nearly spits out\nhis coffee. \"\
+          That's our crown jewels! Federation means we trust their\nauthentication system, and they trust\
+          \ ours. Nobody gets access to each\nother's directory services. Just trust assertions, nothing\
+          \ more.\"\n                    "
+- id: d5_guild_permissions
+  domain: 5
+  correct_index: 2
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 5: Identity and Access Management - Access Control Models (RBAC)'
+  failure_text: "\nRole-Based Access Control (RBAC) assigns permissions to ROLES (like Accountant,\nDeveloper,\
+    \ Manager), and users are assigned to roles. Users inherit all\npermissions associated with their\
+    \ role(s). This simplifies access management\n- instead of tracking individual permissions for each\
+    \ user, administrators\nmanage role definitions and role assignments. When users change jobs, their\n\
+    role changes and permissions update automatically.\n        "
+  themes:
+    fantasy:
+      title: THE GUILD PERMISSIONS QUANDARY
+      narrative: "\nThe Master of the Scribe's Guild approaches you with frustration evident\nin every\
+        \ step. \"A new scribe has joined our ranks! Young Elara, fresh\nfrom the Academy. She should\
+        \ have the same access as every other scribe -\nentry to the Copying Halls, the Ink Stores, the\
+        \ Lesser Archives.\"\n\nHe throws up his hands. \"But every time we get a new scribe, the Master\n\
+        of Keys must individually grant access to each location. It takes days!\nMeanwhile, Elara sits\
+        \ idle. There must be a better way!\"\n\nThe Lord Chamberlain, who oversees the castle's access\
+        \ systems, nods\nthoughtfully. \"We could define a 'Scribe' role with all appropriate\npermissions.\
+        \ When someone is designated a Scribe, they automatically\ninherit all those permissions. When\
+        \ they leave the guild or advance to\nSenior Scribe, their role - and thus their access - changes\
+        \ accordingly.\"\n\nHe turns to you. \"What do your security texts call this approach?\"\n   \
+        \             "
+      choices:
+      - text: Discretionary Access Control - the Guild Master grants access at his discretion
+      - text: Mandatory Access Control - access based on classification labels
+      - text: Role-Based Access Control - permissions assigned to roles, users assigned to roles
+      - text: Rule-Based Access Control - conditional rules based on time or location
+      success_text: "\n\"This is Role-Based Access Control - RBAC,\" you explain. \"Instead of\ngranting\
+        \ individual permissions to each scribe, we define a 'Scribe'\nrole. The role includes: access\
+        \ to Copying Halls, access to Ink Stores,\naccess to Lesser Archives. Any other permissions scribes\
+        \ need.\"\n\nYou continue, \"When Elara joins the guild, we simply assign her to the\nScribe role.\
+        \ She automatically inherits ALL permissions associated with\nthat role. When Marcus advances\
+        \ to Senior Scribe, we change his role -\nhis permissions change automatically.\"\n\nThe Master\
+        \ of Keys looks relieved. \"So I define roles once, and then\nmerely assign people to roles? Instead\
+        \ of tracking hundreds of individual\npermission grants?\"\n\n\"Exactly. And when scribes should\
+        \ no longer access the Ink Stores, we\nchange the role definition - ALL scribes' access updates\
+        \ automatically.\"\n\nRBAC simplifies access management through role assignments.\n          \
+        \      "
+      failure_texts:
+        0: "\n\"That is what we do NOW,\" the Master of Keys sighs. \"The Guild Master\nrequests access\
+          \ for each new member, and I grant it at my discretion,\nlocation by location. DAC requires\
+          \ individual grants by resource owners.\nThe Chamberlain's proposal is different - assign roles,\
+          \ not individual\npermissions.\"\n                    "
+        1: "\nThe Chamberlain shakes his head. \"Mandatory Access Control uses security\nclassifications\
+          \ - Secret, Confidential, Restricted. The system compares\nuser clearance to document classification.\
+          \ We are not discussing labels\nand classifications here, but job functions and roles.\"\n \
+          \                   "
+        3: "\n\"Rule-based access uses conditions,\" the Chamberlain corrects. \"A rule\nmight say 'scribes\
+          \ may access the Copying Halls only during daylight.'\nThat is different from grouping permissions\
+          \ by job function. We want to\nassign access based on ROLE, not based on time or location conditions.\"\
+          \n                    "
+    corporate:
+      title: THE NEW ACCOUNTANT PROBLEM
+      narrative: "\nIt's Monday morning and Maria from HR is at your desk looking frazzled.\n\n\"New hire\
+        \ starts today in Accounting. Sarah Chen. She needs access to\nthe financial systems, the ERP,\
+        \ the expense platform, the budget\ndashboards - basically everything the other accountants have.\"\
+        \n\nShe holds up a thick folder. \"Currently, I have to submit seventeen\nseparate access request\
+        \ tickets. Each one goes to a different system\nowner. Takes two weeks to get someone fully provisioned.\
+        \ It's insane.\"\n\nYour manager walks over. \"Didn't we implement that role-based system\nlast\
+        \ quarter? Where you define 'Accountant' as a role with all the\nstandard permissions, and just\
+        \ assign people to the role?\"\n\nMaria looks hopeful. \"If that's working, I just need to request\
+        \ Sarah\nbe added to the Accountant role and she gets everything automatically?\"\n\nShe turns\
+        \ to you. \"What's this approach called again? I need to use\nthe right term in my email to IT.\"\
+        \n                "
+      choices:
+      - text: Discretionary Access Control - system owners grant access individually
+      - text: Mandatory Access Control - access based on security clearance levels
+      - text: Role-Based Access Control - permissions tied to job roles
+      - text: Rule-Based Access Control - access rules based on conditions
+      success_text: "\n\"Role-Based Access Control - RBAC,\" you confirm. \"Here's how it works:\nIT defines\
+        \ an 'Accountant' role that includes all the permissions\naccountants need. ERP access, financial\
+        \ system access, expense platform,\nbudget dashboards - all bundled into that role.\"\n\nYou pull\
+        \ up the access management portal. \"When Sarah is designated as\nan Accountant, she inherits\
+        \ all permissions from that role automatically.\nNo seventeen separate tickets. One role assignment.\"\
+        \n\nMaria is already typing. \"And when she transfers to Marketing next year,\nwe change her role\
+        \ and her access updates automatically?\"\n\n\"Exactly. The beauty of RBAC is that permissions\
+        \ are managed through\nroles, not individual grants. Change the role definition, everyone with\n\
+        that role is updated. Change someone's role, their permissions change\nto match.\"\n\nMaria heads\
+        \ off happily. RBAC makes access management scalable.\n                "
+      failure_texts:
+        0: "\nMaria sighs. \"That's what we're doing NOW. Each system owner grants\naccess at their discretion.\
+          \ Seventeen tickets, seventeen approvals,\ntwo weeks of waiting. The whole point of roles is\
+          \ to bundle permissions\ntogether so one assignment covers everything.\"\n                 \
+          \   "
+        1: "\nYour manager shakes his head. \"MAC is for classified environments -\nSecret, Top Secret,\
+          \ that kind of thing. Access based on clearance\nlevels and data classification. We're talking\
+          \ about job functions\nhere, not security classifications. Think roles, not labels.\"\n    \
+          \                "
+        3: "\n\"Rule-based would be things like 'access only during business hours'\nor 'access only from\
+          \ the office network,'\" your manager explains.\n\"We're talking about grouping permissions\
+          \ by job function - Accountant,\nDeveloper, Manager. That's role-based, not rule-based.\"\n\
+          \                    "
+- id: d5_emergency_access_request
+  domain: 5
+  correct_index: 2
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 5: Identity and Access Management - Least Privilege and Just-In-Time Access'
+  failure_text: "\nThe Principle of Least Privilege means granting MINIMUM access needed for\nMINIMUM\
+    \ time needed. Just-in-time (JIT) access implements this by providing\nelevated privileges only when\
+    \ required, with automatic revocation after the\nneed passes. This reduces the window of exposure\
+    \ if credentials are compromised\nwhile still enabling legitimate emergency response.\n        "
+  themes:
+    fantasy:
+      title: THE ALCHEMIST'S REQUEST
+      narrative: "\nAldric the Alchemist stands before the Council, his request causing\nmurmurs among\
+        \ the members. \"I petition for permanent access to the\nForbidden Reagent Vault! Last moon, when\
+        \ the plague struck, I needed\ncomponents urgently. The delay in obtaining access cost lives!\"\
+        \n\nHis voice rises with emotion. \"Grant me standing access so I may respond\ninstantly when\
+        \ the next emergency arises!\"\n\nThe Master of Security raises his hand. \"The Forbidden Vault\
+        \ contains\nsubstances that could devastate the kingdom if misused. How many times\nin the past\
+        \ year have you actually needed emergency access?\"\n\nAldric considers. \"Twice. Perhaps thrice.\"\
+        \n\nThe Council turns to you. \"What approach best balances the Alchemist's\nlegitimate need with\
+        \ the security of the realm? He speaks of emergencies,\nyet permanent access seems... excessive.\"\
+        \n                "
+      choices:
+      - text: Grant the permanent access as requested - emergencies require immediate response
+      - text: Deny all access to the Vault - the risk is too great for any alchemist
+      - text: Provide time-limited, just-in-time elevated access when emergencies arise
+      - text: Grant permanent read-only access to view the vault's contents
+      success_text: "\n\"The principle of least privilege guides us here,\" you explain. \"Aldric\nneeds\
+        \ access rarely - perhaps thrice yearly. Granting permanent access\nmeans 362 days of unnecessary\
+        \ risk each year.\"\n\nYou outline the solution: \"Instead, we establish just-in-time access.\n\
+        When an emergency arises, Aldric requests elevated access. A quick\napproval from the Night Watch\
+        \ Captain or the Master of Healers - who\ncan verify the emergency - and access is granted immediately.\
+        \ The access\nautomatically expires after the emergency passes.\"\n\nAldric considers. \"So I\
+        \ get what I need when I need it, but not when I\ndon't?\" \"Precisely. Minimum access, minimum\
+        \ time. If your credentials\nwere ever compromised on an ordinary day, the attacker gains nothing\
+        \ -\nyou have no standing access to compromise.\"\n\nThe Council nods approval. \"Just-in-time\
+        \ access it is. The protection\nof least privilege with the flexibility of emergency response.\"\
+        \n\nLEAST PRIVILEGE means minimum access for minimum time.\n                "
+      failure_texts:
+        0: "\nThe Master of Security shakes his head firmly. \"Permanent access for\na once-per-season\
+          \ need? If Aldric's credentials are ever stolen or\ncoerced, the attacker has unlimited vault\
+          \ access. Least privilege\nmeans providing access only when needed, for only as long as needed.\"\
+          \n                    "
+        1: "\nThe Master of Healers objects. \"Deny all access? Then when the next\nplague strikes, we\
+          \ watch people die while bureaucracy prevents our\nalchemist from obtaining treatments? Least\
+          \ privilege does not mean\nNO privilege - it means the MINIMUM necessary privilege, when necessary.\"\
+          \n                    "
+        3: "\n\"Read-only access to the Forbidden Vault?\" Aldric looks confused.\n\"I need to TAKE the\
+          \ reagents, not merely observe them! And permanent\nread access still provides intelligence\
+          \ to any who compromise my\ncredentials. The right answer is temporary full access when genuinely\n\
+          needed, not permanent partial access.\"\n                    "
+    corporate:
+      title: THE DEVELOPER'S REQUEST
+      narrative: "\nThe senior developer sits across from you in the access review meeting,\nmaking his\
+        \ case with practiced frustration.\n\n\"I need permanent admin access to production. Last month,\
+        \ there was a\ncritical bug at 2 AM. By the time I got emergency access approved, we'd\nlost four\
+        \ hours of uptime. FOUR HOURS. Do you know what that cost us?\"\n\nHe leans forward. \"Just give\
+        \ me standing admin access. I've been here\neight years. I'm trustworthy. I promise I won't touch\
+        \ anything unless\nthere's an actual emergency.\"\n\nYour manager pulls up the access logs. \"\
+        How many times in the past year\nhave you actually needed emergency production access?\"\n\nThe\
+        \ developer thinks. \"Maybe three, four times?\"\n\nYour manager turns to you. \"What's the security-appropriate\
+        \ way to handle\nthis request? The business need is real, but permanent admin access to\nproduction...\"\
+        \n                "
+      choices:
+      - text: Grant permanent admin access - he's trustworthy and emergencies are real
+      - text: Deny all production access - developers shouldn't touch production
+      - text: Implement just-in-time access with time-limited approval workflow
+      - text: Grant permanent read-only admin access as a compromise
+      success_text: "\n\"Just-in-time access with a streamlined approval workflow,\" you recommend.\n\"\
+        Here's why: Dave needs emergency access maybe four times a year. If we\ngive him permanent admin\
+        \ access, we're accepting 361 days of unnecessary\nrisk for 4 days of genuine need.\"\n\nYou pull\
+        \ up the PAM system. \"With just-in-time access, Dave requests\nelevation when there's an actual\
+        \ emergency. An on-call approver - could\nbe the SRE lead or the security duty officer - approves\
+        \ it in minutes.\nHe gets full admin access, it's logged, and it automatically expires\nafter\
+        \ a set period.\"\n\nDave considers. \"So if my credentials get phished tomorrow, the attacker\n\
+        gets... nothing? Because I don't have standing access to production?\"\n\n\"Exactly. And if someone\
+        \ compromises the PAM system, they still need to\njustify and get approval for access. Layers\
+        \ of protection.\"\n\nLEAST PRIVILEGE + JUST-IN-TIME ACCESS = security without impediment.\n \
+        \               "
+      failure_texts:
+        0: "\nYour manager shakes his head. \"Eight years of trust doesn't mean eight\nyears of need.\
+          \ What if Dave's laptop gets stolen? Or he clicks a\nphishing link? Permanent admin access means\
+          \ the attacker gets permanent\nadmin access. Least privilege means minimum access for minimum\
+          \ time.\"\n                    "
+        1: "\n\"No production access at all?\" Dave looks incredulous. \"So when prod\nis down at 2 AM,\
+          \ I just... watch? The SRE team is three people, and\nsometimes I know the code better than\
+          \ they do.\" Least privilege isn't\nzero privilege - it's the minimum needed, when it's needed.\n\
+          \                    "
+        3: "\n\"Read-only admin?\" Dave frowns. \"That doesn't help when I need to\nactually FIX things.\
+          \ And permanent read access still lets an attacker\nsee production data, configuration, secrets\
+          \ - plenty of damage possible.\nThe right answer is full access when genuinely needed, automatically\n\
+          revoked when not.\"\n                    "
+- id: d5_keymaster_audit
+  domain: 5
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 5: Identity and Access Management - Privileged Access Management'
+  failure_text: "\nPrivileged Access Management (PAM) solutions address accountability for\nprivileged\
+    \ users by: 1) Vaulting credentials so admins don't know actual\npasswords, 2) Requiring checkout/check-in\
+    \ for credential use, 3) Recording\nsessions for audit trails, 4) Automatically rotating credentials\
+    \ after use.\nThis provides control and accountability while enabling necessary administrative\nfunctions.\n\
+    \        "
+  themes:
+    fantasy:
+      title: THE KEYMASTER'S DILEMMA
+      narrative: "\nThe Royal Auditors have completed their inspection, and their findings\nare grim.\
+        \ The Chief Auditor spreads parchments across the table.\n\n\"Your Keymasters - those who maintain\
+        \ the kingdom's most critical locks\nand wards - each knows the master passphrases by heart. They\
+        \ use them\ndirectly. There is no record of when or why they access the Royal\nVaults, the Dragon\
+        \ Treasury, or the Seal Archives.\"\n\nShe taps a damning report. \"Last month, fifty gold bars\
+        \ vanished from\nthe Dragon Treasury. Every Keymaster had direct access. No one can\naccount for\
+        \ who entered when. There is no accountability.\"\n\nThe Lord Chamberlain is ashen. \"We trust\
+        \ our Keymasters...\"\n\n\"Trust is not accountability,\" the Auditor replies. \"The Council demands\n\
+        a solution that provides control over privileged access with full\ntracking of who accessed what,\
+        \ when, and why.\"\n                "
+      choices:
+      - text: Require Keymasters to change their passphrases monthly
+      - text: Implement a vault system with credential checkout, session recording, and automatic rotation
+      - text: Share one master passphrase among all Keymasters for simplicity
+      - text: Remove all Keymaster positions - no one should have such access
+      success_text: "\n\"The solution is a Privileged Access Management approach,\" you explain.\n\"The\
+        \ Keymasters will no longer know the master passphrases directly.\nInstead, passphrases are stored\
+        \ in an enchanted vault - a secure\ncredential repository.\"\n\nYou outline the system: \"When\
+        \ a Keymaster needs access, they request it\nfrom the vault. The vault records the request - who,\
+        \ when, why. The\nKeymaster is granted temporary use of the credential, and their entire\nsession\
+        \ is recorded by scrying mirrors. When done, the vault automatically\nchanges the passphrase.\"\
+        \n\nThe Chief Auditor nods. \"So if gold vanishes again, you know exactly\nwhich Keymaster accessed\
+        \ the Treasury, what they did, and when?\"\n\n\"Precisely. Individual accountability through session\
+        \ recording.\nControlled access through the vault. And if a Keymaster leaves service,\nthey take\
+        \ no secrets with them - the vault holds the credentials, not\ntheir memory.\"\n\nPAM provides\
+        \ control, accountability, and credential protection.\n                "
+      failure_texts:
+        0: "\nThe Chief Auditor sighs. \"Monthly passphrase changes? The Keymasters\nwill still know the\
+          \ current passphrase. They can still access vaults\nwithout accountability. Rotation without\
+          \ vaulting solves nothing.\nWe need to control access and record actions, not just change secrets.\"\
+          \n                    "
+        2: "\n\"One shared passphrase?\" The Lord Chamberlain is aghast. \"Then we have\neven LESS accountability!\
+          \ Currently, at least each Keymaster has their\nown credentials. A shared passphrase makes it\
+          \ impossible to distinguish\nwho accessed what. This is the opposite of our requirement.\"\n\
+          \                    "
+        3: "\n\"Remove all Keymasters?\" The Chief Auditor raises an eyebrow. \"Then\nwho maintains the\
+          \ locks? Who responds when the Dragon Treasury needs\nemergency access? Privileged access is\
+          \ necessary - the question is\ncontrolling and auditing that access, not eliminating it entirely.\"\
+          \n                    "
+    corporate:
+      title: THE ADMIN ACCOUNT AUDIT
+      narrative: "\nThe external auditors have flagged a finding and your CISO is not happy.\n\n\"Our\
+        \ system administrators know the root passwords to every critical\nserver by heart,\" she reads\
+        \ from the audit report. \"They access systems\ndirectly using these credentials. There is no\
+        \ record of which admin\naccessed which system, when, or what actions they performed.\"\n\nShe\
+        \ looks up. \"Last quarter, someone made unauthorized configuration\nchanges to the financial\
+        \ database. Every sysadmin had access. We can't\ndetermine who did it because there's no accountability\
+        \ for privileged\naccess.\"\n\nThe IT Director shifts uncomfortably. \"We trust our admins...\"\
+        \n\n\"Trust isn't an audit control,\" the CISO replies. \"We need a solution\nthat provides accountability\
+        \ and control over privileged access. What\ndo you recommend?\"\n                "
+      choices:
+      - text: Require admins to change passwords monthly
+      - text: Implement a PAM solution with credential vaulting and session recording
+      - text: Share one admin account among all administrators for simplicity
+      - text: Remove all administrator accounts from the systems
+      success_text: "\n\"We need a Privileged Access Management solution,\" you explain. \"Here's\nhow\
+        \ it works: admin credentials are stored in a secure vault. Admins\ndon't know the actual passwords\
+        \ - they request access through the PAM\nsystem.\"\n\nYou outline the architecture: \"When an\
+        \ admin needs root access, they\ncheck out the credential from the vault. The PAM system logs\
+        \ who requested\naccess, to which system, with what justification, and when. The admin's\nentire\
+        \ session is recorded. When they're done, the credential is checked\nback in and automatically\
+        \ rotated.\"\n\nThe CISO nods. \"So next time something unauthorized happens, we have a\ncomplete\
+        \ record?\"\n\n\"Video-like session recordings, command logs, who accessed what and when.\nAnd\
+        \ when someone leaves the company, they take nothing with them - the\nvault holds the credentials,\
+        \ and we can rotate them immediately.\"\n\nPAM provides accountability and control over privileged\
+        \ access.\n                "
+      failure_texts:
+        0: "\nThe CISO shakes her head. \"Password rotation doesn't help if admins\nstill know and directly\
+          \ use the credentials. We need to control ACCESS\nand record ACTIONS, not just change passwords\
+          \ monthly. The audit\nfinding is about accountability, not rotation frequency.\"\n         \
+          \           "
+        2: "\n\"A shared admin account?\" The CISO's eyes widen. \"That ELIMINATES\naccountability entirely!\
+          \ 'Someone' made changes becomes 'anyone could\nhave made changes.' This makes the audit finding\
+          \ worse, not better.\nWe need individual accountability, not anonymous shared access.\"\n  \
+          \                  "
+        3: "\n\"Remove all admin accounts?\" The IT Director protests. \"Then who patches\nthe servers?\
+          \ Who responds to incidents? Privileged access is necessary -\nthe question is how to control\
+          \ and audit it, not whether to have it at\nall. Systems don't administer themselves.\"\n   \
+          \                 "
+- id: d5_departing_guardian
+  domain: 5
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 5: Identity and Access Management - Account Lifecycle'
+  failure_text: "\nAccount Lifecycle Management requires that access be terminated when\nemployment ends\
+    \ - ideally on the employee's last day, coordinated with\ntheir physical departure. Premature revocation\
+    \ may prevent completion of\nlegitimate duties. Delayed revocation creates insider threat risk from\n\
+    former employees who retain active credentials. Users should never control\ntheir own access termination.\n\
+    \        "
+  themes:
+    fantasy:
+      title: THE GUARDIAN'S FAREWELL
+      narrative: "\nSir Marcus has served the Citadel faithfully for twenty years, but age\nand weariness\
+        \ have caught up with him. He has announced his retirement\nfrom the Guardian Corps, effective\
+        \ at week's end.\n\nThe Master of Rosters approaches you with the delicate question. \"Sir\nMarcus\
+        \ still holds keys to the Armory, knowledge of patrol passwords,\nand access runes to the Inner\
+        \ Sanctum. When should we revoke these\nprivileges?\"\n\nHe presents several perspectives: \"\
+        Some say immediately upon his\nannouncement - why risk his continued access during his notice\
+        \ period?\nOthers argue we should wait a fortnight after he departs, to ease the\ntransition.\
+        \ Sir Marcus himself suggests we simply leave his access active\n'in case you need me to consult.'\"\
+        \n\nThe Master looks troubled. \"Sir Marcus is honorable, but principles must\nguide our decision,\
+        \ not personal trust. When is the proper time to revoke\na departing guardian's access?\"\n  \
+        \              "
+      choices:
+      - text: Immediately when he announced his retirement
+      - text: On his last day, coordinated with his departure
+      - text: One fortnight after departure, to ensure smooth transition
+      - text: Only when Sir Marcus himself requests deactivation
+      success_text: "\n\"Access should be revoked on Sir Marcus's last day, coordinated with\nhis physical\
+        \ departure,\" you advise. \"The principle is clear: active\nemployees need access to perform\
+        \ their duties. Former employees, no\nmatter how trusted, should not retain access to organizational\
+        \ resources.\"\n\nYou explain the reasoning: \"Revoking immediately upon his announcement\nwould\
+        \ prevent Sir Marcus from completing his final duties and knowledge\ntransfer. But leaving access\
+        \ active after he departs creates risk - even\nif Sir Marcus is honorable, his credentials could\
+        \ be compromised, or\ncircumstances could change.\"\n\nThe Master nods. \"So on the evening of\
+        \ his last day, as he leaves the\nCitadel for the final time, we revoke his access runes and change\
+        \ the\npatrol passwords he knew?\"\n\n\"Precisely. Dignity and security together. He completes\
+        \ his service\nwith full capability, and the moment he is no longer serving, his\naccess ends.\"\
+        \n\nACCOUNT LIFECYCLE: Access ends when employment ends.\n                "
+      failure_texts:
+        0: "\n\"Immediately?\" The Master frowns. \"Sir Marcus has a week of service\nremaining. He must\
+          \ complete knowledge transfer, final patrols, and\nhandover of his responsibilities. Revoking\
+          \ access now prevents him\nfrom doing his job during his legitimate notice period.\"\n     \
+          \               "
+        2: "\n\"A fortnight AFTER departure?\" The Master looks alarmed. \"For two weeks,\na former guardian\
+          \ - no longer bound by oath or oversight - retains\naccess to the Armory and Inner Sanctum?\
+          \ If his credentials were stolen,\nwe would not even know to suspect him. Access must end with\
+          \ employment.\"\n                    "
+        3: "\n\"When HE requests it?\" The Master shakes his head firmly. \"Users should\nnever control\
+          \ their own access termination. Sir Marcus might forget, or\ndecide he 'might need it someday.'\
+          \ Access is an organizational decision\nbased on organizational need, not personal preference.\"\
+          \n                    "
+    corporate:
+      title: THE TWO WEEKS NOTICE
+      narrative: "\nFriday afternoon, and Jennifer from the Security Operations team just\ndropped a resignation\
+        \ letter on her manager's desk. Two weeks notice.\nShe's heading to a competitor.\n\nHR has pinged\
+        \ you for guidance. \"Jennifer has access to the SIEM, the\nvulnerability scanner, incident response\
+        \ procedures, and the threat\nintelligence feeds. When do we revoke her access?\"\n\nThey outline\
+        \ the options they're considering: \"Legal says we COULD\nrevoke immediately and pay out the two\
+        \ weeks. Her manager says she\nneeds to complete knowledge transfer and shouldn't be treated like\
+        \ a\ncriminal. And Jennifer herself suggested we just 'leave things active\nin case you have questions\
+        \ after I leave.'\"\n\nThe HR rep looks at you. \"What's the security-appropriate approach for\n\
+        handling access when someone's leaving?\"\n                "
+      choices:
+      - text: Immediately upon receiving the resignation
+      - text: On her last day, coordinated with her departure
+      - text: One week after she leaves, to help with transition questions
+      - text: Only when Jennifer requests deactivation herself
+      success_text: "\n\"Access should be revoked on Jennifer's last day, coordinated with her\ndeparture\
+        \ from the building,\" you explain. \"The principle is simple:\nemployees need access to do their\
+        \ jobs. The day someone stops being an\nemployee, their access should stop too.\"\n\nYou address\
+        \ the concerns: \"Revoking immediately might be appropriate if\nshe had access to extremely sensitive\
+        \ data or if there were concerns\nabout her conduct. But absent those factors, letting her work\
+        \ her notice\nperiod is reasonable - she's still an employee doing her job.\"\n\nThe HR rep nods.\
+        \ \"And after she leaves?\"\n\n\"Zero access. Doesn't matter how trusted she was or how helpful\
+        \ she\nwants to be. Former employees shouldn't have active credentials. If\nshe's truly needed\
+        \ for questions, she can be brought in as a consultant\nwith explicitly scoped access - but her\
+        \ permanent accounts end with\nher employment.\"\n\nACCOUNT LIFECYCLE requires timely deprovisioning.\n\
+        \                "
+      failure_texts:
+        0: "\n\"Immediately?\" Her manager objects. \"She has two weeks of work to do -\ndocumenting procedures,\
+          \ transitioning responsibilities, closing out\ntickets. She's going to a competitor, yes, but\
+          \ she's still an employee\ntoday. We need her to finish her job before we cut access.\"\n  \
+          \                  "
+        2: "\n\"A week AFTER she leaves?\" The HR rep looks alarmed. \"So a former\nemployee, now working\
+          \ for a competitor, still has access to our SIEM\nand vulnerability data? That's a recipe for\
+          \ data breach. Access ends\nwhen employment ends, period.\"\n                    "
+        3: "\n\"When SHE requests it?\" You shake your head. \"Users don't control\ntheir own access termination.\
+          \ What if she forgets? What if she thinks\n'just in case' is a valid reason? Access decisions\
+          \ are organizational\nresponsibilities, not personal choices.\"\n                    "
+- id: d5_new_recruit_verification
+  domain: 5
+  correct_index: 2
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 5: Identity and Access Management - Identity Proofing'
+  failure_text: "\nIdentity Proofing is the process of verifying a person's identity BEFORE\ncredentials\
+    \ are issued. This might involve document verification, background\nchecks, biometric capture, or\
+    \ in-person verification. It establishes the\nfoundation for trust - without proper identity proofing,\
+    \ you might issue\nvalid credentials to an impostor. Authentication uses credentials later;\nproofing\
+    \ happens before credentials exist.\n        "
+  themes:
+    fantasy:
+      title: THE STRANGER AT THE GATE
+      narrative: "\nA traveler in worn robes approaches the Citadel gates, claiming to be\nSir Aldric\
+        \ of Northmoor, newly assigned to the Guardian Corps. He\npresents a letter of assignment bearing\
+        \ what appears to be the Royal Seal.\n\nThe Gate Captain pulls you aside. \"Before I issue this\
+        \ man guardian\ncredentials - access runes, patrol schedules, armory keys - I need to\nverify\
+        \ he is truly who he claims. A clever impostor with the right\nletter could infiltrate our ranks.\"\
+        \n\nHe outlines the challenge: \"This Sir Aldric claims noble blood and\nmilitary service. His\
+        \ letter looks genuine. But how do we KNOW he is\ntruly Sir Aldric of Northmoor and not an enemy\
+        \ agent with forged\ndocuments?\"\n\nThe traveler waits patiently. \"I understand your caution,\"\
+        \ he says.\n\"In these dangerous times, you must verify before you trust.\"\n\nWhat process is\
+        \ the Gate Captain describing?\n                "
+      choices:
+      - text: Authentication - verifying the traveler's passphrase
+      - text: Authorization - determining what access Sir Aldric should have
+      - text: Identity proofing - verifying the person's identity before issuing credentials
+      - text: Access certification - reviewing Sir Aldric's existing access rights
+      success_text: "\n\"This is identity proofing,\" you explain. \"Before we issue ANY credentials\n\
+        to this traveler, we must verify that he truly is Sir Aldric of Northmoor.\nThis happens BEFORE\
+        \ authentication is even possible - we cannot authenticate\nsomeone who has no credentials yet.\"\
+        \n\nYou outline the process: \"Send a messenger to Northmoor to verify his\nservice record. Have\
+        \ our Court Wizard examine the Royal Seal for\nauthenticity. Compare his face to the sketch in\
+        \ the military rolls.\nOnly when we are confident this person IS Sir Aldric do we issue the\n\
+        credentials that will later be used for authentication.\"\n\nThe Gate Captain nods. \"So identity\
+        \ proofing establishes who someone is.\nAuthentication later verifies they are still that person,\
+        \ using the\ncredentials we issued based on that proofing?\"\n\n\"Exactly. Identity proofing creates\
+        \ the foundation of trust. Without\nproper proofing, you might issue legitimate credentials to\
+        \ an impostor.\"\n\nIDENTITY PROOFING verifies identity BEFORE credentials are issued.\n     \
+        \           "
+      failure_texts:
+        0: "\nThe Gate Captain shakes his head. \"Authentication uses existing credentials\nto verify\
+          \ identity. But this traveler has NO credentials yet - we haven't\nissued them. First, we must\
+          \ verify he is who he claims. That verification\nprocess, before any credential exists, is not\
+          \ authentication.\"\n                    "
+        1: "\n\"Authorization comes later,\" the Gate Captain explains. \"Once we know\nhe IS Sir Aldric,\
+          \ we determine what a knight of his rank should access.\nBut first, we must verify his identity\
+          \ - that he is Sir Aldric at all.\nAuthorization determines what; identity verification determines\
+          \ who.\"\n                    "
+        3: "\n\"Access certification reviews EXISTING access rights,\" the Gate Captain\nnotes. \"Do current\
+          \ guardians still need their current access? But this\ntraveler has no existing access to certify.\
+          \ We must first establish his\nidentity before we can give him anything to later certify.\"\n\
+          \                    "
+    corporate:
+      title: THE HIGH-SECURITY ONBOARDING
+      narrative: "\nThe new Director of Security is scheduled to start next Monday, but\nHR has flagged\
+        \ a concern. \"This position has access to everything -\nsecurity systems, incident reports, vulnerability\
+        \ data, executive\nprotection details. Before we issue any credentials, how do we KNOW\nthis person\
+        \ is really Alexandra Chen, the candidate we hired?\"\n\nThe HR manager outlines the situation.\
+        \ \"She passed interviews, reference\nchecks, and a background check. But someone pointed out\
+        \ that sophisticated\nadversaries have been known to substitute their own agent during the\nonboarding\
+        \ process - especially for high-value security positions.\"\n\nShe continues, \"Before we give\
+        \ this person an employee badge, domain\ncredentials, and access to our most sensitive systems...\
+        \ how do we\nverify she is actually the Alexandra Chen who went through our hiring\nprocess?\"\
+        \n\nYou're asked to design the pre-credential verification process. What\nis this process called?\n\
+        \                "
+      choices:
+      - text: Authentication - verifying her password works
+      - text: Authorization - determining her access levels
+      - text: Identity proofing - verifying the person's identity before issuing credentials
+      - text: Access certification - reviewing her existing access rights
+      success_text: "\n\"This is identity proofing,\" you explain. \"Before we issue ANY credentials\n\
+        to Alexandra - domain account, badge, security system access - we must\nverify that the person\
+        \ standing in front of us is actually Alexandra\nChen, the individual we vetted and hired.\"\n\
+        \nYou outline appropriate proofing measures: \"Government-issued photo ID\nverification. Comparison\
+        \ with interview recordings. Confirmation of\nunique identifiers from her background check. For\
+        \ this level of access,\nwe might even require in-person verification with the hiring manager\n\
+        who interviewed her.\"\n\nThe HR manager nods. \"So identity proofing is what we do BEFORE we\
+        \ issue\ncredentials?\"\n\n\"Exactly. Authentication uses credentials to verify identity later.\
+        \ But\nfirst, we must establish identity to ISSUE those credentials. Without\nproper identity\
+        \ proofing, we might give legitimate credentials to an\nimpostor who would then 'authenticate'\
+        \ successfully every day.\"\n\nIDENTITY PROOFING creates the foundation for all future authentication.\n\
+        \                "
+      failure_texts:
+        0: "\nThe HR manager frowns. \"She doesn't have a password yet - we haven't\ncreated her account.\
+          \ Authentication verifies identity using existing\ncredentials. We need to verify her identity\
+          \ BEFORE we create those\ncredentials. That's a different process.\"\n                    "
+        1: "\n\"Authorization is what she can access once we've verified who she is,\"\nyou correct yourself.\
+          \ \"But first we need to verify she IS who she claims.\nAuthorization determines permissions;\
+          \ this is about establishing identity\nin the first place.\"\n                    "
+        3: "\n\"Access certification reviews EXISTING access,\" the HR manager notes.\n\"Like annual reviews\
+          \ of current employees' permissions. This person\nhas no existing access to certify. We're verifying\
+          \ her identity before\nany access is granted at all.\"\n                    "
+- id: d5_abandoned_scrying_pool
+  domain: 5
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 5: Identity and Access Management - Session Management'
+  failure_text: "\nSession Timeout (also called idle timeout) automatically terminates sessions\nafter\
+    \ a period of inactivity. This reduces the window for unauthorized access\nif a user walks away from\
+    \ an authenticated session. Session timeout is a\ncompensating control for human forgetfulness - users\
+    \ SHOULD lock their screens,\nbut the system protects against situations where they forget.\n    \
+    \    "
+  themes:
+    fantasy:
+      title: THE UNATTENDED SCRYING POOL
+      narrative: "\nThe Master Archivist has raised a concern about the kingdom's magical\nscrying pools\
+        \ - enchanted basins that allow authorized users to access\nsensitive records and communications\
+        \ across the realm.\n\n\"I observed something troubling,\" he reports. \"The Treasury Scribe\n\
+        authenticated to a scrying pool this morning, then was called away to\na meeting. She never properly\
+        \ closed her session. When I passed by an\nhour later, the pool still showed her session - fully\
+        \ active, with\naccess to financial records - completely unattended.\"\n\nHe wrings his hands.\
+        \ \"Anyone could have walked up and accessed those\nrecords as if they were the Treasury Scribe!\
+        \ What security control\nshould govern how long an unattended session remains active?\"\n\nThe\
+        \ question is important. Scrying pools throughout the kingdom face\nthe same risk.\n         \
+        \       "
+      choices:
+      - text: Password complexity requirements - stronger passwords prevent this issue
+      - text: Session timeout / idle timeout - automatically end inactive sessions
+      - text: Multi-factor authentication - require additional factors
+      - text: Account lockout policy - lock out after failed attempts
+      success_text: "\n\"The control you need is session timeout, also called idle timeout,\"\nyou explain.\
+        \ \"After a period of inactivity - say, fifteen minutes with\nno interaction - the scrying pool\
+        \ should automatically terminate the\nsession. The next person who approaches finds the pool sealed,\
+        \ requiring\nfresh authentication.\"\n\nThe Master Archivist nods. \"So even if someone forgets\
+        \ to close their\nsession, the pool closes itself after a period of neglect?\"\n\n\"Exactly. Session\
+        \ timeouts reduce the window for unauthorized access\nif someone walks away from an active session.\
+        \ The more sensitive the\naccess, the shorter the timeout should be. Treasury records might\n\
+        timeout after ten minutes of inactivity. Public records might allow\nthirty.\"\n\nHe makes notes.\
+        \ \"And this complements multi-factor authentication - MFA\nprotects the initial login, but session\
+        \ timeout protects against\nabandoned sessions.\"\n\nSESSION TIMEOUT protects against the risk\
+        \ of unattended active sessions.\n                "
+      failure_texts:
+        0: "\nThe Master Archivist shakes his head. \"Password complexity protects\nagainst guessing or\
+          \ cracking. But the Treasury Scribe used a proper\npassword - her session was legitimately authenticated.\
+          \ The problem is\nthat the session STAYED active after she left. Password strength\ndoesn't\
+          \ help when someone walks away without logging out.\"\n                    "
+        2: "\n\"Multi-factor authentication protects the initial login,\" the Archivist\nnotes. \"The\
+          \ Treasury Scribe DID authenticate properly with multiple\nfactors. But then she walked away\
+          \ and left the session open. MFA\ndoesn't protect against abandoned sessions - it protects against\n\
+          unauthorized initial access.\"\n                    "
+        3: "\n\"Account lockout prevents brute-force password attacks,\" the Archivist\nexplains. \"Lock\
+          \ the account after five wrong guesses. But the Treasury\nScribe logged in correctly - there\
+          \ were no failed attempts. Lockout\ndoesn't address legitimate sessions that are left unattended.\"\
+          \n                    "
+    corporate:
+      title: THE OPEN WORKSTATION
+      narrative: "\nThe security team's weekly patrol report has identified a recurring\nissue. \"Multiple\
+        \ workstations left logged in and unattended,\" the\nreport notes. \"Accounting, HR, even the\
+        \ CEO's office.\"\n\nThe IT Director reviews the findings. \"I walked past Sarah's desk\nyesterday.\
+        \ She'd been in a meeting for an hour. Her workstation was\nstill logged in with the HR database\
+        \ open on screen. Anyone could\nhave walked up and accessed employee records as 'Sarah.'\"\n\n\
+        She looks at you. \"We've done the security awareness training. People\nknow they should lock\
+        \ their screens. But they forget, they get called\naway suddenly, things happen. What technical\
+        \ control addresses this\nproblem?\"\n\nThe CEO chimes in from across the table. \"And don't tell\
+        \ me to require\nlogin every five minutes. My people need to work, not re-authenticate\nconstantly.\"\
+        \n                "
+      choices:
+      - text: Password complexity requirements - stronger passwords prevent this
+      - text: Session timeout / idle timeout - automatically lock after inactivity
+      - text: Multi-factor authentication - require additional factors to login
+      - text: Account lockout policy - lock accounts after failed login attempts
+      success_text: "\n\"Session timeout or idle timeout,\" you recommend. \"Configure workstations\n\
+        and applications to automatically lock or terminate sessions after a\nperiod of inactivity. Fifteen\
+        \ minutes for general workstations, shorter\nfor sensitive systems.\"\n\nThe CEO frowns. \"Fifteen\
+        \ minutes of inactivity, then they have to log\nback in?\"\n\n\"Yes, but that's the balance. If\
+        \ Sarah is genuinely working, she's\ninteracting with the system - no timeout. If she walks away,\
+        \ fifteen\nminutes of idle time and the screen locks. If someone approaches her\ndesk while she's\
+        \ gone, they find a locked workstation, not an open\nHR database.\"\n\nThe IT Director nods. \"\
+        And sensitive applications like HR or Finance\ncould have even shorter timeouts?\"\n\n\"Exactly.\
+        \ Session timeout is the technical control that catches human\nforgetfulness. Awareness training\
+        \ says 'lock your screen.' Session\ntimeout says 'if you forget, the system locks itself.'\"\n\
+        \nSESSION TIMEOUT is a compensating control for human behavior.\n                "
+      failure_texts:
+        0: "\nThe IT Director shakes her head. \"Password complexity protects against\nweak passwords\
+          \ being guessed. But Sarah's password is fine - she\nlogged in successfully. The problem is\
+          \ she walked away with the\nsession still active. Password strength doesn't help when the session\n\
+          is legitimately open and unattended.\"\n                    "
+        2: "\n\"MFA is great for protecting the initial login,\" the IT Director agrees.\n\"But Sarah\
+          \ authenticated successfully, probably with MFA. Then she\nleft her session open. MFA doesn't\
+          \ protect against 'logged in and\nwalked away' - it protects against unauthorized initial authentication.\"\
+          \n                    "
+        3: "\n\"Account lockout is for failed login attempts,\" the IT Director\nexplains. \"Too many\
+          \ wrong passwords, lock the account. But there\nwere no failed attempts here - Sarah logged\
+          \ in correctly, then left.\nLockout doesn't address legitimate sessions left unattended.\"\n\
+          \                    "
+- id: d5_accumulating_keys
+  domain: 5
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 5: Identity and Access Management - Access Recertification'
+  failure_text: "\nAccess Recertification (also called access review) requires managers to\nperiodically\
+    \ review and confirm that their employees' access rights are\nstill appropriate for their current\
+    \ roles. This process catches privilege\naccumulation - the tendency for access to grow over time\
+    \ as people take\non new responsibilities without losing old access. Recertification enforces\nleast\
+    \ privilege over the long term.\n        "
+  themes:
+    fantasy:
+      title: THE COLLECTION OF FORGOTTEN KEYS
+      narrative: "\nThe Royal Auditors have discovered something disturbing. Sir Bartholomew,\nnow Captain\
+        \ of the Northern Watch, still holds keys and access runes\nfrom every position he has held over\
+        \ his thirty-year career.\n\n\"He retains access to the Scribe's Archives from when he was a clerk,\"\
+        \nthe auditor reads. \"Access to the Smithy from his apprentice days.\nTreasury access from his\
+        \ time as a quartermaster. Kitchen stores from\nhis first posting as a guard. Access he accumulated\
+        \ but never\nrelinquished as his duties changed.\"\n\nThe Lord Chamberlain looks pained. \"Sir\
+        \ Bartholomew is loyal and would\nnever abuse these accesses. But the principle is concerning.\
+        \ How many\nothers hold keys they no longer need?\"\n\nThe auditor looks at you. \"What process\
+        \ should we implement to prevent\nthis accumulation of unnecessary access?\"\n                "
+      choices:
+      - text: More frequent password changes will address this
+      - text: Periodic access reviews and recertification by managers
+      - text: Stronger authentication requirements will prevent abuse
+      - text: Network segmentation will contain the risk
+      success_text: "\n\"You need periodic access reviews and recertification,\" you explain.\n\"Regularly\
+        \ - quarterly or annually - each person's manager must review\ntheir access rights and certify\
+        \ that they are still appropriate for\ntheir current role.\"\n\nYou outline the process: \"Sir\
+        \ Bartholomew's current commander reviews\nhis access. 'Northern Watch access? Yes, he needs that.\
+        \ Treasury access?\nNo, he hasn't been quartermaster for fifteen years - revoke it.' The\ncommander\
+        \ certifies appropriate access and flags inappropriate access\nfor removal.\"\n\nThe Lord Chamberlain\
+        \ nods. \"So access that creeps in over time gets\ncaught during these reviews?\"\n\n\"Exactly.\
+        \ Access recertification prevents privilege accumulation. It\nenforces least privilege over the\
+        \ long term, catching access that was\nonce appropriate but is no longer needed. Without regular\
+        \ recertification,\naccess only ever grows - it's rarely removed until a problem occurs.\"\n\n\
+        ACCESS RECERTIFICATION prevents privilege accumulation over time.\n                "
+      failure_texts:
+        0: "\nThe auditor frowns. \"Password changes? Sir Bartholomew changes his\npasswords regularly.\
+          \ That doesn't change the fact that he has ACCESS\nhe doesn't need. Password rotation is about\
+          \ credential freshness, not\nabout whether someone should have access in the first place.\"\n\
+          \                    "
+        2: "\n\"Stronger authentication?\" The auditor shakes his head. \"Sir Bartholomew\nauthenticates\
+          \ properly. The problem is he has TOO MUCH authorized\naccess, not that his authentication is\
+          \ weak. We need to review what\naccess he SHOULD have, not make him authenticate more strongly.\"\
+          \n                    "
+        3: "\n\"Network segmentation controls network traffic,\" the auditor notes.\n\"It doesn't address\
+          \ the fundamental problem that Sir Bartholomew holds\naccess to locations his current role doesn't\
+          \ require. The access needs\nto be reviewed and revoked, not just segmented.\"\n           \
+          \         "
+    corporate:
+      title: THE ACCESS ACCUMULATION PROBLEM
+      narrative: "\nThe annual audit has uncovered an uncomfortable pattern. David from\nMarketing has\
+        \ access to systems from every department he's touched in\nhis twelve years at the company.\n\n\
+        \"Finance systems from when he helped with the budget three years ago,\"\nthe auditor reads. \"\
+        Engineering repos from the product launch five years\nago. HR database from... honestly, no one\
+        \ remembers why he had that.\nCustomer database from his sales days. He has more access than most\n\
+        executives.\"\n\nDavid's manager looks surprised. \"I had no idea he had all that access.\nHe\
+        \ only needs the Marketing tools for his current role.\"\n\nThe CISO turns to you. \"This isn't\
+        \ just David - our audit found this\npattern across the organization. People accumulate access\
+        \ but it's\nnever removed as their roles change. What process should we implement?\"\n       \
+        \         "
+      choices:
+      - text: More frequent password changes will address this
+      - text: Periodic access reviews and recertification by managers
+      - text: Stronger multi-factor authentication will prevent abuse
+      - text: Network segmentation will contain the risk
+      success_text: "\n\"Access recertification,\" you recommend. \"Quarterly or annually, every\nmanager\
+        \ reviews their team's access rights. For each system, they\ncertify: does this person still need\
+        \ this access for their current job?\"\n\nYou outline the process: \"David's Marketing manager\
+        \ reviews his access.\nMarketing tools? Certified. Finance systems? 'He doesn't do budgets\nanymore\
+        \ - remove.' Engineering repos? 'No need - remove.' The manager\ncertifies appropriate access\
+        \ and revokes the rest.\"\n\nThe CISO nods. \"And if a manager certifies access they shouldn't?\"\
+        \n\n\"That's a secondary review - sensitive systems might require additional\napproval. And the\
+        \ audit trail shows who certified what, creating\naccountability. The key is that access gets\
+        \ REVIEWED regularly instead\nof accumulating forever.\"\n\nDavid's manager shrugs. \"Seems reasonable.\
+        \ I should know what my team\nhas access to.\"\n\nACCESS RECERTIFICATION maintains least privilege\
+        \ over time.\n                "
+      failure_texts:
+        0: "\nThe CISO shakes her head. \"David changes his password regularly. That\ndoesn't address\
+          \ the fact that he HAS access to twelve systems he\ndoesn't need. Password rotation is about\
+          \ credential security, not\nabout appropriate access levels.\"\n                    "
+        2: "\n\"MFA doesn't help here,\" the CISO notes. \"David authenticates properly.\nThe problem\
+          \ is he has access to things he shouldn't - not that his\nauthentication is weak. We need to\
+          \ review and revoke inappropriate\naccess, not add more authentication factors.\"\n        \
+          \            "
+        3: "\n\"Segmentation controls network paths,\" the CISO explains. \"It doesn't\naddress application-level\
+          \ access. David can still access the HR\ndatabase if he's authorized, regardless of network\
+          \ segments. We need\nto review whether that authorization is still appropriate.\"\n        \
+          \            "
+- id: d5_vault_access_protocol
+  domain: 5
+  correct_index: 2
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 5: Identity and Access Management - Just-In-Time Access'
+  failure_text: "\nJust-In-Time (JIT) Access grants temporary, time-limited elevated access\nonly when\
+    \ needed, with approval workflow and automatic expiration. This\nimplements least privilege by ensuring\
+    \ users don't have standing access\nto sensitive systems - they request it when needed and it expires\
+    \ when done.\nJIT access limits the blast radius from credential compromise since stolen\ncredentials\
+    \ have no standing access to exploit.\n        "
+  themes:
+    fantasy:
+      title: THE VAULT KEEPER'S DILEMMA
+      narrative: "\nThe Master Smith occasionally needs access to the Rare Metals Vault -\nperhaps twice\
+        \ a month when unusual work requires mithril or starsilver.\nHe has requested permanent access\
+        \ to streamline his work.\n\n\"I am trusted with the kingdom's finest weapons,\" he argues. \"\
+        Why must\nI petition for vault access each time? Grant me standing access and\nspare us all the\
+        \ bureaucracy.\"\n\nThe Vault Keeper considers the request. \"The Rare Metals Vault contains\n\
+        not just valuable materials but ones that could be catastrophic if\nmisused. Permanent access\
+        \ for someone who needs it twice monthly seems...\nexcessive.\"\n\nShe turns to you. \"What approach\
+        \ balances the Master Smith's legitimate\nneeds with the security of materials that could threaten\
+        \ the kingdom?\"\n                "
+      choices:
+      - text: Grant permanent access - he's proven trustworthy
+      - text: Require personal accounts for each vault access
+      - text: Implement just-in-time access with time-limited approval
+      - text: Block all Smith access - too risky for anyone
+      success_text: "\n\"Just-in-time access,\" you recommend. \"When the Master Smith needs\nrare metals,\
+        \ he requests access. The Vault Keeper or an approver\nverifies the legitimate need - perhaps\
+        \ cross-referencing the work order\nfor that enchanted blade. Access is granted immediately and\
+        \ automatically\nexpires after the specific task is complete.\"\n\nThe Master Smith frowns. \"\
+        So I request each time?\"\n\n\"Yes, but the approval can be swift for legitimate needs. The benefit\
+        \ is\nthis: if your credentials were ever stolen, or if circumstances changed\nand you were compromised,\
+        \ the attacker would find you have no standing\nvault access. They would have to request access\
+        \ themselves, triggering\nreview and likely rejection.\"\n\nThe Vault Keeper nods. \"And we have\
+        \ a record of each access - who,\nwhen, why - rather than unlimited access with no accountability?\"\
+        \n\n\"Precisely. Just-in-time access implements least privilege while still\nenabling necessary\
+        \ work.\"\n\nJUST-IN-TIME ACCESS: access only when needed, for only as long as needed.\n     \
+        \           "
+      failure_texts:
+        0: "\nThe Vault Keeper shakes her head. \"Trust today doesn't guarantee trust\ntomorrow. And if\
+          \ his credentials are compromised, the attacker inherits\nthat permanent access. Just-in-time\
+          \ means the window of risk is only\nas long as the actual need - not permanent.\"\n        \
+          \            "
+        1: "\n\"Personal accounts for each access?\" The Master Smith looks confused.\n\"That is what\
+          \ he already has - a personal account. The question is\nwhether that account has STANDING access\
+          \ or TEMPORARY access. Personal\naccounts don't address the duration of access.\"\n        \
+          \            "
+        3: "\n\"Block all access?\" The Vault Keeper looks alarmed. \"Then how does he\nwork with rare\
+          \ metals? The kingdom's finest weapons require these\nmaterials. We cannot block legitimate\
+          \ work - we must enable it securely.\nJust-in-time access grants access when genuinely needed.\"\
+          \n                    "
+    corporate:
+      title: THE PRODUCTION ACCESS DEBATE
+      narrative: "\nThe architecture review is getting heated. The SRE team lead is pushing\nback on a\
+        \ new access policy.\n\n\"My team needs production access for incident response,\" she argues.\n\
+        \"But this new policy says we can only have 'just-in-time' access -\nrequest it when we need it,\
+        \ get approval, time-limited. What happens\nat 3 AM when production is down and the approvers\
+        \ are asleep?\"\n\nThe Security Architect responds. \"The policy includes 'break glass'\nemergency\
+        \ access with after-the-fact review. But for routine access,\nyes - we want just-in-time rather\
+        \ than standing access.\"\n\nThe SRE lead crosses her arms. \"My team is trustworthy. We've never\n\
+        abused production access.\"\n\nThe CISO turns to you. \"Explain why just-in-time access matters\
+        \ even\nfor trusted teams with legitimate needs.\"\n                "
+      choices:
+      - text: Grant permanent production access to the SRE team
+      - text: Create shared accounts for production incident response
+      - text: Implement just-in-time access with streamlined workflow for incidents
+      - text: Block all SRE production access to eliminate risk
+      success_text: "\n\"Just-in-time access protects even trustworthy teams,\" you explain.\n\"Consider:\
+        \ if one of your team members gets phished and an attacker\ncaptures their session, what do they\
+        \ get? With standing access - full\nproduction access. With just-in-time - nothing, until they\
+        \ request\naccess and get approval.\"\n\nYou continue, \"The approval workflow can be streamlined\
+        \ for genuine\nincidents. On-call approvers. Rapid approval with post-incident review.\n'Break\
+        \ glass' emergency access with mandatory after-action documentation.\nThe goal isn't to slow down\
+        \ incident response - it's to ensure that\naccess only exists when there's genuine need.\"\n\n\
+        The SRE lead uncrosses her arms. \"So the approval adds maybe sixty\nseconds to incident response,\
+        \ but a credential compromise gives the\nattacker... nothing?\"\n\n\"Exactly. The attacker would\
+        \ have to request access, justify it, and\nhope the approver doesn't notice something's wrong.\
+        \ Much harder than\nsimply using standing access that's always available.\"\n\nJUST-IN-TIME ACCESS\
+        \ limits blast radius from credential compromise.\n                "
+      failure_texts:
+        0: "\nThe CISO shakes his head. \"If anyone on that team gets compromised,\nthe attacker has full\
+          \ production access immediately. Just-in-time means\na compromised credential has no standing\
+          \ access to exploit - the\nattacker would have to request and justify access separately.\"\n\
+          \                    "
+        1: "\n\"Shared accounts?\" The Security Architect looks horrified. \"Then we\nlose all individual\
+          \ accountability. When something goes wrong in\nproduction at 3 AM, we need to know WHO made\
+          \ what changes. Shared\naccounts are the opposite of secure access management.\"\n         \
+          \           "
+        3: "\n\"Block all access?\" The SRE lead throws up her hands. \"Then who\nresponds to production\
+          \ incidents? The whole point is enabling\nnecessary work securely, not preventing work entirely.\
+          \ Just-in-time\naccess enables work while limiting standing risk.\"\n                    "
+- id: d5_golem_credentials
+  domain: 5
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 5: Identity and Access Management - Service Accounts'
+  failure_text: "\nService accounts (non-human identities) should use managed identities or\ncertificate-based\
+    \ authentication rather than stored passwords. Managed\nidentities tie identity to the compute resource\
+    \ - there's no password to\nsteal, rotate, or share. The identity is intrinsic to the application's\n\
+    infrastructure, eliminating the risk of credential theft or exposure.\n        "
+  themes:
+    fantasy:
+      title: THE GOLEM'S SECRET
+      narrative: "\nThe enchanted golem that maintains the Grand Library has a problem. For\nyears, it\
+        \ has accessed the restricted stacks using a passphrase - a\nsecret word inscribed on a hidden\
+        \ scroll within its chest cavity.\n\n\"The passphrase has never been changed since the golem's\
+        \ creation,\"\nthe Master Librarian reports. \"The scroll is visible to anyone who\nopens the\
+        \ golem's maintenance panel. And the passphrase is the same\none used by the Archival Golems in\
+        \ the Treasury - someone thought\nsharing secrets would be simpler.\"\n\nHe looks worried. \"\
+        If anyone discovered that passphrase, they could\naccess both the Library stacks AND the Treasury\
+        \ archives, pretending\nto be a golem. What is the BEST way to secure our golem's access?\"\n\
+        \                "
+      choices:
+      - text: Change the passphrase once per year
+      - text: Use magical identity binding - the golem is recognized by its essence, not a secret
+      - text: Encrypt the scroll inside the golem's chest
+      - text: Use a simpler passphrase for easier rotation
+      success_text: "\n\"The solution is magical identity binding,\" you explain. \"Instead of\na passphrase\
+        \ that could be stolen or shared, the golem is recognized\nby its unique magical essence - something\
+        \ inherent to this specific\ngolem that cannot be copied or transferred.\"\n\nYou outline the\
+        \ approach: \"Think of it like binding the golem's identity\nto its physical form. The restricted\
+        \ stacks recognize THIS golem, not\nany entity that knows the right passphrase. No secret to steal.\
+        \ No\npassword to share between golems. No scroll to discover.\"\n\nThe Master Librarian nods.\
+        \ \"So if someone opened the maintenance panel,\nthey would find... nothing useful?\"\n\n\"Exactly.\
+        \ The golem's identity is tied to its existence, not to knowledge\nof a secret. In the modern\
+        \ tongue, this is like managed identities or\ncertificate-based authentication for non-human entities.\
+        \ The identity\nIS the golem, not something the golem KNOWS.\"\n\nMANAGED IDENTITIES eliminate\
+        \ stored secrets for service accounts.\n                "
+      failure_texts:
+        0: "\nThe Master Librarian shakes his head. \"Annual passphrase changes still\nleave the passphrase\
+          \ vulnerable to discovery. And if it's on a scroll\nin the golem's chest, whoever finds it has\
+          \ access until the next\nrotation - perhaps a year of unauthorized access.\"\n             \
+          \       "
+        2: "\n\"Encrypting the scroll?\" The Librarian looks skeptical. \"Then how does\nthe golem read\
+          \ it? We would need another secret to decrypt the first\nsecret. We are adding complexity, not\
+          \ solving the problem. The fundamental\nissue is having a stealable secret at all.\"\n     \
+          \               "
+        3: "\n\"A simpler passphrase is WORSE security,\" the Librarian protests.\n\"Easier to guess,\
+          \ easier to remember by those who see it. The solution\nis not to make the secret simpler -\
+          \ it's to eliminate the need for a\nstealable secret entirely.\"\n                    "
+    corporate:
+      title: THE SERVICE ACCOUNT SECRET
+      narrative: "\nThe security assessment of your cloud environment has found a concerning\npattern.\
+        \ A critical application uses a service account to connect to\nthe database, and the password\
+        \ for that service account is stored in\na configuration file on the application server.\n\n\"\
+        The password has never been rotated,\" the assessor notes. \"It's in\nplaintext in config.ini.\
+        \ The same password is used by three different\napplications - someone thought sharing would be\
+        \ easier. And it's the\nonly way the app can authenticate to the database.\"\n\nThe developer\
+        \ looks defensive. \"It works. We've been doing it this\nway for years.\"\n\nThe assessor turns\
+        \ to you. \"What's the BEST way to secure this service\naccount access?\"\n                "
+      choices:
+      - text: Rotate the password once per year
+      - text: Use managed identities or certificate-based authentication
+      - text: Encrypt the configuration file
+      - text: Use a shorter password for easier rotation
+      success_text: "\n\"Managed identities or certificate-based authentication,\" you recommend.\n\"\
+        Eliminate the stored password entirely. In cloud environments, managed\nidentities tie the application's\
+        \ identity to its compute resource - the\nVM or container IS the identity, there's no password\
+        \ to steal.\"\n\nYou explain further: \"With managed identities, there's no secret in a\nconfig\
+        \ file. No password to rotate. No credential to share between\napplications. The identity is intrinsic\
+        \ to the compute resource. If\nsomeone compromises the config file, they find... nothing useful.\"\
+        \n\nThe developer frowns. \"How does the app authenticate then?\"\n\n\"The cloud platform handles\
+        \ it automatically. The app requests a token\nfrom the platform, which verifies the app is running\
+        \ on the authorized\ncompute resource, and issues a short-lived token. No long-lived secrets\n\
+        anywhere in the application.\"\n\nMANAGED IDENTITIES eliminate stored passwords for service accounts.\n\
+        \                "
+      failure_texts:
+        0: "\nThe assessor shakes her head. \"Annual rotation still leaves the\npassword vulnerable to\
+          \ theft from the config file. And you'd have to\ncoordinate rotation across three applications\
+          \ that share this password.\nThe fundamental problem is having a stealable secret at all.\"\n\
+          \                    "
+        2: "\n\"Encrypting the config file?\" The assessor looks skeptical. \"Then the\ndecryption key\
+          \ has to be stored somewhere accessible to the application.\nYou've just moved the secret, not\
+          \ eliminated it. And now you have key\nmanagement complexity on top of the original problem.\"\
+          \n                    "
+        3: "\n\"A shorter password is LESS secure,\" the assessor responds firmly.\n\"Easier to crack,\
+          \ easier to remember if observed. The solution is not\nto make credentials weaker but to eliminate\
+          \ the need for long-lived\nsecrets entirely.\"\n                    "
+- id: d5_blood_seal_concerns
+  domain: 5
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 5: Identity and Access Management - Biometric Authentication'
+  failure_text: "\nBiometric authentication (fingerprints, face, iris, etc.) has a unique\nrisk: biometrics\
+    \ cannot be changed if compromised. Unlike passwords\n(reissued) or tokens (replaced), biometric data\
+    \ is permanent. If fingerprint\ntemplates are stolen, users cannot get new fingerprints. This makes\n\
+    protecting biometric databases critical and argues for local storage,\nencryption, and using biometrics\
+    \ as one factor of multi-factor authentication.\n        "
+  themes:
+    fantasy:
+      title: THE BLOOD SEAL DEBATE
+      narrative: "\nThe Royal Council is considering a new security measure: Blood Seals.\nEach guardian\
+        \ would register their unique blood signature with the\ncastle's wards. Entry to sensitive areas\
+        \ would require a drop of blood\nfrom the registered guardian - impossible to forge, impossible\
+        \ to\ntransfer to another.\n\n\"Perfect security!\" declares the Minister of Defense. \"No passphrase\n\
+        can be overheard, no sigil can be stolen. A guardian's blood is truly\ntheir own.\"\n\nBut the\
+        \ Master Healer raises a troubling concern. \"And what happens\nwhen a guardian's blood signature\
+        \ is compromised? Perhaps through\nmagical means - a shapeshifter who can replicate it, or a dark\
+        \ ritual\nthat copies it. A passphrase can be changed. A sigil can be reissued.\nBut you cannot\
+        \ change a person's blood.\"\n\nThe Council turns to you. \"What is the key concern with blood-based\
+        \ -\nthat is, biometric - authentication?\"\n                "
+      choices:
+      - text: Blood signatures are too easy to guess
+      - text: Biometrics cannot be changed if compromised
+      - text: Blood seal wards are too expensive to implement
+      - text: Blood signatures require guardians to remember complex patterns
+      success_text: "\n\"The Master Healer has identified the critical concern,\" you affirm.\n\"Unlike\
+        \ passphrases, which can be changed when compromised, or sigils,\nwhich can be reissued, biometrics\
+        \ - blood signatures, fingerprints,\nfacial patterns - cannot be replaced if compromised.\"\n\n\
+        You elaborate: \"If a shapeshifter or dark magic duplicates a guardian's\nblood signature, that\
+        \ guardian's biometric is compromised FOREVER. We\ncannot issue them new blood. This makes protecting\
+        \ the stored biometric\ndata critically important - and argues for storing biometric templates\n\
+        locally rather than in a central vault that could be raided.\"\n\nThe Minister of Defense looks\
+        \ troubled. \"So biometrics are strong for\nverification but carry permanent risk if the template\
+        \ is stolen?\"\n\n\"Exactly. This doesn't mean we shouldn't use blood seals - but we must\nprotect\
+        \ the registered signatures with utmost care, and consider them\nas ONE factor among multiple,\
+        \ not the only protection.\"\n\nBIOMETRICS cannot be changed if compromised - protect templates\
+        \ carefully.\n                "
+      failure_texts:
+        0: "\nThe Minister of Defense snorts. \"Guess a blood signature? There are\nmillions of possible\
+          \ patterns. Blood signatures are not vulnerable to\nguessing like simple passphrases. The concern\
+          \ is what happens if the\nsignature is COPIED, not guessed.\"\n                    "
+        2: "\n\"Cost is a practical concern,\" the Chancellor notes, \"but not the\nSECURITY concern the\
+          \ Master Healer raised. The question is about what\nhappens when biometrics are compromised\
+          \ - and the answer is they cannot\nbe reissued like a new passphrase.\"\n                  \
+          \  "
+        3: "\n\"Remember patterns?\" The Master Healer looks confused. \"The whole\nadvantage of biometrics\
+          \ is that guardians need remember nothing - their\nidentity IS the authentication. The concern\
+          \ is not memorization but\nthat biometrics are permanent. You cannot change your blood like\
+          \ you\nchange a passphrase.\"\n                    "
+    corporate:
+      title: THE FINGERPRINT ROLLOUT
+      narrative: "\nThe facilities team is excited about their new fingerprint scanners for\nbuilding\
+        \ access. \"No more lost badges! No more shared PINs! Your finger\nis always with you!\"\n\nBut\
+        \ the security assessment has flagged a concern, and you're presenting\nto the executive team.\n\
+        \n\"The fingerprint scanners are great for convenience,\" you begin. \"But\nthere's a key security\
+        \ concern the team should understand before we\nproceed with the rollout.\"\n\nThe CFO looks impatient.\
+        \ \"We've already purchased the scanners. What's\nthe problem?\"\n\nYou need to explain the unique\
+        \ risk of biometric authentication compared\nto passwords or badges.\n                "
+      choices:
+      - text: Fingerprints are too easy to guess
+      - text: Biometrics cannot be changed if compromised
+      - text: Fingerprint scanners are too expensive
+      - text: Fingerprints require users to remember complex patterns
+      success_text: "\n\"Biometrics cannot be changed if compromised,\" you explain. \"If someone's\n\
+        password is stolen, we issue them a new password. If their badge is\ncloned, we issue a new badge.\
+        \ But if their fingerprint template is\nstolen from the database?\"\n\nYou let that sink in. \"\
+        We cannot issue them new fingerprints. That\nbiometric is compromised permanently.\"\n\nThe CISO\
+        \ nods. \"Which is why we store fingerprint templates locally on\nthe scanners, not in a central\
+        \ database that could be breached. And\nwhy fingerprints should be combined with something else\
+        \ - a PIN, a badge\n- rather than being the sole authentication factor.\"\n\nThe CFO looks concerned.\
+        \ \"So the rollout is still okay?\"\n\n\"Yes, but with proper protections. Encrypt the templates.\
+        \ Store locally.\nUse as one factor of multi-factor authentication. Biometrics are\nconvenient\
+        \ and hard to share or forget - but we must protect them\naccordingly because they can never be\
+        \ replaced.\"\n\nBIOMETRIC templates require strong protection - they're irreplaceable.\n    \
+        \            "
+      failure_texts:
+        0: "\nThe CISO shakes his head. \"Fingerprints have billions of possible\npatterns - they're not\
+          \ guessable like weak passwords. The concern is\nwhat happens when the fingerprint TEMPLATE\
+          \ is stolen from our systems.\nThat's fundamentally different from password guessing.\"\n  \
+          \                  "
+        2: "\n\"We've already purchased them,\" the CFO notes. \"Cost isn't the concern\nhere. The security\
+          \ question is: what makes biometrics different from\npasswords in terms of compromise recovery?\
+          \ The answer is you can't\nissue someone new fingerprints.\"\n                    "
+        3: "\nThe CFO looks confused. \"Remember patterns? The whole point is that\npeople don't have\
+          \ to remember anything - their finger is the key.\nThe concern isn't about memorization but\
+          \ about what happens when\nbiometric data is compromised. It can't be changed like a password.\"\
+          \n                    "
+- id: d5_quarterly_passphrase_chaos
+  domain: 5
+  correct_index: 2
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 5: Identity and Access Management - Password Policies'
+  failure_text: "\nModern password guidance (including NIST 800-63B) recommends longer\npassphrases with\
+    \ less frequent changes. Frequent rotation causes users\nto choose weak, predictable passwords or\
+    \ write them down. Long passphrases\nare more secure and more memorable than short complex passwords.\
+    \ Change\npasswords when there's evidence of compromise, not on arbitrary schedules.\n        "
+  themes:
+    fantasy:
+      title: THE PARCHMENT PROBLEM
+      narrative: "\nThe Master of Archives has discovered something troubling during his\nrounds. Small\
+        \ parchments hidden under inkwells, tucked into book spines,\nslipped beneath desk blotters -\
+        \ each containing the current passphrase\nof a scribe or guardian.\n\n\"Our policy requires passphrase\
+        \ changes every moon cycle,\" he explains\nto the Council. \"We forbid reusing the last five passphrases.\
+        \ We require\neight runes minimum with symbols and numbers. And THIS is the result.\"\n\nHe gestures\
+        \ at a collection of confiscated parchments. \"Sun4Moon!\"\n\"Winter25!\" \"Spring26!\" \"The\
+        \ same patterns, incrementing. Written down\nbecause no one can remember constantly changing complex\
+        \ passphrases.\"\n\nThe Council looks uncomfortable. \"Surely more frequent changes would\nimprove\
+        \ security?\"\n\nThe Master of Archives turns to you. \"What change would BEST improve\nboth security\
+        \ and usability?\"\n                "
+      choices:
+      - text: Reduce minimum passphrase length to six runes
+      - text: Require weekly passphrase changes instead of monthly
+      - text: Require longer passphrases with less frequent changes
+      - text: Remove all passphrase requirements entirely
+      success_text: "\n\"Modern wisdom suggests longer passphrases with less frequent changes,\"\nyou\
+        \ advise. \"Instead of eight complex runes changed every moon, consider\ntwenty runes - a phrase!\
+        \ - changed only when compromised.\"\n\nYou explain: \"A passphrase like 'TheNorthTowerGuardsTheDawn'\
+        \ is vastly\nharder to crack than 'Sun4Moon!' - yet easier to remember. Because it's\nmemorable,\
+        \ scribes need not write it down. Because it changes rarely,\nthey don't develop predictable patterns.\"\
+        \n\nThe Master of Archives nods slowly. \"So 'length over complexity, stability\nover rotation'?\"\
+        \n\n\"Exactly. Frequent rotation trains people to use predictable patterns\nand write things down\
+        \ - the opposite of our goals. A truly strong\npassphrase that lives only in memory is more secure\
+        \ than a weak one\nthat changes often and lives on parchment under the inkwell.\"\n\nMODERN PASSWORD\
+        \ GUIDANCE: Longer passphrases, less frequent rotation.\n                "
+      failure_texts:
+        0: "\nThe Master of Archives shakes his head. \"Shorter passphrases are easier\nto crack! Six\
+          \ runes versus eight makes attacks faster, not harder. The\nproblem is not length - it's the\
+          \ combination of complexity requirements\nand frequent rotation that creates unusable policies.\"\
+          \n                    "
+        1: "\n\"MORE frequent changes?\" The Master spreads his hands over the pile of\nhidden parchments.\
+          \ \"Weekly changes would make this worse! Scribes would\nresort to even simpler patterns, even\
+          \ more written records. The problem\nis that frequent rotation creates bad habits, not that\
+          \ rotation isn't\nfrequent enough.\"\n                    "
+        3: "\n\"No requirements at all?\" The Master looks alarmed. \"Then we would have\nscribes using\
+          \ 'password' and 'hello' as their passphrases. Some structure\nis necessary - the question is\
+          \ what structure promotes GOOD passphrases\nwithout creating impossible burdens.\"\n       \
+          \             "
+    corporate:
+      title: THE STICKY NOTE AUDIT
+      narrative: "\nThe annual security walkthrough has produced embarrassing results. The\nauditors found\
+        \ sticky notes with passwords under keyboards, in desk\ndrawers, and taped to monitors throughout\
+        \ the office.\n\n\"Your password policy requires eight characters with uppercase, lowercase,\n\
+        numbers, and symbols,\" the auditor notes. \"Passwords must change every\n90 days and cannot repeat\
+        \ the last twelve passwords.\"\n\nShe holds up a photo of a monitor with \"Welcome2024!\" written\
+        \ on a\nsticky note. \"The policy creates passwords too complex to remember and\nchanges too frequent\
+        \ to memorize. So users write them down.\"\n\nThe CISO looks at you. \"Modern guidance has changed.\
+        \ What policy would\nBEST improve both security and usability?\"\n                "
+      choices:
+      - text: Reduce minimum length to six characters
+      - text: Require monthly password changes instead of quarterly
+      - text: Require longer passphrases with less frequent changes
+      - text: Remove all password requirements entirely
+      success_text: "\n\"NIST 800-63B and modern security guidance recommend longer passphrases\nwith\
+        \ less frequent changes,\" you explain. \"Instead of complex eight-\ncharacter passwords changed\
+        \ quarterly, consider sixteen-plus character\npassphrases changed only when there's evidence of\
+        \ compromise.\"\n\nYou continue: \"A passphrase like 'MyDogRexLovesToChaseSquirrels!' is\nexponentially\
+        \ harder to crack than 'P@ssw0rd!' yet infinitely easier\nto remember. No one writes it on a sticky\
+        \ note. And because it doesn't\nchange every quarter, users don't develop predictable patterns\
+        \ like\nadding incrementing numbers.\"\n\nThe CISO nods. \"So we get stronger authentication AND\
+        \ better usability?\"\n\n\"Exactly. Frequent rotation with complexity requirements trains users\n\
+        to work around the policy. Long, memorable passphrases with rare rotation\ntrains users to use\
+        \ genuinely strong credentials.\"\n\nMODERN PASSWORD GUIDANCE favors length and stability over\
+        \ complexity and rotation.\n                "
+      failure_texts:
+        0: "\nThe auditor shakes her head. \"Shorter passwords are EASIER to crack.\nReducing from eight\
+          \ to six characters dramatically reduces the search\nspace. The problem isn't length - it's\
+          \ the combination of complexity\nand frequent rotation that makes passwords unusable.\"\n  \
+          \                  "
+        1: "\n\"More frequent changes?\" The auditor gestures at the sticky note photos.\n\"This IS the\
+          \ result of frequent changes. Users can't remember constantly\nchanging complex passwords, so\
+          \ they write them down or use predictable\npatterns. Monthly changes would make this worse,\
+          \ not better.\"\n                    "
+        3: "\n\"No requirements at all?\" The CISO frowns. \"Then we'd have passwords\nlike '123456' and\
+          \ 'password.' Some guidance is necessary - the question\nis what guidance creates usable security.\
+          \ Long passphrases with rare\nrotation is the modern answer.\"\n                    "
+- id: d5_registry_eavesdropping
+  domain: 5
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 5: Identity and Access Management - Directory Services'
+  failure_text: "\nDirectory services like Active Directory use LDAP for queries. By default,\nLDAP traffic\
+    \ is unencrypted - attackers can observe user lookups, group\nmemberships, and authentication attempts.\
+    \ LDAPS (LDAP over SSL/TLS) encrypts\nthis traffic, protecting directory information from network\
+    \ eavesdropping\nwhile maintaining full directory functionality.\n        "
+  themes:
+    fantasy:
+      title: THE REGISTRY OF SOULS
+      narrative: "\nThe Kingdom's Registry of Souls maintains records of all guardians,\nscribes, and\
+        \ officials - their identities, their roles, their access\npermissions. When a guardian approaches\
+        \ a gate, the gate consults the\nRegistry to verify their standing.\n\nThe Master of Shadows has\
+        \ concerning news. \"Our scryers have detected\nenemy agents intercepting the messages between\
+        \ gates and the Registry.\nThe queries travel openly through the aether - who is asking, about\n\
+        whom, and the Registry's response. This reveals our patrol patterns,\nour personnel movements,\
+        \ our organizational structure.\"\n\nThe Keeper of the Registry looks worried. \"We cannot stop\
+        \ using the\nRegistry - the entire kingdom depends on it for access decisions. But\nthese messages\
+        \ must be protected from eavesdroppers.\"\n\nWhat should be implemented?\n                "
+      choices:
+      - text: Disable the Registry entirely
+      - text: Enable encrypted communication with the Registry
+      - text: Use a different registry system
+      - text: Store all identities in plaintext scrolls at each gate
+      success_text: "\n\"We must enable encrypted communication - think of it as warded\nchannels - between\
+        \ the gates and the Registry,\" you explain. \"The\nqueries and responses travel through magical\
+        \ conduits that only the\nRegistry and authorized gates can read. Eavesdroppers see only\nunintelligible\
+        \ patterns.\"\n\nThe Master of Shadows nods. \"Like speaking in a language only the\nsender and\
+        \ recipient understand?\"\n\n\"Exactly. In technical terms, this would be LDAPS - LDAP over TLS.\n\
+        The Registry continues to function exactly as before, but all\ncommunication is encrypted. Enemy\
+        \ agents intercepting the messages\nwould learn nothing - not who is being queried, not what permissions\n\
+        they have, not who is making the requests.\"\n\nThe Keeper of the Registry looks relieved. \"\
+        So we maintain our\nRegistry system but wrap it in protection?\"\n\n\"Precisely. Encryption protects\
+        \ the confidentiality of directory\ncommunications without disrupting directory functionality.\"\
+        \n\nLDAPS encrypts directory service communications.\n                "
+      failure_texts:
+        0: "\nThe Keeper of the Registry protests. \"Disable the Registry? Then how\ndoes any gate know\
+          \ who has access? The entire kingdom's access control\ndepends on the Registry! We cannot disable\
+          \ it - we must protect its\ncommunications while maintaining its function.\"\n             \
+          \       "
+        2: "\nThe Master of Shadows shakes his head. \"A different registry system\nwould face the same\
+          \ problem if its communications travel openly. The\nissue is not the registry itself but the\
+          \ protection of messages TO\nand FROM the registry. We need encryption, not replacement.\"\n\
+          \                    "
+        3: "\n\"Plaintext scrolls at each gate?\" The Keeper looks horrified. \"Then\nevery gate contains\
+          \ the entire roster of the kingdom's personnel and\npermissions - any gate that falls exposes\
+          \ everything! And updates would\nrequire courier travel to every gate. The Registry exists precisely\n\
+          to avoid this chaos.\"\n                    "
+    corporate:
+      title: THE LDAP FINDING
+      narrative: "\nThe penetration test report has landed on your desk with a critical\nfinding highlighted\
+        \ in red.\n\n\"Active Directory LDAP queries are transmitted in cleartext,\" you read.\n\"A network-positioned\
+        \ attacker can observe authentication attempts,\nuser lookups, and group membership queries. Sensitive\
+        \ information about\norganizational structure, user accounts, and access patterns is exposed.\"\
+        \n\nThe IT Director looks at the finding. \"Everything uses AD - email,\nfile shares, applications.\
+        \ We can't just turn it off.\"\n\nThe network engineer offers a suggestion. \"We could switch\
+        \ to a\ndifferent directory service?\"\n\nThe CISO shakes her head. \"That's a massive undertaking\
+        \ that doesn't\nnecessarily solve the problem. What's the appropriate fix?\"\n                "
+      choices:
+      - text: Disable LDAP and Active Directory
+      - text: Enable LDAPS (LDAP over TLS/SSL)
+      - text: Switch to a different directory service
+      - text: Store all passwords in plaintext to avoid encryption overhead
+      success_text: "\n\"Enable LDAPS - LDAP over SSL/TLS,\" you recommend. \"This encrypts all\ncommunication\
+        \ between clients and Active Directory. The queries still\nwork exactly the same way, but network\
+        \ observers see only encrypted\ntraffic instead of cleartext account information.\"\n\nThe IT\
+        \ Director nods. \"So from the application perspective, nothing\nchanges?\"\n\n\"Minimal changes.\
+        \ Applications need to use the LDAPS port and trust the\nAD certificate. But the fundamental functionality\
+        \ is identical - we're\njust wrapping it in transport encryption. The attacker who could\npreviously\
+        \ see 'User jsmith checking group membership for Domain Admins'\nnow sees encrypted traffic that\
+        \ reveals nothing.\"\n\nThe CISO looks satisfied. \"So we maintain AD functionality while\nprotecting\
+        \ the wire traffic?\"\n\n\"Exactly. LDAPS is the standard solution for securing directory\nservice\
+        \ communications.\"\n\nLDAPS encrypts LDAP traffic, protecting directory queries from eavesdropping.\n\
+        \                "
+      failure_texts:
+        0: "\nThe IT Director stares. \"Disable Active Directory? Every system in the\ncompany authenticates\
+          \ against AD. Email, file shares, applications -\neverything. We can't just turn it off. We\
+          \ need to SECURE it, not\neliminate it.\"\n                    "
+        2: "\nThe CISO shakes her head. \"A different directory service would still\nneed to encrypt its\
+          \ communications. The problem isn't AD itself - it's\nthe lack of transport encryption. Switching\
+          \ directories is massive\neffort that doesn't inherently solve the cleartext problem.\"\n  \
+          \                  "
+        3: "\nThe entire room falls silent. The CISO finally speaks: \"Plaintext\npasswords would be the\
+          \ worst possible approach. That's the opposite\nof security. We need encryption of communications,\
+          \ not abandonment\nof credential protection.\"\n                    "
+- id: d5_complex_access_rules
+  domain: 5
+  correct_index: 2
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 5: Identity and Access Management - Attribute-Based Access Control'
+  failure_text: "\nAttribute-Based Access Control (ABAC) evaluates multiple attributes to make\naccess\
+    \ decisions: subject attributes (department, role, clearance), resource\nattributes (classification,\
+    \ type, owner), and environmental attributes (time,\nlocation, device). This enables fine-grained,\
+    \ context-aware policies like\n\"Finance users can access Confidential-Finance data during business\
+    \ hours\nfrom corporate networks.\"\n        "
+  themes:
+    fantasy:
+      title: THE SCHOLAR'S ACCESS PUZZLE
+      narrative: "\nThe Grand Library faces a complex access challenge. Different scholars\nneed different\
+        \ access based on multiple factors - not just their role.\n\nThe Head Librarian presents the problem:\
+        \ \"A scholar from the Mages'\nGuild, researching classified magical texts, during daylight hours,\n\
+        from within the Citadel walls - should have access. The same scholar,\nat midnight, from outside\
+        \ the Citadel - should NOT have access to those\nsame texts.\"\n\nShe continues: \"A scholar's\
+        \ access depends on their guild affiliation,\nthe classification of the document, the time of\
+        \ day, and their location.\nRole-based access cannot capture this complexity - a 'Scholar' role\
+        \ is\ntoo broad.\"\n\nThe Royal Architect asks: \"What access control model allows decisions\n\
+        based on multiple attributes - subject attributes, resource attributes,\nenvironmental conditions\
+        \ - evaluated together?\"\n                "
+      choices:
+      - text: Role-Based Access Control - assign permissions to roles
+      - text: Discretionary Access Control - owners grant access
+      - text: Attribute-Based Access Control - evaluate multiple attributes for decisions
+      - text: Mandatory Access Control - labels and clearances
+      success_text: "\n\"This requires Attribute-Based Access Control - ABAC,\" you explain.\n\"ABAC evaluates\
+        \ multiple attributes to make access decisions: subject\nattributes (guild affiliation, clearance\
+        \ level), resource attributes\n(document classification, sensitivity), and environmental attributes\n\
+        (time, location).\"\n\nYou outline a policy: \"A Mages' Guild scholar, clearance level Secret,\n\
+        may access classified magical texts, during business hours, from within\nthe Citadel. Each element\
+        \ is an attribute; together they form the\naccess decision.\"\n\nThe Head Librarian nods. \"So\
+        \ we can express complex policies that\ntraditional role-based access cannot capture?\"\n\n\"\
+        Exactly. RBAC says 'Scholars can access the library.' ABAC says\n'Mages' Guild scholars with Secret\
+        \ clearance can access classified\nmagical texts during daylight from trusted locations.' The\
+        \ granularity\nis in the attributes, not the role.\"\n\nABAC provides fine-grained access control\
+        \ through attribute evaluation.\n                "
+      failure_texts:
+        0: "\nThe Head Librarian shakes her head. \"Role-based access assigns\npermissions to roles like\
+          \ 'Scholar.' But a Scholar from the Mages'\nGuild needs different access than a Scholar from\
+          \ the Healers' Guild,\nand both depend on time and location. RBAC doesn't easily capture\nall\
+          \ these conditions.\"\n                    "
+        1: "\n\"Discretionary access relies on resource owners granting permissions,\"\nthe Royal Architect\
+          \ notes. \"But our requirement is for POLICY-based\naccess decisions involving multiple factors.\
+          \ We need rules that consider\nguild, classification, time, and location together - not owner\
+          \ discretion.\"\n                    "
+        3: "\n\"Mandatory Access Control uses fixed security labels - Secret, Top\nSecret - compared to\
+          \ user clearance,\" the Architect explains. \"It's\npowerful but rigid. We need flexibility\
+          \ to incorporate time, location,\nand multiple classifications, not just a label hierarchy.\"\
+          \n                    "
+    corporate:
+      title: THE DYNAMIC ACCESS REQUIREMENT
+      narrative: "\nThe new compliance mandate has created an access control nightmare.\nThe compliance\
+        \ officer explains the requirements.\n\n\"Access to financial data must consider: the user's department,\
+        \ the\ndata's classification level, the time of access, and the user's\nlocation. An Accounting\
+        \ employee accessing Confidential-Finance data\nduring business hours from the office network\
+        \ is fine. The same access\nat 2 AM from a coffee shop should be blocked.\"\n\nShe continues:\
+        \ \"Same data, same user, different context, different\ndecision. Our current role-based system\
+        \ can't handle this. A 'Finance'\nrole is too blunt.\"\n\nThe IT architect scratches his head.\
+        \ \"We need an access model that\nevaluates multiple conditions together - user attributes, data\n\
+        attributes, environmental factors. What model supports that?\"\n                "
+      choices:
+      - text: Role-Based Access Control - just add more roles
+      - text: Discretionary Access Control - let data owners decide
+      - text: Attribute-Based Access Control - evaluate multiple attributes dynamically
+      - text: Mandatory Access Control - clearance levels only
+      success_text: "\n\"Attribute-Based Access Control - ABAC,\" you recommend. \"ABAC policies\nevaluate\
+        \ attributes from multiple sources: subject attributes (department,\njob level, training completed),\
+        \ resource attributes (data classification,\nsensitivity, owner department), and environmental\
+        \ attributes (time, day,\nnetwork location, device type).\"\n\nYou draft a sample policy: \"IF\
+        \ user.department = 'Accounting' AND\nresource.classification = 'Confidential-Finance' AND environment.time\n\
+        BETWEEN 0800 AND 1800 AND environment.network = 'Corporate' THEN\nPERMIT.\"\n\nThe compliance\
+        \ officer nods. \"So we can express complex, context-aware\npolicies?\"\n\n\"Exactly. ABAC provides\
+        \ the granularity you need. Role-based says 'who\ncan access what.' Attribute-based says 'who\
+        \ can access what, under what\nconditions.' That context-awareness is what compliance requires.\"\
+        \n\nABAC enables fine-grained, context-aware access control.\n                "
+      failure_texts:
+        0: "\nThe IT architect shakes his head. \"More roles? We already have role\nexplosion. And roles\
+          \ don't capture time or location. We'd need roles\nlike 'Finance-Daytime-Office' and 'Finance-Daytime-Remote'\
+          \ - that's\nnot scalable. We need attribute evaluation, not more roles.\"\n                \
+          \    "
+        1: "\n\"Data owner discretion doesn't help with time-based or location-based\ndecisions,\" the\
+          \ compliance officer notes. \"We need automated policy\nenforcement based on multiple factors,\
+          \ not case-by-case owner decisions.\nDAC doesn't provide the dynamic context-aware controls\
+          \ we need.\"\n                    "
+        3: "\n\"Clearance levels alone aren't enough,\" the architect explains. \"MAC\ncompares user clearance\
+          \ to data classification. But we also need to\nconsider time, location, and department affiliation.\
+          \ MAC's label\ncomparison is too narrow for these multi-factor requirements.\"\n           \
+          \         "
+- id: d5_governance_chaos
+  domain: 5
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 5: Identity and Access Management - Identity Governance'
+  failure_text: "\nIdentity Governance and Administration (IGA) solutions provide holistic\nidentity management:\
+    \ unified visibility across systems, automated access\nreviews/certification, policy enforcement (SoD,\
+    \ least privilege), identity\nlifecycle automation, and comprehensive audit trails. IGA addresses\
+    \ systemic\ngovernance issues like orphaned accounts, privilege accumulation, and lack\nof visibility.\n\
+    \        "
+  themes:
+    fantasy:
+      title: THE LEDGER OF FORGOTTEN KEYS
+      narrative: "\nThe Royal Auditors have completed their review, and their findings are\ndire. The\
+        \ Grand Chamberlain reads the summary with growing dismay.\n\n\"Orphaned access: 247 guardians\
+        \ who left service still have active\naccess runes. Excessive permissions: Scribes with access\
+        \ to the Treasury,\nCooks with access to the Armory - permissions that make no sense. And\nNO\
+        \ comprehensive view of who has access to what across all domains.\"\n\nHe slams the parchment\
+        \ down. \"We do not know who has access. We cannot\nreview whether access is appropriate. We discover\
+        \ problems only when\nsomething goes wrong. This is governance chaos.\"\n\nThe Master of Keys\
+        \ looks defensive. \"Each domain manages its own access.\nThe Treasury manages Treasury access.\
+        \ The Armory manages Armory access.\nThere is no unified view.\"\n\nWhat solution addresses these\
+        \ governance challenges?\n                "
+      choices:
+      - text: Implement stronger passphrase policies
+      - text: Deploy an Identity Governance solution for unified visibility and lifecycle management
+      - text: Add more guard towers
+      - text: Require multi-factor authentication everywhere
+      success_text: "\n\"You need an Identity Governance solution,\" you explain. \"Think of it\nas a\
+        \ master ledger that aggregates access information from all domains,\nprovides unified visibility,\
+        \ automates access reviews, and manages the\nidentity lifecycle from appointment to departure.\"\
+        \n\nYou outline the capabilities: \"Orphaned accounts? The governance system\ntracks when guardians\
+        \ leave service and ensures access is revoked.\nExcessive permissions? Automated reviews flag\
+        \ access that doesn't match\nrole expectations. No unified view? The system aggregates access\
+        \ from\nTreasury, Armory, Archives - everywhere - into a single pane.\"\n\nThe Grand Chamberlain\
+        \ leans forward. \"And policy violations are detected\nautomatically rather than discovered during\
+        \ audits?\"\n\n\"Exactly. Continuous monitoring, automated access reviews, segregation\nof duties\
+        \ enforcement, comprehensive audit trails. Governance addresses\nthe systemic issues, not just\
+        \ individual symptoms.\"\n\nIDENTITY GOVERNANCE provides visibility, control, and lifecycle management.\n\
+        \                "
+      failure_texts:
+        0: "\nThe Grand Chamberlain sighs. \"Stronger passphrases? That does not\naddress orphaned accounts\
+          \ or excessive permissions. People who have\nleft still have access - stronger passphrases just\
+          \ make their old\naccess harder to abuse, not impossible. We need governance, not\npassword\
+          \ policy.\"\n                    "
+        2: "\n\"More guard towers?\" The Auditor looks bemused. \"We are discussing\naccess governance,\
+          \ not physical security. Orphaned accounts, excessive\npermissions, lack of visibility - these\
+          \ are identity management problems,\nnot problems solved by additional fortifications.\"\n \
+          \                   "
+        3: "\n\"Multi-factor authentication strengthens login,\" the Auditor notes.\n\"But it doesn't\
+          \ address who SHOULD have access. Orphaned accounts with\nMFA are still orphaned accounts. Excessive\
+          \ permissions with MFA are\nstill excessive permissions. We need governance over access rights,\
+          \ not\njust stronger authentication.\"\n                    "
+    corporate:
+      title: THE ACCESS CHAOS REPORT
+      narrative: "\nThe external audit has produced findings that have the executive team\nin crisis mode.\
+        \ The CISO reads the highlights.\n\n\"Orphaned accounts: 312 former employees still have active\
+        \ access.\nExcessive permissions: Users with access to systems their roles don't\nrequire. Segregation\
+        \ of duties violations: Users with conflicting\npermissions. And no comprehensive view of who\
+        \ has access to what across\nall systems.\"\n\nShe looks around the room. \"Each system manages\
+        \ its own access. AD, AWS,\nSalesforce, the ERP - no unified visibility, no coordinated lifecycle\n\
+        management, no automated reviews.\"\n\nThe CEO taps the table. \"What do we need to fix this?\
+        \ And don't tell\nme 'more manual reviews' - we've tried that.\"\n\nWhat solution addresses these\
+        \ governance challenges?\n                "
+      choices:
+      - text: Implement stronger password policies
+      - text: Deploy an Identity Governance and Administration (IGA) solution
+      - text: Add more firewalls
+      - text: Require MFA for all applications
+      success_text: "\n\"You need an Identity Governance and Administration - IGA - solution,\"\nyou recommend.\
+        \ \"IGA provides unified visibility across all systems,\nautomated access reviews, policy enforcement,\
+        \ and identity lifecycle\nmanagement.\"\n\nYou outline the value: \"Orphaned accounts? IGA integrates\
+        \ with HR to\nautomatically deprovision when employees leave. Excessive permissions?\nAutomated\
+        \ certification campaigns flag anomalies for manager review.\nSegregation of duties? IGA enforces\
+        \ policies preventing conflicting\naccess. No visibility? Single dashboard showing who has access\
+        \ to what\nacross AD, AWS, Salesforce, and every connected system.\"\n\nThe CEO nods. \"So instead\
+        \ of hoping each system owner manages their own\naccess correctly...\"\n\n\"You have centralized\
+        \ governance with automated enforcement. IGA doesn't\nreplace system-level controls, but it provides\
+        \ the oversight layer that\ncatches what falls through the cracks.\"\n\nIGA addresses identity\
+        \ governance holistically.\n                "
+      failure_texts:
+        0: "\nThe CISO shakes her head. \"Password policies don't address orphaned\naccounts or excessive\
+          \ permissions. Former employees with strong passwords\nstill shouldn't have access. The problem\
+          \ is WHAT access people have,\nnot HOW they authenticate.\"\n                    "
+        2: "\n\"Firewalls?\" The CEO looks confused. \"We're talking about identity\ngovernance, not network\
+          \ security. Firewalls don't prevent orphaned\naccounts or excessive application permissions.\
+          \ Different problem\ndomain entirely.\"\n                    "
+        3: "\n\"MFA strengthens authentication,\" the CISO agrees. \"But orphaned\naccounts with MFA are\
+          \ still orphaned. Excessive permissions with MFA\nare still excessive. We need governance over\
+          \ WHO should have access\nto WHAT, not just stronger proof of identity at login.\"\n       \
+          \             "
+- id: d5_stolen_keys_attack
+  domain: 5
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 5: Identity and Access Management - Credential Stuffing Defense'
+  failure_text: "\nCredential stuffing attacks use passwords stolen from other breaches to\nattempt login\
+    \ at your organization. Longer passwords don't help when the\nEXACT password was stolen. Effective\
+    \ defense requires: 1) MFA - so stolen\npasswords alone aren't enough, and 2) Detection/blocking -\
+    \ rate limiting,\nCAPTCHA, known-breach credential checking, and blocking suspicious patterns.\nMulti-factor\
+    \ authentication defeats credential stuffing by requiring\nsomething beyond the stolen password.\n\
+    \        "
+  themes:
+    fantasy:
+      title: THE STOLEN KEYS FROM DISTANT LANDS
+      narrative: "\nThe Master of Shadows brings alarming intelligence. \"Enemy agents have\nobtained\
+        \ a ledger of passphrases stolen from the Western Kingdoms. They\nare trying these passphrases\
+        \ against our gates, hoping that some of our\nguardians use the same phrases they used in the\
+        \ West.\"\n\nThe Gate Captain confirms the problem. \"We have seen hundreds of attempts\ntoday\
+        \ - passphrases that are valid elsewhere being tried here. Some\nguardians DO use the same passphrase\
+        \ everywhere. When the attempt matches,\nthe attacker enters as that guardian.\"\n\nThe Lord Chamberlain\
+        \ looks grave. \"Requiring longer passphrases will not\nhelp if the exact passphrase was stolen\
+        \ from the Western Kingdoms. What\nis our MOST effective defense?\"\n                "
+      choices:
+      - text: Require longer passphrases
+      - text: Implement multiple factors and detect repeated attempts from the same source
+      - text: Change the location of our gates
+      - text: Disable the ability to recover forgotten passphrases
+      success_text: "\n\"Our most effective defense combines multiple factors with detection,\"\nyou explain.\
+        \ \"If we require not just a passphrase but also a sigil\nthat each guardian carries - multi-factor\
+        \ authentication - then stolen\npassphrases alone are insufficient. The enemy has the passphrase\
+        \ but\nnot the sigil.\"\n\nYou continue: \"Additionally, we must detect and block these attacks.\n\
+        If hundreds of attempts come from the same source, if attempts use\nknown-stolen passphrases,\
+        \ if the pattern of attempts suggests automated\nattack - we block and alert. Rate limiting, known-breach\
+        \ checking,\nbehavioral detection.\"\n\nThe Master of Shadows nods. \"So even if a guardian foolishly\
+        \ uses the\nsame passphrase everywhere, the attacker is stopped by the second factor\nor detected\
+        \ by the patterns?\"\n\n\"Exactly. Multi-factor defeats credential stuffing because stolen\ncredentials\
+        \ alone aren't enough. Detection and blocking adds defense\nin depth.\"\n\nMFA + DETECTION defeats\
+        \ credential stuffing attacks.\n                "
+      failure_texts:
+        0: "\nThe Lord Chamberlain shakes his head. \"Longer passphrases don't help\nwhen the EXACT passphrase\
+          \ was stolen from elsewhere. If a guardian\nuses 'TheDragonFliesSouth' in both kingdoms, and\
+          \ that exact passphrase\nwas stolen from the West, length provides no protection. The attack\n\
+          uses the real stolen credential.\"\n                    "
+        2: "\nThe Gate Captain snorts. \"Security through obscurity? The enemy will\nfind our gates eventually\
+          \ - they found them today. Moving gates doesn't\naddress the fundamental vulnerability that\
+          \ stolen credentials from\nelsewhere can be tried here.\"\n                    "
+        3: "\nThe Master of Shadows looks confused. \"Disabling passphrase recovery?\nThat affects guardians\
+          \ who forget their own passphrases, not attackers\nusing stolen passphrases. The recovery process\
+          \ is not the attack vector\nhere - the attack uses credentials stolen from other realms.\"\n\
+          \                    "
+    corporate:
+      title: THE CREDENTIAL STUFFING CAMPAIGN
+      narrative: "\nThe SOC alert is blinking red. \"We're seeing thousands of login attempts\nfrom rotating\
+        \ IP addresses,\" the analyst reports. \"The attempts are\nusing username/password combinations\
+        \ - real ones, stolen from breaches\nat other companies. They're trying to see if our users reused\
+        \ passwords.\"\n\nShe pulls up the patterns. \"When a combo works - because the user DID\nreuse\
+        \ their password - the attacker is in. Full account access. We've\nalready had three confirmed\
+        \ compromises this morning.\"\n\nThe CISO arrives at the SOC. \"Credential stuffing attack. What's\
+        \ our\nmost effective defense? These aren't weak passwords being guessed -\nthese are real passwords\
+        \ the users chose, stolen from elsewhere.\"\n                "
+      choices:
+      - text: Require longer passwords
+      - text: Implement MFA and detect/block credential stuffing attempts
+      - text: Change the login page URL
+      - text: Disable the password recovery feature
+      success_text: "\n\"MFA combined with detection and blocking,\" you recommend immediately.\n\"First,\
+        \ multi-factor authentication means stolen passwords aren't enough.\nThe attacker has the password\
+        \ but not the authenticator app or hardware\ntoken. They can't complete the login.\"\n\nYou continue\
+        \ outlining defenses: \"Second, detection and blocking. Rate\nlimiting for login attempts. CAPTCHA\
+        \ after suspicious patterns. Checking\nattempted passwords against known-breached credential databases.\
+        \ Blocking\nIPs exhibiting stuffing patterns. These attackers are trying thousands\nof credentials\
+        \ - they'll trigger detection.\"\n\nThe CISO nods. \"So even if our users made the mistake of\
+        \ reusing\npasswords, the additional factor and our detection capabilities protect\nthem?\"\n\n\
+        \"Exactly. MFA defeats the attack because passwords alone aren't enough.\nDetection catches and\
+        \ blocks the attack patterns. Defense in depth.\"\n\nMFA + DETECTION is the solution for credential\
+        \ stuffing.\n                "
+      failure_texts:
+        0: "\nThe analyst shakes her head. \"Longer passwords don't help when the\nEXACT password was\
+          \ stolen from a breach. If our user's password at\nLinkedIn was 'MyD0gRex2024!' and they used\
+          \ it here too, length is\nirrelevant - the attacker has the real credential.\"\n           \
+          \         "
+        2: "\nThe CISO stares. \"Change the login URL? That's security through\nobscurity. The attackers\
+          \ will find it - they already found it today.\nWe need real defenses that work even when the\
+          \ attacker knows where\nto attack.\"\n                    "
+        3: "\n\"Password recovery isn't the attack vector,\" the analyst notes. \"These\nattackers have\
+          \ stolen credentials from other breaches. They're not\ntrying to recover passwords - they're\
+          \ trying passwords they already\nhave. Disabling recovery would hurt our users, not the attackers.\"\
+          \n                    "

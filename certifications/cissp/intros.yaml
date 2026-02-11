@@ -1,0 +1,229 @@
+1:
+  title: 'DOMAIN I: SECURITY AND RISK MANAGEMENT'
+  narrator: THE KEEPER OF GOVERNANCE
+  introduction: "\nThe Hall of Security and Risk Management is the foundation upon which all\nother domains\
+    \ rest. Here, the ancient principles of governance, risk, and\ncompliance converge. You will learn\
+    \ to see security not as a technical\npuzzle alone, but as a balance between protecting assets and\
+    \ enabling the\nrealm to function.\n\nThis domain teaches you to think like a leader: How do we decide\
+    \ what to\nprotect? How much risk is acceptable? What policies guide our guardians?\nYou will encounter\
+    \ questions of ethics, business continuity, and the laws\nthat bind us all. Master these principles,\
+    \ and you will have the foundation\nto understand every domain that follows.\n\nAbove all else, remember\
+    \ the cardinal rule that governs every decision in\nthis Citadel: LIFE SAFETY IS ALWAYS THE HIGHEST\
+    \ PRIORITY. No asset, no data,\nno secret is worth more than a human life. This principle will guide\
+    \ you\nthrough every trial ahead, and it is the first lesson every guardian must\nlearn.\n        "
+  corporate:
+    narrator: THE CISO (via all-hands meeting)
+    introduction: "\nWelcome to Level 1: Security Governance and Risk Management. This is where\nwe figure\
+      \ out what we're protecting, why we're protecting it, and how much\nmoney we can convince the CFO\
+      \ to spend on it.\n\nThink of this as the \"business side\" of security. You'll learn about risk\n\
+      assessments (how bad could this really get?), business continuity (what\nhappens when the data center\
+      \ floods?), and compliance (keeping auditors\nhappy so they'll leave us alone).\n\nHere's the one\
+      \ rule that overrides everything else: LIFE SAFETY FIRST.\nIf the server room is on fire and someone's\
+      \ trapped inside, you save the\nperson, not the backup tapes. No data is worth a human life. Ever.\
+      \ This\nisn't just ethics - it's literally the first thing they'll ask about on\nthe CISSP exam.\
+      \ And in real life, it's the difference between being a\nsecurity professional and being a monster.\n\
+      \nNow, let's talk about managing risk without losing our minds...\n            "
+2:
+  title: 'DOMAIN II: ASSET SECURITY'
+  narrator: THE GUARDIAN OF TREASURES
+  introduction: "\nThe Vault of Asset Security holds the second great truth of our profession:\nyou cannot\
+    \ protect what you do not know. Before any defense can be mounted,\nwe must first understand what\
+    \ we guard - its value, its nature, and who\nbears responsibility for its safety.\n\nIn this domain,\
+    \ you will learn the arts of classification and ownership.\nNot all treasures are equal; some require\
+    \ iron vaults while others need\nonly wooden chests. You must distinguish between the DATA OWNER -\
+    \ who\ndetermines how information should be protected - and the DATA CUSTODIAN -\nwho maintains it\
+    \ day-to-day. These roles are distinct and essential.\n\nYou will discover how assets flow through\
+    \ their lifecycle: from creation\nthrough storage, use, and sharing, to eventual archival or destruction.\n\
+    Pay special attention to the concept of DATA REMANENCE - the ghost of\ninformation that lingers even\
+    \ after we believe it destroyed. Many a secret\nhas been betrayed by careless disposal. The wise guardian\
+    \ ensures that\nwhen data must die, it dies completely, leaving no trace for enemies to\nrecover.\n\
+    \        "
+  corporate:
+    narrator: THE DATA GOVERNANCE TEAM LEAD
+    introduction: "\nWelcome to Level 2: Asset Security. Or as I like to call it, \"Where is all\nour\
+      \ stuff, and who's supposed to be watching it?\"\n\nHere's the uncomfortable truth: most organizations\
+      \ have no idea what data\nthey actually have, where it lives, or who's responsible for it. Sound\n\
+      familiar? Yeah, that's why we have this department.\n\nYou'll learn about classification (is this\
+      \ 'Confidential' or just 'Internal\nUse Only'?), data ownership (hint: the person who created it\
+      \ isn't always\nthe owner), and the data lifecycle (from creation to that beautiful moment\nwhen\
+      \ you finally get to delete it legally).\n\nPay attention to DATA REMANENCE - that's the fun phenomenon\
+      \ where deleted\ndata isn't really deleted. That hard drive you threw in the dumpster?\nSomeone's\
+      \ probably reading it right now. Sleep well tonight!\n\nLet's learn how to actually secure the things\
+      \ that matter...\n            "
+3:
+  title: 'DOMAIN III: SECURITY ARCHITECTURE AND ENGINEERING'
+  narrator: THE MASTER ARCHITECT
+  introduction: "\nWelcome to the Engineering Halls, where the very foundations of our defenses\nare designed\
+    \ and built. Here you will learn that security is not merely\nbolted on after construction - it must\
+    \ be woven into the fabric of every\nwall, every ward, every magical circuit from the very beginning.\n\
+    \nThe great architects of old understood DEFENSE IN DEPTH - that no single\nbarrier, however mighty,\
+    \ should be trusted alone. Layer upon layer of\nprotection, each independent, each capable of standing\
+    \ when others fall.\nStudy the security models that govern our realm: Bell-LaPadula guards our\nsecrets\
+    \ from prying eyes, while Biba ensures the integrity of our records.\n\nYou will master the arcane\
+    \ arts of cryptography - the ancient mathematics\nthat transforms readable text into indecipherable\
+    \ ciphers. Learn the\ndifference between symmetric keys (shared secrets) and asymmetric pairs\n(public\
+    \ and private). Understand that even the strongest encryption fails\nif its keys are poorly managed.\n\
+    \nAbove all, remember: a castle built on sand will crumble, no matter how\nthick its walls. Security\
+    \ must be architected into the foundation.\n        "
+  corporate:
+    narrator: THE ENTERPRISE ARCHITECT
+    introduction: "\nWelcome to Level 3: Security Architecture and Engineering. This is where\nwe actually\
+      \ BUILD the security controls everyone else just talks about.\n\nEver wonder why that \"quick fix\"\
+      \ from five years ago is now a critical\nvulnerability? Because someone skipped the architecture\
+      \ review. Security\nneeds to be designed in from the start, not duct-taped on during the\npenetration\
+      \ test.\n\nYou'll learn about DEFENSE IN DEPTH (because your firewall WILL fail\nsomeday), security\
+      \ models (Bell-LaPadula for confidentiality, Biba for\nintegrity - yes, there will be a test), and\
+      \ cryptography (the thing\neveryone uses but nobody understands).\n\nKey lesson: symmetric encryption\
+      \ uses one key, asymmetric uses two. If\nyou remember nothing else, remember that. Also remember\
+      \ that the guy who\nsays \"we'll add security later\" is the reason we have incident response\n\
+      teams.\n\nLet's learn how to build things that don't fall apart at the first sign\nof an attacker...\n\
+      \            "
+4:
+  title: 'DOMAIN IV: COMMUNICATION AND NETWORK SECURITY'
+  narrator: THE WARDEN OF PATHWAYS
+  introduction: "\nThe realm is connected by countless magical pathways - ley lines that carry\nmessages,\
+    \ enchanted courier routes, and mystical portals that span vast\ndistances. This domain teaches you\
+    \ to secure these vital connections, for\nan enemy who controls the pathways controls the flow of\
+    \ all information.\n\nYou will study the great OSI model - seven layers of communication, each\nwith\
+    \ its own vulnerabilities and protections. From the physical crystals\nthat carry our signals to the\
+    \ application spells that interpret them, every\nlayer must be guarded.\n\nLearn the art of network\
+    \ segmentation - dividing your realm into protected\nzones so that a breach in one area cannot spread\
+    \ to others. Master the\ndeployment of firewalls, those magical barriers that examine every message\n\
+    and block the suspicious. Understand VPNs - encrypted tunnels through\nhostile territory that protect\
+    \ travelers from eavesdroppers.\n\nBe ever vigilant against the dark arts: man-in-the-middle attacks\
+    \ where\nenemies insert themselves into conversations, denial-of-service floods\nthat overwhelm our\
+    \ defenses, and the countless ways attackers exploit\npoorly secured connections. The network is the\
+    \ battlefield.\n        "
+  corporate:
+    narrator: THE NETWORK SECURITY MANAGER
+    introduction: "\nWelcome to Level 4: Communication and Network Security. This is where we\nlearn why\
+      \ \"just plug it into the network\" is a phrase that makes security\npeople twitch.\n\nRemember\
+      \ the OSI model from your networking class? Good, because you'll\nneed it. Seven layers, each one\
+      \ a new opportunity for someone to break\nsomething. From physical cables to application protocols,\
+      \ every layer has\nits own special flavor of vulnerability.\n\nYou'll learn about VLANs (keeping\
+      \ departments from accidentally seeing\neach other's traffic), firewalls (the first line of defense\
+      \ that everyone\nthinks is the ONLY line of defense), and VPNs (so road warriors can work\nfrom\
+      \ coffee shops without exposing everything).\n\nThe fun stuff is the attacks: man-in-the-middle\
+      \ (reading your traffic),\nDDoS (drowning you in garbage packets), and DNS poisoning (redirecting\n\
+      users to evil sites). These aren't theoretical - they happen every day.\n\nLet's learn how to keep\
+      \ the network from becoming your biggest liability...\n            "
+5:
+  title: 'DOMAIN V: IDENTITY AND ACCESS MANAGEMENT'
+  narrator: THE GATEKEEPER
+  introduction: "\nWho goes there? This ancient challenge echoes through the Citadel's gates,\nfor the\
+    \ art of Identity and Access Management is the art of knowing who\nseeks entry and what they should\
+    \ be permitted to do once inside.\n\nYou will master the three pillars of authentication: something\
+    \ you KNOW\n(a password or secret phrase), something you HAVE (a token or enchanted\namulet), and\
+    \ something you ARE (the unique patterns of your very essence).\nWise defenders combine these factors,\
+    \ for a single pillar may be knocked\ndown, but three standing together rarely fall.\n\nLearn the\
+    \ principle of LEAST PRIVILEGE - that every soul should receive\nonly the access necessary for their\
+    \ duties, no more. A scribe needs access\nto the library, not the treasury. A guard needs the armory,\
+    \ not the royal\nchambers. Excessive privilege is excessive risk.\n\nStudy the lifecycle of identity:\
+    \ from the moment a new apprentice is\ngranted their first access, through their career of changing\
+    \ roles and\nresponsibilities, to the critical moment when they depart and all access\nmust be revoked.\
+    \ Many a castle has fallen to a \"departed\" member whose\nkeys were never collected.\n        "
+  corporate:
+    narrator: THE IAM TEAM LEAD
+    introduction: "\nWelcome to Level 5: Identity and Access Management. Or as I call it,\n\"Who are you,\
+      \ and why do you think you can access that?\"\n\nThis is the domain where we answer three eternal\
+      \ questions: Authentication\n(are you who you claim to be?), Authorization (are you allowed to do\
+      \ what\nyou're trying to do?), and Accounting (what did you actually do?). The\nholy trinity of\
+      \ IAM.\n\nYou'll learn about MFA (because passwords alone are basically useless),\nSSO (one login\
+      \ to rule them all), and the ever-popular access reviews\n(quarterly reminders that Bob from accounting\
+      \ still has admin rights\nthree years after he transferred to marketing).\n\nKey concept: LEAST\
+      \ PRIVILEGE. Everyone gets the minimum access needed to\ndo their job. That intern doesn't need\
+      \ domain admin. Neither does the CEO,\nhonestly. The more access you have, the more damage you can\
+      \ accidentally\ncause.\n\nAnd remember: the most dangerous time for access is when someone leaves.\n\
+      If you don't revoke access immediately, congratulations, you've created\nan insider threat. Let's\
+      \ learn how to not do that...\n            "
+6:
+  title: 'DOMAIN VI: SECURITY ASSESSMENT AND TESTING'
+  narrator: THE GRAND INQUISITOR
+  introduction: "\nTrust, but verify. This ancient wisdom guides the Sixth Domain, where we\nlearn the\
+    \ arts of testing our own defenses before our enemies do. For\nwhat good are walls never inspected?\
+    \ What use are wards never tested?\n\nYou will learn the difference between vulnerability assessments\
+    \ - the\ncareful cataloging of potential weaknesses - and penetration testing -\nthe simulated attacks\
+    \ that prove whether those weaknesses can truly be\nexploited. Both have their place; neither is sufficient\
+    \ alone.\n\nStudy the three approaches to testing: black box (knowing nothing, as an\noutside attacker\
+    \ would), white box (knowing everything, as an insider\nmight), and gray box (the realistic middle\
+    \ ground). Each reveals different\ntruths about your defenses.\n\nMaster the art of the security audit\
+    \ - the formal examination of controls\nand compliance. Learn to read logs and analyze patterns, for\
+    \ the history\nof what has happened reveals what might happen again. And practice the\ntabletop exercise\
+    \ - the gathering of minds to walk through crisis scenarios\nbefore they become reality.\n\nThe kingdom\
+    \ that tests itself finds its weaknesses. The kingdom that does\nnot... has its weaknesses found for\
+    \ it.\n        "
+  corporate:
+    narrator: THE SECURITY TESTING MANAGER
+    introduction: "\nWelcome to Level 6: Security Assessment and Testing. This is where we\nfind out how\
+      \ bad things really are, before the bad guys do.\n\nThere's a crucial difference between a vulnerability\
+      \ assessment (here's\na list of things that MIGHT be exploitable) and a penetration test (here's\n\
+      proof that we just exploited them). One gives you a to-do list. The other\ngives you a heart attack\
+      \ and a to-do list.\n\nYou'll learn about black-box testing (attacker knows nothing), white-box\n\
+      testing (tester knows everything), and gray-box (realistic middle ground).\nYou'll also learn why\
+      \ the auditors want all those logs, and what happens\nwhen you don't have them (spoiler: you fail\
+      \ the audit).\n\nKey tools: vulnerability scanners (automated weakness detection), SAST\nand DAST\
+      \ (finding bugs in code before and after deployment), and the\nhumble log review (where we discover\
+      \ that the breach actually happened\nthree months ago).\n\nRemember: if you don't test your security,\
+      \ someone else will. And they\nwon't send you a nice report afterward. Let's learn how to find problems\n\
+      before they find us...\n            "
+7:
+  title: 'DOMAIN VII: SECURITY OPERATIONS'
+  narrator: THE COMMANDER OF THE WATCH
+  introduction: "\nThe walls are built. The guards are trained. The wards are set. But security\nis not\
+    \ a destination - it is an endless journey. Welcome to Security\nOperations, where the daily work\
+    \ of protection never ceases.\n\nYou will learn the sacred art of incident response - what to do when\
+    \ the\nunthinkable happens. Preparation, identification, containment, eradication,\nrecovery, and\
+    \ lessons learned. Every incident follows this path; every\ndefender must know it by heart.\n\nMaster\
+    \ the handling of evidence, for in the aftermath of an attack, the\ntruth lives in the artifacts left\
+    \ behind. Chain of custody must be\npreserved, or justice cannot be served. Learn forensic techniques\
+    \ that\nreveal what happened, when, and by whom.\n\nStudy the watchtowers of our profession: SIEM\
+    \ systems that gather and\ncorrelate signals from every corner of the realm, threat intelligence\n\
+    that warns of coming storms, and the continuous monitoring that never\nsleeps. Patch management, change\
+    \ control, configuration management - the\nunglamorous work that prevents most incidents before they\
+    \ begin.\n\nIn Security Operations, vigilance is life. Complacency is death.\n        "
+  corporate:
+    narrator: THE SOC MANAGER
+    introduction: "\nWelcome to Level 7: Security Operations. This is where the rubber meets\nthe road,\
+      \ where theory becomes \"it's 3 AM and something is very wrong.\"\n\nThe SOC (Security Operations\
+      \ Center) never sleeps. Neither will you, if\nyou work here long enough. You'll learn about SIEM\
+      \ platforms (drowning\nin logs so you don't have to), incident response (what to do when things\n\
+      go sideways), and threat intelligence (knowing what the bad guys are up\nto before they get here).\n\
+      \nThe incident response lifecycle is your new bible: Preparation, Detection,\nContainment, Eradication,\
+      \ Recovery, Lessons Learned. Memorize it. Live it.\nYou'll walk through it at 2 AM more often than\
+      \ you'd like.\n\nKey skills: Evidence handling (don't contaminate the crime scene), patch\nmanagement\
+      \ (update before you're exploited), and change management (so\nthe new \"improvement\" doesn't break\
+      \ everything). Also, documentation -\nbecause \"we fixed it but don't remember how\" is not a valid\
+      \ incident report.\n\nRemember: the SIEM alert at 3 AM is always real. Until it isn't. But treat\n\
+      every one like it is, because the one you ignore will be the actual breach.\nLet's learn how to\
+      \ survive the operational trenches...\n            "
+8:
+  title: 'DOMAIN VIII: SOFTWARE DEVELOPMENT SECURITY'
+  narrator: THE MASTER ARTIFICER
+  introduction: "\nEvery magical artifact begins as raw potential. In the hands of a careless\nartificer,\
+    \ that potential becomes a cursed object that betrays its user.\nIn the hands of a master, it becomes\
+    \ a trustworthy tool. Welcome to Software\nDevelopment Security, where we learn to create without\
+    \ creating vulnerabilities.\n\nYou will learn that security must be woven into the development lifecycle\n\
+    from the very first incantation. Requirements, design, implementation,\ntesting, deployment - at every\
+    \ stage, security must be present. The\ngrimoire written without security in mind becomes a gateway\
+    \ for attackers.\n\nStudy the common vulnerabilities that plague magical constructs: buffer\noverflows\
+    \ that allow possession, injection attacks that turn the artifact\nagainst its user, cross-site scripting\
+    \ that spreads corruption. Learn the\nOWASP Top Ten - the most common mistakes artificers make - and\
+    \ how to\nprevent each one.\n\nMaster the arts of code review and security testing. Learn to use automated\n\
+    tools that scan for weakness, but never trust them completely - the human\neye catches what machines\
+    \ miss. Understand secure deployment, so that even\na well-crafted artifact is not undone by careless\
+    \ installation.\n\nIn this domain, we create. And with creation comes responsibility.\n        "
+  corporate:
+    narrator: THE APPSEC LEAD
+    introduction: "\nWelcome to Level 8: Software Development Security. This is where we try\nto convince\
+      \ developers that security is their problem too. (It's going\nabout as well as you'd expect.)\n\n\
+      Here's the hard truth: most vulnerabilities are born in development, not\ndiscovered by attackers.\
+      \ That SQL injection? A developer didn't validate\ninput. That XSS? A developer didn't encode output.\
+      \ That hardcoded password?\nI don't even want to talk about it.\n\nYou'll learn about the SDLC (Security\
+      \ Development Lifecycle - yes, we\nadded \"Security\" to the acronym, no, it didn't magically fix\
+      \ everything).\nThe goal is to bake security into every phase: requirements, design, coding,\ntesting,\
+      \ and deployment. \"We'll add security later\" is how breaches happen.\n\nKey topics: OWASP Top\
+      \ Ten (the greatest hits of web vulnerabilities),\nsecure coding practices (input validation, output\
+      \ encoding, the basics\neveryone skips), and code review (where we find out what the automated\n\
+      tools missed).\n\nOh, and DevSecOps. It's like DevOps, but with security people awkwardly\ninserted\
+      \ into the pipeline. It works better than you'd think, once\neveryone stops being territorial.\n\
+      \nLet's learn how to build software that doesn't immediately get popped...\n            "

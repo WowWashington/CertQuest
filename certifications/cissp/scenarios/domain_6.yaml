@@ -1,0 +1,1722 @@
+domain: 6
+domain_name: Security Assessment and Testing
+scenarios:
+- id: d6_castle_survey
+  domain: 6
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 6: Security Assessment and Testing - Vulnerability Assessment'
+  failure_text: "\nVulnerability assessment and penetration testing serve different purposes.\nAssessment\
+    \ identifies weaknesses through scanning and examination without\nexploitation. Penetration testing\
+    \ actively exploits vulnerabilities to\nprove impact. When minimal disruption is required, vulnerability\
+    \ assessment\nprovides comprehensive visibility with lower risk.\n        "
+  themes:
+    fantasy:
+      title: THE CITADEL'S WEAKNESS SURVEY
+      narrative: "\nThe Citadel Council has grown concerned about the fortress's defenses. Years of\n\
+        peace have led to complacency, and whispers speak of forgotten vulnerabilities\nin the outer walls\
+        \ and magical wards.\n\nThe High Commander approaches you with a delicate matter. \"We must understand\n\
+        our weaknesses,\" she says, \"but the realm is at peace. I cannot have siege\nengines battering\
+        \ our walls or war mages testing our barriers with actual\ncombat spells. The disruption would\
+        \ panic the citizenry and potentially\ndamage what we seek to protect.\"\n\nShe needs a comprehensive\
+        \ inventory of all defensive weaknesses - crumbling\nstonework, degraded enchantments, gaps in\
+        \ patrol routes - but with minimal\nrisk of actual damage.\n\n\"How would you survey our defenses\
+        \ without actually attacking them?\"\n                "
+      choices:
+      - text: Conduct a full siege simulation with battering rams and war magic
+      - text: Survey and catalog all defensive weaknesses without testing them destructively
+      - text: Hire enemy infiltrators to test our defenses with real attacks
+      - text: Send spies to test the guards' susceptibility to bribery and deception
+      success_text: "\nYou organize teams of engineers, ward-inspectors, and veteran guards to\nmethodically\
+        \ survey every inch of the Citadel's defenses. They probe stones\nfor weakness, trace magical\
+        \ wards for degradation, and map patrol patterns\nfor gaps - all without swinging a single weapon\
+        \ or casting an offensive spell.\n\nThe resulting report is sobering but invaluable: forty-seven\
+        \ points of\npotential failure, prioritized by severity and ease of exploitation. The\nCouncil\
+        \ can now allocate resources for repairs based on actual risk.\n\n\"This is precisely what we\
+        \ needed,\" the High Commander nods approvingly.\n\"A complete picture of our vulnerabilities\
+        \ without the chaos of actual\nassault. Now we can strengthen what matters most.\"\n\nA VULNERABILITY\
+        \ ASSESSMENT identifies weaknesses through examination and\nscanning without exploitation. When\
+        \ management needs comprehensive\nvisibility with minimal disruption, assessment is the right\
+        \ choice.\n                "
+      failure_texts:
+        0: "\nThe siege simulation went exactly as feared. While your battering rams\nidentified three\
+          \ structural weaknesses in the eastern wall, they also\ncreated two new ones. Three guards were\
+          \ injured. A section of the ward\nmatrix collapsed entirely when your war mages tested it.\n\
+          \nPenetration testing with exploitation provides deeper validation but\ncarries higher risk\
+          \ of disruption. When management explicitly wants\nminimal risk, a vulnerability assessment\
+          \ (scanning without exploitation)\nis the appropriate choice.\n                    "
+        2: "\nHiring actual enemy infiltrators seemed clever until one of them decided\nto actually defect\
+          \ - but to the other side. He took detailed maps of your\ndefenses back to his true masters.\
+          \ Red team exercises have their place,\nbut they carry inherent risks and weren't what management\
+          \ requested.\n\nWhen the goal is understanding weaknesses with minimal disruption, a\nvulnerability\
+          \ assessment provides comprehensive scanning without the\nrisks of actual exploitation attempts.\n\
+          \                    "
+        3: "\nYour social engineering test revealed that several guards could indeed\nbe bribed - but\
+          \ now those guards know they were tested and are either\nresentful or fired. Meanwhile, you\
+          \ still don't know about the crumbling\nsection of the eastern wall or the failing ward crystals.\n\
+          \nSocial engineering tests evaluate people, not infrastructure. A\nvulnerability assessment\
+          \ of the defenses themselves was what the\nHigh Commander actually requested.\n            \
+          \        "
+    corporate:
+      title: THE SECURITY WEAKNESS REVIEW
+      narrative: "\nThe quarterly board meeting left the CISO looking pale. \"The board wants\nto understand\
+        \ our security weaknesses,\" she explains during the emergency\nteam huddle. \"But they're terrified\
+        \ of business disruption. Last year's\npen test took down the trading floor for two hours and\
+        \ nobody has\nforgotten it.\"\n\nShe pulls up the email from the CEO: \"Need comprehensive view\
+        \ of\nvulnerabilities. ABSOLUTELY NO SYSTEM DISRUPTION. Quarterly numbers\ndepend on 100% uptime\
+        \ this month.\"\n\nThe security team looks at you. Someone has to figure out how to give\nthe\
+        \ board what they want without breaking anything.\n\n\"We need to map our weaknesses,\" the CISO\
+        \ continues, \"but if we crash\nproduction again, heads will roll. What approach do we take?\"\
+        \n                "
+      choices:
+      - text: Run a full penetration test with exploitation against production
+      - text: Conduct vulnerability scanning without exploitation attempts
+      - text: Bring in a red team for adversarial attack simulation
+      - text: Launch a social engineering campaign against the sales team
+      success_text: "\nYou schedule authenticated vulnerability scans during low-traffic windows,\ncarefully\
+        \ tuned to avoid aggressive probing that might destabilize services.\nThe scans identify missing\
+        \ patches, misconfigurations, and exposed services\nwithout actually exploiting any of them.\n\
+        \nThe resulting report identifies 847 vulnerabilities across the environment,\ncategorized by\
+        \ severity and mapped to business-critical systems. The board\ngets their comprehensive view.\
+        \ Production stays up. The CISO keeps her job.\n\n\"This is exactly what we needed,\" she says,\
+        \ reviewing the executive summary.\n\"Clear visibility into our risk posture without the drama.\
+        \ Schedule these\nquarterly.\"\n\nVULNERABILITY ASSESSMENT through scanning provides comprehensive\
+        \ weakness\nidentification with minimal disruption. Penetration testing validates\nexploitability\
+        \ but carries higher risk - save it for when stakeholders\naccept that risk.\n                "
+      failure_texts:
+        0: "\nThe penetration test was thorough. It was also catastrophic. Your testers\nfound an exploitable\
+          \ vulnerability in the payment gateway - by exploiting\nit. The payment system crashed for four\
+          \ hours during peak trading.\n\nThe board got their answer about vulnerabilities: you have them.\
+          \ They also\ngot a firsthand demonstration of why they didn't want active exploitation.\nThe\
+          \ CISO was asked to \"pursue other opportunities.\"\n\nWhen management explicitly requests minimal\
+          \ disruption, vulnerability\nassessment (scanning without exploitation) is the appropriate approach.\n\
+          \                    "
+        2: "\nRed team exercises are excellent for testing detection and response, but\nthey're adversarial\
+          \ by nature. Your red team successfully exfiltrated\n\"sensitive data\" (it was a test) but\
+          \ also triggered three real security\nincidents, caused a P1 outage during their lateral movement,\
+          \ and gave the\nSOC team collective PTSD.\n\nThe board wanted a quiet survey, not a war. Vulnerability\
+          \ assessment\nwould have provided the comprehensive view they requested without the\noperational\
+          \ chaos.\n                    "
+        3: "\nYour social engineering campaign revealed that 40% of sales staff would\nclick a phishing\
+          \ link. It also resulted in three HR complaints, one\nlawsuit threat, and a very angry VP of\
+          \ Sales demanding to know why\nyou're \"attacking my people.\"\n\nMore importantly, you still\
+          \ don't know anything about the technical\nvulnerabilities in your infrastructure. Social engineering\
+          \ tests people;\nthe board asked about system weaknesses.\n                    "
+- id: d6_siege_knowledge
+  domain: 6
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 6: Security Assessment and Testing - Penetration Testing Types'
+  failure_text: "\nPenetration test types are defined by the knowledge provided to testers:\n- Black box:\
+    \ No information (simulates external attacker)\n- White box: Full information (documentation, source\
+    \ code, credentials)\n- Gray box: Partial information (some access/knowledge)\n\nWhen testers receive\
+    \ complete documentation and access, it's white box testing.\n        "
+  themes:
+    fantasy:
+      title: THE SIEGE MASTER'S KNOWLEDGE
+      narrative: "\nThe Citadel has hired the legendary Siege Master Valdris to test the fortress\ndefenses.\
+        \ Before he begins, the War Council must decide how much information\nto provide him.\n\n\"This\
+        \ decision shapes the entire exercise,\" the High Commander explains.\n\"We could give him nothing\
+        \ - let him approach as a true enemy would, learning\nour defenses only through reconnaissance.\
+        \ We could give him everything -\nblueprints, ward specifications, guard schedules, patrol routes\
+        \ - so he can\nfind the deepest flaws. Or something in between.\"\n\nThe Council has chosen to\
+        \ provide Valdris with complete architectural plans\nof the fortress, the magical specifications\
+        \ of every ward, access to the\nguard rotation schedules, and even the emergency response procedures.\n\
+        \nA young knight looks confused. \"If we tell him everything, how is that a\nreal test?\"\n\n\
+        What type of siege test has the Council commissioned?\n                "
+      choices:
+      - text: A black box test - the attacker knows nothing
+      - text: A white box test - the attacker has full knowledge
+      - text: A gray box test - the attacker has partial knowledge
+      - text: A blind test - no information is provided
+      success_text: "\n\"This is WHITE BOX testing,\" you explain to the knight. \"By giving Siege\nMaster\
+        \ Valdris complete information, we enable him to find the deepest,\nmost subtle vulnerabilities.\
+        \ He won't waste time discovering what we\nalready know - he can focus on finding what we DON'T\
+        \ know.\"\n\nThe High Commander nods approvingly. \"Exactly. A black box test simulates\nthe average\
+        \ enemy. But Valdris, with full knowledge, simulates the most\ndangerous threat: an enemy with\
+        \ inside information. If he cannot breach\nus, no one can.\"\n\nThe siege test proceeds with remarkable\
+        \ efficiency. Valdris identifies\nseventeen vulnerabilities that external reconnaissance would\
+        \ never have\nrevealed, including a critical flaw in the ward matrix that only appears\nunder\
+        \ specific conditions documented in the specifications.\n\nWHITE BOX (clear box) testing provides\
+        \ complete information to testers,\nenabling thorough examination that time-limited black box\
+        \ testing might miss.\n                "
+      failure_texts:
+        0: "\nBlack box testing provides NO information to the testers. They must\ndiscover everything\
+          \ through reconnaissance, just as an external attacker\nwould. But the Council explicitly gave\
+          \ Valdris complete architectural\nplans, ward specifications, and guard schedules.\n\nWith full\
+          \ information provided, this is WHITE BOX testing. Black box\nwould mean Valdris arrives knowing\
+          \ nothing about the Citadel's defenses.\n                    "
+        2: "\nGray box testing provides PARTIAL information - perhaps some network\ndiagrams but not source\
+          \ code, or user-level access but not admin\ncredentials. But the Council provided EVERYTHING:\
+          \ complete plans,\nfull specifications, all schedules.\n\nThis level of disclosure makes it\
+          \ WHITE BOX testing. Gray box would\ninvolve withholding some significant information.\n   \
+          \                 "
+        3: "\n\"Blind testing\" is similar to black box - no information provided to\ntesters. But the\
+          \ Council explicitly gave Valdris complete documentation\nand access to all defensive specifications.\n\
+          \nWith full information disclosure, this is WHITE BOX (clear box) testing.\nBlind/black box\
+          \ testing would mean starting with zero knowledge.\n                    "
+    corporate:
+      title: THE PENETRATION TEST BRIEF
+      narrative: "\nInitech has contracted an external penetration testing firm for their annual\nsecurity\
+        \ assessment. The kickoff meeting gets interesting when the lead\ntester asks about scope and\
+        \ knowledge.\n\n\"What information are you providing us?\" asks the tester, pen ready.\n\nThe\
+        \ IT Director slides a stack of documents across the table. \"Everything.\nNetwork diagrams for\
+        \ all segments. System documentation. Source code for\nour custom applications. Admin credentials\
+        \ for test accounts. Architecture\ndocuments. Our security policies and procedures.\"\n\nThe tester's\
+        \ eyebrows rise. \"That's... comprehensive.\"\n\n\"We want thorough results,\" the IT Director\
+        \ responds. \"No point in paying\nyou to spend three weeks discovering what's in these documents.\"\
+        \n\nA junior security analyst whispers to you, \"Isn't giving them everything\nkind of cheating?\
+        \ What kind of test is this?\"\n\nWhat type of penetration test has Initech commissioned?\n  \
+        \              "
+      choices:
+      - text: Black box test - simulating an external attacker
+      - text: White box test - full knowledge and documentation provided
+      - text: Gray box test - partial information provided
+      - text: Blind test - testers have no advance information
+      success_text: "\n\"This is a WHITE BOX penetration test,\" you explain quietly. \"Also called\n\
+        clear box or crystal box testing. We're giving them full access to\ndocumentation, source code,\
+        \ and architecture.\"\n\nThe junior analyst still looks skeptical. You continue: \"Think about\
+        \ it.\nA black box test means they spend days on reconnaissance, finding things\nwe already know.\
+        \ With white box, they skip straight to finding what we\nDON'T know. It's more thorough, not less.\"\
+        \n\nThe test proves your point. With source code access, the testers find\nthree critical vulnerabilities\
+        \ in custom code that no amount of black\nbox probing would have uncovered. The architecture review\
+        \ identifies\ndesign flaws that only manifest under specific conditions.\n\n\"Best ROI we've gotten\
+        \ from a pen test,\" the IT Director says at the\nreadout. \"Turns out giving them the blueprints\
+        \ helps them find the\nreal problems.\"\n\nWHITE BOX testing enables thorough examination of known\
+        \ systems,\nfinding deeper issues that time-limited black box testing often misses.\n        \
+        \        "
+      failure_texts:
+        0: "\nBlack box testing simulates an external attacker with NO prior knowledge.\nTesters must\
+          \ discover everything through reconnaissance and enumeration.\nBut Initech explicitly provided\
+          \ network diagrams, source code, credentials,\nand complete documentation.\n\nWith full information\
+          \ provided, this is WHITE BOX testing. Black box\nwould mean the testers start with zero knowledge\
+          \ of Initech's environment.\n                    "
+        2: "\nGray box testing provides PARTIAL knowledge - perhaps user-level access\nbut not admin credentials,\
+          \ or network diagrams but not source code.\nBut Initech provided EVERYTHING: complete diagrams,\
+          \ full source code,\nadmin credentials, and all documentation.\n\nThis level of disclosure defines\
+          \ WHITE BOX testing. Gray box implies\nsignificant information was withheld.\n             \
+          \       "
+        3: "\nBlind testing means testers receive no advance information about the\ntarget. This is similar\
+          \ to black box testing. But Initech's IT Director\nexplicitly provided complete documentation,\
+          \ source code, and credentials.\n\nWith full knowledge provided, this is WHITE BOX testing.\
+          \ Blind/black\nbox testing would begin with zero information about the environment.\n      \
+          \              "
+- id: d6_ward_scan
+  domain: 6
+  correct_index: 2
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 6: Security Assessment and Testing - Vulnerability Scanning'
+  failure_text: "\nVulnerability scan results require validation. False positives are common\ndue to version\
+    \ detection limitations, configuration differences, or\nscanner limitations. Proper validation confirms\
+    \ actual vulnerabilities.\nScanner tuning (credentials, updated plugins, exclusions) improves\nfuture\
+    \ accuracy. Neither blind acceptance nor complete rejection is\nappropriate.\n        "
+  themes:
+    fantasy:
+      title: THE WARD INSPECTOR'S DILEMMA
+      narrative: "\nThe Citadel's Ward Inspector bursts into your office, looking distressed.\nHer magical\
+        \ detection crystals have completed their monthly scan of the\nfortress's protective enchantments,\
+        \ and the results are troubling.\n\n\"Five hundred critical ward failures!\" she exclaims, spreading\
+        \ the\nparchment across your desk. \"If this is true, the entire Citadel is\nessentially unprotected!\"\
+        \n\nYou examine the report more closely. The scan flagged wards as \"failed\"\nbased on energy\
+        \ signature patterns. But as you review specific entries,\nsomething seems off. Ward 247 in the\
+        \ Eastern Tower is flagged as failed,\nbut you inspected it personally last week - it was functioning\
+        \ perfectly.\nYou check three more \"critical failures\" and find the same issue.\n\n\"I manually\
+        \ verified some of these,\" you tell the Inspector. \"They're\nworking fine. I think your detection\
+        \ crystals are misfiring.\"\n\n\"But there ARE real failures in here!\" she protests. \"What do\
+        \ we do with\nthese results?\"\n\nWhat is the appropriate response to this vulnerability scan\
+        \ report?\n                "
+      choices:
+      - text: Report all 500 critical findings as genuine ward failures
+      - text: Discard the entire scan since the crystals are clearly unreliable
+      - text: Validate findings manually and tune the detection crystals to reduce false positives
+      - text: Only address the failures that seem most dangerous based on location
+      success_text: "\n\"We need to do both things,\" you tell the Inspector. \"First, manually\nvalidate\
+        \ a sample of these findings to separate the real failures from\nthe false alarms. Then, we tune\
+        \ your detection crystals to reduce the\nnoise.\"\n\nThe validation effort reveals that 400 of\
+        \ the 500 findings were false\npositives - wards functioning normally but triggering detection\
+        \ due to\ncrystal calibration issues. But critically, 100 findings were REAL ward\nfailures that\
+        \ needed immediate attention.\n\nBy tuning the detection crystals with the validation data, future\
+        \ scans\nbecome far more accurate. The Ward Inspector can now trust her results.\n\n\"Thank you,\"\
+        \ she says, recalibrating her equipment. \"I was so\noverwhelmed by the volume that I didn't know\
+        \ where to start. Validation\nand tuning - I should have known.\"\n\nVULNERABILITY SCAN VALIDATION\
+        \ is essential. False positives waste effort;\nfalse negatives create risk. Validate findings\
+        \ and tune scanners for\nimproved accuracy over time.\n                "
+      failure_texts:
+        0: "\nReporting all 500 findings as genuine sends remediation teams chasing\n400 non-existent\
+          \ problems. The real 100 failures get lost in the noise.\nResources are wasted. Credibility\
+          \ is destroyed when teams discover\nthey're \"fixing\" working systems.\n\nVulnerability scan\
+          \ results REQUIRE validation. Reporting unvalidated\nfindings undermines the entire program\
+          \ and wastes organizational resources.\n                    "
+        1: "\nDiscarding the entire scan throws out 100 REAL ward failures along with\nthe 400 false positives.\
+          \ The baby goes out with the bathwater. Those\n100 genuine vulnerabilities remain unaddressed.\n\
+          \nFalse positives don't invalidate an entire scan. The proper response\nis validation to identify\
+          \ real issues and tuning to improve future\nscan accuracy.\n                    "
+        3: "\n\"Seems most dangerous\" is subjective judgment, not evidence-based\nanalysis. Location\
+          \ might matter, but you can't know which failures are\nreal without validation. You might address\
+          \ false positives while\nignoring real critical failures in \"unimportant\" locations.\n\nValidation\
+          \ provides factual basis for prioritization. Proper tuning\nthen improves future scan accuracy.\n\
+          \                    "
+    corporate:
+      title: THE VULNERABILITY SCAN DISASTER
+      narrative: "\nFriday afternoon. Your vulnerability management tool just completed its\nquarterly\
+        \ scan of the production environment. The dashboard lights up\nlike a Christmas tree of doom:\
+        \ 500 CRITICAL vulnerabilities detected.\n\nYou start drilling into the results. The first critical\
+        \ finding claims\nyour main web server is running an ancient version of Apache with a\nknown remote\
+        \ code execution vulnerability. But you personally patched\nthat server last week. You check -\
+        \ it's running the latest version.\n\nCurious, you validate a few more \"critical\" findings.\
+        \ Same story.\nThe scanner is detecting vulnerabilities that don't actually exist on\nthese systems\
+        \ - version detection gone wrong, perhaps.\n\nBut not ALL the findings are false. Some of these\
+        \ criticals are real.\nThe scanner has identified genuine issues mixed in with the noise.\n\n\
+        Your manager leans over your shoulder. \"500 criticals? We're going\nto have to work the weekend.\
+        \ Unless... what's the deal with these\nresults?\"\n\nWhat do you recommend?\n                "
+      choices:
+      - text: Report all 500 as genuine critical vulnerabilities to management
+      - text: Ignore the entire scan since it is clearly unreliable
+      - text: Validate the findings and tune the scanner to reduce false positives
+      - text: Only fix the vulnerabilities that seem most dangerous
+      success_text: "\n\"Hold off on the weekend war room,\" you tell your manager. \"These\nresults need\
+        \ validation first. I've already found significant false\npositives.\"\n\nYou spend Friday evening\
+        \ validating a representative sample. The\nresults are telling: 400 false positives (version detection\
+        \ failures,\nconfiguration differences the scanner didn't understand) and 100\ngenuine critical\
+        \ vulnerabilities that absolutely need remediation.\n\nMonday morning, you present the validated\
+        \ findings with a plan:\nimmediate patching for the 100 real criticals, and scanner tuning\n(credential\
+        \ configuration, updated plugins, exception rules) to\nreduce false positives in future scans.\n\
+        \n\"This is how vulnerability management should work,\" your manager\nnods. \"Validated findings\
+        \ we can trust, not raw scanner output that\nburies us in noise. Good work.\"\n\nVALIDATE vulnerability\
+        \ scan results. FALSE POSITIVES waste resources\nand destroy credibility. TUNE scanners based\
+        \ on validation data to\nimprove accuracy over time.\n                "
+      failure_texts:
+        0: "\nYou reported 500 critical vulnerabilities. Remediation teams scrambled.\nWeekend overtime\
+          \ was authorized. By Tuesday, teams had verified that\n400 of your \"criticals\" were false\
+          \ positives. Real criticals got lost\nin the rush. Your credibility with the infrastructure\
+          \ team is shot.\n\n\"Next time,\" your manager says coldly, \"validate before you report.\"\n\
+          \nVulnerability scan results REQUIRE validation before reporting.\nUnvalidated findings waste\
+          \ resources and destroy program credibility.\n                    "
+        1: "\nYou threw away a scan that contained 100 REAL critical vulnerabilities\nbecause it also\
+          \ had false positives. Those 100 genuine issues remain\nunpatched. Three weeks later, one of\
+          \ them gets exploited.\n\n\"Why wasn't this in the scan?\" the CISO demands during the incident\n\
+          review.\n\n\"It was,\" you admit. \"I discarded the whole scan because of false\npositives.\"\
+          \n\nFalse positives don't invalidate a scan. Validate findings and tune\nthe scanner - don't\
+          \ throw out the baby with the bathwater.\n                    "
+        3: "\n\"Seem most dangerous\" based on what? Gut feeling? Without validation,\nyou don't know\
+          \ which findings are real. You might patch false positives\nwhile ignoring genuine criticals\
+          \ because they \"seemed\" less urgent.\n\nThe scan contained 100 real criticals and 400 false\
+          \ positives. Random\nprioritization without validation is security theater, not risk\nmanagement.\
+          \ Validate first to establish facts.\n                    "
+- id: d6_independent_audit
+  domain: 6
+  correct_index: 2
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 6: Security Assessment and Testing - Security Audits'
+  failure_text: "\n\"No vested interest\" requires organizational independence. Internal\nauditors work\
+    \ for the organization. Self-assessors evaluate their own\nwork. Peer reviewers may have competitive\
+    \ or reciprocal relationships.\nOnly independent third-party auditors - external firms with no stake\n\
+    in the outcome - satisfy strict independence requirements.\n        "
+  themes:
+    fantasy:
+      title: THE INDEPENDENT INSPECTION
+      narrative: "\nThe Merchant Guild Confederation has issued new requirements for all\ntrading houses\
+        \ that handle inter-kingdom gold transfers. Among the\nregulations is a mandate for annual security\
+        \ inspections.\n\nThe key requirement reads: \"All trading houses shall undergo annual\nsecurity\
+        \ inspection by parties with no vested interest in the findings.\"\n\nYour trading house has received\
+        \ this mandate. The Guild Master gathers\nthe leadership to discuss compliance.\n\n\"We have options,\"\
+        \ he explains. \"Our own security wardens could inspect\nour vaults. The vault managers could\
+        \ assess their own protections.\nFellow trading houses could review each other. Or we could bring\
+        \ in\nthe independent Inspection Guild from across the sea.\"\n\nThe Chief Treasurer frowns. \"\
+        Independent inspectors are expensive. Can't\nour own security wardens do this? They know our systems\
+        \ better than any\noutsider.\"\n\nWhat type of inspection satisfies the \"no vested interest\"\
+        \ requirement?\n                "
+      choices:
+      - text: Internal inspection by your own security wardens
+      - text: Self-assessment by the vault managers themselves
+      - text: Independent third-party inspection by the Inspection Guild
+      - text: Peer review by another trading house in the Confederation
+      success_text: "\n\"The regulation requires 'no vested interest in the findings,'\" you\nexplain.\
+        \ \"That means inspectors who don't benefit from favorable\nresults. Our wardens work for us.\
+        \ Vault managers assess their own work.\nFellow trading houses compete with us - they might benefit\
+        \ from our\nfailure.\"\n\nYou continue: \"Only the independent Inspection Guild from across the\n\
+        sea meets the requirement. They have no stake in our success or failure.\nTheir reputation depends\
+        \ on honest assessment, not on pleasing us.\"\n\nThe Guild Master nods slowly. \"Expensive, but\
+        \ necessary. The regulation\nis clear - we need true independence.\"\n\nThe Inspection Guild's\
+        \ assessment is thorough and objective. Their\nrecommendations improve security without the bias\
+        \ that internal\nreviews often carry.\n\nTHIRD-PARTY AUDITS provide organizational independence.\
+        \ When regulations\nrequire \"no vested interest,\" this means external auditors who don't\nbenefit\
+        \ from favorable findings.\n                "
+      failure_texts:
+        0: "\nYour internal security wardens work for the trading house. Their\nperformance reviews, pay,\
+          \ and job security depend on favorable results.\nIf they find major failures, it reflects poorly\
+          \ on their own work.\nThis is the definition of \"vested interest.\"\n\n\"No vested interest\"\
+          \ requires auditors who are organizationally\nindependent - third parties with no stake in the\
+          \ outcome.\n                    "
+        1: "\nVault managers assessing their own vaults is the most vested interest\npossible. They designed\
+          \ the protections, implemented them, and would\nbe blamed for failures. Self-assessment is valuable\
+          \ for improvement\nbut cannot satisfy independence requirements.\n\nThird-party auditors with\
+          \ no organizational relationship are required\nwhen regulations mandate \"no vested interest.\"\
+          \n                    "
+        3: "\nPeer review by competing trading houses seems independent, but creates\na different conflict.\
+          \ Competitors might benefit from undermining your\nreputation, or might go easy hoping for reciprocal\
+          \ treatment. Either\nway, they have vested interests.\n\nTrue independence requires parties\
+          \ with NO organizational, competitive,\nor reciprocal relationships that could influence findings.\n\
+          \                    "
+    corporate:
+      title: THE AUDIT REQUIREMENT
+      narrative: "\nInitech's compliance team has been reviewing new regulatory requirements.\nThe latest\
+        \ mandate from the Financial Services Authority is clear:\n\"Annual security audits must be performed\
+        \ by parties with no vested\ninterest in the findings.\"\n\nThe CFO gathers the leadership team\
+        \ to discuss options and costs.\n\n\"We have our internal audit department,\" she begins. \"They're\
+        \ qualified\nand already on payroll. We also have the security team who could do a\nself-assessment.\
+        \ Our sister company across the street offered to\nreview us if we review them. Or we could pay\
+        \ Big Four prices for an\nexternal firm.\"\n\nThe CEO winces at the budget numbers. \"Those external\
+        \ auditors want\n$200,000. Internal audit is free. Can't we just use our own people?\"\n\nWhat\
+        \ type of audit satisfies the \"no vested interest\" regulatory\nrequirement?\n              \
+        \  "
+      choices:
+      - text: Internal audit by the company's audit department
+      - text: Self-assessment by the security team
+      - text: Independent third-party audit by an external firm
+      - text: Peer review by the sister company
+      success_text: "\n\"The regulation specifically requires 'no vested interest,'\" you\nexplain. \"\
+        That's a legal term that means organizational independence.\nOur internal audit reports to our\
+        \ board. The security team would be\nassessing their own work. The sister company has business\
+        \ relationships\nwith us.\"\n\nThe CFO looks pained but understanding. \"So only external auditors\n\
+        qualify.\"\n\n\"Correct. External audit firms stake their reputation and licensing\non independence.\
+        \ They have no financial or career stake in our\nresults. That's what the regulation demands.\"\
+        \n\nThe external audit is expensive but produces defensible results.\nWhen regulators ask, Initech\
+        \ can demonstrate true independence.\nThe $200,000 is cheaper than regulatory fines for non-compliance.\n\
+        \nTHIRD-PARTY AUDITS satisfy independence requirements. External\nauditors have no organizational\
+        \ stake in results and stake their\nprofessional reputation on objectivity.\n                "
+      failure_texts:
+        0: "\nInternal audit, while independent of operations, still works for\nthe company. Their paychecks\
+          \ come from Initech. Their career\nadvancement depends on Initech. If they find catastrophic\
+          \ failures,\nit reflects on their employer - they have vested interest.\n\n\"No vested interest\"\
+          \ in regulatory terms means organizational\nindependence. Only external third-party auditors\
+          \ qualify.\n                    "
+        1: "\nSelf-assessment is literally the most vested interest possible. The\nsecurity team assessing\
+          \ their own security program is like grading\nyour own test. They designed it, implemented it,\
+          \ and would be blamed\nfor failures.\n\nRegulatory independence requirements specifically exist\
+          \ because\nself-assessment, while valuable internally, cannot be trusted for\ncompliance purposes.\n\
+          \                    "
+        3: "\nThe sister company has business relationships with Initech. Shared\nresources, intercompany\
+          \ transactions, common ownership - all create\nvested interests. They might go easy expecting\
+          \ reciprocal treatment,\nor might be too harsh for competitive reasons.\n\n\"No vested interest\"\
+          \ means NO organizational, financial, or\nreciprocal relationships that could bias findings.\n\
+          \                    "
+- id: d6_night_watch_log
+  domain: 6
+  correct_index: 2
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 6: Security Assessment and Testing - Log Analysis'
+  failure_text: "\nLog analysis reveals security incidents through pattern recognition.\nMass failed authentication\
+    \ attempts followed by success indicates\nbrute force attack or credential stuffing. Off-hours activity\
+    \ from\nunusual sources raises additional suspicion. Legitimate automation\nuses service accounts\
+    \ and doesn't fail repeatedly. Legitimate users\ndon't generate thousands of failed attempts.\n  \
+    \      "
+  themes:
+    fantasy:
+      title: THE NIGHT WATCH ANOMALY
+      narrative: "\nAs the Citadel's log analyst, you begin your morning review of the night\nwatch records.\
+        \ The Watch Commander's magical ledger automatically records\nevery gate passage, every guard\
+        \ challenge, and every authentication at\nthe treasury and armory.\n\nOne entry immediately catches\
+        \ your eye. Guard Captain Aldric's sigil was\nused to authenticate access to the treasury vault,\
+        \ the armory, and the\nrecords chamber - all within a single hour between 3 AM and 4 AM. The\n\
+        ledger shows 2,847 failed authentication attempts before each successful\nentry.\n\nThis is concerning\
+        \ for several reasons. Aldric works the day shift. He\nhas never worked the night watch in his\
+        \ twenty years of service. And\nthe volume of failed attempts suggests something other than a\
+        \ forgotten\npassphrase.\n\nThe Watch Commander asks for your assessment of these log entries.\n\
+        What do these patterns most likely indicate?\n                "
+      choices:
+      - text: Normal automated guard patrol system activity
+      - text: Captain Aldric forgot his authentication phrases and kept trying
+      - text: Possible credential compromise or brute force attack
+      - text: A malfunction in the magical ledger recording system
+      success_text: "\n\"This pattern indicates credential compromise or brute force attack,\"\nyou report.\
+        \ \"Consider the evidence: thousands of failed attempts\nbefore success suggests either credential\
+        \ stuffing - trying stolen\ncredentials - or brute force password guessing. The 3 AM timing, when\n\
+        Aldric never works, suggests an attacker operating when they assumed\nno one would notice.\"\n\
+        \nThe Watch Commander immediately suspends Aldric's access and summons\nhim for questioning. Investigation\
+        \ reveals that Aldric's sigil token\nwas stolen during a visit to the Night Market district. An\
+        \ infiltrator\nhad been using magical tools to guess authentication codes.\n\nThanks to the log\
+        \ analysis, the breach is contained before significant\ndamage occurs. New authentication protocols\
+        \ are implemented.\n\nLOG ANALYSIS identifies security incidents through pattern recognition.\n\
+        Mass failed attempts followed by success, off-hours activity, and\nunusual access patterns are\
+        \ strong indicators of credential compromise\nor active attack.\n                "
+      failure_texts:
+        0: "\nAutomated patrol systems use SERVICE sigils, not personal guard\ncredentials. They also\
+          \ don't fail authentication thousands of times\nbefore succeeding. Legitimate automation doesn't\
+          \ generate this\npattern of errors.\n\nMass failed attempts from a single account, at unusual\
+          \ hours, across\nmultiple sensitive locations indicates attack activity, not normal\noperations.\n\
+          \                    "
+        1: "\nIf Aldric forgot his passphrase, he would fail a few times and then\nseek help resetting\
+          \ it. 2,847 failed attempts across THREE different\nsecure locations in one hour? That's not\
+          \ forgetfulness - that's an\nautomated attack tool systematically guessing credentials.\n\n\
+          This pattern strongly indicates brute force attack or credential\nstuffing. Immediate investigation\
+          \ is required.\n                    "
+        3: "\nLedger malfunctions don't generate failed authentication events. A\nmalfunction might lose\
+          \ entries, corrupt records, or show impossible\ntimestamps - not create thousands of false failed\
+          \ attempts followed\nby successful access to real locations.\n\nThese log entries describe real\
+          \ authentication attempts. The pattern\nindicates attack activity, not equipment failure.\n\
+          \                    "
+    corporate:
+      title: THE 3 AM LOG ANOMALY
+      narrative: "\nMonday morning. You're the first one in the SOC, coffee in hand,\nstarting the daily\
+        \ log review. The SIEM dashboard shows something\nthat immediately grabs your attention.\n\nThe\
+        \ account \"jsmith\" - belonging to Jennifer Smith in Accounting -\ngenerated 3,412 failed login\
+        \ attempts across the domain controller,\nfile servers, and email gateway between 3 AM and 4 AM\
+        \ Sunday morning.\nAfter the failures, successful authentications occurred.\n\nYou check Jennifer's\
+        \ schedule. She's strictly 9-to-5. No record of\nworking weekends, ever. No VPN connection from\
+        \ her home. The login\nattempts came from an IP address in Eastern Europe.\n\nYour manager walks\
+        \ in. \"Anything interesting from the weekend logs?\"\n\nWhat does this pattern most likely indicate?\n\
+        \                "
+      choices:
+      - text: Normal automated system activity using her account
+      - text: Jennifer forgot her password and kept trying until it worked
+      - text: Possible credential compromise or brute force attack
+      - text: A logging system malfunction generating false events
+      success_text: "\n\"We have a potential credential compromise,\" you report, already\npulling up\
+        \ additional details. \"3,400 failed attempts isn't password\nforgetfulness - that's an automated\
+        \ attack. The 3 AM timing when no\none's watching, the Eastern European IP, the fact that Jennifer\n\
+        never works weekends - this is either credential stuffing or brute\nforce.\"\n\nYour manager goes\
+        \ pale. \"Lock the account. Now.\"\n\nThe investigation confirms your analysis. Jennifer's credentials\n\
+        were found in a breach dump from another site where she reused her\npassword. Attackers were attempting\
+        \ to use them across Initech's\ninfrastructure.\n\nThanks to rapid detection, the attackers gained\
+        \ no access beyond\ninitial authentication. Jennifer's password is reset, and a\ncompany-wide\
+        \ password reset and MFA rollout is expedited.\n\nLOG ANALYSIS catches attacks. Mass failed logins\
+        \ from unusual\nsources at unusual times are classic indicators of credential\ncompromise or brute\
+        \ force attacks.\n                "
+      failure_texts:
+        0: "\nAutomated systems use SERVICE ACCOUNTS, not user credentials.\nThey also don't fail thousands\
+          \ of times before succeeding. No\nlegitimate automation pattern looks like this.\n\nUser account\
+          \ + mass failures + unusual hours + foreign IP = attack,\nnot normal operations. This requires\
+          \ immediate investigation.\n                    "
+        1: "\nForgetting a password causes a few failed attempts, then a password\nreset request. 3,412\
+          \ failed attempts from an IP in Eastern Europe\nat 3 AM on a Sunday? That's an automated attack\
+          \ tool, not a confused\nemployee.\n\nThis pattern indicates credential stuffing (trying stolen\
+          \ credentials)\nor brute force attack. Jennifer's credentials have been compromised.\n     \
+          \               "
+        3: "\nLogging systems don't generate fake failed authentication events.\nA malfunction might drop\
+          \ logs, corrupt timestamps, or create\nimpossible entries - not fabricate thousands of sequential\
+          \ failed\nlogin attempts that match a known attack pattern.\n\nThese are real authentication\
+          \ attempts from a real IP address.\nThe pattern indicates active attack against Jennifer's credentials.\n\
+          \                    "
+- id: d6_spell_scroll_review
+  domain: 6
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 6: Security Assessment and Testing - Static Analysis'
+  failure_text: "\nStatic Application Security Testing (SAST) analyzes source code without\nexecuting\
+    \ it. It finds vulnerabilities like SQL injection, buffer\noverflows, and hardcoded credentials by\
+    \ examining code patterns. This\nenables early detection during development, before deployment. Dynamic\n\
+    testing (DAST) requires execution; penetration testing requires\ndeployment.\n        "
+  themes:
+    fantasy:
+      title: THE SPELL SCROLL INSPECTION
+      narrative: "\nThe Citadel's Arcane Development Guild has created a new batch of spell\nscrolls -\
+        \ complex enchantments that will power the fortress's automated\ndefenses. Before these scrolls\
+        \ can be deployed to the ward towers, they\nmust be reviewed for safety.\n\nThe Guild Master approaches\
+        \ you with the scrolls. \"My enchanters have\nworked hard on these, but I'm concerned. One of\
+        \ our previous batches\ncontained a critical flaw that only manifested when the wards were\nactivated\
+        \ during a thunderstorm. We nearly lost the entire eastern tower.\"\n\n\"We need to find these\
+        \ kinds of problems BEFORE the scrolls are deployed,\"\nhe continues. \"But we can't just activate\
+        \ every scroll to test it - some\nof these enchantments would level the practice grounds. Is there\
+        \ a way\nto examine the spell patterns themselves, without actually casting the\nspells?\"\n\n\
+        What approach should be used to find vulnerabilities in the spell scrolls\nbefore they are deployed\
+        \ and activated?\n                "
+      choices:
+      - text: Cast each spell in the practice grounds to see what happens
+      - text: Analyze the spell patterns and rune sequences without casting them
+      - text: Deploy them to production and monitor for problems
+      - text: Test how long the spells take to cast under heavy load
+      success_text: "\n\"We can examine the spell patterns directly,\" you explain. \"A trained\nward\
+        \ analyst can trace the rune sequences, identify dangerous pattern\ncombinations, and find logical\
+        \ flaws - all without actually casting\na single spell.\"\n\nYou arrange for the Citadel's senior\
+        \ ward analysts to review the\nscrolls. Using pattern-recognition techniques, they trace energy\n\
+        flows, check for forbidden rune combinations, and verify that fail-safe\nsequences are properly\
+        \ integrated.\n\n\"Found it,\" one analyst announces, pointing to a scroll. \"This\namplification\
+        \ loop has no termination condition. If cast, it would\ndraw power until the caster collapsed.\
+        \ Good catch BEFORE deployment.\"\n\nThe flaw is corrected in the source patterns. The scrolls\
+        \ are\nrewritten safely.\n\nSTATIC CODE ANALYSIS examines code without executing it. By analyzing\n\
+        patterns, logic, and structure, vulnerabilities can be found early -\nbefore the dangerous consequences\
+        \ of execution.\n                "
+      failure_texts:
+        0: "\nCasting spells to find problems is DYNAMIC testing - testing through\nexecution. The Guild\
+          \ Master specifically asked about finding problems\nWITHOUT activating the spells, because some\
+          \ of them could \"level the\npractice grounds.\"\n\nSTATIC ANALYSIS examines the spell patterns\
+          \ (code) without execution.\nThis finds vulnerabilities early, before the consequences manifest.\n\
+          \                    "
+        2: "\n\"Deploy and monitor\" is the most dangerous approach possible. You'd\nput potentially flawed\
+          \ enchantments into production and wait for\nfailures. Given that the last flaw \"nearly lost\
+          \ the entire eastern\ntower,\" this approach risks catastrophic damage.\n\nTesting should occur\
+          \ BEFORE deployment. Static analysis examines\ncode without execution, finding problems when\
+          \ they're cheap to fix.\n                    "
+        3: "\nTesting casting time under load is PERFORMANCE testing, not security\ntesting. It measures\
+          \ how long spells take, not whether they have\ndangerous flaws in their logic.\n\nThe Guild\
+          \ Master needs to find security vulnerabilities in the spell\npatterns - logical flaws, dangerous\
+          \ combinations, missing safeguards.\nStatic analysis examines the patterns directly, without\
+          \ execution.\n                    "
+    corporate:
+      title: THE PRE-DEPLOYMENT CODE REVIEW
+      narrative: "\nThe development team has just finished a sprint on a critical new\npayment processing\
+        \ module. Before it can go to production, the security\nteam needs to review it for vulnerabilities.\n\
+        \nThe lead developer is anxious. \"We're already behind schedule. The\nproduct manager is asking\
+        \ for deployment by Friday.\"\n\nThe security architect reviews the timeline. \"Traditional pen\
+        \ testing\ntakes weeks. But we need to find security issues - SQL injection,\nhardcoded credentials,\
+        \ buffer overflows - before this code touches\nproduction.\"\n\n\"Is there a way to scan the code\
+        \ itself?\" the developer asks. \"Without\ndeploying it anywhere, without running it? We have\
+        \ the source right\nhere. Can we analyze it directly?\"\n\nWhat type of security testing examines\
+        \ source code without executing\nthe application?\n                "
+      choices:
+      - text: Dynamic Application Security Testing (DAST)
+      - text: Static Application Security Testing (SAST)
+      - text: Penetration testing
+      - text: Stress testing
+      success_text: "\n\"Static Application Security Testing - SAST,\" you confirm. \"It\nanalyzes source\
+        \ code directly, without running the application.\nWe can scan for SQL injection patterns, hardcoded\
+        \ secrets,\nunsafe function calls, and buffer overflow conditions just by\nexamining the code.\"\
+        \n\nYou integrate a SAST tool into the CI/CD pipeline. Within an hour,\nit identifies three instances\
+        \ of SQL string concatenation vulnerable\nto injection, one hardcoded API key in a configuration\
+        \ file, and\nseveral uses of deprecated cryptographic functions.\n\n\"Found and fixed before anyone\
+        \ outside this room knew about them,\"\nthe developer says, making the corrections. \"This should\
+        \ be part\nof every sprint.\"\n\nSAST finds vulnerabilities early, when they're cheap to fix.\
+        \ By\nanalyzing code without execution, it integrates into development\npipelines for continuous\
+        \ security feedback.\n                "
+      failure_texts:
+        0: "\nDynamic Application Security Testing (DAST) tests RUNNING applications\nby sending requests\
+          \ and analyzing responses. It requires the\napplication to be deployed and executed. The developer\
+          \ specifically\nasked about analyzing code WITHOUT running it.\n\nSAST (Static testing) analyzes\
+          \ source code without execution.\nDAST (Dynamic testing) requires a running application.\n \
+          \                   "
+        2: "\nPenetration testing targets deployed, running systems. It tests\nreal applications in real\
+          \ environments through actual attack\nsimulation. This requires deployment, which defeats the\
+          \ purpose\nof finding issues BEFORE deployment.\n\nSAST analyzes source code without deployment,\
+          \ finding vulnerabilities\nwhile they're still in development and cheap to fix.\n          \
+          \          "
+        3: "\nStress testing evaluates performance under load - how many\ntransactions per second, what\
+          \ happens under peak traffic, etc.\nIt measures capacity and stability, not security vulnerabilities.\n\
+          \nThe team needs to find SQL injection, hardcoded credentials, and\nother security flaws. SAST\
+          \ analyzes source code for these patterns\nwithout requiring execution.\n                  \
+          \  "
+- id: d6_portal_testing
+  domain: 6
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 6: Security Assessment and Testing - DAST'
+  failure_text: "\nDynamic Application Security Testing (DAST) tests running applications\nby sending\
+    \ requests and analyzing responses. It finds runtime\nvulnerabilities like authentication bypasses,\
+    \ session management\nflaws, and configuration errors that static analysis cannot detect.\nDAST requires\
+    \ a deployed, running application; SAST analyzes code\nwithout execution.\n        "
+  themes:
+    fantasy:
+      title: THE PORTAL'S ACTIVE DEFENSES
+      narrative: "\nThe Citadel's new teleportation portal is nearly ready for deployment.\nThe Arcane\
+        \ Guild has reviewed the spell patterns (static analysis)\nand found no obvious flaws in the enchantment\
+        \ design. But the Portal\nMaster isn't satisfied.\n\n\"The spell patterns look correct,\" she\
+        \ admits, \"but portals are\ncomplex. Problems emerge during actual operation. The authentication\n\
+        sequence might have flaws that only manifest when someone actually\nattempts passage. Session\
+        \ binding might break under specific conditions.\nConfiguration errors might leave backdoors that\
+        \ analysis can't detect.\"\n\nShe gestures at the shimmering gateway. \"I need to test this portal\n\
+        while it's RUNNING. Send actual magical requests through it. See how\nit responds to malformed\
+        \ transport sequences. Check if the authentication\ncan be bypassed during active operation.\"\
+        \n\nWhat testing approach examines the portal's security while it's actively\noperating?\n   \
+        \             "
+      choices:
+      - text: Review the portal's enchantment diagrams again more carefully
+      - text: Test the running portal by sending requests and analyzing responses
+      - text: Have scholars study the portal's design documentation
+      - text: Analyze the portal's original architectural blueprints
+      success_text: "\n\"We need DYNAMIC testing,\" you explain. \"We send actual transport\nrequests\
+        \ through the active portal - properly formed, malformed,\nmalicious - and observe how it responds.\
+        \ We test authentication\nbypass, session manipulation, and configuration weaknesses in the\n\
+        running system.\"\n\nA team of ward testers is assembled. They attempt to transport\nwithout proper\
+        \ credentials. They send malformed destination sequences.\nThey probe for configuration weaknesses.\
+        \ All against the RUNNING\nportal.\n\n\"Found it!\" a tester calls out. \"If you send a partial\
+        \ authentication\nfollowed immediately by a valid request, the session binding fails.\nYou could\
+        \ potentially hijack another traveler's destination.\"\n\nThe flaw exists only during runtime\
+        \ - static analysis would never\nhave found it. The dynamic testing caught it before deployment.\n\
+        \nDYNAMIC APPLICATION SECURITY TESTING (DAST) tests running systems\nby sending requests and analyzing\
+        \ responses. It finds runtime\nvulnerabilities that static analysis misses.\n                "
+      failure_texts:
+        0: "\nReviewing the enchantment diagrams is STATIC analysis - examining\nthe code/design without\
+          \ execution. The Portal Master specifically\nnoted that static analysis was already completed\
+          \ and wanted to test\nthe portal \"while it's RUNNING.\"\n\nDynamic testing examines active\
+          \ systems through interaction, finding\nruntime vulnerabilities that static analysis cannot\
+          \ detect.\n                    "
+        2: "\nStudying documentation is design review, not security testing. It\nexamines plans and intentions,\
+          \ not actual implementation and behavior.\nDocuments might say one thing while the running system\
+          \ does another.\n\nThe Portal Master needs to test the OPERATIONAL portal - how it\nactually\
+          \ responds to requests. That requires dynamic testing against\nthe running system.\n       \
+          \             "
+        3: "\nArchitectural blueprints describe intended design, not actual\nimplementation. They might\
+          \ specify perfect authentication, but\nthe running portal might have misconfigured it. Static\
+          \ analysis\nof plans doesn't reveal runtime behavior.\n\nDynamic testing sends actual requests\
+          \ to the running system,\ndiscovering how it actually behaves rather than how it was\ndesigned\
+          \ to behave.\n                    "
+    corporate:
+      title: THE RUNNING APPLICATION TEST
+      narrative: "\nThe new web application has passed code review and static analysis.\nThe security\
+        \ team signed off on the source code examination. But the\napplication security architect wants\
+        \ one more round of testing.\n\n\"SAST found the coding issues,\" she explains, \"but some vulnerabilities\n\
+        only manifest at runtime. Authentication bypass that depends on session\nstate. Configuration\
+        \ errors that leave debug endpoints exposed.\nRace conditions that only appear under real traffic\
+        \ patterns.\"\n\nShe pulls up the staging environment on her screen. \"The application\nis deployed\
+        \ and running. I need to test it AS a running application -\nsend it requests, probe its authentication,\
+        \ check its session\nmanagement, find configuration errors.\"\n\n\"But we already reviewed the\
+        \ code,\" the project manager protests.\n\n\"Code review tells us what the developers WROTE. I\
+        \ need to know\nwhat the running application actually DOES.\"\n\nWhat type of testing examines\
+        \ security in a running web application?\n                "
+      choices:
+      - text: Review the application source code again
+      - text: Perform dynamic application security testing (DAST)
+      - text: Conduct a code review meeting
+      - text: Analyze the application design documents
+      success_text: "\n\"Dynamic Application Security Testing - DAST,\" you confirm. \"We\ntest the running\
+        \ application by actually interacting with it.\nSend HTTP requests, probe authentication endpoints,\
+        \ test session\nmanagement, look for exposed configuration.\"\n\nThe DAST tool crawls the running\
+        \ application, finds all endpoints,\nand begins probing. Within hours, it identifies issues that\
+        \ code\nreview missed:\n\n- An authentication bypass when session cookies are manipulated\n- A\
+        \ debug endpoint accidentally exposed in the staging config\n- Session fixation vulnerability\
+        \ in the login flow\n\n\"None of these were visible in the code,\" the architect notes.\n\"They\
+        \ emerged from configuration, deployment, and runtime behavior.\nThis is why we test running applications.\"\
+        \n\nDAST tests running applications through interaction, finding\nruntime vulnerabilities that\
+        \ static analysis cannot detect.\n                "
+      failure_texts:
+        0: "\nThe scenario explicitly states that source code review (SAST) was\nalready completed. The\
+          \ architect is asking for something different:\ntesting the RUNNING application to find vulnerabilities\
+          \ that only\nmanifest during execution.\n\nDAST tests running applications. SAST examines code\
+          \ without\nexecution. The architect already has static results.\n                    "
+        2: "\nA code review meeting examines source code - that's static analysis.\nThe scenario notes\
+          \ that static analysis is complete. The architect\nwants to test what the running application\
+          \ \"actually DOES.\"\n\nDynamic testing interacts with the deployed, running application\nto\
+          \ find runtime vulnerabilities invisible in code.\n                    "
+        3: "\nDesign documents describe intended behavior, not actual behavior.\nThe running application\
+          \ might deviate from design in ways that\ncreate vulnerabilities. Documents don't catch configuration\n\
+          errors, runtime issues, or deployment problems.\n\nDAST tests the actual running application\
+          \ through interaction,\ndiscovering what it actually does rather than what it was\ndesigned\
+          \ to do.\n                    "
+- id: d6_guild_certification
+  domain: 6
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 6: Security Assessment and Testing - Compliance Testing'
+  failure_text: "\nCompliance assessments specifically evaluate adherence to regulatory or\nstandard requirements.\
+    \ They map organizational controls to specific\nrequirements and document evidence of compliance.\
+    \ General vulnerability\nscanning, performance testing, and usability assessments serve other\npurposes\
+    \ but don't demonstrate compliance with specific standards.\n        "
+  themes:
+    fantasy:
+      title: THE MERCHANT GUILD CERTIFICATION
+      narrative: "\nThe Citadel serves as a central hub for gold transfers between the\nFive Kingdoms.\
+        \ The Inter-Kingdom Merchant Confederation has established\nstrict standards for any fortress\
+        \ that handles such transfers - the\nGold Transfer Security Standards (GTSS).\n\nThe annual certification\
+        \ deadline approaches. Your trading house must\ndemonstrate adherence to GTSS requirements: specific\
+        \ vault construction\nstandards, guard rotation protocols, magical ward specifications, and\n\
+        record-keeping procedures.\n\nA young apprentice suggests various testing approaches. \"Should\
+        \ we\nscan for vulnerabilities? Test our performance under heavy load? Check\nif our vaults are\
+        \ easy to use?\"\n\nThe Chief Treasurer sighs. \"Those are all fine activities, but they\nwon't\
+        \ satisfy the Confederation. We need to prove we meet GTSS\nspecifically. Every requirement. Every\
+        \ control. Documented and verified.\"\n\nWhat type of assessment demonstrates adherence to GTSS\
+        \ requirements?\n                "
+      choices:
+      - text: General vulnerability scanning of the vaults
+      - text: GTSS compliance assessment/audit
+      - text: Performance load testing during peak transfer hours
+      - text: Usability assessment of vault access procedures
+      success_text: "\n\"We need a GTSS COMPLIANCE ASSESSMENT,\" you explain to the apprentice.\n\"It's\
+        \ specifically designed to verify adherence to the Confederation's\nrequirements. Each GTSS control\
+        \ is evaluated: do we meet it or not?\nIs there evidence? Is it documented?\"\n\nYou engage certified\
+        \ GTSS assessors who methodically work through\nevery requirement. Vault construction: verified\
+        \ against specifications.\nGuard protocols: observed and documented. Ward standards: measured\n\
+        and certified. Records: audited for completeness.\n\nThe assessment produces a detailed report\
+        \ mapping your controls to\nGTSS requirements, with evidence of compliance for each. The\nConfederation\
+        \ accepts your certification.\n\n\"General security testing is valuable,\" the assessor notes,\
+        \ \"but\ncompliance assessment specifically verifies adherence to a particular\nstandard's requirements.\
+        \ That's what regulators need.\"\n\nCOMPLIANCE ASSESSMENTS verify adherence to specific regulatory\
+        \ or\nstandard requirements, mapping controls to specifications.\n                "
+      failure_texts:
+        0: "\nGeneral vulnerability scanning identifies weaknesses but doesn't map\nto specific GTSS requirements.\
+          \ You might have excellent scan results\nwhile still failing multiple GTSS controls. The Confederation\
+          \ doesn't\naccept \"our vulnerability scan was clean\" as proof of compliance.\n\nCompliance\
+          \ assessment specifically evaluates each GTSS requirement\nand documents adherence.\n      \
+          \              "
+        2: "\nPerformance load testing measures capacity and speed - how many\ntransfers per hour, response\
+          \ time under peak load. Valuable\noperationally, but completely irrelevant to GTSS compliance.\n\
+          \nGTSS specifies vault construction, guard protocols, and security\ncontrols - not performance\
+          \ metrics. Compliance assessment verifies\nadherence to the standard's actual requirements.\n\
+          \                    "
+        3: "\nUsability assessment evaluates how easy systems are to use. While\nuser experience matters\
+          \ operationally, GTSS doesn't care if your\nvaults are easy to access - it cares if they're\
+          \ SECURE according\nto specific standards.\n\nCompliance assessment verifies that each required\
+          \ security control\nis implemented according to the standard's specifications.\n           \
+          \         "
+    corporate:
+      title: THE PCI DSS DEADLINE
+      narrative: "\nInitech processes credit card payments. As a Level 2 merchant, they\nmust maintain\
+        \ PCI DSS compliance and produce an annual Self-Assessment\nQuestionnaire with supporting evidence.\n\
+        \nThe compliance deadline is in three weeks. The Compliance Manager is\norganizing the assessment\
+        \ effort.\n\n\"We've done vulnerability scans,\" she reviews her checklist. \"We've\ntested our\
+        \ disaster recovery. We've done a nice usability study on\nthe checkout flow. But the QSA is going\
+        \ to ask about PCI DSS\nrequirements specifically. Do we encrypt cardholder data? Do we\nhave\
+        \ proper access controls? Are our network segments correctly\nisolated?\"\n\nA junior analyst\
+        \ suggests just sending the vulnerability scan results.\n\"Those prove we're secure, right?\"\n\
+        \nThe Compliance Manager shakes her head. \"We need to demonstrate we\nmeet PCI DSS requirements\
+        \ specifically. That's not the same thing.\"\n\nWhat type of assessment demonstrates PCI DSS compliance?\n\
+        \                "
+      choices:
+      - text: General vulnerability scan results
+      - text: PCI DSS compliance assessment/audit
+      - text: Performance load testing results
+      - text: Usability assessment of the checkout flow
+      success_text: "\n\"We need a PCI DSS COMPLIANCE ASSESSMENT,\" you explain. \"It specifically\nevaluates\
+        \ adherence to PCI DSS requirements. Each control from the\nstandard is checked: do we meet it,\
+        \ and where's the evidence?\"\n\nThe assessment methodically works through PCI DSS requirements:\n\
+        \n- Requirement 3: Is cardholder data encrypted at rest? Evidence?\n- Requirement 7: Are access\
+        \ controls properly implemented? Proof?\n- Requirement 11: Is vulnerability scanning performed\
+        \ quarterly? Logs?\n\nEach requirement is evaluated, documented, and evidenced. The result\nis\
+        \ a compliance report that the QSA can validate, showing exactly\nhow Initech meets each PCI DSS\
+        \ control.\n\n\"Vulnerability scans are ONE requirement,\" the Compliance Manager\nnotes. \"PCI\
+        \ DSS has hundreds. Compliance assessment covers them all.\"\n\nCOMPLIANCE ASSESSMENT specifically\
+        \ verifies adherence to regulatory\nor standard requirements with documented evidence for each\
+        \ control.\n                "
+      failure_texts:
+        0: "\nVulnerability scanning is ONE component of PCI DSS (Requirement 11).\nBut PCI DSS has hundreds\
+          \ of requirements covering encryption, access\ncontrol, logging, policies, and more. A clean\
+          \ vulnerability scan\ndoesn't prove you meet encryption standards, access controls, or\ndata\
+          \ retention policies.\n\nCompliance assessment evaluates ALL requirements from the standard,\n\
+          not just one component.\n                    "
+        2: "\nPerformance load testing measures system capacity and speed. PCI DSS\ndoesn't care if your\
+          \ checkout can handle 10,000 transactions per\nsecond - it cares whether you're protecting cardholder\
+          \ data according\nto specific security requirements.\n\nCompliance assessment verifies security\
+          \ controls, not performance\ncharacteristics.\n                    "
+        3: "\nUsability assessment evaluates user experience. PCI DSS requirements\nfocus on security,\
+          \ not convenience. A checkout flow that's easy to\nuse but transmits unencrypted cardholder\
+          \ data fails compliance.\n\nCompliance assessment specifically evaluates security controls\n\
+          against PCI DSS requirements, not user experience metrics.\n                    "
+- id: d6_metrics_council
+  domain: 6
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 6: Security Assessment and Testing - Security Metrics'
+  failure_text: "\nMean Time to Remediate (MTTR) for critical vulnerabilities measures how\nquickly dangerous\
+    \ issues are fixed - directly indicating remediation\neffectiveness. This is an OUTCOME metric showing\
+    \ actual performance.\nInput metrics like tool count, team size, or total discoveries don't\nindicate\
+    \ whether you're actually reducing risk. Lower MTTR = faster\nrisk reduction.\n        "
+  themes:
+    fantasy:
+      title: THE DEFENSE COUNCIL REPORT
+      narrative: "\nThe Citadel's Defense Council has summoned you for a quarterly review.\nThey want\
+        \ to understand how effectively the fortress is managing its\ndefensive weaknesses - the crumbling\
+        \ walls, the fading wards, the\ngaps in patrol coverage.\n\n\"We've invested significantly in\
+        \ remediation,\" the High Commander\nstates. \"Stone masons, ward enchanters, additional guards.\
+        \ I need\nto know: is it working? Are we actually fixing problems faster?\"\n\nThe Chief Quartermaster\
+        \ suggests various metrics. \"We could report\nhow many weaknesses we've discovered across all\
+        \ time. Or count our\nnew stoneworking tools. Or simply report how many guards we've hired.\"\n\
+        \nBut these don't seem to answer the Commander's question about\nremediation EFFECTIVENESS.\n\n\
+        Which metric BEST indicates how effectively you're addressing\ndefensive weaknesses?\n       \
+        \         "
+      choices:
+      - text: Total number of weaknesses ever discovered in Citadel history
+      - text: Mean time to remediate critical defensive weaknesses
+      - text: Number of security tools and equipment purchased
+      - text: Size of the guard and maintenance force
+      success_text: "\n\"Mean time to remediate critical weaknesses,\" you report. \"When we\nidentify\
+        \ a serious problem - a crumbling section of wall, a failing\nward crystal - how long does it\
+        \ take to fix it? This directly measures\nremediation effectiveness.\"\n\nYou present the data:\
+        \ \"Three moons ago, critical weaknesses took an\naverage of 45 days to address. After our investments,\
+        \ we're now at\n22 days. Our remediation SPEED has doubled, meaning critical risks\nare exposed\
+        \ for less time.\"\n\nThe High Commander nods with satisfaction. \"Now THAT tells me\nsomething\
+        \ useful. Not how many tools we bought, not how many guards\nwe hired - but whether we're actually\
+        \ fixing problems faster.\"\n\nMEAN TIME TO REMEDIATE (MTTR) for critical vulnerabilities directly\n\
+        measures remediation effectiveness. Lower MTTR means faster risk\nreduction. This is an outcome\
+        \ metric, not an input metric.\n                "
+      failure_texts:
+        0: "\nTotal discoveries across all time is historical volume, not current\nperformance. \"We've\
+          \ found 10,000 weaknesses ever\" says nothing about\nwhether you're fixing them. You could be\
+          \ finding problems and never\naddressing them.\n\nMTTR measures how quickly you address problems\
+          \ - that's remediation\neffectiveness.\n                    "
+        2: "\nTool count is an INPUT metric - resources consumed. Having more\ntools doesn't mean you're\
+          \ using them effectively. You could own\nevery stoneworking implement in the kingdom and still\
+          \ have\ncrumbling walls if you're not deploying them well.\n\nMTTR is an OUTCOME metric - it\
+          \ measures results, not resources.\n                    "
+        3: "\nStaff size is another INPUT metric. More guards and masons doesn't\nautomatically mean faster\
+          \ remediation. They could be poorly managed,\nworking on low-priority issues, or simply not\
+          \ deployed effectively.\n\nThe question is about effectiveness: are we FIXING problems faster?\n\
+          MTTR answers that question directly.\n                    "
+    corporate:
+      title: THE VULNERABILITY MANAGEMENT REVIEW
+      narrative: "\nThe quarterly security review with the CISO. She wants to understand\nhow effective\
+        \ the vulnerability management program is.\n\n\"We've added headcount. We've bought new scanning\
+        \ tools. We've\nincreased our patch management budget by 40%,\" she lists. \"But I\nneed EVIDENCE\
+        \ that we're actually performing better. Give me a\nmetric that shows our remediation effectiveness.\"\
+        \n\nThe security team offers suggestions:\n- \"We've found 50,000 vulnerabilities this year!\"\
+        \n- \"We purchased three new scanning platforms!\"\n- \"We hired four more vulnerability analysts!\"\
+        \n\nThe CISO frowns. \"Those tell me what we've spent and found. They\ndon't tell me if we're\
+        \ actually fixing things faster. What metric\nshows our remediation PERFORMANCE?\"\n         \
+        \       "
+      choices:
+      - text: Total number of vulnerabilities ever discovered
+      - text: Mean time to remediate critical vulnerabilities
+      - text: Number of security tools purchased
+      - text: Size of the security team
+      success_text: "\n\"Mean time to remediate critical vulnerabilities,\" you respond.\n\"When we identify\
+        \ a critical CVE, how many days until it's patched?\nThat directly measures remediation effectiveness.\"\
+        \n\nYou pull up the dashboard. \"Q1: average 34 days for critical\nremediation. Q3: average 19\
+        \ days. We've nearly cut our exposure\nwindow in half. Critical vulnerabilities are fixed 44%\
+        \ faster\nthan six months ago.\"\n\nThe CISO nods. \"Now THAT'S a meaningful metric. Not input\
+        \ metrics\nlike headcount and tool purchases - an outcome metric that shows\nwhether our investments\
+        \ are producing results. Keep tracking this.\"\n\nMTTR (Mean Time to Remediate) for critical vulnerabilities\
+        \ is\nthe key effectiveness metric for vulnerability management. It\nmeasures outcomes, not inputs,\
+        \ showing whether you're actually\nreducing risk faster.\n                "
+      failure_texts:
+        0: "\n\"Total vulnerabilities discovered\" is a volume metric with no\ncontext. Finding 50,000\
+          \ vulnerabilities means nothing if you're\nnot fixing them. You could be discovering more while\
+          \ your backlog\ngrows infinitely.\n\nMTTR measures how quickly you REMEDIATE - that's the effectiveness\n\
+          the CISO asked about.\n                    "
+        2: "\nTool count is an INPUT metric. Buying three scanners doesn't\nprove you're using them effectively.\
+          \ You could have the best\ntools in the industry and still have a 200-day remediation\ncycle\
+          \ if processes are broken.\n\nMTTR is an OUTCOME metric showing actual remediation performance.\n\
+          \                    "
+        3: "\nTeam size is an INPUT metric - resources consumed. Four new\nanalysts doesn't automatically\
+          \ mean faster remediation. They\ncould be onboarding, working on low-priority items, or stuck\n\
+          in process bottlenecks.\n\nThe CISO asked about EFFECTIVENESS. MTTR shows whether problems\n\
+          are actually being fixed faster, regardless of team size.\n                    "
+- id: d6_war_games
+  domain: 6
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 6: Security Assessment and Testing - Red Team / Blue Team'
+  failure_text: "\nRed team vs blue team exercises test both technical controls AND human\ndetection/response\
+    \ capabilities. The red team (attackers) attempts to\nachieve objectives while the blue team (defenders)\
+    \ tries to detect,\nrespond, and stop them. Automated scanning tests technology but not\npeople. Policy\
+    \ review checks documentation but not execution.\nSelf-assessment collects opinions but not evidence.\n\
+    \        "
+  themes:
+    fantasy:
+      title: THE CITADEL WAR GAMES
+      narrative: "\nThe Citadel's annual defense review has arrived. The War Council wants\nto test not\
+        \ just the fortress walls and wards, but also the defenders\nthemselves. Can the guard force detect\
+        \ intrusions? Can they respond\neffectively? Do their communication procedures work under pressure?\n\
+        \nThe Master of Defense presents his proposal: \"I suggest we form two\nteams. The CRIMSON team\
+        \ will attempt to infiltrate the Citadel and\nreach the treasury, using whatever tactics they\
+        \ can devise. The\nAZURE team - our regular guard force - will try to detect, respond,\nand stop\
+        \ them.\"\n\nA skeptical council member objects. \"We already run automated ward\nscans. Why do\
+        \ we need humans pretending to attack?\"\n\nThe Master of Defense smiles. \"Scans test our magical\
+        \ barriers. This\ntests our PEOPLE - whether they can actually detect and respond to\na thinking\
+        \ adversary.\"\n\nWhat type of exercise tests both technical defenses AND defender\ncapabilities?\n\
+        \                "
+      choices:
+      - text: Automated vulnerability scanning
+      - text: Red team vs blue team exercise
+      - text: Policy documentation review
+      - text: Control self-assessment questionnaire
+      success_text: "\n\"RED TEAM versus BLUE TEAM exercise,\" you confirm. \"The red team\nsimulates\
+        \ adversaries, attempting to achieve objectives. The blue\nteam - the defenders - tries to detect,\
+        \ respond, and stop them.\nIt tests both technical controls AND human response capabilities.\"\
+        \n\nThe exercise begins at dawn. The Crimson team (red) attempts\ninfiltration through multiple\
+        \ vectors - the water gate, the old\nservant passage, even social engineering of a new guard.\
+        \ The Azure\nteam (blue) monitors wards, patrols, and responds to alerts.\n\nAfter three days,\
+        \ the results are illuminating. The red team found\ntwo physical access points that bypassed magical\
+        \ wards. But more\nimportantly, the blue team's response revealed communication gaps -\nwarnings\
+        \ from the eastern tower took too long to reach central\ncommand.\n\n\"Automated scans would never\
+        \ have found these human factors,\" the\nMaster of Defense concludes. \"Red vs blue tests the\
+        \ whole system.\"\n                "
+      failure_texts:
+        0: "\nAutomated vulnerability scanning tests TECHNICAL controls - wards,\nbarriers, detection\
+          \ crystals. It doesn't test whether the guards\ncan actually detect and respond to a thinking\
+          \ attacker. Scanners\ndon't probe human procedures, communication, or response capability.\n\
+          \nRed team vs blue team exercises test the complete defensive system:\ntechnology AND people.\n\
+          \                    "
+        2: "\nPolicy review examines documentation - what procedures SAY should\nhappen. It doesn't test\
+          \ whether people can actually EXECUTE those\nprocedures under pressure from a determined adversary.\n\
+          \nRed vs blue exercises prove whether defenders can actually detect,\nrespond, and stop attacks\
+          \ - not just whether they have policies.\n                    "
+        3: "\nSelf-assessment questionnaires ask people to evaluate their own\ncapabilities. \"Can you\
+          \ detect intrusions?\" \"Yes.\" But can you\nreally? Self-assessment doesn't involve active\
+          \ testing against\na determined adversary.\n\nRed vs blue exercises PROVE detection and response\
+          \ capability\nthrough actual adversarial simulation.\n                    "
+    corporate:
+      title: THE SECURITY WAR GAMES
+      narrative: "\nThe CISO presents a proposal to the executive team for the annual\nsecurity exercise.\n\
+        \n\"I want to test our complete security posture,\" she explains.\n\"Not just our firewalls and\
+        \ endpoint protection - I want to know\nif our SOC can actually detect a sophisticated attacker.\
+        \ Can our\nincident response team actually contain a breach? Do our runbooks\nwork under pressure?\"\
+        \n\nShe outlines her plan: \"We'll engage an external team to simulate\nreal adversaries - let's\
+        \ call them the red team. They'll try to\nachieve specific objectives: exfiltrate customer data,\
+        \ establish\npersistence, whatever. Our internal security team - the blue team -\nwill try to\
+        \ detect and stop them, using only our normal tools and\nprocedures.\"\n\nThe CEO raises an eyebrow.\
+        \ \"We already have vulnerability scans\nand automated alerts.\"\n\n\"Those test our technology,\"\
+        \ the CISO responds. \"This tests our\nPEOPLE.\"\n\nWhat type of exercise tests both defenses\
+        \ AND defender capabilities?\n                "
+      choices:
+      - text: Automated vulnerability scanning
+      - text: Red team vs blue team exercise
+      - text: Policy review
+      - text: Control self-assessment
+      success_text: "\n\"RED TEAM versus BLUE TEAM exercise,\" you confirm. \"The red team\n(attackers)\
+        \ attempts to achieve objectives. The blue team\n(defenders) tries to detect, respond, and stop\
+        \ them. It tests\nthe complete security program: technology, people, and process.\"\n\nThe exercise\
+        \ runs for two weeks. The red team attempts phishing,\nexploits unpatched systems, and tries lateral\
+        \ movement. The blue\nteam monitors their SIEM, responds to alerts, and tries to\ncontain the\
+        \ simulated attack.\n\nResults are illuminating:\n- Red team achieved persistence on 3 systems\
+        \ before detection\n- Blue team detection time averaged 6 hours (not great)\n- Incident response\
+        \ runbook had 4 critical gaps\n- Communication between SOC and management broke down\n\n\"Automated\
+        \ scans wouldn't have found any of this,\" the CISO notes.\n\"We learned more about our actual\
+        \ security posture in two weeks\nthan in a year of compliance audits.\"\n                "
+      failure_texts:
+        0: "\nVulnerability scanning tests technical controls - can it find\nmissing patches, misconfigurations,\
+          \ exposed ports? It doesn't\ntest whether the SOC can detect an actual attacker, or whether\n\
+          incident response procedures work under pressure.\n\nRed vs blue exercises test the complete\
+          \ system: technology,\nprocess, AND people working together against adversaries.\n         \
+          \           "
+        2: "\nPolicy review examines what procedures are documented. It doesn't\ntest whether people can\
+          \ execute those procedures when a real\nattack is happening. Documentation might be perfect\
+          \ while\nexecution completely fails.\n\nRed vs blue exercises PROVE execution capability through\
+          \ actual\nadversarial simulation.\n                    "
+        3: "\nSelf-assessment asks teams to evaluate their own capabilities.\n\"We're great at detection!\"\
+          \ \"We can contain any breach!\" But\nself-perception doesn't equal reality. Organizations routinely\n\
+          overestimate their detection and response capabilities.\n\nRed vs blue exercises provide evidence\
+          \ of actual capability\nagainst a thinking adversary.\n                    "
+- id: d6_bounty_hunters
+  domain: 6
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 6: Security Assessment and Testing - Bug Bounty Programs'
+  failure_text: "\nBug bounty programs invite external security researchers worldwide to\nfind vulnerabilities,\
+    \ paying rewards (\"bounties\") only for valid\nfindings. This provides continuous testing from diverse\
+    \ perspectives\nwith pay-for-results economics. Annual contracts are periodic and\nsingle-source.\
+    \ Internal audits lack external perspective. Compliance\ncertifications are point-in-time verification,\
+    \ not ongoing testing.\n        "
+  themes:
+    fantasy:
+      title: THE FLAW FINDER'S REWARD
+      narrative: "\nThe Citadel's defenses have been tested by internal teams and hired\nsiege masters.\
+        \ But the Master of Defense wants something more.\n\n\"Our own people are skilled,\" she acknowledges,\
+        \ \"but they think like\nus. They know our patterns. I want fresh eyes - MANY fresh eyes - from\n\
+        across all the kingdoms. Rogues, trap-breakers, ward-crackers - anyone\nwho can find flaws we've\
+        \ missed.\"\n\nShe proposes an unusual program. \"We announce a challenge to all the\nkingdoms:\
+        \ find a flaw in the Citadel's defenses and prove it. In\nreturn, we pay a bounty - gold for genuine\
+        \ discoveries. No punishment\nfor honest attempts. Continuous testing from the most diverse pool\n\
+        of talent possible.\"\n\nThe Chief Treasurer frowns. \"We're already paying siege masters for\n\
+        annual assessments. Why pay outsiders for the same thing?\"\n\nWhat program provides continuous\
+        \ testing from diverse external\nresearchers, paying only for valid findings?\n              \
+        \  "
+      choices:
+      - text: Annual penetration test contract with a siege master
+      - text: Bug bounty program open to researchers across the kingdoms
+      - text: Internal security audit by the guard force
+      - text: Compliance certification by the Merchant Guild
+      success_text: "\n\"A BUG BOUNTY PROGRAM,\" you explain. \"We invite external researchers -\nthe\
+        \ rogues and trap-breakers the Master mentions - to find flaws.\nWe pay bounties only when they\
+        \ find valid vulnerabilities. Continuous\ntesting from diverse perspectives with pay-for-results\
+        \ economics.\"\n\nThe program launches. Within the first moon, twelve researchers from\nsix kingdoms\
+        \ have submitted findings. Two critical flaws that your\ninternal teams never found. Seven moderate\
+        \ issues. Three false alarms\nthat cost nothing because bounties require validation.\n\n\"Annual\
+        \ siege master contracts give us one perspective for a fixed\nfee,\" the Master of Defense notes.\
+        \ \"The bounty program gives us\ndozens of perspectives, and we only pay for results. The mathematics\n\
+        favor us.\"\n\nBUG BOUNTY PROGRAMS enable continuous security testing from diverse\nexternal researchers\
+        \ worldwide, paying only for valid findings.\n                "
+      failure_texts:
+        0: "\nAnnual penetration test contracts provide periodic testing - once\na year, fixed fee, one\
+          \ team's perspective. The Master of Defense\nspecifically wanted CONTINUOUS testing from MANY\
+          \ researchers, not\nperiodic testing from one team.\n\nBug bounty programs run continuously\
+          \ and attract diverse researchers\nwith pay-for-results economics.\n                    "
+        2: "\nInternal security audits use INTERNAL staff, not external researchers.\nInternal teams think\
+          \ like insiders - they know the patterns and may\nhave blind spots. The Master of Defense specifically\
+          \ wanted \"fresh\neyes from across all the kingdoms.\"\n\nBug bounty programs attract diverse\
+          \ external perspectives that\ninternal teams cannot provide.\n                    "
+        3: "\nCompliance certifications are point-in-time assessments against\nspecific standards, not\
+          \ continuous security testing. They verify\nyou meet requirements; they don't find new vulnerabilities.\n\
+          \nBug bounty programs provide ongoing vulnerability discovery from\ndiverse researchers, not\
+          \ compliance verification.\n                    "
+    corporate:
+      title: THE CROWDSOURCED SECURITY PROGRAM
+      narrative: "\nThe security team is reviewing options for expanding their testing\ncoverage. The\
+        \ CISO presents a challenge.\n\n\"Our annual pen test gives us one firm's perspective for two\
+        \ weeks a\nyear. I want continuous testing. I want HUNDREDS of researchers with\ndifferent skill\
+        \ sets, different perspectives, different techniques.\nAnd I want to pay only when they find something\
+        \ real.\"\n\nThe budget analyst perks up at that last part. \"Pay only for results?\nThat's better\
+        \ than paying for time regardless of findings.\"\n\n\"Exactly,\" the CISO continues. \"There are\
+        \ researchers all over the\nworld who specialize in finding flaws. Web app experts, mobile\nspecialists,\
+        \ crypto researchers. I want access to all of them,\ncontinuously, with economics that make sense.\"\
+        \n\nWhat program enables continuous testing from diverse global\nresearchers with pay-for-results\
+        \ economics?\n                "
+      choices:
+      - text: Annual penetration test contract
+      - text: Bug bounty program
+      - text: Internal security audit
+      - text: Compliance certification
+      success_text: "\n\"A BUG BOUNTY PROGRAM,\" you confirm. \"We define scope, set reward\ntiers based\
+        \ on severity, and invite external researchers to find\nvulnerabilities. They report findings\
+        \ through a coordinated\ndisclosure process. We validate and pay bounties for confirmed\nissues.\"\
+        \n\nWithin three months of launch:\n- 340 researchers have tested the applications\n- 23 valid\
+        \ vulnerabilities discovered (including 2 criticals)\n- Total payout: $47,000 (far less than annual\
+        \ pen test cost)\n- One researcher found an authentication bypass the pen testers missed\n\n\"\
+        The math is compelling,\" the CFO notes in the quarterly review.\n\"We're getting continuous coverage\
+        \ from hundreds of researchers\nfor less than we paid for annual point-in-time testing.\"\n\n\
+        BUG BOUNTY PROGRAMS provide continuous, crowdsourced security testing\nwith pay-for-results economics\
+        \ and diverse global perspectives.\n                "
+      failure_texts:
+        0: "\nAnnual pen test contracts provide periodic testing from one firm.\nThe CISO specifically\
+          \ wanted CONTINUOUS testing from HUNDREDS of\nresearchers with DIVERSE perspectives. Annual\
+          \ contracts are the\nopposite: periodic, single-source, homogeneous.\n\nBug bounty programs\
+          \ attract diverse researchers for continuous\ntesting with pay-for-results economics.\n    \
+          \                "
+        2: "\nInternal security audits use internal staff. The CISO specifically\nwanted \"researchers\
+          \ all over the world\" with different specialties.\nInternal teams can't provide the diversity\
+          \ or continuous external\nperspective of a global researcher community.\n\nBug bounty programs\
+          \ tap into worldwide security researcher talent\nthat internal teams cannot replicate.\n   \
+          \                 "
+        3: "\nCompliance certifications verify adherence to standards at a point\nin time. They don't\
+          \ provide continuous vulnerability discovery.\nThe CISO wanted ongoing testing that finds new\
+          \ issues, not periodic\ncompliance verification.\n\nBug bounty programs enable continuous security\
+          \ testing with diverse\nglobal participation.\n                    "
+- id: d6_crisis_council
+  domain: 6
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 6: Security Assessment and Testing - Tabletop Exercises'
+  failure_text: "\nTabletop exercises are discussion-based walkthroughs where participants\ntalk through\
+    \ their responses to hypothetical scenarios. No actual systems\nare affected, making them safe for\
+    \ practicing incident response. They\nreveal gaps in procedures, role confusion, and coordination\
+    \ issues\nwithout operational risk. Full-scale tests affect real systems;\npenetration tests attack\
+    \ real targets.\n        "
+  themes:
+    fantasy:
+      title: THE CRISIS COUNCIL DRILL
+      narrative: "\nThe Citadel's incident response team hasn't faced a major crisis in\nyears. The Master\
+        \ of Defense is concerned that when the next dragon\nattack or dark wizard siege occurs, the response\
+        \ team won't know\ntheir roles.\n\n\"I want to test our response procedures,\" she explains. \"\
+        But I can't\nsummon an actual dragon or invite a dark wizard. I need a way to\npractice WITHOUT\
+        \ affecting our actual defenses.\"\n\nShe gathers the key responders around a table. \"Imagine\
+        \ this scenario:\na shape-shifting infiltrator has replaced the treasury guard captain.\nTreasury\
+        \ funds are being siphoned. Walk me through your response.\"\n\nNo one leaves the room. No guards\
+        \ are dispatched. No wards are\nactivated. But for the next two hours, the team discusses, debates,\n\
+        and walks through every step of their response plan.\n\nWhat type of exercise practices incident\
+        \ response without affecting\nproduction systems?\n                "
+      choices:
+      - text: Full-scale disaster recovery test with actual failover
+      - text: Tabletop exercise / discussion-based walkthrough
+      - text: Production penetration test
+      - text: Automated backup restoration test
+      success_text: "\n\"This is a TABLETOP EXERCISE,\" you explain. \"Discussion-based practice\nwhere\
+        \ participants talk through their responses to hypothetical\nscenarios. No systems are touched.\
+        \ No guards are deployed. We're\ntesting whether our people know the procedures and can work together.\"\
+        \n\nThe exercise reveals valuable insights:\n\n- The communications officer didn't know who authorizes\
+        \ external\n  disclosure to the other kingdoms\n- The treasury guard captain's backup authority\
+        \ wasn't clearly defined\n- Two responders thought they had the same responsibility\n\nAll discovered\
+        \ through discussion, not production impact.\n\n\"If we'd found these gaps during an actual crisis,\
+        \ lives could have\nbeen lost,\" the Master of Defense notes. \"Tabletop exercises are\nsafe practice\
+        \ for dangerous situations.\"\n\nTABLETOP EXERCISES are discussion-based walkthroughs that test\n\
+        response procedures without affecting operational systems.\n                "
+      failure_texts:
+        0: "\nFull-scale disaster recovery tests involve actual system failover -\nreal systems going\
+          \ down, real recovery procedures executing. This\naffects production and carries risk. The Master\
+          \ of Defense specifically\nwanted to practice WITHOUT affecting defenses.\n\nTabletop exercises\
+          \ are discussion-only, no system impact.\n                    "
+        2: "\nPenetration testing targets real systems with real attacks (even if\ncontrolled). This affects\
+          \ production systems and could cause disruption.\nThe scenario explicitly asks for practice\
+          \ that doesn't affect actual\ndefenses.\n\nTabletop exercises are purely discussion-based -\
+          \ no systems touched.\n                    "
+        3: "\nBackup restoration tests actual recovery processes - real data being\nrestored, real systems\
+          \ being rebuilt. This is operational testing,\nnot incident response practice.\n\nTabletop exercises\
+          \ test response PROCEDURES and team coordination\nthrough facilitated discussion, not technical\
+          \ recovery processes.\n                    "
+    corporate:
+      title: THE RANSOMWARE DRILL
+      narrative: "\nThe incident response team at Initech has documented procedures for\nhandling ransomware\
+        \ attacks. But they've never actually responded to\none. The CISO wants to test their preparedness\
+        \ without, obviously,\nactually infecting the network with ransomware.\n\n\"I want to gather the\
+        \ team,\" she explains. \"Present them with a\nscenario: ransomware has encrypted our file servers,\
+        \ attackers are\ndemanding Bitcoin, the FBI is calling for an interview, and the\npress has wind\
+        \ of it. Walk through what we'd do. Who calls who?\nWhat decisions need to be made? Where are\
+        \ our runbooks?\"\n\nShe looks around the conference room. \"We'll stay right here. No\nsystems\
+        \ touched. Just talk through the response.\"\n\nWhat type of exercise allows incident response\
+        \ practice without\naffecting production systems?\n                "
+      choices:
+      - text: Full-scale disaster recovery test
+      - text: Tabletop exercise / walkthrough
+      - text: Production penetration test
+      - text: Automated backup restoration
+      success_text: "\n\"TABLETOP EXERCISE,\" you confirm. \"Discussion-based scenario practice.\nWe present\
+        \ a hypothetical situation and walk through our response,\nidentifying gaps in procedures, unclear\
+        \ roles, and coordination\nissues - all without touching a single production system.\"\n\nThe\
+        \ exercise runs for three hours. Key findings:\n\n- The CFO wasn't sure when to engage cyber insurance\n\
+        - Legal didn't know the ransomware payment disclosure requirements\n- IT and Security disagreed\
+        \ on who has authority to isolate systems\n- The communication plan didn't include after-hours\
+        \ contact methods\n\n\"Better to find these gaps in a conference room than during an\nactual ransomware\
+        \ attack,\" the CISO notes. \"Schedule these\nquarterly.\"\n\nTABLETOP EXERCISES test response\
+        \ procedures through facilitated\ndiscussion, identifying gaps safely before real incidents occur.\n\
+        \                "
+      failure_texts:
+        0: "\nFull-scale DR tests involve actual failover of systems - real\nservers going down, real\
+          \ recovery processes executing. This affects\nproduction and carries risk of extended outage.\n\
+          \nThe CISO specifically wanted discussion-based practice without\ntouching systems. Tabletop\
+          \ exercises provide exactly that.\n                    "
+        2: "\nPenetration testing attacks real production systems. Even authorized\npen tests can cause\
+          \ service disruption. The CISO explicitly wanted\nto stay in the conference room with no systems\
+          \ touched.\n\nTabletop exercises are discussion-only - the scenario is hypothetical,\nthe learning\
+          \ is real, the systems are untouched.\n                    "
+        3: "\nBackup restoration tests actual recovery technology - pulling backups,\nrestoring data,\
+          \ validating integrity. This is operational testing of\nbackup systems, not incident response\
+          \ practice.\n\nTabletop exercises test people and procedures through discussion,\nnot technology\
+          \ through execution.\n                    "
+- id: d6_recovery_validation
+  domain: 6
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 6: Security Assessment and Testing - DR Testing'
+  failure_text: "\nOnly actual failover testing validates whether stated RTOs are achievable.\nDocumentation\
+    \ review shows what's planned but not what's possible.\nStaff opinions express belief but not proof.\
+    \ Industry benchmarks compare\nbut don't validate. Full-scale DR tests reveal the gap between stated\n\
+    objectives and real-world capability, identifying issues before actual\ndisasters occur.\n        "
+  themes:
+    fantasy:
+      title: THE RECOVERY PROMISE
+      narrative: "\nThe Citadel's disaster recovery plan contains a bold claim: \"In the\nevent of catastrophic\
+        \ tower collapse, critical ward systems can be\nrestored within four hours.\"\n\nThe High Commander\
+        \ is reviewing the plan with growing skepticism.\n\"This document was written three years ago.\
+        \ Have we ever actually\nTESTED whether we can restore wards in four hours?\"\n\nThe Ward Master\
+        \ looks uncomfortable. \"Well, no. But we have the\nbackup ward crystals stored in the vault.\
+        \ And the restoration\nprocedures are documented...\"\n\n\"Documentation says we CAN do it. I\
+        \ need to KNOW we can do it.\"\nThe Commander's voice is firm. \"Before we tell the kingdom they're\n\
+        protected by four-hour recovery, I want proof.\"\n\nWhat type of test BEST validates that the\
+        \ four-hour recovery time\nobjective is actually achievable?\n                "
+      choices:
+      - text: Review the disaster recovery documentation more carefully
+      - text: Conduct a full-scale recovery test with actual failover
+      - text: Ask the Ward Master if he thinks four hours is achievable
+      - text: Compare the four-hour target to other citadels' benchmarks
+      success_text: "\n\"We need a FULL-SCALE RECOVERY TEST,\" you advise. \"Actually trigger\na failover\
+        \ scenario. Restore the ward systems from backup crystals.\nTime the entire process. Prove that\
+        \ four hours is achievable - or\nlearn what the real number is.\"\n\nThe test is scheduled for\
+        \ a low-activity period. The ward tower is\nisolated. Recovery begins from stored crystals following\
+        \ documented\nprocedures.\n\nResult: Recovery took six hours and forty minutes. The documentation\n\
+        was wrong. Several critical steps weren't even documented. One backup\ncrystal was corrupted and\
+        \ hadn't been validated in two years.\n\n\"Better to know NOW than during an actual disaster,\"\
+        \ the Commander\nacknowledges. \"Update the recovery time to eight hours to include\nmargin, and\
+        \ fix those procedures. And schedule these tests annually.\"\n\nFULL-SCALE DR TESTS validate whether\
+        \ stated recovery objectives are\nachievable. Documentation review and opinions don't prove capability.\n\
+        \                "
+      failure_texts:
+        0: "\nThe disaster recovery documentation CLAIMS four-hour recovery. But\nclaims aren't proof.\
+          \ The document might be outdated, inaccurate, or\nbased on assumptions that no longer hold.\
+          \ Only actual testing proves\nwhether the documented RTO is achievable.\n\nReview shows what's\
+          \ written. Full-scale testing proves what's real.\n                    "
+        2: "\nThe Ward Master's opinion isn't evidence of capability. People\nroutinely overestimate recovery\
+          \ capability because they've never\nactually tested it. \"I think we can do it\" doesn't equal\
+          \ \"we've\nproven we can do it.\"\n\nFull-scale testing reveals the gap between belief and reality.\n\
+          \                    "
+        3: "\nWhat other citadels can achieve tells you nothing about YOUR\ncapability. Different infrastructure,\
+          \ different procedures, different\nstaff. Benchmarks are comparisons, not validation.\n\nOnly\
+          \ testing YOUR actual recovery process proves YOUR actual\ncapability.\n                    "
+    corporate:
+      title: THE RTO VALIDATION
+      narrative: "\nInitech's disaster recovery plan promises a 4-hour Recovery Time\nObjective (RTO)\
+        \ for critical systems. This RTO is reported to the\nboard, included in customer contracts, and\
+        \ cited in regulatory\nfilings.\n\nThe new IT Director notices a problem: \"When was this RTO\
+        \ last\nvalidated?\"\n\nSilence. The DR plan has existed for five years. The RTO has\nnever been\
+        \ tested.\n\n\"We're promising customers and regulators that we can recover in\nfour hours,\"\
+        \ the Director continues. \"We have no evidence this is\ntrue. We've never actually performed\
+        \ a full recovery test.\"\n\nThe Operations Manager is defensive. \"We have the backups. We have\n\
+        the procedures documented. We've done tabletop exercises.\"\n\n\"Those prove we have a PLAN. They\
+        \ don't prove the plan WORKS.\"\n\nWhat test BEST validates that the 4-hour RTO is achievable?\n\
+        \                "
+      choices:
+      - text: Review the DR documentation for completeness
+      - text: Conduct a full-scale DR test with actual failover
+      - text: Ask the operations team if they think 4 hours is realistic
+      - text: Compare Initech's RTO to industry benchmarks
+      success_text: "\n\"FULL-SCALE DR TEST with actual failover,\" you recommend. \"Declare\na simulated\
+        \ disaster. Fail over to the recovery site. Restore from\nbackups. Time every step. Prove we can\
+        \ meet RTO - or learn what\nour real capability is.\"\n\nThe test is scheduled for a maintenance\
+        \ window. The primary\ndatacenter is isolated. Recovery begins.\n\nResult: 7 hours, 23 minutes\
+        \ to full service restoration. The 4-hour\nRTO was fiction.\n\nPost-mortem findings:\n- Two critical\
+        \ systems weren't in the backup scope\n- Network configuration restore procedures were outdated\n\
+        - Staff had never actually practiced the failover steps\n\n\"This is embarrassing,\" the IT Director\
+        \ admits, \"but infinitely\nbetter than discovering during a real disaster that we can't meet\n\
+        our promises. Update the RTO to 8 hours and fix these gaps.\"\n\nFULL-SCALE DR TESTING validates\
+        \ actual recovery capability against\nstated objectives.\n                "
+      failure_texts:
+        0: "\nDocumentation review verifies that a plan exists and is complete.\nIt doesn't verify that\
+          \ the plan WORKS. Procedures might be outdated.\nBackup scope might be wrong. Actual execution\
+          \ might take twice as\nlong as documented.\n\nOnly full-scale testing reveals real-world recovery\
+          \ capability.\n                    "
+        2: "\nStaff opinions aren't evidence. Operations teams routinely believe\nthey can recover faster\
+          \ than they actually can because they've never\ntested it. Optimism isn't validation.\n\nFull-scale\
+          \ testing provides actual evidence of recovery capability.\n                    "
+        3: "\nIndustry benchmarks show what other companies achieve, not what\nInitech can achieve. Different\
+          \ infrastructure, different complexity,\ndifferent procedures. Comparison is not validation.\n\
+          \nTesting YOUR actual recovery process proves YOUR actual RTO.\n                    "
+- id: d6_ward_validation
+  domain: 6
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 6: Security Assessment and Testing - Control Validation'
+  failure_text: "\nEffective control testing requires actively testing the control.\nAttempting blocked\
+    \ actions and verifying they fail demonstrates\noperational effectiveness. Configuration review shows\
+    \ intent but not\nreality. Administrator opinions aren't evidence. Absence of incidents\ndoesn't prove\
+    \ the control works - other factors might be responsible.\nActive positive testing proves controls\
+    \ function as designed.\n        "
+  themes:
+    fantasy:
+      title: THE WARD VERIFICATION
+      narrative: "\nThe Citadel's ward-keepers have installed a new protective enchantment.\nThis ward\
+        \ is designed to block portal travel from unauthorized locations\n- specifically, from coordinates\
+        \ known to be dark wizard strongholds.\n\nThe Ward Master presents his report to the Security\
+        \ Council. \"The ward\nis configured and active. Here's the configuration scroll showing all\n\
+        blocked coordinates.\"\n\nA council member asks the obvious question: \"How do we know it's\n\
+        actually WORKING? Configuration scrolls show intent. I want proof\nthat if someone tries to portal\
+        \ from a blocked location, they actually\nget blocked.\"\n\nThe Ward Master considers his options\
+        \ for validating that the new\ncontrol is functioning as designed.\n\nHow should this control\
+        \ be validated?\n                "
+      choices:
+      - text: Review the ward configuration scrolls in detail
+      - text: Attempt test portals from blocked locations and verify they fail
+      - text: Ask the ward-keeper if the ward is working properly
+      - text: Check whether any unauthorized portals have occurred recently
+      success_text: "\n\"We need to ACTIVELY TEST the control,\" you advise. \"Travel to a\nlocation we\
+        \ know is blocked. Attempt to portal to the Citadel.\nVerify that the portal fails. That's the\
+        \ only way to prove the\nward actually works as designed.\"\n\nThe Ward Master arranges a controlled\
+        \ test. A trusted mage travels\n(by mundane means) to coordinates on the blocklist. She attempts\n\
+        to open a portal to the Citadel.\n\nThe portal fails. The rejection is logged in the ward's detection\n\
+        crystal. The control is confirmed working.\n\n\"Configuration shows INTENT,\" you explain. \"\
+        Testing shows REALITY.\nThe ward is configured correctly AND functioning correctly. Without\n\
+        this test, we'd only know one of those things.\"\n\nCONTROL TESTING validates that security controls\
+        \ actually function\nas intended. Attempting blocked actions and verifying failure\nproves operational\
+        \ effectiveness.\n                "
+      failure_texts:
+        0: "\nConfiguration review shows INTENT - what the ward is SUPPOSED to\ndo. It doesn't prove the\
+          \ ward is actually blocking portals. The\nconfiguration might be correct while the ward itself\
+          \ malfunctions.\n\nActive testing - attempting blocked actions and verifying they\nfail - proves\
+          \ operational effectiveness.\n                    "
+        2: "\nThe ward-keeper's opinion isn't evidence. He might believe the ward\nworks because he configured\
+          \ it correctly, but belief isn't proof.\nThe ward could be misconfigured, malfunctioning, or\
+          \ bypassed in\nways he doesn't realize.\n\nActual testing provides evidence of control effectiveness.\n\
+          \                    "
+        3: "\nAbsence of incidents doesn't prove the control works. Maybe no one\nhas tried to portal\
+          \ from blocked locations. Maybe attempts are\nsucceeding but not being detected. Maybe the control\
+          \ is working\nfor other reasons.\n\nActive testing provides direct evidence that the specific\
+          \ control\nfunctions as designed.\n                    "
+    corporate:
+      title: THE FIREWALL RULE VALIDATION
+      narrative: "\nThe security team has implemented a new firewall rule: block all\noutbound connections\
+        \ to known malicious IP addresses. A threat\nintelligence feed provides the blocklist, updated\
+        \ daily.\n\nThe Security Manager presents the implementation to the CISO.\n\"The rule is configured\
+        \ and active. Here's the firewall policy\nshowing the blocklist integration.\"\n\nThe CISO looks\
+        \ at the policy printout. \"Configuration looks\ncorrect. But how do we KNOW it's working? Configuration\
+        \ shows\nwhat we intended. I want proof that malicious IPs are actually\nbeing blocked.\"\n\n\
+        The Security Manager considers options for validating this\ncontrol.\n\nHow should this firewall\
+        \ control be validated?\n                "
+      choices:
+      - text: Review the firewall configuration files
+      - text: Attempt connections to known-bad IPs and verify they are blocked
+      - text: Ask the firewall administrator if it is working
+      - text: Check if any malware infections have occurred since deployment
+      success_text: "\n\"We need to ACTIVELY TEST the control,\" you recommend. \"Attempt\nconnections\
+        \ to IPs on the blocklist from inside the network.\nVerify they're blocked. Check the firewall\
+        \ logs for deny entries.\nThat proves the control works as designed.\"\n\nYou set up a test workstation.\
+        \ You attempt connections to several\nIPs from the threat intelligence blocklist. Each connection\
+        \ times\nout. The firewall logs show explicit deny entries for each attempt.\n\n\"Configuration\
+        \ tells us what we INTENDED. Testing tells us what\nactually HAPPENS,\" you report to the CISO.\
+        \ \"The control is verified\nworking. We should schedule periodic re-validation as part of\ncontrol\
+        \ monitoring.\"\n\nCONTROL TESTING validates that security controls actually function\nas intended\
+        \ by actively testing them and verifying expected behavior.\n                "
+      failure_texts:
+        0: "\nConfiguration review shows INTENT - what the firewall SHOULD do.\nBut configuration errors,\
+          \ rule order problems, or integration\nfailures could mean the rule doesn't actually block anything.\n\
+          \nActive testing - attempting blocked connections and verifying\nfailure - proves the control\
+          \ is operationally effective.\n                    "
+        2: "\nThe firewall admin's opinion isn't evidence. They might believe\nthe rule works because\
+          \ they configured it correctly, but that\ndoesn't account for implementation errors, rule conflicts,\
+          \ or\nunexpected behavior.\n\nActual testing provides proof of control effectiveness.\n    \
+          \                "
+        3: "\nAbsence of malware doesn't prove the firewall rule works. Maybe\nno malware tried to connect\
+          \ to blocklist IPs. Maybe other controls\n(endpoint protection, IDS) are doing the blocking.\
+          \ Maybe infections\noccurred but weren't detected.\n\nActive testing proves this SPECIFIC control\
+          \ functions as designed.\n                    "
+- id: d6_continuous_siege
+  domain: 6
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 6: Security Assessment and Testing - Breach Attack Simulation'
+  failure_text: "\nBreach and Attack Simulation (BAS) platforms continuously and\nautomatically simulate\
+    \ attack techniques (often mapped to MITRE ATT&CK)\nto test whether security controls detect and prevent\
+    \ them. This provides\nongoing validation without manual testing effort. Vulnerability scans\nfind\
+    \ weaknesses but don't simulate attacks. Annual pen tests are\npoint-in-time. Antivirus is a control\
+    \ being tested, not a testing tool.\n        "
+  themes:
+    fantasy:
+      title: THE ENDLESS SIEGE DRILL
+      narrative: "\nThe Citadel's defenses are tested annually by siege masters. But the\nMaster of Defense\
+        \ has grown concerned about the gaps between tests.\n\n\"Once a year, we hire siege masters for\
+        \ two weeks. They find problems.\nWe fix them. But then what?\" She gestures at the ward towers.\
+        \ \"Eleven\nmonths go by. New enchantments are deployed. Guard rotations change.\nMagic is updated.\
+        \ By the time the next siege test arrives, we've\ndrifted back into unknown territory.\"\n\nShe\
+        \ presents a new proposal: \"I want to acquire a system - a permanent\nautomated siege simulation.\
+        \ Something that continuously tests our\nwards and walls using the same techniques real attackers\
+        \ would use.\nEvery day. Every hour. Without needing to hire siege masters each time.\"\n\nWhat\
+        \ solution provides continuous, automated attack simulation to\nvalidate security controls?\n\
+        \                "
+      choices:
+      - text: Monthly vulnerability scans of the ward crystals
+      - text: Breach and Attack Simulation platform
+      - text: Annual penetration test by siege masters
+      - text: Install more protective ward crystals
+      success_text: "\n\"You're describing a BREACH AND ATTACK SIMULATION platform,\" you\nexplain. \"\
+        Automated systems that continuously simulate real attack\ntechniques - portal intrusion, ward\
+        \ bypasses, credential attacks -\nto validate whether your defensive controls actually detect\
+        \ and\nprevent them.\"\n\nThe platform is deployed. It runs attack simulations hourly:\n- Attempts\
+        \ known ward bypass techniques\n- Tests detection enchantments with simulated dark magic signatures\n\
+        - Validates blocking controls against intrusion patterns\n\nEach test produces results: did the\
+        \ defenses detect it? Block it?\nAlert on it? Continuous validation without continuous siege\n\
+        master fees.\n\n\"This is exactly what I needed,\" the Master of Defense nods.\n\"Point-in-time\
+        \ tests have value. But continuous validation ensures\nour defenses never silently drift into\
+        \ failure.\"\n\nBREACH AND ATTACK SIMULATION (BAS) platforms provide continuous,\nautomated testing\
+        \ of security controls against real attack techniques.\n                "
+      failure_texts:
+        0: "\nVulnerability scans identify known weaknesses - missing patches,\nmisconfigurations. They\
+          \ don't simulate actual attack techniques\nto validate whether controls detect and prevent them.\n\
+          \nBAS platforms actively simulate attacks (like MITRE ATT&CK\ntechniques) to test whether controls\
+          \ work as expected.\n                    "
+        2: "\nAnnual penetration tests are exactly what the Master of Defense\nidentified as insufficient.\
+          \ Point-in-time testing with eleven-month\ngaps. She specifically asked for CONTINUOUS, AUTOMATED\
+          \ testing.\n\nBAS platforms run continuously without manual testing effort.\n              \
+          \      "
+        3: "\nMore ward crystals are a CONTROL - something being tested, not a\ntesting platform. Adding\
+          \ defenses doesn't validate that existing\ndefenses work. You'd still need to test whether the\
+          \ new crystals\nactually function correctly.\n\nBAS platforms TEST controls; they don't add\
+          \ new ones.\n                    "
+    corporate:
+      title: THE CONTINUOUS VALIDATION PLATFORM
+      narrative: "\nThe CISO reviews the security testing calendar with frustration.\n\n\"We do an annual\
+        \ pen test - two weeks, then they're gone. We have\nquarterly vulnerability scans. But between\
+        \ tests, how do I know\nour controls still work? Did that firewall change break our\ndetection?\
+        \ Is the new EDR actually blocking attack techniques?\nDid something drift?\"\n\nShe pulls up\
+        \ a vendor presentation. \"There are platforms now that\ncontinuously simulate attack techniques\
+        \ against our environment.\nThe MITRE ATT&CK framework - automated. Constantly testing whether\n\
+        our SIEM detects lateral movement. Whether our endpoint protection\nblocks known malware techniques.\
+        \ 24/7 validation, not annual\nsnapshots.\"\n\n\"Isn't that what pen testers do?\" asks the CFO.\n\
+        \n\"Pen testers are human experts doing point-in-time testing. This\nis automated continuous validation.\"\
+        \n\nWhat type of platform provides continuous, automated attack\nsimulation across the kill chain?\n\
+        \                "
+      choices:
+      - text: Monthly vulnerability scans
+      - text: Breach and Attack Simulation (BAS) platform
+      - text: Annual penetration test
+      - text: Antivirus software
+      success_text: "\n\"BREACH AND ATTACK SIMULATION,\" you confirm. \"BAS platforms\ncontinuously and\
+        \ automatically simulate attack techniques -\naligned with frameworks like MITRE ATT&CK. They\
+        \ test whether\nyour controls detect and prevent each technique.\"\n\nThe platform runs simulations\
+        \ across the kill chain:\n- Initial access: phishing simulations, exploit attempts\n- Execution:\
+        \ malicious script techniques\n- Persistence: registry modifications, scheduled tasks\n- Lateral\
+        \ movement: pass-the-hash, remote execution\n- Exfiltration: data staging, C2 communication\n\n\
+        For each technique, results show: did the control detect it?\nBlock it? Alert on it? Continuous\
+        \ validation of the entire\nsecurity stack.\n\n\"Now I have evidence,\" the CISO says, reviewing\
+        \ the dashboard.\n\"Not 'we tested once last year' - evidence that our controls\nwork TODAY.\"\
+        \n\nBAS platforms provide continuous, automated security control\nvalidation against real-world\
+        \ attack techniques.\n                "
+      failure_texts:
+        0: "\nVulnerability scans find known weaknesses - CVEs, misconfigurations.\nThey don't simulate\
+          \ attack techniques or test whether controls\ndetect and prevent actual threats.\n\nBAS platforms\
+          \ actively simulate attacks to validate detection\nand prevention capabilities.\n          \
+          \          "
+        2: "\nAnnual pen tests are point-in-time. The CISO specifically\nidentified the problem with \"\
+          annual snapshots\" versus continuous\nvalidation. Pen tests use human experts periodically;\
+          \ BAS provides\nautomated continuous testing.\n\nBAS platforms fill the eleven-month gap between\
+          \ annual tests.\n                    "
+        3: "\nAntivirus is a CONTROL - something being tested, not a testing\nplatform. BAS platforms\
+          \ test whether your antivirus (and SIEM,\nand firewall, and EDR) actually works against attack\
+          \ techniques.\n\nYou need something that tests controls, not another control.\n            \
+          \        "
+- id: d6_component_review
+  domain: 6
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 6: Security Assessment and Testing - Software Composition Analysis'
+  failure_text: "\nSoftware Composition Analysis (SCA) tools analyze third-party dependencies\n(libraries,\
+    \ packages, components) to identify known vulnerabilities. They\ncross-reference component versions\
+    \ against CVE databases, alerting when\nyour project uses vulnerable versions. SAST analyzes your\
+    \ code, not\ndependencies. IAST tests running applications. WAF blocks attacks but\ndoesn't identify\
+    \ vulnerable components.\n        "
+  themes:
+    fantasy:
+      title: THE BORROWED ENCHANTMENTS
+      narrative: "\nThe Citadel's Arcane Development Guild has adopted a modern approach\nto spell crafting.\
+        \ Rather than writing every enchantment from scratch,\nthey incorporate pre-written magical components\
+        \ from the Open Spell\nRepository - shared enchantments created by mages across all kingdoms.\n\
+        \nThe Arch-Mage reviews the latest defensive ward. \"This protection\nspell uses forty-seven external\
+        \ magical components. Binding hexes,\nenergy channelers, focus crystals - all borrowed from the\
+        \ Repository.\"\n\nA young mage asks, \"Is that secure? We're using spells written by\nmages we've\
+        \ never met.\"\n\nThe Arch-Mage nods thoughtfully. \"An excellent question. Some of\nthese components\
+        \ may contain known flaws that have been discovered\nsince we adopted them. We need a way to identify\
+        \ which of our\nborrowed components have known vulnerabilities.\"\n\nWhat type of analysis identifies\
+        \ known vulnerabilities in third-party\nmagical components?\n                "
+      choices:
+      - text: Static analysis of the ward's original rune patterns
+      - text: Component composition analysis of borrowed enchantments
+      - text: Interactive testing of the ward while active
+      - text: Protective barrier around the ward to block attacks
+      success_text: "\n\"SOFTWARE COMPOSITION ANALYSIS,\" you explain (using the closest\nanalogy). \"\
+        A technique that examines all borrowed components and\ncross-references them against known vulnerability\
+        \ databases. If\na component we're using has been found to have a flaw, we're\nalerted immediately.\"\
+        \n\nThe composition analysis tool scans the ward's dependencies:\n- Binding Hex v2.3: VULNERABLE\
+        \ - energy leak allows bypass\n- Focus Crystal v4.1: Safe\n- Energy Channeler v1.8: VULNERABLE\
+        \ - buffer overflow in charging\n- ...and 44 more components analyzed\n\n\"Three of our borrowed\
+        \ components have known flaws,\" the report\nconcludes. \"These were discovered after you incorporated\
+        \ them.\nUpdates are available.\"\n\n\"Without this analysis, we'd have deployed vulnerable wards,\"\
+        \ the\nArch-Mage acknowledges. \"Composition analysis identifies inherited\nrisk.\"\n\nSOFTWARE\
+        \ COMPOSITION ANALYSIS (SCA) identifies known vulnerabilities\nin third-party components, libraries,\
+        \ and dependencies.\n                "
+      failure_texts:
+        0: "\nStatic analysis examines YOUR code - the original rune patterns\nwritten by your mages.\
+          \ It doesn't analyze the third-party components\nyou've incorporated. Those borrowed enchantments\
+          \ need composition\nanalysis to check for known vulnerabilities.\n\nSCA specifically examines\
+          \ external dependencies, not original code.\n                    "
+        2: "\nInteractive testing (IAST) examines running applications through\ninstrumentation. It might\
+          \ find issues during execution, but it's\nnot designed to identify known vulnerabilities in\
+          \ specific third-party\ncomponents by version.\n\nComposition analysis specifically cross-references\
+          \ component versions\nagainst vulnerability databases.\n                    "
+        3: "\nA protective barrier (Web Application Firewall analogy) blocks\nattacks at runtime. It doesn't\
+          \ identify that you're using vulnerable\ncomponents - it might block some attacks while leaving\
+          \ the underlying\nvulnerability unaddressed.\n\nComposition analysis identifies vulnerable components\
+          \ so they can\nbe updated or replaced.\n                    "
+    corporate:
+      title: THE OPEN SOURCE RISK
+      narrative: "\nThe development team at Initech builds applications using dozens of\nopen-source libraries.\
+        \ Package managers make it easy - npm install,\npip install, mvn dependency - and suddenly your\
+        \ application has\nhundreds of components written by developers you've never met.\n\nThe security\
+        \ architect raises a concern during sprint planning.\n\"Our payment application imports 247 npm\
+        \ packages. How many of those\nhave known vulnerabilities? Log4j taught us that one vulnerable\n\
+        dependency can compromise everything.\"\n\nThe lead developer looks thoughtful. \"Our SAST tool\
+        \ checks our code.\nBut you're right - it doesn't check the code we imported.\"\n\n\"We need something\
+        \ that specifically analyzes our dependencies,\"\nthe architect continues. \"Cross-references\
+        \ every package version\nagainst CVE databases. Alerts us when libraries we're using have\nknown\
+        \ flaws.\"\n\nWhat type of tool identifies known vulnerabilities in third-party\nopen-source components?\n\
+        \                "
+      choices:
+      - text: Static Application Security Testing (SAST)
+      - text: Software Composition Analysis (SCA)
+      - text: Interactive Application Security Testing (IAST)
+      - text: Web Application Firewall (WAF)
+      success_text: "\n\"SOFTWARE COMPOSITION ANALYSIS - SCA,\" you confirm. \"It analyzes\nyour dependency\
+        \ manifest - package.json, requirements.txt, pom.xml -\nand cross-references every component version\
+        \ against vulnerability\ndatabases like the National Vulnerability Database.\"\n\nThe SCA tool\
+        \ scans the payment application:\n- lodash@4.17.15: CRITICAL - CVE-2020-28500, prototype pollution\n\
+        - log4j@2.14.1: CRITICAL - CVE-2021-44228, remote code execution\n- jackson-databind@2.9.8: HIGH\
+        \ - multiple deserialization flaws\n- ...and 244 more packages analyzed\n\n\"Three packages with\
+        \ critical CVEs that we're actively using,\"\nthe architect reports. \"Update paths are available.\
+        \ Without SCA,\nwe'd have shipped with known vulnerabilities.\"\n\nSOFTWARE COMPOSITION ANALYSIS\
+        \ identifies known vulnerabilities\nin third-party dependencies, enabling proactive remediation.\n\
+        \                "
+      failure_texts:
+        0: "\nSAST analyzes YOUR source code - the code your developers wrote.\nIt looks for coding patterns\
+          \ that indicate vulnerabilities. But\nit doesn't analyze third-party libraries you've imported.\n\
+          \nSCA specifically examines external dependencies and their known\nvulnerability status.\n \
+          \                   "
+        2: "\nIAST instruments running applications to identify vulnerabilities\nduring testing. While\
+          \ it might catch some issues, it's not designed\nto systematically identify all known CVEs in\
+          \ your dependency tree.\n\nSCA cross-references every component version against vulnerability\n\
+          databases.\n                    "
+        3: "\nWAF blocks attacks against running applications. It doesn't identify\nthat you're using\
+          \ vulnerable libraries - it might mitigate some\nattacks while the underlying vulnerable code\
+          \ remains. WAF is a\ncontrol, not an analysis tool.\n\nSCA identifies vulnerable components\
+          \ so they can be updated before\ndeployment.\n                    "
+- id: d6_pipeline_testing
+  domain: 6
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 6: Security Assessment and Testing - Continuous Security Testing'
+  failure_text: "\nIntegrating security testing (SAST, DAST, SCA) into CI/CD pipelines provides\ncontinuous,\
+    \ automated security feedback. Developers find issues immediately\nwhen code is committed, enabling\
+    \ faster remediation. More frequent audits\nare still periodic. More auditors don't change timing.\
+    \ Blocking releases\ncreates bottlenecks. Pipeline integration shifts security left for early\ndetection\
+    \ without slowing delivery.\n        "
+  themes:
+    fantasy:
+      title: THE ENCHANTMENT FORGE REVIEW
+      narrative: "\nThe Citadel's Arcane Development Guild has a problem. Security reviews\nof new enchantments\
+        \ happen only before major deployments - typically\nonce per season. But the guild produces new\
+        \ enchantments weekly.\n\n\"By the time the seasonal review happens,\" the Guild Master explains,\n\
+        \"we've deployed dozens of enchantments. When reviewers find flaws,\nwe have to recall enchantments\
+        \ that are already protecting the walls.\nExpensive. Disruptive. Embarrassing.\"\n\nA young enchanter\
+        \ suggests a solution: \"What if security review\nhappened AS WE CRAFT? Every time we add a new\
+        \ rune sequence to the\nspell forge, automated analysis runs immediately. We find problems\nwhen\
+        \ the enchantment is still on the workbench, not after it's\nembedded in the walls.\"\n\n\"Integrating\
+        \ security testing into our enchantment creation process\nitself...\" the Guild Master muses.\
+        \ \"Not a separate activity, but part\nof how we work.\"\n\nWhat approach integrates security\
+        \ testing into the development process\nfor immediate feedback?\n                "
+      choices:
+      - text: More frequent seasonal security audits
+      - text: Integrate security testing into the enchantment forge process
+      - text: Hire more security reviewers for larger seasonal reviews
+      - text: Delay all deployments until security approves
+      success_text: "\n\"INTEGRATE SECURITY TESTING INTO THE DEVELOPMENT PIPELINE,\" you\nadvise. \"Every\
+        \ time enchanters commit new rune sequences, automated\nsecurity analysis runs immediately. Static\
+        \ analysis checks the\npatterns. Composition analysis verifies borrowed components. Results\n\
+        appear before the enchantment leaves the forge.\"\n\nThe integration is implemented. Now:\n- New\
+        \ rune patterns trigger immediate static analysis\n- Borrowed components are checked against vulnerability\
+        \ databases\n- Enchanters see security feedback within minutes of crafting\n- Flaws are fixed\
+        \ while the enchantment is still in development\n\n\"The seasonal review still happens,\" the\
+        \ Guild Master notes, \"but\nnow it finds almost nothing because issues are caught during creation.\n\
+        Shift left - find problems when they're cheap to fix.\"\n\nCONTINUOUS SECURITY TESTING integrates\
+        \ SAST, DAST, and SCA into\ndevelopment pipelines for immediate feedback on every change.\n  \
+        \              "
+      failure_texts:
+        0: "\nMore frequent audits are still PERIODIC. Quarterly instead of\nseasonal still means enchantments\
+          \ deploy weeks before review.\nThe fundamental problem - finding issues after deployment -\n\
+          remains.\n\nPipeline integration provides IMMEDIATE feedback on every change,\nnot periodic\
+          \ batch reviews.\n                    "
+        2: "\nMore reviewers for larger seasonal reviews doesn't address timing.\nIt might find more issues,\
+          \ but still only during the seasonal review.\nEnchantments still deploy before review. Recalls\
+          \ still happen.\n\nThe issue is WHEN testing occurs, not review capacity. Pipeline\nintegration\
+          \ shifts testing to development time.\n                    "
+        3: "\nDelaying all deployments creates a bottleneck. Every enchantment\nwaits for approval. Security\
+          \ becomes a barrier, not an enabler.\nThe guild's velocity plummets while security reviews the\
+          \ backlog.\n\nPipeline integration provides immediate automated feedback without\nslowing delivery\
+          \ - security enables rather than blocks.\n                    "
+    corporate:
+      title: THE CI/CD SECURITY GAP
+      narrative: "\nInitech's development teams deploy to production multiple times daily\nthrough their\
+        \ CI/CD pipeline. Code goes from commit to production in\nhours. But security testing? That happens\
+        \ quarterly.\n\n\"By the time the quarterly security review occurs,\" the Security\nArchitect\
+        \ explains, \"hundreds of changes have deployed. When we find\nvulnerabilities, they've been in\
+        \ production for weeks. Remediation is\nexpensive because the developers have moved on to new\
+        \ features.\"\n\nThe Development Lead sees the problem. \"What if security testing was\npart of\
+        \ the pipeline itself? Every commit triggers security scans.\nEvery build includes vulnerability\
+        \ checking. Developers get feedback\nimmediately, not three months later.\"\n\n\"That's a significant\
+        \ change to how we work,\" the CISO notes. \"But\nit would catch issues when they're cheapest\
+        \ to fix.\"\n\nWhat approach integrates security testing into the CI/CD pipeline\nfor immediate\
+        \ developer feedback?\n                "
+      choices:
+      - text: More frequent quarterly audits
+      - text: Integrate SAST/DAST into CI/CD pipeline
+      - text: Hire more security auditors
+      - text: Delay releases until security approves
+      success_text: "\n\"INTEGRATE SECURITY TESTING INTO CI/CD,\" you recommend. \"SAST runs\non every\
+        \ commit. DAST runs against deployment environments. SCA\nchecks dependencies on every build.\
+        \ Developers get security feedback\nwithin minutes of pushing code.\"\n\nThe integration is implemented:\n\
+        - Pre-commit hooks run quick SAST checks\n- Build pipeline includes full SAST and SCA analysis\n\
+        - Staging deployments trigger DAST scans\n- Security findings appear in developer workflows immediately\n\
+        \n\"Last quarter, we found 47 vulnerabilities,\" the Security Architect\nreports. \"Since pipeline\
+        \ integration, we catch equivalent issues\nimmediately. Developers fix them before they leave\
+        \ their IDE. Our\nquarterly review now finds almost nothing because issues are caught\nat creation.\"\
+        \n\nCONTINUOUS SECURITY TESTING integrates SAST, DAST, and SCA into\nCI/CD pipelines, providing\
+        \ immediate feedback and shifting security left.\n                "
+      failure_texts:
+        0: "\nQuarterly audits are still PERIODIC. Even monthly would mean code\ndeploys weeks before\
+          \ review. The problem is timing, not frequency\nof batch reviews.\n\nPipeline integration provides\
+          \ feedback on EVERY commit, not\nperiodic batch reviews after deployment.\n                \
+          \    "
+        2: "\nMore auditors increases review capacity but doesn't change timing.\nQuarterly reviews with\
+          \ more people still happen quarterly. Code\nstill deploys before review. Remediation is still\
+          \ expensive.\n\nThe issue is WHEN testing occurs. Pipeline integration shifts\ntesting to development\
+          \ time.\n                    "
+        3: "\nDelaying releases creates a security gate that blocks everything.\nDevelopment velocity\
+          \ crashes. Security becomes the team everyone\nhates. Features are held hostage waiting for\
+          \ review.\n\nPipeline integration provides automated, immediate feedback without\ncreating bottlenecks\
+          \ - security enables velocity rather than\nblocking it.\n                    "
+- id: d6_remediation_status
+  domain: 6
+  correct_index: 1
+  xp_reward: 75
+  hp_penalty: 25
+  domain_reference: 'Domain 6: Security Assessment and Testing - Remediation Tracking'
+  failure_text: "\nRemediation status reports track the current state of identified findings:\nfixed,\
+    \ in progress, risk-accepted, or open. This provides accountability\nand visibility into vulnerability\
+    \ management effectiveness. Original\nreports are historical and don't show progress. New tests find\
+    \ new issues\nbut don't track known ones. Verbal assurance lacks documentation and\nevidence.\n  \
+    \      "
+  themes:
+    fantasy:
+      title: THE SIEGE MASTER'S FOLLOW-UP
+      narrative: "\nThree moons ago, the Citadel hired Siege Master Valdris to test the\nfortress defenses.\
+        \ His assessment identified fifty weaknesses - twenty\ncritical, fifteen moderate, fifteen minor.\
+        \ The High Commander approved\nremediation plans for all findings.\n\nNow the War Council has\
+        \ convened. The High Commander needs to report\nto the kingdom's rulers on security posture.\n\
+        \n\"Three moons have passed,\" she states. \"I need to know: what is the\nCURRENT status of those\
+        \ fifty findings? How many are fixed? How many\nare still being worked? How many remain untouched?\"\
+        \n\nThe Master of Records considers the options. He could present Valdris's\noriginal report.\
+        \ He could commission a new siege test. He could simply\nassure the Council that all is well.\n\
+        \nWhat should be provided to show the current remediation status?\n                "
+      choices:
+      - text: The original siege master report from three moons ago
+      - text: A remediation status report showing fixed, in progress, and open findings
+      - text: Commission a new siege test to find current vulnerabilities
+      - text: Verbal assurance that the defense team is working on everything
+      success_text: "\n\"A REMEDIATION STATUS REPORT,\" you advise. \"It tracks the current state\nof\
+        \ each finding from Valdris's assessment. For every weakness identified:\nis it fixed? Is remediation\
+        \ in progress? Is it still open? Risk-accepted\nwith compensating controls?\"\n\nThe Master of\
+        \ Records produces the tracking report:\n- 50 total findings\n- 32 remediated and verified (64%)\n\
+        - 11 in active remediation (22%)\n- 5 risk-accepted with documentation (10%)\n- 2 still open,\
+        \ awaiting resources (4%)\n\n\"This tells me exactly what I need,\" the High Commander nods. \"\
+        Not\nwhat Valdris found three moons ago - we know that. Not a new assessment\nthat ignores prior\
+        \ findings. The current status of KNOWN issues.\nThis is accountability.\"\n\nREMEDIATION STATUS\
+        \ REPORTS track the current state of identified\nfindings, providing visibility and accountability\
+        \ for vulnerability\nmanagement.\n                "
+      failure_texts:
+        0: "\nThe original report shows what Valdris found three moons ago. It\ndoesn't show what's been\
+          \ fixed, what's in progress, or what's still\nopen. The Council already has this report - they\
+          \ need CURRENT status.\n\nRemediation tracking shows the present state of known findings,\n\
+          not historical discoveries.\n                    "
+        2: "\nA new siege test would find NEW vulnerabilities, not report on\nthe status of KNOWN issues.\
+          \ Valdris found fifty problems. The\nCouncil needs to know if those fifty are addressed - not\
+          \ discover\nfifty new ones.\n\nNew assessments and remediation tracking serve different purposes.\n\
+          Both are needed, but the question is about tracking known issues.\n                    "
+        3: "\nVerbal assurance provides no documentation, no verification, and\nno accountability. \"\
+          We're working on it\" doesn't tell the Council\nWHICH findings are fixed, WHICH are in progress,\
+          \ or whether\ncritical issues remain open.\n\nFormal remediation tracking provides evidence\
+          \ and accountability.\n                    "
+    corporate:
+      title: THE PEN TEST FOLLOW-UP
+      narrative: "\nThree months ago, Initech's annual penetration test identified 50\nvulnerabilities\
+        \ - 20 critical, 15 high, 15 medium. The findings\nwere assigned to various teams for remediation.\
+        \ Now the board wants\na security update.\n\n\"The board meeting is Tuesday,\" the CISO says.\
+        \ \"They want to know:\nwhat happened to those 50 findings? They remember the scary presentation\n\
+        three months ago. Now they want to know if we're still scary.\"\n\nThe security manager considers\
+        \ options:\n- Present the original pen test report (they already saw it)\n- Commission a new pen\
+        \ test (won't be done by Tuesday)\n- Give verbal assurance that everything is fine (they'll want\
+        \ proof)\n- Produce a tracking report showing current status of each finding\n\nWhat should be\
+        \ provided to show current remediation status?\n                "
+      choices:
+      - text: The original penetration test report
+      - text: Remediation status report showing fixed, in progress, and open findings
+      - text: A new penetration test
+      - text: Verbal assurance that everything is being addressed
+      success_text: "\n\"REMEDIATION STATUS REPORT,\" you recommend. \"It tracks every\nfinding from the\
+        \ pen test. Current status: remediated, in progress,\nrisk-accepted, or still open. Evidence of\
+        \ closure for fixed items.\nTarget dates for open items. The board gets accountability, not\n\
+        promises.\"\n\nYou produce the tracking report:\n- 50 total findings from March pen test\n- 37\
+        \ remediated and verified (74%)\n- 8 in active remediation, ETA next month (16%)\n- 3 risk-accepted\
+        \ with compensating controls (6%)\n- 2 blocked, waiting on vendor patches (4%)\n\n\"This is exactly\
+        \ what they need,\" the CISO nods. \"Not the old\nreport - they saw that. Not a new test - that\
+        \ finds new issues.\nThe current status of KNOWN issues. Progress. Accountability.\nEvidence.\"\
+        \n\nREMEDIATION STATUS REPORTS provide visibility into vulnerability\nmanagement program effectiveness\
+        \ and demonstrate accountability.\n                "
+      failure_texts:
+        0: "\nThe original pen test report is three months old. The board already\nsaw it. They want to\
+          \ know what's happened SINCE then. How many\nfindings are fixed? How many remain? What's the\
+          \ current risk posture?\n\nThe original report shows discovery. Remediation tracking shows\n\
+          progress.\n                    "
+        2: "\nA new pen test finds NEW vulnerabilities. It doesn't tell the board\nwhether the 50 KNOWN\
+          \ issues were addressed. They want to know about\nthe specific findings that concerned them\
+          \ three months ago.\n\nNew assessments and remediation tracking are both needed but serve\n\
+          different purposes.\n                    "
+        3: "\nBoards want evidence, not assurance. \"We're working on everything\"\ndoesn't tell them\
+          \ WHICH criticals are fixed, how long others will\ntake, or whether material risks remain. They'll\
+          \ ask for specifics.\n\nRemediation tracking provides documented, verifiable status with\nevidence\
+          \ of closure.\n                    "
