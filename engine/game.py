@@ -8,7 +8,7 @@ from typing import Dict, List, Optional
 from .player import Player, GameStatus
 from .display import Display
 from .input_handler import InputHandler
-from .theme_manager import ThemeManager, StoryTheme
+from .theme_manager import ThemeManager
 from .certification_loader import CertificationConfig
 
 
@@ -33,27 +33,31 @@ class Scenario:
         # Theme-aware content
         self.themes: Dict = data.get('themes', {})
 
-    def get_themed_content(self, theme: StoryTheme) -> Dict:
+    def get_themed_content(self, theme_key: str) -> Dict:
         """
-        Return theme-specific content, with fallback to fantasy.
+        Return theme-specific content, with fallback to first available theme.
+
+        Args:
+            theme_key: The theme key string (e.g., 'fantasy', 'corporate')
 
         Returns dict with: title, narrative, choices, success_text, failure_texts
         """
-        theme_key = theme.value
         if theme_key in self.themes:
             return self.themes[theme_key]
-        # Fallback to fantasy theme
-        return self.themes.get('fantasy', {
+        # Fallback to first available theme, then to empty defaults
+        if self.themes:
+            return list(self.themes.values())[0]
+        return {
             'title': 'SCENARIO',
             'narrative': '',
             'choices': [],
             'success_text': '',
             'failure_texts': {}
-        })
+        }
 
-    def get_failure_text(self, theme: StoryTheme, chosen_index: int) -> str:
+    def get_failure_text(self, theme_key: str, chosen_index: int) -> str:
         """Get the failure text for a specific wrong choice."""
-        content = self.get_themed_content(theme)
+        content = self.get_themed_content(theme_key)
         failure_texts = content.get('failure_texts', {})
 
         # Try theme-specific failure text first (handle both int and str keys from YAML)
@@ -83,7 +87,7 @@ class Game:
         self.cert = certification
         self.display = Display(certification)
         self.input = InputHandler()
-        self.theme_manager = ThemeManager()
+        self.theme_manager = ThemeManager(certification)  # Load themes from cert config
         self.player: Optional[Player] = None
         self.scenarios: Dict[int, List[Scenario]] = {}  # domain -> all scenarios
         self.selected_scenarios: Dict[int, List[Scenario]] = {}  # domain -> selected for this playthrough
@@ -162,16 +166,10 @@ class Game:
         # Build domain names from certification config
         domain_names = {d['id']: d['name'] for d in self.cert.domains}
 
-        if self.theme_manager.current_theme == StoryTheme.CORPORATE:
-            print("\n  " + "=" * 60)
-            print("  TRAINING MODULE SELECTION")
-            print("  " + "=" * 60)
-            print("\n  Which department would you like to start your training in?\n")
-        else:
-            print("\n  " + "=" * 60)
-            print("  DOMAIN SELECTION")
-            print("  " + "=" * 60)
-            print("\n  Which domain would you like to begin your trials?\n")
+        print("\n  " + "=" * 60)
+        print("  DOMAIN SELECTION")
+        print("  " + "=" * 60)
+        print("\n  Which domain would you like to begin?\n")
 
         for num, name in domain_names.items():
             print(f"    [{num}] Domain {num}: {name}")
@@ -203,12 +201,8 @@ class Game:
                         skipped_xp = skipped_domains * xp_per_domain
                         self.player.xp = skipped_xp
 
-                        if self.theme_manager.current_theme == StoryTheme.CORPORATE:
-                            print(f"\n  Starting at Level {domain}: {domain_names.get(domain, '')}")
-                            print(f"  (Previous {skipped_domains} module(s) marked as reviewed: +{skipped_xp} XP)")
-                        else:
-                            print(f"\n  Beginning at Domain {domain}: {domain_names.get(domain, '')}")
-                            print(f"  (Earlier {skipped_domains} domain(s) acknowledged as mastered: +{skipped_xp} XP)")
+                        print(f"\n  Starting at Domain {domain}: {domain_names.get(domain, '')}")
+                        print(f"  (Previous {skipped_domains} domain(s) credited: +{skipped_xp} XP)")
                         self.input.wait_for_enter("\n  Press ENTER to continue...")
                     break
 
@@ -218,37 +212,52 @@ class Game:
         self._show_domain_introduction(self.player.current_domain)
 
     def _select_theme(self) -> None:
-        """Let the player choose their preferred story theme."""
-        # Get theme info from certification config if available
-        presentation = self.cert.presentation
-        fantasy_info = presentation.get('themes', {}).get('fantasy', {})
-        corporate_info = presentation.get('themes', {}).get('corporate', {})
+        """Let the player choose their preferred story theme (supports 1+ themes)."""
+        available_themes = self.theme_manager.get_all_themes()
 
-        fantasy_title = fantasy_info.get('game_title', 'Medieval Fantasy')
-        corporate_title = corporate_info.get('game_title', 'Corporate Office')
+        # If only one theme, auto-select it
+        if len(available_themes) == 1:
+            self.theme_manager.set_theme_by_index(0)
+            self.display.clear_screen()
+            self._show_theme_title()
+            return
 
+        # Multiple themes - show selection menu
         print("\n  Choose your story style:\n")
-        print(f"    [1] Medieval Fantasy - {fantasy_title}")
-        print("        Explore an ancient realm where knowledge is guarded...")
-        print()
-        print(f"    [2] Corporate Office - {corporate_title}")
-        print("        Navigate office politics, meetings, and compliance...")
-        print()
-        print("    (You can switch themes anytime during scenarios by pressing 0)")
-        print()
+
+        for i, theme in enumerate(available_themes, 1):
+            display_name = theme.get('display_name', theme['key'].title())
+            game_title = theme.get('game_title', '')
+            description = theme.get('description', '')
+
+            if game_title:
+                print(f"    [{i}] {display_name} - {game_title}")
+            else:
+                print(f"    [{i}] {display_name}")
+
+            if description:
+                # Truncate long descriptions
+                desc_short = description[:60] + "..." if len(description) > 60 else description
+                print(f"        {desc_short}")
+            print()
+
+        if len(available_themes) > 1:
+            print("    (You can switch themes anytime during scenarios by pressing 0)")
+            print()
 
         while True:
-            choice = self.input.get_text("  Select theme (1 or 2): ")
+            choice = self.input.get_text(f"  Select theme (1-{len(available_themes)}): ")
             if choice is None:
                 return
             choice = choice.strip()
-            if choice == '1':
-                self.theme_manager.set_theme(StoryTheme.FANTASY)
-                break
-            elif choice == '2':
-                self.theme_manager.set_theme(StoryTheme.CORPORATE)
-                break
-            print("  Please enter 1 or 2.")
+
+            if choice.isdigit():
+                idx = int(choice) - 1
+                if 0 <= idx < len(available_themes):
+                    self.theme_manager.set_theme_by_index(idx)
+                    break
+
+            print(f"  Please enter a number 1-{len(available_themes)}.")
 
         self.display.clear_screen()
         self._show_theme_title()
@@ -279,53 +288,31 @@ class Game:
 
         narrator = theme_info.get('narrator', 'NARRATOR')
 
-        if self.theme_manager.current_theme == StoryTheme.CORPORATE:
-            intro = f"""
-Welcome to the {self.cert.name} Training Program!
+        # Use a generic intro that works with any theme
+        intro = f"""
+Welcome to the {self.cert.name} training experience.
 
-You've been selected for this comprehensive training experience.
-{self.domain_count} modules await your completion.
+{self.domain_count} domains await your exploration. Each presents challenges
+that will test your knowledge and sharpen your understanding.
 
-Complete your training with flying colors, and you'll earn recognition
+Complete your training with excellence, and you'll earn recognition
 as a certified professional.
 
-Good luck - and remember, the coffee in the break room is free.
-            """
-            print(self.display.render_narrative(intro, narrator))
-        else:
-            intro = f"""
-The time has come to prove your worth.
-
-Within these ancient halls, knowledge is power, and mastery is earned.
-You have been summoned to face {self.domain_count} domains of trials.
-
-Make wise choices, and you shall ascend to recognition
-as a certified professional.
-
-Let your journey begin.
-            """
-            print(self.display.render_narrative(intro, narrator))
+Your journey begins now.
+        """
+        print(self.display.render_narrative(intro, narrator))
 
         self.input.wait_for_enter("\n  Press ENTER to begin your journey...")
 
     def _get_player_name(self) -> Optional[str]:
-        """Prompt player for their character name (theme-aware)."""
-        presentation = self.cert.presentation
-        theme_key = self.theme_manager.get_theme_key()
-        theme_info = presentation.get('themes', {}).get(theme_key, {})
-        player_term = theme_info.get('player_term', 'Seeker')
+        """Prompt player for their character name."""
+        player_term = self.theme_manager.get_player_term()
 
-        if self.theme_manager.current_theme == StoryTheme.CORPORATE:
-            print("\n  What name should we put on your desk nameplate?")
-        else:
-            print(f"\n  What name shall the Chronicles record for you, {player_term}?")
+        print(f"\n  Enter your name, {player_term}:")
 
         name = self.input.get_text("  > ")
         if name:
-            if self.theme_manager.current_theme == StoryTheme.CORPORATE:
-                print(f"\n  Welcome aboard, {name}. Let's get started.\n")
-            else:
-                print(f"\n  Welcome, {name}. May your judgment be sound.\n")
+            print(f"\n  Welcome, {name}. Let the training begin.\n")
             self.input.wait_for_enter("  Press ENTER to continue...")
         return name
 
@@ -398,18 +385,12 @@ Let your journey begin.
             domain_names = {d['id']: d['name'] for d in self.cert.domains}
             next_domain_name = domain_names.get(self.player.current_domain, f'Domain {self.player.current_domain}')
 
-            if self.theme_manager.current_theme == StoryTheme.CORPORATE:
-                print(self.display.render_narrative(
-                    f"Congratulations! You've completed that module. "
-                    f"Time to move on to Level {self.player.current_domain}: {next_domain_name}.",
-                    "HR NOTIFICATION"
-                ))
-            else:
-                print(self.display.render_narrative(
-                    f"You have proven yourself in this domain. "
-                    f"The path to Domain {self.player.current_domain}: {next_domain_name} opens before you...",
-                    "THE CITADEL"
-                ))
+            narrator = self.theme_manager.get_narrator()
+            print(self.display.render_narrative(
+                f"Excellent work! You've completed this domain. "
+                f"Moving on to Domain {self.player.current_domain}: {next_domain_name}.",
+                narrator
+            ))
             self.input.wait_for_enter("\n  Press ENTER to enter the next domain...")
             # Show educational introduction for the new domain
             self._show_domain_introduction(self.player.current_domain)
@@ -464,7 +445,8 @@ Let your journey begin.
         """Execute a single scenario encounter with theme support."""
         while True:
             # Get themed content for current theme
-            content = scenario.get_themed_content(self.theme_manager.current_theme)
+            theme_key = self.theme_manager.get_theme_key()
+            content = scenario.get_themed_content(theme_key)
             title = content.get('title', 'SCENARIO')
             narrative = content.get('narrative', '')
             choices = content.get('choices', [])
@@ -562,20 +544,19 @@ Let your journey begin.
 
         if title_changed:
             title = self.player.get_title_for_theme(self.theme_manager.get_theme_key())
-            if self.theme_manager.current_theme == StoryTheme.CORPORATE:
-                print(f"\n  *** PROMOTION! New title: {title} ***\n")
-            else:
-                print(f"\n  *** You have earned a new title: {title} ***\n")
+            print(f"\n  *** New title earned: {title} ***\n")
 
     def _handle_failure(self, scenario: Scenario, chosen: int) -> None:
         """Process an incorrect answer (theme-aware)."""
         self.player.take_damage(scenario.hp_penalty, scenario.domain)
 
+        theme_key = self.theme_manager.get_theme_key()
+
         # Get the specific reasoning for this wrong choice (theme-aware)
-        failure_reason = scenario.get_failure_text(self.theme_manager.current_theme, chosen)
+        failure_reason = scenario.get_failure_text(theme_key, chosen)
 
         # Get the correct answer text for display
-        content = scenario.get_themed_content(self.theme_manager.current_theme)
+        content = scenario.get_themed_content(theme_key)
         choices = content.get('choices', [])
         correct_index = scenario.correct_index
         correct_text = ""
@@ -601,7 +582,7 @@ Let your journey begin.
   |                         COMMANDS                                 |
   +------------------------------------------------------------------+
   |  [1-4]   - Select a numbered choice                              |
-  |  [0]     - Switch story theme (Fantasy/Corporate)                |
+  |  [0]     - Switch story theme                                     |
   |  help    - Show this help message                                |
   |  status  - Show your current stats                               |
   |  quit    - End your session early                                |
@@ -616,66 +597,41 @@ Let your journey begin.
         print(help_text)
 
     def _show_ending(self) -> None:
-        """Display performance summary at the end of training (theme-aware)."""
+        """Display performance summary at the end of training."""
         self.display.clear_screen()
 
         accuracy = self.player.accuracy
         rating = self.player.performance_rating
-        is_corporate = self.theme_manager.current_theme == StoryTheme.CORPORATE
 
         # Get theme-specific info
         presentation = self.cert.presentation
         theme_key = self.theme_manager.get_theme_key()
         theme_info = presentation.get('themes', {}).get(theme_key, {})
         victory_message = theme_info.get('victory_message', f'Congratulations on completing {self.cert.name}!')
+        narrator = self.theme_manager.get_narrator()
 
-        # Choose ending based on performance and theme
+        # Choose ending based on performance
         if accuracy >= 80:
-            if is_corporate:
-                print(self.display.render_narrative(
-                    f"Outstanding work, {self.player.name}! "
-                    f"The board is impressed. You've demonstrated mastery across all modules. "
-                    f"{victory_message}",
-                    "EXECUTIVE ANNOUNCEMENT"
-                ))
-            else:
-                print(self.display.render_narrative(
-                    f"Congratulations, {self.player.name}! "
-                    f"You have demonstrated mastery of all domains. "
-                    f"{victory_message}",
-                    "THE HIGH COUNCIL"
-                ))
+            print(self.display.render_narrative(
+                f"Outstanding work, {self.player.name}! "
+                f"You've demonstrated mastery across all domains. "
+                f"{victory_message}",
+                narrator
+            ))
         elif accuracy >= 60:
-            if is_corporate:
-                print(self.display.render_narrative(
-                    f"Good effort, {self.player.name}. You've completed the training program. "
-                    f"Your performance review mentions 'shows potential'. "
-                    f"Consider reviewing the modules you struggled with.",
-                    "HR PERFORMANCE REVIEW"
-                ))
-            else:
-                print(self.display.render_narrative(
-                    f"Well done, {self.player.name}. You have completed your training. "
-                    f"Your understanding shows promise, though some areas "
-                    f"would benefit from further study.",
-                    "THE COUNCIL OF REVIEW"
-                ))
+            print(self.display.render_narrative(
+                f"Good effort, {self.player.name}. You've completed the training. "
+                f"Your performance shows potential. "
+                f"Consider reviewing the domains where you struggled.",
+                narrator
+            ))
         else:
-            if is_corporate:
-                print(self.display.render_narrative(
-                    f"{self.player.name}, we need to talk. "
-                    f"Your training scores suggest some gaps. "
-                    f"Review the material and consider retaking the training.",
-                    "YOUR MANAGER"
-                ))
-            else:
-                print(self.display.render_narrative(
-                    f"{self.player.name}, you have walked the halls "
-                    f"and faced the trials. While your journey is complete, "
-                    f"the knowledge has not yet taken root. "
-                    f"Return to your studies and attempt the trials again.",
-                    "THE MENTORS"
-                ))
+            print(self.display.render_narrative(
+                f"{self.player.name}, you've completed the training, "
+                f"but there's room for improvement. "
+                f"Review the material and consider retaking the training.",
+                narrator
+            ))
 
         # Performance Summary
         print("\n  " + "=" * 60)

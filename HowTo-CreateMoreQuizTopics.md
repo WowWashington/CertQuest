@@ -13,6 +13,57 @@ CertQuest uses a simple folder structure with YAML files. To add a new certifica
 
 You can generate all of these using the AI prompt below.
 
+## Flexible Theme System
+
+CertQuest supports **one or more themes** per certification. You're not limited to "fantasy" and "corporate" - you can create any themes you want!
+
+### Single Theme Example
+For a straightforward training experience:
+```yaml
+presentation:
+  themes:
+    standard:
+      display_name: "Standard Training"
+      game_title: "AWS Cloud Practitioner Training"
+      player_term: "Learner"
+      narrator: "INSTRUCTOR"
+```
+
+### Multiple Themes Example
+For variety and engagement:
+```yaml
+presentation:
+  themes:
+    fantasy:
+      display_name: "Medieval Fantasy"
+      game_title: "The Cloud Kingdom"
+      player_term: "Apprentice"
+      narrator: "THE ARCHMAGE"
+
+    corporate:
+      display_name: "Corporate Office"
+      game_title: "Cloud Corp Training"
+      player_term: "Employee"
+      narrator: "HR DEPARTMENT"
+
+    military:
+      display_name: "Military Operations"
+      game_title: "Cyber Command Academy"
+      player_term: "Recruit"
+      narrator: "COMMANDING OFFICER"
+
+    scifi:
+      display_name: "Science Fiction"
+      game_title: "Starship Systems Training"
+      player_term: "Cadet"
+      narrator: "SHIP AI"
+```
+
+### Theme Behavior
+- **One theme**: Auto-selected, no menu shown
+- **Multiple themes**: User chooses at startup, can switch with `0` during play
+- **Scenarios**: Must include content for each theme defined in config
+
 ---
 
 ## Step-by-Step Instructions
@@ -94,6 +145,23 @@ DOMAIN_LIST:
 3. [Domain 3 Name]
 # ... add more as needed
 
+# THEMES (customize as desired - you can have 1, 2, or more themes)
+# Each theme needs a key (lowercase, no spaces) and display settings
+THEMES:
+- key: fantasy
+  display_name: "Medieval Fantasy"
+  description: "Ancient scrolls and magical wards"
+- key: corporate
+  display_name: "Corporate Office"
+  description: "Office life and IT departments"
+# Add more themes if desired:
+# - key: military
+#   display_name: "Military Operations"
+#   description: "Cyber command training"
+# - key: scifi
+#   display_name: "Science Fiction"
+#   description: "Starship systems and AI"
+
 # =============================================================================
 # PROMPT STARTS HERE - DO NOT MODIFY BELOW THIS LINE
 # =============================================================================
@@ -108,7 +176,7 @@ Create training scenarios for the certification specified above. Each scenario s
 3. Have exactly 4 answer choices with only ONE correct answer
 4. Include detailed explanations for why the correct answer is right
 5. Include explanations for why each wrong answer is incorrect
-6. Be available in TWO themes: "fantasy" (medieval/magical) and "corporate" (office/business)
+6. Be available in ALL themes listed above (each scenario needs content for every theme)
 
 ## Output Format
 
