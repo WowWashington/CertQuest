@@ -5,7 +5,7 @@ from .game import Game
 from .player import Player
 from .display import Display
 from .input_handler import InputHandler
-from .theme_manager import ThemeManager, StoryTheme
+from .theme_manager import ThemeManager
 
 __all__ = [
     'CertificationLoader',
@@ -15,5 +15,4 @@ __all__ = [
     'Display',
     'InputHandler',
     'ThemeManager',
-    'StoryTheme',
 ]
