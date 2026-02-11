@@ -178,7 +178,7 @@ class Game:
         print()
 
         while True:
-            choice = self.input.get_text(f"  Select starting domain (1-{self.domain_count} or ENTER): ")
+            choice = self.input.get_text(f"  Select starting domain (1-{self.domain_count} or ENTER): ", allow_empty=True)
             if choice is None:
                 return
 
