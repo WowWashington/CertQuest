@@ -13,6 +13,102 @@ CertQuest uses a simple folder structure with YAML files. To add a new certifica
 
 You can generate all of these using the AI prompt below.
 
+---
+
+## ⚠️ REQUIRED SCHEMA - READ THIS FIRST ⚠️
+
+**CertQuest will NOT recognize your certification unless `config.yaml` follows this EXACT structure.**
+
+The loader specifically looks for these required sections. Do NOT use custom field names like `question_file`, `theme_file`, `settings`, or `metadata` - they will be ignored.
+
+### Minimum Required config.yaml Structure
+
+```yaml
+# REQUIRED: certification section
+certification:
+  id: your-cert-id          # lowercase, no spaces (used as folder name)
+  name: "Display Name"      # Short name shown in menus
+  full_name: "Full Certification Name"
+  organization: "Issuing Organization"
+
+# REQUIRED: domains section
+domains:
+  count: 1                  # Number of domains (must be >= 1)
+  list:
+    - id: 1
+      name: "Domain Name"
+      short_name: "Short Name"
+      themes:
+        standard:           # Must match a key in presentation.themes
+          title: "DOMAIN TITLE"
+          subtitle: "Optional subtitle"
+
+# REQUIRED: presentation section with at least one theme
+presentation:
+  themes:
+    standard:               # Theme key (use any name: standard, fantasy, corporate, etc.)
+      display_name: "Standard"
+      game_title: "Your Quiz Title"
+      player_term: "Player"
+      narrator: "NARRATOR"
+
+# REQUIRED: scoring section
+scoring:
+  scenarios_per_domain: 10
+  xp_per_correct: 50
+  hp_penalty_wrong: 20
+  max_hp: 100
+  starting_hp: 100
+  titles:
+    - threshold: 0
+      standard: "Beginner"  # Must match theme keys
+    - threshold: 250
+      standard: "Intermediate"
+    - threshold: 500
+      standard: "Expert"
+```
+
+### Required Folder Structure
+
+```
+certifications/
+└── your-cert-id/           # Folder name should match certification.id
+    ├── config.yaml         # REQUIRED - must follow schema above
+    ├── intros.yaml         # Optional - domain introductions
+    └── scenarios/          # REQUIRED folder
+        ├── domain_1.yaml   # Questions for domain 1
+        ├── domain_2.yaml   # Questions for domain 2 (if count >= 2)
+        └── ...
+```
+
+### What Will NOT Work
+
+```yaml
+# ❌ WRONG - These fields are NOT recognized:
+certification:
+  question_file: "questions.yaml"    # NOT SUPPORTED
+  theme_file: "themes.yaml"          # NOT SUPPORTED
+  settings:                          # NOT SUPPORTED
+    total_questions: 5
+  metadata:                          # NOT SUPPORTED
+    difficulty: "Hard"
+
+# ❌ WRONG - Missing required sections:
+certification:
+  id: my-cert
+  name: "My Cert"
+# Missing: domains, presentation, scoring sections!
+
+# ❌ WRONG - domains.count is 0 or missing:
+domains:
+  list:
+    - id: 1
+      name: "Domain 1"
+# Missing: count field!
+```
+
+---
+
 ## Flexible Theme System
 
 CertQuest supports **one or more themes** per certification. You're not limited to "fantasy" and "corporate" - you can create any themes you want!
@@ -416,6 +512,55 @@ Before using generated content:
 ## Contributing Back
 
 If you create a high-quality certification pack, consider contributing it back to the CertQuest repository! Submit a pull request with your certification folder.
+
+---
+
+---
+
+## Troubleshooting
+
+### Certification Not Appearing in Menu
+
+If your certification doesn't show up when you run `python main.py`:
+
+1. **Check for `config.yaml`** - Must exist at `certifications/your-cert/config.yaml`
+2. **Verify required sections** - Must have: `certification`, `domains`, `presentation`, `scoring`
+3. **Check `domains.count`** - Must be >= 1, not 0 or missing
+4. **Check theme consistency** - Theme keys in `presentation.themes` must match keys used in `domains.list[].themes`
+
+**Debug command:**
+```bash
+python -c "import yaml; print(yaml.safe_load(open('certifications/your-cert/config.yaml')))"
+```
+
+### "1-0" in Domain Selection Prompt
+
+This means `domains.count` is 0 or missing. Add:
+```yaml
+domains:
+  count: 1   # Must be >= 1
+```
+
+### LLM Generated Wrong Format
+
+If an AI (Gemini, ChatGPT, etc.) generates a config that doesn't work:
+
+1. The AI likely invented its own schema instead of following CertQuest's
+2. Copy the **Minimum Required config.yaml Structure** from above
+3. Ask the AI: "Reformat this to match this exact YAML schema: [paste the schema]"
+4. Or manually edit the generated config to match the required structure
+
+### YAML Syntax Errors
+
+```bash
+# Validate YAML syntax:
+python -c "import yaml; yaml.safe_load(open('your-file.yaml'))"
+```
+
+Common issues:
+- Missing spaces after colons: `name:"value"` → `name: "value"`
+- Inconsistent indentation: Use 2 spaces, not tabs
+- Unquoted special characters: Quote strings containing `: # [ ] { }`
 
 ---
 
