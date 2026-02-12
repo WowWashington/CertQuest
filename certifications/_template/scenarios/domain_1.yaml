@@ -1,0 +1,128 @@
+# ============================================================================
+# CERTQUEST SCENARIOS TEMPLATE - domain_1.yaml
+# ============================================================================
+#
+# INSTRUCTIONS FOR AI (Claude, ChatGPT, Gemini, Copilot, etc.):
+# 1. Copy this ENTIRE file structure - do NOT invent your own format
+# 2. Replace all [PLACEHOLDER] values with actual content
+# 3. Keep the structure: domain, domain_name, scenarios (list of scenario objects)
+# 4. Each scenario MUST have: id, domain, correct_index, themes
+# 5. correct_index is 0-based (0=first choice, 1=second, 2=third, 3=fourth)
+# 6. Create separate files for each domain: domain_1.yaml, domain_2.yaml, etc.
+#
+# INSTRUCTIONS FOR HUMANS:
+# 1. Edit this file to add your questions
+# 2. Each scenario needs themed content for EVERY theme in config.yaml
+# 3. If you have theme "standard" in config.yaml, each scenario needs themes.standard
+#
+# ============================================================================
+
+domain: 1                                         # Which domain this file covers
+domain_name: "Sample Domain"                      # Domain name (for reference)
+
+scenarios:
+  # -------------------------------------------------------------------------
+  # SCENARIO 1 - Example with full structure
+  # -------------------------------------------------------------------------
+  - id: "d1_example_question"                     # Unique ID (suggest: d[domain]_[short_description])
+    domain: 1                                     # Domain number
+    correct_index: 0                              # 0-based index of correct answer (0=first choice)
+    xp_reward: 50                                 # XP for correct answer (usually matches scoring.xp_per_correct)
+    hp_penalty: 20                                # HP penalty for wrong answer
+    domain_reference: "Domain 1: Sample Domain - Core Concepts"  # Study reference shown after question
+
+    themes:
+      standard:                                   # Must match theme key in config.yaml
+        title: "THE FIRST CHALLENGE"              # Scenario title (ALL CAPS recommended)
+
+        narrative: |                              # The question setup (use | for multi-line)
+          You are presented with a fundamental question about the topic.
+
+          This narrative sets up the scenario and provides context for the
+          question that follows. It should be engaging and relevant to the
+          certification material.
+
+          What is the correct approach?
+
+        choices:                                  # Exactly 4 choices required
+          - text: "The correct answer - this one is right"
+          - text: "An incorrect answer - plausible but wrong"
+          - text: "Another wrong answer - common misconception"
+          - text: "Final wrong answer - clearly incorrect to experts"
+
+        success_text: |                           # Shown when player chooses correctly
+          Excellent! You selected the correct answer.
+
+          This is the right approach because [explanation of why this is correct].
+
+          Key learning point: [reinforce the certification concept]
+
+        failure_texts:                            # Shown when player chooses incorrectly
+          0: |                                    # Only include entries for WRONG answers
+            # This would be here if choice 0 were wrong (but it's correct in this example)
+          1: |
+            That's not quite right.
+
+            This answer is incorrect because [explanation].
+
+            The correct approach is to [brief explanation of correct answer].
+          2: |
+            Incorrect. This is a common misconception.
+
+            While it might seem reasonable, [explain why it's wrong].
+
+            Remember: [key learning point]
+          3: |
+            That's not correct.
+
+            This option [explain why it's clearly wrong].
+
+            The correct answer involves [hint at correct approach].
+
+  # -------------------------------------------------------------------------
+  # SCENARIO 2 - Minimal example
+  # -------------------------------------------------------------------------
+  - id: "d1_second_question"
+    domain: 1
+    correct_index: 2                              # Third choice is correct (0-indexed)
+    xp_reward: 50
+    hp_penalty: 20
+    domain_reference: "Domain 1: Sample Domain - Secondary Topic"
+
+    themes:
+      standard:
+        title: "ANOTHER CHALLENGE"
+
+        narrative: |
+          Here is another scenario testing a different concept.
+
+          Which option best addresses this situation?
+
+        choices:
+          - text: "First wrong answer"
+          - text: "Second wrong answer"
+          - text: "The correct answer"              # correct_index: 2 points here
+          - text: "Fourth wrong answer"
+
+        success_text: |
+          Correct! [Explanation of why this is right]
+
+        failure_texts:
+          0: |
+            Incorrect. [Explanation for choice 0]
+          1: |
+            Not quite. [Explanation for choice 1]
+          3: |
+            Wrong. [Explanation for choice 3]
+
+  # -------------------------------------------------------------------------
+  # ADD MORE SCENARIOS BELOW
+  # -------------------------------------------------------------------------
+  # Copy the scenario structure above and modify for each question.
+  # Aim for scenarios_per_domain questions (as set in config.yaml).
+  #
+  # Tips:
+  # - Make each id unique across all domains
+  # - Vary correct_index (0, 1, 2, 3) so correct answer isn't always first
+  # - Write clear explanations in failure_texts to help learning
+  # - If you have multiple themes, add content for each theme key

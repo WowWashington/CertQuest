@@ -1,0 +1,112 @@
+# ============================================================================
+# CERTQUEST CONFIG.YAML TEMPLATE
+# ============================================================================
+#
+# INSTRUCTIONS FOR AI (Claude, ChatGPT, Gemini, Copilot, etc.):
+# 1. Copy this ENTIRE file structure - do NOT invent your own fields
+# 2. Replace all [PLACEHOLDER] values with actual content
+# 3. Keep all section names EXACTLY as shown (certification, domains, presentation, scoring)
+# 4. Do NOT add custom fields like: question_file, theme_file, settings, metadata, logic, files
+#
+# INSTRUCTIONS FOR HUMANS:
+# 1. Copy this _template folder and rename it to your certification id
+# 2. Edit this config.yaml with your certification details
+# 3. Edit scenarios/domain_1.yaml with your questions
+# 4. Optionally edit intros.yaml for domain introductions
+#
+# ============================================================================
+
+# ============================================================================
+# SECTION 1: CERTIFICATION (Required)
+# ============================================================================
+certification:
+  id: template                                    # lowercase, no spaces, matches folder name
+  name: "Template Certification"                  # Short display name for menus
+  full_name: "Template Certification for Testing" # Full official name
+  organization: "CertQuest"                       # Issuing organization
+
+# ============================================================================
+# SECTION 2: DOMAINS (Required)
+# ============================================================================
+# The "count" field MUST match the number of items in "list"
+# The "count" field MUST be >= 1
+domains:
+  count: 1                                        # REQUIRED: Number of domains (minimum 1)
+
+  list:
+    - id: 1                                       # Domain number (starts at 1)
+      name: "Sample Domain"                       # Full domain name
+      short_name: "Sample"                        # Abbreviated name (optional)
+      themes:                                     # Theme-specific titles for this domain
+        standard:                                 # Must match a key in presentation.themes
+          title: "SAMPLE DOMAIN TITLE"            # Displayed as domain header (ALL CAPS recommended)
+          subtitle: "Learn the basics"            # Optional subtitle
+
+    # Add more domains as needed:
+    # - id: 2
+    #   name: "Second Domain"
+    #   short_name: "Second"
+    #   themes:
+    #     standard:
+    #       title: "SECOND DOMAIN TITLE"
+    #       subtitle: "Advanced concepts"
+
+# ============================================================================
+# SECTION 3: PRESENTATION (Required)
+# ============================================================================
+# Define one or more themes. Each theme provides different narrative flavor.
+# - Single theme: Auto-selected, no menu shown to user
+# - Multiple themes: User chooses at startup, can switch during play
+presentation:
+  themes:
+    standard:                                     # Theme key (lowercase, no spaces)
+      display_name: "Standard"                    # Shown in theme selection menu
+      game_title: "Template Quiz"                 # Main title on game screen
+      subtitle: "A CertQuest Training Module"     # Subtitle on game screen
+      player_term: "Trainee"                      # What to call the player
+      domain_term: "Module"                       # What to call domains
+      narrator: "INSTRUCTOR"                      # Who narrates the story
+      victory_message: |                          # Shown when player completes all domains
+        Congratulations! You have completed the Template Certification training.
+        Your dedication to learning is commendable.
+
+    # Add more themes for variety:
+    # fantasy:
+    #   display_name: "Fantasy Adventure"
+    #   game_title: "The Quest for Knowledge"
+    #   subtitle: "A Magical Learning Journey"
+    #   player_term: "Apprentice"
+    #   domain_term: "Realm"
+    #   narrator: "THE ANCIENT SAGE"
+    #   victory_message: |
+    #     The ancient scrolls glow with approval...
+
+# ============================================================================
+# SECTION 4: SCORING (Required)
+# ============================================================================
+scoring:
+  scenarios_per_domain: 5                         # Questions per domain (match your domain_N.yaml files)
+  xp_per_correct: 50                              # XP awarded for correct answers
+  hp_penalty_wrong: 20                            # HP lost for wrong answers
+  max_hp: 100                                     # Maximum hit points
+  starting_hp: 100                                # Starting hit points
+
+  # Titles awarded as player gains XP
+  # threshold = minimum XP required for this title
+  # Each theme key must have a corresponding title
+  titles:
+    - threshold: 0
+      standard: "Novice"                          # Starting title
+    - threshold: 100
+      standard: "Apprentice"
+    - threshold: 200
+      standard: "Practitioner"
+    - threshold: 300
+      standard: "Expert"
+
+# ============================================================================
+# SECTION 5: PERFORMANCE (Optional)
+# ============================================================================
+performance:
+  excellent: 80                                   # Percentage for "excellent" rating
+  passing: 60                                     # Percentage for "passing" rating

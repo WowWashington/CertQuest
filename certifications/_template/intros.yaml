@@ -1,0 +1,47 @@
+# ============================================================================
+# CERTQUEST INTROS TEMPLATE - intros.yaml (Optional)
+# ============================================================================
+#
+# This file provides educational introductions for each domain.
+# These are shown when a player enters a new domain for the first time.
+#
+# INSTRUCTIONS:
+# 1. Create an entry for each domain number (1, 2, 3, etc.)
+# 2. Include content for each theme defined in config.yaml
+# 3. This file is OPTIONAL - if not provided, domains start without intro
+#
+# ============================================================================
+
+# Domain 1 Introduction
+1:
+  standard:                                       # Must match theme key in config.yaml
+    narrator: "INSTRUCTOR"                        # Who is speaking
+    introduction: |
+      Welcome to Domain 1: Sample Domain.
+
+      In this module, you will learn the fundamental concepts that form
+      the foundation of this certification. These core principles are
+      essential for understanding the more advanced topics that follow.
+
+      Key topics covered in this domain:
+      - First important concept
+      - Second important concept
+      - Third important concept
+
+      Take your time with each scenario and read the explanations
+      carefully, even when you answer correctly. Good luck!
+
+  # If you have multiple themes, add content for each:
+  # fantasy:
+  #   narrator: "THE ANCIENT SAGE"
+  #   introduction: |
+  #     Brave apprentice, you enter the First Realm...
+
+# Domain 2 Introduction (add if you have domain 2)
+# 2:
+#   standard:
+#     narrator: "INSTRUCTOR"
+#     introduction: |
+#       Welcome to Domain 2...
+
+# Continue for each domain in your certification
