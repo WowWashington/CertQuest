@@ -2,16 +2,31 @@
 # CERTQUEST CONFIG.YAML TEMPLATE
 # ============================================================================
 #
-# INSTRUCTIONS FOR AI (Claude, ChatGPT, Gemini, Copilot, etc.):
+# 🚨 CRITICAL REQUIREMENTS FOR AI (Claude, ChatGPT, Gemini, Copilot, etc.):
+#
+# MUST DO:
 # 1. Copy this ENTIRE file structure - do NOT invent your own fields
 # 2. Replace all [PLACEHOLDER] values with actual content
 # 3. Keep all section names EXACTLY as shown (certification, domains, presentation, scoring)
-# 4. Do NOT add custom fields like: question_file, theme_file, settings, metadata, logic, files
+# 4. Place scenario files in scenarios/domain_N.yaml (MUST be in scenarios/ subfolder)
+#
+# MUST NOT DO:
+# - Do NOT add custom fields like: question_file, theme_file, settings, metadata, logic, files
+# - Do NOT create a separate themes.yaml file - themes go INSIDE this config.yaml
+# - Do NOT place domain_N.yaml files in the root folder - they MUST be in scenarios/
+# - Do NOT use custom filenames like questions.yaml - MUST use domain_1.yaml, domain_2.yaml, etc.
+#
+# REQUIRED FOLDER STRUCTURE:
+#   your-cert-id/
+#   ├── config.yaml              ← This file
+#   ├── intros.yaml              ← Optional
+#   └── scenarios/               ← REQUIRED subdirectory
+#       └── domain_1.yaml        ← Scenarios MUST be here, NOT in root folder
 #
 # INSTRUCTIONS FOR HUMANS:
 # 1. Copy this _template folder and rename it to your certification id
 # 2. Edit this config.yaml with your certification details
-# 3. Edit scenarios/domain_1.yaml with your questions
+# 3. Edit scenarios/domain_1.yaml with your questions (MUST be in scenarios/ folder)
 # 4. Optionally edit intros.yaml for domain introductions
 #
 # ============================================================================

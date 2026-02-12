@@ -2,13 +2,58 @@
 
 This guide explains how to use AI (Claude, ChatGPT, Gemini, Copilot, etc.) to generate new certification quiz packs for CertQuest.
 
+---
+
+## 🚨 PRE-FLIGHT CHECKLIST - STRICT REQUIREMENTS 🚨
+
+**Before generating ANY content, verify these non-negotiable requirements:**
+
+### Required Folder Structure (MUST follow exactly)
+
+```
+certifications/
+└── your-cert-id/                    # Folder name MUST match certification.id
+    ├── config.yaml                  # MUST exist - certification configuration
+    ├── intros.yaml                  # OPTIONAL - domain introductions
+    └── scenarios/                   # MUST exist - subdirectory for questions
+        ├── domain_1.yaml            # MUST be inside scenarios/ folder
+        ├── domain_2.yaml            # MUST be inside scenarios/ folder
+        └── domain_N.yaml            # One file per domain
+```
+
+### ❌ CRITICAL: What NOT To Do
+
+```
+# ❌ WRONG - Scenarios in root folder (WILL NOT WORK):
+certifications/your-cert/
+├── config.yaml
+├── domain_1.yaml          ← WRONG LOCATION!
+└── questions.yaml         ← WRONG FILENAME!
+
+# ✅ CORRECT - Scenarios in scenarios/ subdirectory:
+certifications/your-cert/
+├── config.yaml
+└── scenarios/
+    └── domain_1.yaml      ← CORRECT!
+```
+
+### ❌ MUST NOT Do These Things
+
+- **MUST NOT** place `domain_N.yaml` files in the root folder - they **MUST** be in `scenarios/` subdirectory
+- **MUST NOT** use custom filenames like `questions.yaml` - **MUST** use `domain_1.yaml`, `domain_2.yaml`, etc.
+- **MUST NOT** create `themes.yaml` as a separate file - themes **MUST** be inside `config.yaml`
+- **MUST NOT** add unsupported fields like `question_file`, `theme_file`, `settings`, `metadata`, `logic`, `files`
+- **MUST NOT** omit the `domains.count` field - it **MUST** be >= 1
+
+---
+
 ## Overview
 
 CertQuest uses a simple folder structure with YAML files. To add a new certification:
 
 1. Create a folder in `/certifications/your-cert-name/`
 2. Add `config.yaml` (certification metadata and domains)
-3. Add `scenarios/domain_N.yaml` files (the actual questions)
+3. Add `scenarios/domain_N.yaml` files (the actual questions) **← MUST be in scenarios/ subfolder**
 4. Optionally add `intros.yaml` (educational introductions per domain)
 
 You can generate all of these using the AI prompt below.

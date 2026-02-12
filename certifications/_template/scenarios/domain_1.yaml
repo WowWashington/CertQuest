@@ -2,18 +2,27 @@
 # CERTQUEST SCENARIOS TEMPLATE - domain_1.yaml
 # ============================================================================
 #
+# 🚨 FILE LOCATION: This file MUST be placed in scenarios/ subdirectory
+#
+#    CORRECT: certifications/your-cert/scenarios/domain_1.yaml  ✅
+#    WRONG:   certifications/your-cert/domain_1.yaml            ❌
+#    WRONG:   certifications/your-cert/questions.yaml           ❌
+#
 # INSTRUCTIONS FOR AI (Claude, ChatGPT, Gemini, Copilot, etc.):
-# 1. Copy this ENTIRE file structure - do NOT invent your own format
-# 2. Replace all [PLACEHOLDER] values with actual content
-# 3. Keep the structure: domain, domain_name, scenarios (list of scenario objects)
-# 4. Each scenario MUST have: id, domain, correct_index, themes
-# 5. correct_index is 0-based (0=first choice, 1=second, 2=third, 3=fourth)
-# 6. Create separate files for each domain: domain_1.yaml, domain_2.yaml, etc.
+# 1. This file MUST be saved as: scenarios/domain_1.yaml (in scenarios/ subfolder)
+# 2. Copy this ENTIRE file structure - do NOT invent your own format
+# 3. Replace all [PLACEHOLDER] values with actual content
+# 4. Keep the structure: domain, domain_name, scenarios (list of scenario objects)
+# 5. Each scenario MUST have: id, domain, correct_index, themes
+# 6. correct_index is 0-based (0=first choice, 1=second, 2=third, 3=fourth)
+# 7. Create separate files for each domain: domain_1.yaml, domain_2.yaml, etc.
+# 8. Do NOT use custom filenames like questions.yaml or quiz.yaml
 #
 # INSTRUCTIONS FOR HUMANS:
-# 1. Edit this file to add your questions
-# 2. Each scenario needs themed content for EVERY theme in config.yaml
-# 3. If you have theme "standard" in config.yaml, each scenario needs themes.standard
+# 1. This file must be in the scenarios/ subfolder (not the root certification folder)
+# 2. Edit this file to add your questions
+# 3. Each scenario needs themed content for EVERY theme in config.yaml
+# 4. If you have theme "standard" in config.yaml, each scenario needs themes.standard
 #
 # ============================================================================
 
