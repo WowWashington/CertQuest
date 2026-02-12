@@ -20,7 +20,7 @@
 # SECTION 1: CERTIFICATION (Required)
 # ============================================================================
 certification:
-  id: template                                    # lowercase, no spaces, matches folder name
+  id: _template                                   # lowercase, no spaces, matches folder name
   name: "Template Certification"                  # Short display name for menus
   full_name: "Template Certification for Testing" # Full official name
   organization: "CertQuest"                       # Issuing organization
