@@ -16,6 +16,12 @@
 # - Do NOT place domain_N.yaml files in the root folder - they MUST be in scenarios/
 # - Do NOT use custom filenames like questions.yaml - MUST use domain_1.yaml, domain_2.yaml, etc.
 #
+# ❌ FORBIDDEN FIELDS (these will be IGNORED if present):
+#    description, version, files, logic, metadata, settings, question_file, theme_file
+#
+# ✅ ONLY THESE TOP-LEVEL SECTIONS ARE RECOGNIZED:
+#    certification, domains, presentation, scoring, performance
+#
 # REQUIRED FOLDER STRUCTURE:
 #   your-cert-id/
 #   ├── config.yaml              ← This file

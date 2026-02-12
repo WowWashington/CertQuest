@@ -45,6 +45,56 @@ certifications/your-cert/
 - **MUST NOT** add unsupported fields like `question_file`, `theme_file`, `settings`, `metadata`, `logic`, `files`
 - **MUST NOT** omit the `domains.count` field - it **MUST** be >= 1
 
+### ❌ FORBIDDEN FIELDS - These Will Be Ignored
+
+**In config.yaml - Do NOT use these fields:**
+| Forbidden Field | Why |
+|-----------------|-----|
+| `description:` | NOT SUPPORTED - remove it |
+| `version:` | NOT SUPPORTED - remove it |
+| `files:` | NOT SUPPORTED - remove it |
+| `logic:` | NOT SUPPORTED - remove it |
+| `metadata:` | NOT SUPPORTED - remove it |
+| `settings:` | NOT SUPPORTED - remove it |
+| `question_file:` | NOT SUPPORTED - remove it |
+| `theme_file:` | NOT SUPPORTED - remove it |
+
+**In scenario files - Do NOT use these fields:**
+| Forbidden Field | CertQuest Equivalent |
+|-----------------|---------------------|
+| `question:` | Use `themes.[theme].narrative:` instead |
+| `explanation:` | Use `themes.[theme].success_text:` instead |
+| `difficulty:` | NOT SUPPORTED - remove it |
+| `concept:` | NOT SUPPORTED - remove it |
+| `choices:` as simple strings | Use `themes.[theme].choices:` with `- text: "..."` |
+
+### 📖 Field Translation Guide
+
+If you're familiar with other quiz formats, here's how CertQuest maps common fields:
+
+| Common Quiz Field | CertQuest Equivalent |
+|-------------------|---------------------|
+| `question:` | `themes.[theme].narrative:` |
+| `answer:` | `themes.[theme].success_text:` |
+| `explanation:` | `themes.[theme].success_text:` + `failure_texts:` |
+| `choices:` (string list) | `themes.[theme].choices:` with `- text: "..."` |
+| `correct_answer:` | `correct_index:` (0-based integer: 0, 1, 2, or 3) |
+| `difficulty:` | Not used - remove this field |
+| `category:` | `domain_reference:` |
+| `hint:` | Not used - remove this field |
+| `tags:` | Not used - remove this field |
+
+### 🔍 Self-Check: Did You Generate It Wrong?
+
+If your AI generated output contains ANY of these, **it's wrong**:
+- `question:` ❌ → Should be `themes.[theme].narrative:`
+- `explanation:` ❌ → Should be `themes.[theme].success_text:`
+- `choices:` as `- "text"` ❌ → Should be `- text: "text"`
+- `themes.yaml` as separate file ❌ → Themes go in `config.yaml`
+- Missing `domains:` section ❌ → Required in config.yaml
+- Missing `presentation:` section ❌ → Required in config.yaml
+- Missing `scoring:` section ❌ → Required in config.yaml
+
 ---
 
 ## Overview

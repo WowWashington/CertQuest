@@ -18,6 +18,15 @@
 # 7. Create separate files for each domain: domain_1.yaml, domain_2.yaml, etc.
 # 8. Do NOT use custom filenames like questions.yaml or quiz.yaml
 #
+# ❌ FORBIDDEN FIELDS (do NOT use these - they will be IGNORED):
+#    question:     → Use themes.[theme].narrative: instead
+#    explanation:  → Use themes.[theme].success_text: instead
+#    difficulty:   → Not supported, remove it
+#    concept:      → Not supported, remove it
+#    choices: as simple strings → Use themes.[theme].choices: with - text: "..."
+#
+# 🔍 SELF-CHECK: If your output has "question:" or "explanation:", YOU DID IT WRONG!
+#
 # INSTRUCTIONS FOR HUMANS:
 # 1. This file must be in the scenarios/ subfolder (not the root certification folder)
 # 2. Edit this file to add your questions

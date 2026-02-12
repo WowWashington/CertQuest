@@ -533,7 +533,7 @@ Your journey begins now.
             hp_healed = self.player.heal(5)
 
         # Get themed success text
-        content = scenario.get_themed_content(self.theme_manager.current_theme)
+        content = scenario.get_themed_content(self.theme_manager.current_theme_key)
         success_text = content.get('success_text', 'Correct!')
 
         print(self.display.render_success(
