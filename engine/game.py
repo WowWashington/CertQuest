@@ -3,6 +3,8 @@ Core game loop and orchestration for CertQuest.
 Certification-agnostic game engine that loads content dynamically.
 """
 
+import os
+import json
 import random
 from typing import Dict, List, Optional
 from .player import Player, GameStatus
@@ -10,6 +12,9 @@ from .display import Display
 from .input_handler import InputHandler
 from .theme_manager import ThemeManager
 from .certification_loader import CertificationConfig
+
+# Player name storage file
+PLAYER_FILE = ".certquest_player"
 
 
 class Scenario:
@@ -305,16 +310,56 @@ Your journey begins now.
         self.input.wait_for_enter("\n  Press ENTER to begin your journey...")
 
     def _get_player_name(self) -> Optional[str]:
-        """Prompt player for their character name."""
+        """Prompt player for their character name, with memory of previous sessions."""
         player_term = self.theme_manager.get_player_term()
 
-        print(f"\n  Enter your name, {player_term}:")
+        # Try to load saved player name
+        saved_name = self._load_saved_player_name()
 
-        name = self.input.get_text("  > ")
+        if saved_name:
+            print(f"\n  Welcome back, {saved_name}!")
+            print(f"  Press ENTER to continue, or type a new name to change:")
+            new_name = self.input.get_text("  > ", allow_empty=True)
+
+            if new_name and new_name.strip():
+                # User wants to change name
+                name = new_name.strip()
+                self._save_player_name(name)
+                print(f"\n  Welcome, {name}. Let the training begin.\n")
+            else:
+                # Keep existing name
+                name = saved_name
+                print(f"\n  Welcome back, {name}. Let the training continue.\n")
+        else:
+            # No saved name, ask for new one
+            print(f"\n  Enter your name, {player_term}:")
+            name = self.input.get_text("  > ")
+            if name:
+                self._save_player_name(name)
+                print(f"\n  Welcome, {name}. Let the training begin.\n")
+
         if name:
-            print(f"\n  Welcome, {name}. Let the training begin.\n")
             self.input.wait_for_enter("  Press ENTER to continue...")
         return name
+
+    def _load_saved_player_name(self) -> Optional[str]:
+        """Load previously saved player name from file."""
+        try:
+            if os.path.exists(PLAYER_FILE):
+                with open(PLAYER_FILE, 'r') as f:
+                    data = json.load(f)
+                    return data.get('name')
+        except (json.JSONDecodeError, IOError):
+            pass
+        return None
+
+    def _save_player_name(self, name: str) -> None:
+        """Save player name to file for future sessions."""
+        try:
+            with open(PLAYER_FILE, 'w') as f:
+                json.dump({'name': name}, f)
+        except IOError:
+            pass  # Silently fail if we can't save
 
     def _game_loop(self) -> None:
         """Core gameplay loop."""
@@ -469,7 +514,7 @@ Your journey begins now.
             print(self.display.render_narrative(narrative, title))
 
             # Show choices with theme toggle hint
-            print(self.display.render_choices(choice_texts, show_theme_hint=True), end="")
+            print(self.display.render_choices(choice_texts, show_theme_hint=self.theme_manager.has_multiple_themes()), end="")
 
             # Get player choice
             while True:
@@ -479,12 +524,12 @@ Your journey begins now.
                     if self.input.confirm("  Abandon your quest? [y/N] "):
                         self.player.current_domain = self.domain_count + 1  # Force game end
                         return
-                    print(self.display.render_choices(choice_texts, show_theme_hint=True), end="")
+                    print(self.display.render_choices(choice_texts, show_theme_hint=self.theme_manager.has_multiple_themes()), end="")
                     continue
 
                 if result[0] == 'help':
                     self._show_help()
-                    print(self.display.render_choices(choice_texts, show_theme_hint=True), end="")
+                    print(self.display.render_choices(choice_texts, show_theme_hint=self.theme_manager.has_multiple_themes()), end="")
                     continue
 
                 if result[0] == 'status':
@@ -493,10 +538,15 @@ Your journey begins now.
                     theme_info = presentation.get('themes', {}).get(theme_key, {})
                     player_term = theme_info.get('player_term', 'SEEKER').upper()
                     print(self.display.render_hud(self.player, player_term))
-                    print(self.display.render_choices(choice_texts, show_theme_hint=True), end="")
+                    print(self.display.render_choices(choice_texts, show_theme_hint=self.theme_manager.has_multiple_themes()), end="")
                     continue
 
                 if result[0] == 'theme_toggle':
+                    # Only toggle if multiple themes available
+                    if not self.theme_manager.has_multiple_themes():
+                        print("  Only one theme available for this certification.")
+                        print("  > ", end="")
+                        continue
                     # Toggle theme and redisplay the scenario
                     new_theme = self.theme_manager.toggle_theme()
                     self.display.clear_screen()
@@ -510,7 +560,10 @@ Your journey begins now.
                     break  # Break inner loop to redisplay with new theme
 
                 if result[0] == 'invalid':
-                    print(f"  Invalid choice. Enter 1-{len(choices)}, 0 to switch theme, or 'help'.")
+                    if self.theme_manager.has_multiple_themes():
+                        print(f"  Invalid choice. Enter 1-{len(choices)}, 0 to switch theme, or 'help'.")
+                    else:
+                        print(f"  Invalid choice. Enter 1-{len(choices)}, or 'help'.")
                     print("  > ", end="")
                     continue
 
@@ -583,12 +636,15 @@ Your journey begins now.
 
     def _show_help(self) -> None:
         """Display help information."""
+        # Build command list based on available features
+        theme_line = "|  [0]     - Switch story theme                                     |" if self.theme_manager.has_multiple_themes() else ""
+
         help_text = f"""
   +------------------------------------------------------------------+
   |                         COMMANDS                                 |
   +------------------------------------------------------------------+
   |  [1-4]   - Select a numbered choice                              |
-  |  [0]     - Switch story theme                                     |
+  {theme_line}
   |  help    - Show this help message                                |
   |  status  - Show your current stats                               |
   |  quit    - End your session early                                |
@@ -600,6 +656,8 @@ Your journey begins now.
   |  There is no death penalty - this is training!                   |
   +------------------------------------------------------------------+
         """
+        # Remove empty lines from help text (when theme_line is empty)
+        help_text = '\n'.join(line for line in help_text.split('\n') if line.strip())
         print(help_text)
 
     def _show_ending(self) -> None:
