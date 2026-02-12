@@ -15,6 +15,54 @@ You can generate all of these using the AI prompt below.
 
 ---
 
+## 📁 USE THE TEMPLATE FOLDER
+
+**Before using an AI to generate content, look at the `_template` folder!**
+
+The `certifications/_template/` folder contains working, commented example files:
+
+```
+certifications/_template/
+├── README.md              # Quick start instructions
+├── config.yaml            # ✅ Complete config with ALL required sections
+├── intros.yaml            # Optional domain introductions
+└── scenarios/
+    └── domain_1.yaml      # ✅ Example scenarios with correct format
+```
+
+### How to Use the Templates
+
+**Option 1: Copy and Edit Manually**
+1. Copy the `_template` folder
+2. Rename it to your certification ID (e.g., `az-900`)
+3. Edit the files with your content
+
+**Option 2: Give Templates to Your AI**
+When asking an AI to generate content, **paste the template files into your prompt**:
+
+```
+I need you to generate a CertQuest certification pack.
+
+CRITICAL: You MUST follow this EXACT format. Do NOT invent custom fields.
+Copy the structure exactly - only change the values.
+
+Here is the required config.yaml format:
+[Paste contents of _template/config.yaml]
+
+Here is the required scenario format:
+[Paste contents of _template/scenarios/domain_1.yaml]
+
+Now generate content for: [Your certification topic]
+- Certification ID: [your-cert-id]
+- Number of domains: [N]
+- Questions per domain: [X]
+- Theme: standard
+```
+
+**Why this matters:** AI models often invent their own YAML schemas instead of following yours. By providing the exact templates, you ensure the AI produces compatible output.
+
+---
+
 ## ⚠️ REQUIRED SCHEMA - READ THIS FIRST ⚠️
 
 **CertQuest will NOT recognize your certification unless `config.yaml` follows this EXACT structure.**
@@ -546,9 +594,15 @@ domains:
 If an AI (Gemini, ChatGPT, etc.) generates a config that doesn't work:
 
 1. The AI likely invented its own schema instead of following CertQuest's
-2. Copy the **Minimum Required config.yaml Structure** from above
-3. Ask the AI: "Reformat this to match this exact YAML schema: [paste the schema]"
-4. Or manually edit the generated config to match the required structure
+2. **Use the `_template` folder** - Copy `certifications/_template/config.yaml` and paste it into your AI prompt
+3. Tell the AI: "Use this EXACT format. Do NOT add custom fields. Only change the values."
+4. Or manually copy `_template` folder and edit the files directly
+
+**Common AI mistakes to watch for:**
+- Adding `question_file`, `theme_file`, `settings`, `metadata`, `logic`, `files` fields (NOT SUPPORTED)
+- Missing the `domains` section entirely
+- Missing `domains.count` field
+- Putting scenarios in wrong location (should be in `scenarios/domain_1.yaml`)
 
 ### YAML Syntax Errors
 
