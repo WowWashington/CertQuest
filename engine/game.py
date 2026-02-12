@@ -419,7 +419,13 @@ Your journey begins now.
         if domain_info:
             theme_key = self.theme_manager.get_theme_key()
             theme_content = domain_info.get('themes', {}).get(theme_key, {})
-            domain_title = theme_content.get('title', domain_info.get('name', f'DOMAIN {domain_num}'))
+            # Handle case where theme_content is a string instead of dict
+            if isinstance(theme_content, str):
+                domain_title = theme_content
+            elif isinstance(theme_content, dict):
+                domain_title = theme_content.get('title', domain_info.get('name', f'DOMAIN {domain_num}'))
+            else:
+                domain_title = domain_info.get('name', f'DOMAIN {domain_num}')
 
             banner = f"""
     +===================================================================+
